@@ -54,6 +54,69 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E2014FF4237596D5002D8C8B /* Request */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		E2014FF5237596E5002D8C8B /* Search */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		E2014FF6237596F6002D8C8B /* Requesting */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Requesting;
+			sourceTree = "<group>";
+		};
+		E2014FF723759737002D8C8B /* Requested */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Requested;
+			sourceTree = "<group>";
+		};
+		E2014FF823759754002D8C8B /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		E2014FFA23759765002D8C8B /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		E2014FFB23759775002D8C8B /* Bio */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Bio;
+			sourceTree = "<group>";
+		};
+		E2014FFC23759789002D8C8B /* History */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		E2014FFD2375979C002D8C8B /* Support */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
 		E7FF57C02371A36900F3FA22 = {
 			isa = PBXGroup;
 			children = (
@@ -75,7 +138,6 @@
 		E7FF57CB2371A36A00F3FA22 /* CuidooApp */ = {
 			isa = PBXGroup;
 			children = (
-				E7FF57E423732CD400F3FA22 /* Views */,
 				E7FF57E323732CCD00F3FA22 /* Models */,
 				E7FF57E22371A59A00F3FA22 /* Scenes */,
 				E7FF57E12371A4A600F3FA22 /* Resources */,
@@ -109,6 +171,15 @@
 		E7FF57E22371A59A00F3FA22 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				E2014FF5237596E5002D8C8B /* Search */,
+				E2014FF4237596D5002D8C8B /* Request */,
+				E2014FF6237596F6002D8C8B /* Requesting */,
+				E2014FF723759737002D8C8B /* Requested */,
+				E2014FF823759754002D8C8B /* Chat */,
+				E2014FFA23759765002D8C8B /* Profile */,
+				E2014FFB23759775002D8C8B /* Bio */,
+				E2014FFC23759789002D8C8B /* History */,
+				E2014FFD2375979C002D8C8B /* Support */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -118,13 +189,6 @@
 			children = (
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		E7FF57E423732CD400F3FA22 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		E7FF57E523732CF100F3FA22 /* Controllers */ = {
