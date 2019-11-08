@@ -23,10 +23,10 @@
             </objects>
             <point key="canvasLocation" x="-442" y="-66"/>
         </scene>
-        <!--Root View Controller-->
+        <!--View Controller-->
         <scene sceneID="sop-GI-e2K">
             <objects>
-                <viewController id="O9t-IF-eoK" customClass="RootViewController" customModule="CuidooApp" sceneMemberID="viewController">
+                <viewController id="O9t-IF-eoK" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Als-T8-2d3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -65,6 +65,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r1Q-gd-dWp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-442" y="652"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="Y51-7B-rnx">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Search" id="KCa-BV-I0l" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IZG-tY-Ay9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-485" y="1059"/>
         </scene>
     </scenes>
 </document>
