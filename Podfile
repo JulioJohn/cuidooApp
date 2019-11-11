@@ -13,6 +13,7 @@ target 'CuidooApp' do
   pod 'Firebase/Storage'
   pod 'Firebase/Core'
   pod 'Kingfisher'
+  pod 'ALLoadingView'
 
 
 end

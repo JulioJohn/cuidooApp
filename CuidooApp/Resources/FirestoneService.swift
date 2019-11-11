@@ -53,7 +53,7 @@ class FirestoreService {
   }
   
   func update<T>(_ object: T, reference: Reference, completion: @escaping CompletionObject<FirestoreResponse>) where T: FireCodable {
-    guard let data = object.values else { completion(.failure); return }
+   guard let data = object.values else { completion(.failure); return }
     reference.reference().document(object.id).setData(data, merge: true) { (error) in
       guard let _ = error else { completion(.success); return }
       completion(.failure)

@@ -27,6 +27,10 @@
 		E238AD2423798569008348BA /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = E238AD2323798569008348BA /* Optional.swift */; };
 		E238AD282379860A008348BA /* DictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E238AD272379860A008348BA /* DictionaryExtension.swift */; };
 		E238AD2A23798716008348BA /* ImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E238AD2923798716008348BA /* ImageViewExtension.swift */; };
+		E238AD2C237989E1008348BA /* ImagePickerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E238AD2B237989E1008348BA /* ImagePickerService.swift */; };
+		E238AD2E23798C54008348BA /* DateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E238AD2D23798C54008348BA /* DateService.swift */; };
+		E238AD3023798CDA008348BA /* Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E238AD2F23798CDA008348BA /* Encodable.swift */; };
+		E238AD322379A9AE008348BA /* KeyboardHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E238AD312379A9AD008348BA /* KeyboardHandler.swift */; };
 		E2A815C22378C4A0005D9C6F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E2A815C12378C4A0005D9C6F /* GoogleService-Info.plist */; };
 		E2A815C52378C832005D9C6F /* AuthUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A815C42378C832005D9C6F /* AuthUserViewController.swift */; };
 		E7FF57CD2371A36A00F3FA22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FF57CC2371A36A00F3FA22 /* AppDelegate.swift */; };
@@ -59,6 +63,10 @@
 		E238AD2323798569008348BA /* Optional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
 		E238AD272379860A008348BA /* DictionaryExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryExtension.swift; sourceTree = "<group>"; };
 		E238AD2923798716008348BA /* ImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewExtension.swift; sourceTree = "<group>"; };
+		E238AD2B237989E1008348BA /* ImagePickerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerService.swift; sourceTree = "<group>"; };
+		E238AD2D23798C54008348BA /* DateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateService.swift; sourceTree = "<group>"; };
+		E238AD2F23798CDA008348BA /* Encodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encodable.swift; sourceTree = "<group>"; };
+		E238AD312379A9AD008348BA /* KeyboardHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardHandler.swift; sourceTree = "<group>"; };
 		E2A815C12378C4A0005D9C6F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E2A815C42378C832005D9C6F /* AuthUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUserViewController.swift; sourceTree = "<group>"; };
 		E7FF57C92371A36A00F3FA22 /* CuidooApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CuidooApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -157,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				E238AD1123796B78008348BA /* FireCodable.swift */,
+				E238AD312379A9AD008348BA /* KeyboardHandler.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -182,6 +191,8 @@
 			children = (
 				E238AD1823796E88008348BA /* FirestorageService.swift */,
 				E238AD1A23797019008348BA /* FirestoneService.swift */,
+				E238AD2B237989E1008348BA /* ImagePickerService.swift */,
+				E238AD2D23798C54008348BA /* DateService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -208,6 +219,7 @@
 				E238AD2323798569008348BA /* Optional.swift */,
 				E238AD272379860A008348BA /* DictionaryExtension.swift */,
 				E238AD2923798716008348BA /* ImageViewExtension.swift */,
+				E238AD2F23798CDA008348BA /* Encodable.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -445,13 +457,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7FF57CD2371A36A00F3FA22 /* AppDelegate.swift in Sources */,
+				E238AD2C237989E1008348BA /* ImagePickerService.swift in Sources */,
 				E238AD2423798569008348BA /* Optional.swift in Sources */,
 				E238AD1B23797019008348BA /* FirestoneService.swift in Sources */,
 				E238AD282379860A008348BA /* DictionaryExtension.swift in Sources */,
 				E2A815C52378C832005D9C6F /* AuthUserViewController.swift in Sources */,
 				E238AD1E23798254008348BA /* TypeAlias.swift in Sources */,
+				E238AD3023798CDA008348BA /* Encodable.swift in Sources */,
+				E238AD322379A9AE008348BA /* KeyboardHandler.swift in Sources */,
 				E238AD2A23798716008348BA /* ImageViewExtension.swift in Sources */,
 				E238AD1223796B78008348BA /* FireCodable.swift in Sources */,
+				E238AD2E23798C54008348BA /* DateService.swift in Sources */,
 				E7FF57CF2371A36A00F3FA22 /* SceneDelegate.swift in Sources */,
 				E238AD1923796E88008348BA /* FirestorageService.swift in Sources */,
 				E238AD1523796CFC008348BA /* AuthUser.swift in Sources */,

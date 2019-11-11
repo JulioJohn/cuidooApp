@@ -1,4 +1,5 @@
 PODS:
+  - ALLoadingView (1.1.5)
   - BoringSSL-GRPC (0.0.3):
     - BoringSSL-GRPC/Implementation (= 0.0.3)
     - BoringSSL-GRPC/Interface (= 0.0.3)
@@ -136,6 +137,7 @@ PODS:
   - Protobuf (3.10.0)
 
 DEPENDENCIES:
+  - ALLoadingView
   - Firebase/Analytics
   - Firebase/Auth
   - Firebase/Core
@@ -146,6 +148,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - ALLoadingView
     - BoringSSL-GRPC
     - Firebase
     - FirebaseAnalytics
@@ -171,6 +174,7 @@ SPEC REPOS:
     - Protobuf
 
 SPEC CHECKSUMS:
+  ALLoadingView: 5f3a5e73402d3ec178dae51ebdb39c1d64c0a87b
   BoringSSL-GRPC: db8764df3204ccea016e1c8dd15d9a9ad63ff318
   Firebase: bc9cfc7a96c73268656d5aaab453ff1b4b530e0e
   FirebaseAnalytics: 0e3ecff2c5d86070f7d4325e21f1edabfbd558dc
@@ -195,6 +199,6 @@ SPEC CHECKSUMS:
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   Protobuf: a4dc852ad69c027ca2166ed287b856697814375b
 
-PODFILE CHECKSUM: d6f5a7dc18910c2e4afcf6628ec2d2e2becbee42
+PODFILE CHECKSUM: f32396a10a06e9929dde2ce9a779fcbef500598f
 
 COCOAPODS: 1.8.4
