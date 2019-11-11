@@ -8,5 +8,11 @@ target 'CuidooApp' do
   # Pods for CuidooApp
   pod 'Firebase/Analytics'
   pod 'Firebase/Database'
+  pod 'Firebase/Firestore'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Storage'
+  pod 'Firebase/Core'
+  pod 'Kingfisher'
+
 
 end

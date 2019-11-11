@@ -17,12 +17,23 @@
 		E201500C23759BC7002D8C8B /* Bio.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E201500B23759BC7002D8C8B /* Bio.storyboard */; };
 		E201500E23759BD0002D8C8B /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E201500D23759BD0002D8C8B /* History.storyboard */; };
 		E201501023759BDB002D8C8B /* Support.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E201500F23759BDB002D8C8B /* Support.storyboard */; };
+		E238AD0F23796A24008348BA /* FirebaseEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = E238AD0E23796A24008348BA /* FirebaseEnums.swift */; };
+		E238AD1223796B78008348BA /* FireCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E238AD1123796B78008348BA /* FireCodable.swift */; };
+		E238AD1523796CFC008348BA /* AuthUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E238AD1423796CFC008348BA /* AuthUser.swift */; };
+		E238AD1923796E88008348BA /* FirestorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E238AD1823796E88008348BA /* FirestorageService.swift */; };
+		E238AD1B23797019008348BA /* FirestoneService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E238AD1A23797019008348BA /* FirestoneService.swift */; };
+		E238AD1E23798254008348BA /* TypeAlias.swift in Sources */ = {isa = PBXBuildFile; fileRef = E238AD1D23798254008348BA /* TypeAlias.swift */; };
+		E238AD2123798410008348BA /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E238AD2023798410008348BA /* UserManager.swift */; };
+		E238AD2423798569008348BA /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = E238AD2323798569008348BA /* Optional.swift */; };
+		E238AD282379860A008348BA /* DictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E238AD272379860A008348BA /* DictionaryExtension.swift */; };
+		E238AD2A23798716008348BA /* ImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E238AD2923798716008348BA /* ImageViewExtension.swift */; };
+		E2A815C22378C4A0005D9C6F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E2A815C12378C4A0005D9C6F /* GoogleService-Info.plist */; };
+		E2A815C52378C832005D9C6F /* AuthUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A815C42378C832005D9C6F /* AuthUserViewController.swift */; };
 		E7FF57CD2371A36A00F3FA22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FF57CC2371A36A00F3FA22 /* AppDelegate.swift */; };
 		E7FF57CF2371A36A00F3FA22 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FF57CE2371A36A00F3FA22 /* SceneDelegate.swift */; };
-		E7FF57D42371A36A00F3FA22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7FF57D22371A36A00F3FA22 /* Main.storyboard */; };
+		E7FF57D42371A36A00F3FA22 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7FF57D22371A36A00F3FA22 /* Auth.storyboard */; };
 		E7FF57D62371A36F00F3FA22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7FF57D52371A36F00F3FA22 /* Assets.xcassets */; };
 		E7FF57D92371A36F00F3FA22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7FF57D72371A36F00F3FA22 /* LaunchScreen.storyboard */; };
-		E7FF57E723732F1300F3FA22 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E7FF57E623732F1300F3FA22 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,14 +49,25 @@
 		E201500B23759BC7002D8C8B /* Bio.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Bio.storyboard; sourceTree = "<group>"; };
 		E201500D23759BD0002D8C8B /* History.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
 		E201500F23759BDB002D8C8B /* Support.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Support.storyboard; sourceTree = "<group>"; };
+		E238AD0E23796A24008348BA /* FirebaseEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseEnums.swift; sourceTree = "<group>"; };
+		E238AD1123796B78008348BA /* FireCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireCodable.swift; sourceTree = "<group>"; };
+		E238AD1423796CFC008348BA /* AuthUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUser.swift; sourceTree = "<group>"; };
+		E238AD1823796E88008348BA /* FirestorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestorageService.swift; sourceTree = "<group>"; };
+		E238AD1A23797019008348BA /* FirestoneService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoneService.swift; sourceTree = "<group>"; };
+		E238AD1D23798254008348BA /* TypeAlias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeAlias.swift; sourceTree = "<group>"; };
+		E238AD2023798410008348BA /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		E238AD2323798569008348BA /* Optional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
+		E238AD272379860A008348BA /* DictionaryExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryExtension.swift; sourceTree = "<group>"; };
+		E238AD2923798716008348BA /* ImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewExtension.swift; sourceTree = "<group>"; };
+		E2A815C12378C4A0005D9C6F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E2A815C42378C832005D9C6F /* AuthUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUserViewController.swift; sourceTree = "<group>"; };
 		E7FF57C92371A36A00F3FA22 /* CuidooApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CuidooApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7FF57CC2371A36A00F3FA22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E7FF57CE2371A36A00F3FA22 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E7FF57D32371A36A00F3FA22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E7FF57D32371A36A00F3FA22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Auth.storyboard; sourceTree = "<group>"; };
 		E7FF57D52371A36F00F3FA22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E7FF57D82371A36F00F3FA22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E7FF57DA2371A36F00F3FA22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E7FF57E623732F1300F3FA22 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +153,82 @@
 			path = Support;
 			sourceTree = "<group>";
 		};
+		E238AD1023796B2F008348BA /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				E238AD1123796B78008348BA /* FireCodable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		E238AD1323796C75008348BA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E238AD1423796CFC008348BA /* AuthUser.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E238AD1623796D2D008348BA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E2A815C42378C832005D9C6F /* AuthUserViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		E238AD1723796E58008348BA /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E238AD1823796E88008348BA /* FirestorageService.swift */,
+				E238AD1A23797019008348BA /* FirestoneService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		E238AD1C2379823F008348BA /* Typealias */ = {
+			isa = PBXGroup;
+			children = (
+				E238AD1D23798254008348BA /* TypeAlias.swift */,
+			);
+			name = Typealias;
+			sourceTree = "<group>";
+		};
+		E238AD1F237983E5008348BA /* Data Manager */ = {
+			isa = PBXGroup;
+			children = (
+				E238AD2023798410008348BA /* UserManager.swift */,
+			);
+			path = "Data Manager";
+			sourceTree = "<group>";
+		};
+		E238AD2223798533008348BA /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				E238AD2323798569008348BA /* Optional.swift */,
+				E238AD272379860A008348BA /* DictionaryExtension.swift */,
+				E238AD2923798716008348BA /* ImageViewExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		E2A815C32378C6D5005D9C6F /* Initial */ = {
+			isa = PBXGroup;
+			children = (
+				E238AD1623796D2D008348BA /* Controller */,
+				E238AD1323796C75008348BA /* Model */,
+			);
+			name = Initial;
+			sourceTree = "<group>";
+		};
+		E2A815C623796898005D9C6F /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				E238AD0E23796A24008348BA /* FirebaseEnums.swift */,
+			);
+			name = Enums;
+			sourceTree = "<group>";
+		};
 		E7FF57C02371A36900F3FA22 = {
 			isa = PBXGroup;
 			children = (
@@ -156,7 +254,7 @@
 				E7FF57E12371A4A600F3FA22 /* Resources */,
 				E7FF57E02371A49F00F3FA22 /* Storyboards */,
 				E7FF57DA2371A36F00F3FA22 /* Info.plist */,
-				E7FF57E623732F1300F3FA22 /* GoogleService-Info.plist */,
+				E2A815C12378C4A0005D9C6F /* GoogleService-Info.plist */,
 			);
 			path = CuidooApp;
 			sourceTree = "<group>";
@@ -164,8 +262,7 @@
 		E7FF57E02371A49F00F3FA22 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				E7FF57D22371A36A00F3FA22 /* Main.storyboard */,
-				E7FF57D72371A36F00F3FA22 /* LaunchScreen.storyboard */,
+				E7FF57D22371A36A00F3FA22 /* Auth.storyboard */,
 				E2014FFE23759B4F002D8C8B /* Search.storyboard */,
 				E201500023759B58002D8C8B /* Profile.storyboard */,
 				E201500223759B86002D8C8B /* Request.storyboard */,
@@ -175,6 +272,7 @@
 				E201500B23759BC7002D8C8B /* Bio.storyboard */,
 				E201500D23759BD0002D8C8B /* History.storyboard */,
 				E201500F23759BDB002D8C8B /* Support.storyboard */,
+				E7FF57D72371A36F00F3FA22 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -182,6 +280,12 @@
 		E7FF57E12371A4A600F3FA22 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E238AD2223798533008348BA /* Extension */,
+				E238AD1F237983E5008348BA /* Data Manager */,
+				E238AD1C2379823F008348BA /* Typealias */,
+				E238AD1723796E58008348BA /* Services */,
+				E238AD1023796B2F008348BA /* Protocols */,
+				E2A815C623796898005D9C6F /* Enums */,
 				E7FF57D52371A36F00F3FA22 /* Assets.xcassets */,
 				E7FF57CE2371A36A00F3FA22 /* SceneDelegate.swift */,
 				E7FF57CC2371A36A00F3FA22 /* AppDelegate.swift */,
@@ -192,6 +296,7 @@
 		E7FF57E22371A59A00F3FA22 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				E2A815C32378C6D5005D9C6F /* Initial */,
 				E2014FF5237596E5002D8C8B /* Search */,
 				E2014FF4237596D5002D8C8B /* Request */,
 				E2014FF6237596F6002D8C8B /* Requesting */,
@@ -280,13 +385,13 @@
 				E201500823759BAA002D8C8B /* Requested.storyboard in Resources */,
 				E201500523759B96002D8C8B /* Requesting.storyboard in Resources */,
 				E201501023759BDB002D8C8B /* Support.storyboard in Resources */,
-				E7FF57E723732F1300F3FA22 /* GoogleService-Info.plist in Resources */,
 				E7FF57D62371A36F00F3FA22 /* Assets.xcassets in Resources */,
-				E7FF57D42371A36A00F3FA22 /* Main.storyboard in Resources */,
+				E7FF57D42371A36A00F3FA22 /* Auth.storyboard in Resources */,
 				E201500A23759BB4002D8C8B /* Chat.storyboard in Resources */,
 				E201500C23759BC7002D8C8B /* Bio.storyboard in Resources */,
 				E2014FFF23759B4F002D8C8B /* Search.storyboard in Resources */,
 				E201500E23759BD0002D8C8B /* History.storyboard in Resources */,
+				E2A815C22378C4A0005D9C6F /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,19 +445,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7FF57CD2371A36A00F3FA22 /* AppDelegate.swift in Sources */,
+				E238AD2423798569008348BA /* Optional.swift in Sources */,
+				E238AD1B23797019008348BA /* FirestoneService.swift in Sources */,
+				E238AD282379860A008348BA /* DictionaryExtension.swift in Sources */,
+				E2A815C52378C832005D9C6F /* AuthUserViewController.swift in Sources */,
+				E238AD1E23798254008348BA /* TypeAlias.swift in Sources */,
+				E238AD2A23798716008348BA /* ImageViewExtension.swift in Sources */,
+				E238AD1223796B78008348BA /* FireCodable.swift in Sources */,
 				E7FF57CF2371A36A00F3FA22 /* SceneDelegate.swift in Sources */,
+				E238AD1923796E88008348BA /* FirestorageService.swift in Sources */,
+				E238AD1523796CFC008348BA /* AuthUser.swift in Sources */,
+				E238AD2123798410008348BA /* UserManager.swift in Sources */,
+				E238AD0F23796A24008348BA /* FirebaseEnums.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		E7FF57D22371A36A00F3FA22 /* Main.storyboard */ = {
+		E7FF57D22371A36A00F3FA22 /* Auth.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				E7FF57D32371A36A00F3FA22 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Auth.storyboard;
 			sourceTree = "<group>";
 		};
 		E7FF57D72371A36F00F3FA22 /* LaunchScreen.storyboard */ = {
@@ -486,7 +602,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 97PTJ72QJZ;
+				DEVELOPMENT_TEAM = 76DX35F6T7;
 				INFOPLIST_FILE = CuidooApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -505,7 +621,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 97PTJ72QJZ;
+				DEVELOPMENT_TEAM = 76DX35F6T7;
 				INFOPLIST_FILE = CuidooApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
