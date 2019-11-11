@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C765B01237991BC00D3D38B /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C765B00237991BC00D3D38B /* SearchViewController.swift */; };
 		7B04F344FDE1CDCE8574C748 /* Pods_CuidooApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA842981CFE67996BA18031C /* Pods_CuidooApp.framework */; };
 		E2014FFF23759B4F002D8C8B /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2014FFE23759B4F002D8C8B /* Search.storyboard */; };
 		E201500123759B58002D8C8B /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E201500023759B58002D8C8B /* Profile.storyboard */; };
@@ -42,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		303077478AF76DECDC033BE2 /* Pods-CuidooApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CuidooApp.debug.xcconfig"; path = "Target Support Files/Pods-CuidooApp/Pods-CuidooApp.debug.xcconfig"; sourceTree = "<group>"; };
+		4C765B00237991BC00D3D38B /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		800AE3D6E1EBAC85C2721D3B /* Pods-CuidooApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CuidooApp.release.xcconfig"; path = "Target Support Files/Pods-CuidooApp/Pods-CuidooApp.release.xcconfig"; sourceTree = "<group>"; };
 		BA842981CFE67996BA18031C /* Pods_CuidooApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CuidooApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2014FFE23759B4F002D8C8B /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
@@ -90,6 +92,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C765AFE2379908800D3D38B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4C765B00237991BC00D3D38B /* SearchViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4C765AFF2379909200D3D38B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		7A10E2F6808C474F7E0A412E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +125,8 @@
 		E2014FF5237596E5002D8C8B /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				4C765AFF2379909200D3D38B /* Model */,
+				4C765AFE2379908800D3D38B /* Controller */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -467,7 +486,11 @@
 				E238AD322379A9AE008348BA /* KeyboardHandler.swift in Sources */,
 				E238AD2A23798716008348BA /* ImageViewExtension.swift in Sources */,
 				E238AD1223796B78008348BA /* FireCodable.swift in Sources */,
+<<<<<<< Updated upstream
 				E238AD2E23798C54008348BA /* DateService.swift in Sources */,
+=======
+				4C765B01237991BC00D3D38B /* SearchViewController.swift in Sources */,
+>>>>>>> Stashed changes
 				E7FF57CF2371A36A00F3FA22 /* SceneDelegate.swift in Sources */,
 				E238AD1923796E88008348BA /* FirestorageService.swift in Sources */,
 				E238AD1523796CFC008348BA /* AuthUser.swift in Sources */,
