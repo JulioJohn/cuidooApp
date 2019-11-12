@@ -486,11 +486,8 @@
 				E238AD322379A9AE008348BA /* KeyboardHandler.swift in Sources */,
 				E238AD2A23798716008348BA /* ImageViewExtension.swift in Sources */,
 				E238AD1223796B78008348BA /* FireCodable.swift in Sources */,
-<<<<<<< Updated upstream
 				E238AD2E23798C54008348BA /* DateService.swift in Sources */,
-=======
 				4C765B01237991BC00D3D38B /* SearchViewController.swift in Sources */,
->>>>>>> Stashed changes
 				E7FF57CF2371A36A00F3FA22 /* SceneDelegate.swift in Sources */,
 				E238AD1923796E88008348BA /* FirestorageService.swift in Sources */,
 				E238AD1523796CFC008348BA /* AuthUser.swift in Sources */,
