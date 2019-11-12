@@ -9,11 +9,5 @@ target 'CuidooApp' do
   pod 'Firebase/Analytics'
   pod 'Firebase/Database'
   pod 'Firebase/Firestore'
-  pod 'Firebase/Auth'
-  pod 'Firebase/Storage'
-  pod 'Firebase/Core'
-  pod 'Kingfisher'
-  pod 'ALLoadingView'
-
 
 end
