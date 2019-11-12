@@ -118,7 +118,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="AdressTextField" destination="9XV-jy-GGN" id="lPI-Wc-11f"/>
                         <outlet property="SearchTableView" destination="jXd-NC-Slu" id="xdu-FV-bQa"/>
                     </connections>
                 </viewController>

@@ -13,11 +13,9 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var SearchTableView: UITableView!
     //essa é a tableview grande da tela
     
-    @IBOutlet weak var AdressTextField: UITextField!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        SearchTableView.delegate = self
+        //SearchTableView.delegate = self as! UITableViewDelegate
         // Do any additional setup after loading the view.
     }
     
@@ -33,14 +31,15 @@ class SearchViewController: UIViewController {
     */
 
 }
-extension SearchViewController: UITableViewDataSource{
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
-    }
-}
 
-extension SearchViewController: UITableViewDelegate{
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
-    }
-}
+//extension SearchViewController: UITableViewDataSource{
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//
+//    }
+//}
+//
+//extension SearchViewController: UITableViewDelegate{
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return 1
+//    }
+//}

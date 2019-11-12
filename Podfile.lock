@@ -147,7 +147,7 @@ DEPENDENCIES:
   - Kingfisher
 
 SPEC REPOS:
-  trunk:
+  https://github.com/cocoapods/specs.git:
     - ALLoadingView
     - BoringSSL-GRPC
     - Firebase
@@ -201,4 +201,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: f32396a10a06e9929dde2ce9a779fcbef500598f
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.7.5
