@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jXd-NC-Slu">
-                                <rect key="frame" x="0.0" y="88" width="414" height="694"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="676"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="140" id="18e-ir-66z">
                                         <rect key="frame" x="0.0" y="28" width="414" height="140"/>
@@ -169,22 +169,49 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="102" id="q6b-bt-FFH">
-                                        <rect key="frame" x="0.0" y="318" width="414" height="102"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="302" id="q6b-bt-FFH">
+                                        <rect key="frame" x="0.0" y="318" width="414" height="302"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="q6b-bt-FFH" id="diJ-AN-Fvt">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="102"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="302"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <view alpha="0.55000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="udh-b3-wUc">
-                                <rect key="frame" x="0.0" y="782" width="414" height="80"/>
-                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="udh-b3-wUc">
+                                <rect key="frame" x="0.0" y="764" width="414" height="98"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9z5-u0-nMU">
+                                        <rect key="frame" x="18" y="48" width="378" height="50"/>
+                                        <color key="backgroundColor" red="0.99824029209999998" green="0.39281293750000001" blue="0.39213877920000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="m1S-qX-ZXw"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Buscar">
+                                            <color key="titleColor" red="0.93337559699999995" green="0.93324023489999997" blue="0.94117838139999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forma de pagamento" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mgS-UQ-EXU">
+                                        <rect key="frame" x="18" y="13.5" width="163.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="NOw-km-mtI"/>
+                                    <constraint firstItem="9z5-u0-nMU" firstAttribute="leading" secondItem="udh-b3-wUc" secondAttribute="leading" constant="18" id="Fqv-1T-iPc"/>
+                                    <constraint firstAttribute="bottom" secondItem="9z5-u0-nMU" secondAttribute="bottom" id="GbI-RC-klb"/>
+                                    <constraint firstAttribute="height" constant="98" id="NOw-km-mtI"/>
+                                    <constraint firstItem="9z5-u0-nMU" firstAttribute="top" secondItem="mgS-UQ-EXU" secondAttribute="bottom" constant="14" id="XpX-U0-PxV"/>
+                                    <constraint firstItem="mgS-UQ-EXU" firstAttribute="leading" secondItem="udh-b3-wUc" secondAttribute="leading" constant="18" id="aeC-zt-d84"/>
+                                    <constraint firstAttribute="trailing" secondItem="9z5-u0-nMU" secondAttribute="trailing" constant="18" id="l2f-qS-apj"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -207,6 +234,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="SearchTableView" destination="jXd-NC-Slu" id="xdu-FV-bQa"/>
+                        <outlet property="searchButton" destination="9z5-u0-nMU" id="l38-Wd-r80"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q2m-qT-mcr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

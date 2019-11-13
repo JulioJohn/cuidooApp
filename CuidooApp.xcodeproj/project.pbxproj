@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C4A3A80237C2B19009A3B64 /* celulaCuidadoras.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C4A3A7F237C2B19009A3B64 /* celulaCuidadoras.xib */; };
 		4C765B01237991BC00D3D38B /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C765B00237991BC00D3D38B /* SearchViewController.swift */; };
 		7B04F344FDE1CDCE8574C748 /* Pods_CuidooApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA842981CFE67996BA18031C /* Pods_CuidooApp.framework */; };
 		E2014FFF23759B4F002D8C8B /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2014FFE23759B4F002D8C8B /* Search.storyboard */; };
@@ -28,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		303077478AF76DECDC033BE2 /* Pods-CuidooApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CuidooApp.debug.xcconfig"; path = "Target Support Files/Pods-CuidooApp/Pods-CuidooApp.debug.xcconfig"; sourceTree = "<group>"; };
+		4C4A3A7F237C2B19009A3B64 /* celulaCuidadoras.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = celulaCuidadoras.xib; sourceTree = "<group>"; };
 		4C765B00237991BC00D3D38B /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		800AE3D6E1EBAC85C2721D3B /* Pods-CuidooApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CuidooApp.release.xcconfig"; path = "Target Support Files/Pods-CuidooApp/Pods-CuidooApp.release.xcconfig"; sourceTree = "<group>"; };
 		BA842981CFE67996BA18031C /* Pods_CuidooApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CuidooApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,6 +64,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C4A3A7E237C2AC4009A3B64 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4C4A3A7F237C2B19009A3B64 /* celulaCuidadoras.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4C4A3A81237C3450009A3B64 /* Match */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Match;
+			sourceTree = "<group>";
+		};
 		4C765AFE2379908800D3D38B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +112,7 @@
 		E2014FF5237596E5002D8C8B /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				4C4A3A7E237C2AC4009A3B64 /* View */,
 				4C765AFF2379909200D3D38B /* Model */,
 				4C765AFE2379908800D3D38B /* Controller */,
 			);
@@ -218,6 +236,7 @@
 		E7FF57E22371A59A00F3FA22 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				4C4A3A81237C3450009A3B64 /* Match */,
 				E2A815C32378C6D5005D9C6F /* Initial */,
 				E2014FF5237596E5002D8C8B /* Search */,
 				E2014FF4237596D5002D8C8B /* Request */,
@@ -301,6 +320,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C4A3A80237C2B19009A3B64 /* celulaCuidadoras.xib in Resources */,
 				E201500123759B58002D8C8B /* Profile.storyboard in Resources */,
 				E201500323759B86002D8C8B /* Request.storyboard in Resources */,
 				E7FF57D92371A36F00F3FA22 /* LaunchScreen.storyboard in Resources */,
@@ -512,7 +532,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 303077478AF76DECDC033BE2 /* Pods-CuidooApp.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 97PTJ72QJZ;
 				INFOPLIST_FILE = CuidooApp/Info.plist;
@@ -531,7 +550,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 800AE3D6E1EBAC85C2721D3B /* Pods-CuidooApp.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 97PTJ72QJZ;
 				INFOPLIST_FILE = CuidooApp/Info.plist;

@@ -12,9 +12,11 @@ class SearchViewController: UIViewController {
     
     @IBOutlet weak var SearchTableView: UITableView!
     //essa é a tableview grande da tela
+    @IBOutlet weak var searchButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.searchButton.layer.cornerRadius = 20
         //SearchTableView.delegate = self as! UITableViewDelegate
         // Do any additional setup after loading the view.
     }
