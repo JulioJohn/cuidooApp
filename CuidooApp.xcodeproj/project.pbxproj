@@ -91,6 +91,24 @@
 			path = Match;
 			sourceTree = "<group>";
 		};
+		4C4A3A82237D9DE0009A3B64 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E7CCFEE0237C4FA800F9DA94 /* ChatViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		4C4A3A83237D9E07009A3B64 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E7CCFEE2237C685B00F9DA94 /* Channel.swift */,
+				E7CCFEE4237C689A00F9DA94 /* Message.swift */,
+				E7CCFEEE237C8DA400F9DA94 /* DatabaseRepresentation.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		4C765AFE2379908800D3D38B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -148,10 +166,8 @@
 		E2014FF823759754002D8C8B /* Chat */ = {
 			isa = PBXGroup;
 			children = (
-				E7CCFEE0237C4FA800F9DA94 /* ChatViewController.swift */,
-				E7CCFEE2237C685B00F9DA94 /* Channel.swift */,
-				E7CCFEE4237C689A00F9DA94 /* Message.swift */,
-				E7CCFEEE237C8DA400F9DA94 /* DatabaseRepresentation.swift */,
+				4C4A3A83237D9E07009A3B64 /* Model */,
+				4C4A3A82237D9DE0009A3B64 /* Controller */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -565,7 +581,7 @@
 			baseConfigurationReference = 303077478AF76DECDC033BE2 /* Pods-CuidooApp.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 97PTJ72QJZ;
+				DEVELOPMENT_TEAM = P8PFF3RBDA;
 				INFOPLIST_FILE = CuidooApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -583,7 +599,7 @@
 			baseConfigurationReference = 800AE3D6E1EBAC85C2721D3B /* Pods-CuidooApp.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 97PTJ72QJZ;
+				DEVELOPMENT_TEAM = P8PFF3RBDA;
 				INFOPLIST_FILE = CuidooApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

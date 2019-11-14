@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import MessageKit
+import InputBarAccessoryView
 
 class ChatViewController: MessagesViewController, MessageInputBarDelegate {
 
@@ -39,6 +40,7 @@ class ChatViewController: MessagesViewController, MessageInputBarDelegate {
         messagesCollectionView.messagesDataSource = self
         messagesCollectionView.messagesLayoutDelegate = self
         messagesCollectionView.messagesDisplayDelegate = self
+        
         
         //Atualiza a mensagem quando é adicionado uma nova
         messageListener = reference?.addSnapshotListener { querySnapshot, error in
@@ -77,11 +79,9 @@ class ChatViewController: MessagesViewController, MessageInputBarDelegate {
       guard let message = Message(document: change.document) else {
         return
       }
-
       switch change.type {
       case .added:
         insertNewMessage(message)
-
       default:
         break
       }
@@ -93,15 +93,21 @@ class ChatViewController: MessagesViewController, MessageInputBarDelegate {
           print("Error sending message: \(e.localizedDescription)")
           return
         }
-        
         self.messagesCollectionView.scrollToBottom()
       }
     }
-}
+    
+    // função de funcionamento do botão com o novo MessageKit
+    func inputBar(_ inputBar: InputBarAccessoryView, didPressSendButtonWith text: String) {
+         print("apertou o botao")
+           let message = Message(content: text)
+           save(message)
+           inputBar.inputTextView.text = ""
+    }
+} // end class ChatViewController
 
 
 // MARK: - MessageInputBarDelegate
-
 extension ChatViewController: MessagesDisplayDelegate {
   
     internal func backgroundColor(for message: MessageType, at indexPath: IndexPath,
@@ -124,22 +130,15 @@ extension ChatViewController: MessagesDisplayDelegate {
     return .bubbleTail(corner, .curved)
   }
   
-  func messageInputBar(_ inputBar: MessageInputBar, didPressSendButtonWith text: String) {
-    print("apertou o botao")
-    let message = Message(content: text)
-    save(message)
-    inputBar.inputTextView.text = ""
-  }
-}
+} // end extension ChatViewController: MessagesDisplayDelegate
 
 // MARK: - UIImagePickerControllerDelegate
 
 extension ChatViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
   
-}
+} // end extension ChatViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate
 
 // MARK: - MessagesDataSource
-
 extension ChatViewController: MessagesDataSource {
     func messageForItem(at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> MessageType {
         return messages[indexPath.section]
@@ -169,8 +168,10 @@ extension ChatViewController: MessagesDataSource {
       ]
     )
   }
-}
+} // end extension ChatViewController: MessagesDataSource
 
+
+// MARK: - MessageLayoutDelegate
 extension ChatViewController: MessagesLayoutDelegate {
 
   func avatarSize(for message: MessageType, at indexPath: IndexPath,
@@ -190,6 +191,6 @@ extension ChatViewController: MessagesLayoutDelegate {
 
     return 0
   }
-}
+} // end extension ChatViewController: MessagesLayoutDelegate
 
 

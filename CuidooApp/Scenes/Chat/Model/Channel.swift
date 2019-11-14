@@ -30,7 +30,7 @@ struct Channel {
     self.name = name
   }
   
-}
+} // end struct Channel
 
 extension Channel: DatabaseRepresentation {
   
@@ -44,7 +44,7 @@ extension Channel: DatabaseRepresentation {
     return rep
   }
   
-}
+} // end extension Channel: DataRepresentation
 
 //É necessário para cumprir o protocolo Equatable
 extension Channel: Comparable {
@@ -57,4 +57,4 @@ extension Channel: Comparable {
     return lhs.name < rhs.name
   }
 
-}
+} // end extension Channel: Comparable 

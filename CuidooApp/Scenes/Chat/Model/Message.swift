@@ -46,10 +46,11 @@ class Message: MessageType {
     
     init?(document: QueryDocumentSnapshot) {
       let data = document.data()
-      
-      guard let sentDate = data["created"] as? Date else {
+        
+      guard let sentDate = data["created"] as? Timestamp else {
         return nil
       }
+        
       guard let senderID = data["senderID"] as? String else {
         return nil
       }
@@ -59,7 +60,7 @@ class Message: MessageType {
       
       id = document.documentID
       
-      self.sentDate = sentDate
+      self.sentDate = sentDate.dateValue()
       sender = Sender(id: senderID, displayName: senderName)
       
       if let content = data["content"] as? String {
@@ -74,7 +75,7 @@ class Message: MessageType {
         return nil
       }
     }
-}
+} // end class Message 
 
 extension Message: DatabaseRepresentation {
     var representation: [String : Any] {
@@ -92,7 +93,7 @@ extension Message: DatabaseRepresentation {
         
         return rep
     }
-}
+} // end extension Message: DatabaseRepresentation
 
 //É necessário para cumprir o protocolo Equatable
 extension Message: Comparable {
@@ -105,4 +106,4 @@ extension Message: Comparable {
     return lhs.sentDate < rhs.sentDate
   }
   
-}
+} // end extension Message: Comparable
