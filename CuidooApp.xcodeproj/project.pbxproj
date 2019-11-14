@@ -20,6 +20,12 @@
 		E201500E23759BD0002D8C8B /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E201500D23759BD0002D8C8B /* History.storyboard */; };
 		E201501023759BDB002D8C8B /* Support.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E201500F23759BDB002D8C8B /* Support.storyboard */; };
 		E2A815C22378C4A0005D9C6F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E2A815C12378C4A0005D9C6F /* GoogleService-Info.plist */; };
+		E7CCFEE1237C4FA800F9DA94 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CCFEE0237C4FA800F9DA94 /* ChatViewController.swift */; };
+		E7CCFEE3237C685B00F9DA94 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CCFEE2237C685B00F9DA94 /* Channel.swift */; };
+		E7CCFEE5237C689A00F9DA94 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CCFEE4237C689A00F9DA94 /* Message.swift */; };
+		E7CCFEEF237C8DA400F9DA94 /* DatabaseRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CCFEEE237C8DA400F9DA94 /* DatabaseRepresentation.swift */; };
+		E7CCFEF6237C9B6B00F9DA94 /* ChatColorsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CCFEF5237C9B6B00F9DA94 /* ChatColorsExtension.swift */; };
+		E7CCFEF8237C9C0700F9DA94 /* CollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CCFEF7237C9C0700F9DA94 /* CollectionViewExtension.swift */; };
 		E7FF57CD2371A36A00F3FA22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FF57CC2371A36A00F3FA22 /* AppDelegate.swift */; };
 		E7FF57CF2371A36A00F3FA22 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FF57CE2371A36A00F3FA22 /* SceneDelegate.swift */; };
 		E7FF57D42371A36A00F3FA22 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7FF57D22371A36A00F3FA22 /* Auth.storyboard */; };
@@ -43,6 +49,12 @@
 		E201500D23759BD0002D8C8B /* History.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
 		E201500F23759BDB002D8C8B /* Support.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Support.storyboard; sourceTree = "<group>"; };
 		E2A815C12378C4A0005D9C6F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E7CCFEE0237C4FA800F9DA94 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		E7CCFEE2237C685B00F9DA94 /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
+		E7CCFEE4237C689A00F9DA94 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		E7CCFEEE237C8DA400F9DA94 /* DatabaseRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseRepresentation.swift; sourceTree = "<group>"; };
+		E7CCFEF5237C9B6B00F9DA94 /* ChatColorsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatColorsExtension.swift; sourceTree = "<group>"; };
+		E7CCFEF7237C9C0700F9DA94 /* CollectionViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewExtension.swift; sourceTree = "<group>"; };
 		E7FF57C92371A36A00F3FA22 /* CuidooApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CuidooApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7FF57CC2371A36A00F3FA22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E7FF57CE2371A36A00F3FA22 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -136,6 +148,10 @@
 		E2014FF823759754002D8C8B /* Chat */ = {
 			isa = PBXGroup;
 			children = (
+				E7CCFEE0237C4FA800F9DA94 /* ChatViewController.swift */,
+				E7CCFEE2237C685B00F9DA94 /* Channel.swift */,
+				E7CCFEE4237C689A00F9DA94 /* Message.swift */,
+				E7CCFEEE237C8DA400F9DA94 /* DatabaseRepresentation.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -175,6 +191,15 @@
 			name = Initial;
 			sourceTree = "<group>";
 		};
+		E7CCFEF4237C9B4B00F9DA94 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E7CCFEF5237C9B6B00F9DA94 /* ChatColorsExtension.swift */,
+				E7CCFEF7237C9C0700F9DA94 /* CollectionViewExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		E7FF57C02371A36900F3FA22 = {
 			isa = PBXGroup;
 			children = (
@@ -196,6 +221,7 @@
 		E7FF57CB2371A36A00F3FA22 /* CuidooApp */ = {
 			isa = PBXGroup;
 			children = (
+				E7CCFEF4237C9B4B00F9DA94 /* Extensions */,
 				E7FF57E22371A59A00F3FA22 /* Scenes */,
 				E7FF57E12371A4A600F3FA22 /* Resources */,
 				E7FF57E02371A49F00F3FA22 /* Storyboards */,
@@ -387,7 +413,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7FF57CD2371A36A00F3FA22 /* AppDelegate.swift in Sources */,
+				E7CCFEF8237C9C0700F9DA94 /* CollectionViewExtension.swift in Sources */,
+				E7CCFEE3237C685B00F9DA94 /* Channel.swift in Sources */,
+				E7CCFEEF237C8DA400F9DA94 /* DatabaseRepresentation.swift in Sources */,
+				E7CCFEF6237C9B6B00F9DA94 /* ChatColorsExtension.swift in Sources */,
 				4C765B01237991BC00D3D38B /* SearchViewController.swift in Sources */,
+				E7CCFEE5237C689A00F9DA94 /* Message.swift in Sources */,
+				E7CCFEE1237C4FA800F9DA94 /* ChatViewController.swift in Sources */,
 				E7FF57CF2371A36A00F3FA22 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

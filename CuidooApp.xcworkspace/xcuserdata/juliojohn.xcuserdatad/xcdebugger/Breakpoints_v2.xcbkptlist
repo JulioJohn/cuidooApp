@@ -66,38 +66,6 @@
             endingLineNumber = "80"
             landmarkName = "register(_:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "531A956B-4DE1-4C21-B4BD-F4737D42BFA7 - 312762548e341a19"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CuidooApp.AuthUserViewController.register(Any) -&gt; ()"
-                  moduleName = "CuidooApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/juliojohn/Desktop/CuidooApp/CuidooApp/Scenes/AuthUserViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "80"
-                  endingLineNumber = "80"
-                  offsetFromSymbolStart = "2492">
-               </Location>
-               <Location
-                  uuid = "531A956B-4DE1-4C21-B4BD-F4737D42BFA7 - 93d229122f9b9dc4"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #4 (CuidooApp.FirestoreResponse) -&gt; () in CuidooApp.AuthUserViewController.register(Any) -&gt; ()"
-                  moduleName = "CuidooApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/juliojohn/Desktop/CuidooApp/CuidooApp/Scenes/AuthUserViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "80"
-                  endingLineNumber = "80"
-                  offsetFromSymbolStart = "96">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -130,38 +98,6 @@
             endingLineNumber = "40"
             landmarkName = "register(user:completion:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "18DEC176-A06E-4819-A108-F2A27D2CA7D8 - 84d9dc3a52c9e116"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CuidooApp.UserManager.register(user: CuidooApp.AuthUser, completion: (CuidooApp.FirestoreResponse) -&gt; ()) -&gt; ()"
-                  moduleName = "CuidooApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/juliojohn/Desktop/CuidooApp/CuidooApp/Resources/Data%20Manager/UserManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "40"
-                  endingLineNumber = "40"
-                  offsetFromSymbolStart = "372">
-               </Location>
-               <Location
-                  uuid = "18DEC176-A06E-4819-A108-F2A27D2CA7D8 - d42ed73cfabc44c"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRAuthDataResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in CuidooApp.UserManager.register(user: CuidooApp.AuthUser, completion: (CuidooApp.FirestoreResponse) -&gt; ()) -&gt; ()"
-                  moduleName = "CuidooApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/juliojohn/Desktop/CuidooApp/CuidooApp/Resources/Data%20Manager/UserManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "40"
-                  endingLineNumber = "40"
-                  offsetFromSymbolStart = "168">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -210,38 +146,6 @@
             endingLineNumber = "43"
             landmarkName = "register(user:completion:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "D29DB5E4-179B-44C0-8877-207FEE9107FE - d42ed73cfabc44c"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRAuthDataResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in CuidooApp.UserManager.register(user: CuidooApp.AuthUser, completion: (CuidooApp.FirestoreResponse) -&gt; ()) -&gt; ()"
-                  moduleName = "CuidooApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/juliojohn/Desktop/CuidooApp/CuidooApp/Resources/Data%20Manager/UserManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "43"
-                  endingLineNumber = "43"
-                  offsetFromSymbolStart = "780">
-               </Location>
-               <Location
-                  uuid = "D29DB5E4-179B-44C0-8877-207FEE9107FE - cef61fd553e2c193"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (CuidooApp.FirestoreResponse) -&gt; () in closure #1 (Swift.Optional&lt;__C.FIRAuthDataResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in CuidooApp.UserManager.register(user: CuidooApp.AuthUser, completion: (CuidooApp.FirestoreResponse) -&gt; ()) -&gt; ()"
-                  moduleName = "CuidooApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/juliojohn/Desktop/CuidooApp/CuidooApp/Resources/Data%20Manager/UserManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "44"
-                  endingLineNumber = "44"
-                  offsetFromSymbolStart = "120">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
