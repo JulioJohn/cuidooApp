@@ -3,24 +3,71 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="66" id="TXC-5d-QgE">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="66"/>
-            <autoresizingMask key="autoresizingMask"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TXC-5d-QgE" id="Gzi-M5-Up9">
-                <rect key="frame" x="0.0" y="0.0" width="414" height="66"/>
-                <autoresizingMask key="autoresizingMask"/>
-                <userDefinedRuntimeAttributes>
-                    <userDefinedRuntimeAttribute type="number" keyPath="corner.radius">
-                        <integer key="value" value="10"/>
-                    </userDefinedRuntimeAttribute>
-                </userDefinedRuntimeAttributes>
-            </tableViewCellContentView>
-            <point key="canvasLocation" x="50.724637681159422" y="-30.133928571428569"/>
-        </tableViewCell>
+        <view contentMode="scaleToFill" id="32J-uZ-UQ2" customClass="BabySitterTypeView" customModule="CuidooApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="374" height="75"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wo0-tG-gVA">
+                    <rect key="frame" x="16" y="10" width="342" height="55"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cuidadora" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gUZ-Dm-gwz">
+                            <rect key="frame" x="16" y="13" width="83" height="12"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="xx minutos até você" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4c-9c-pSL">
+                            <rect key="frame" x="16" y="25" width="134" height="18"/>
+                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$00,00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cbL-bb-NZE">
+                            <rect key="frame" x="267" y="25" width="59" height="18"/>
+                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="g4c-9c-pSL" firstAttribute="leading" secondItem="wo0-tG-gVA" secondAttribute="leading" constant="16" id="4rE-YU-yFo"/>
+                        <constraint firstItem="gUZ-Dm-gwz" firstAttribute="leading" secondItem="wo0-tG-gVA" secondAttribute="leading" constant="16" id="5c4-EN-ps7"/>
+                        <constraint firstAttribute="trailing" secondItem="cbL-bb-NZE" secondAttribute="trailing" constant="16" id="FRT-MP-jFe"/>
+                        <constraint firstAttribute="bottom" secondItem="cbL-bb-NZE" secondAttribute="bottom" constant="12" id="Pqn-na-z8l"/>
+                        <constraint firstItem="gUZ-Dm-gwz" firstAttribute="top" secondItem="wo0-tG-gVA" secondAttribute="top" constant="13" id="QM0-WA-GF0"/>
+                        <constraint firstItem="g4c-9c-pSL" firstAttribute="top" secondItem="gUZ-Dm-gwz" secondAttribute="bottom" id="aHV-79-U7P"/>
+                        <constraint firstItem="cbL-bb-NZE" firstAttribute="centerY" secondItem="g4c-9c-pSL" secondAttribute="centerY" id="cE7-Kk-dhd"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <integer key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="wo0-tG-gVA" firstAttribute="leading" secondItem="wOB-Kq-ufP" secondAttribute="leading" constant="16" id="3il-oO-WHN"/>
+                <constraint firstAttribute="bottom" secondItem="wo0-tG-gVA" secondAttribute="bottom" constant="10" id="ZJ5-8R-qrm"/>
+                <constraint firstItem="wo0-tG-gVA" firstAttribute="top" secondItem="32J-uZ-UQ2" secondAttribute="top" constant="10" id="aCn-ON-3Ke"/>
+                <constraint firstItem="wOB-Kq-ufP" firstAttribute="trailing" secondItem="wo0-tG-gVA" secondAttribute="trailing" constant="16" id="sPD-Al-xUo"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="wOB-Kq-ufP"/>
+            <connections>
+                <outlet property="babySitterType" destination="gUZ-Dm-gwz" id="uZa-kI-1uz"/>
+                <outlet property="distanceInTime" destination="g4c-9c-pSL" id="cVC-VK-OW4"/>
+            </connections>
+            <point key="canvasLocation" x="63.768115942028992" y="90.066964285714278"/>
+        </view>
     </objects>
 </document>

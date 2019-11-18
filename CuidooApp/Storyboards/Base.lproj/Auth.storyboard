@@ -43,7 +43,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Proxima tela"/>
                                 <connections>
-                                    <segue destination="qQB-St-NMw" kind="show" id="83U-1B-wwh"/>
+                                    <segue destination="qQB-St-NMw" kind="show" id="iml-oo-Vsc"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YtD-Ox-q4V">

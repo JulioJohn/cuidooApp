@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4C4A3A80237C2B19009A3B64 /* celulaCuidadoras.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C4A3A7F237C2B19009A3B64 /* celulaCuidadoras.xib */; };
 		4C765B01237991BC00D3D38B /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C765B00237991BC00D3D38B /* SearchViewController.swift */; };
+		4CE2AC4D2382C24200614B0A /* BabySitterTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE2AC4C2382C24200614B0A /* BabySitterTypeTableViewCell.swift */; };
 		7B04F344FDE1CDCE8574C748 /* Pods_CuidooApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA842981CFE67996BA18031C /* Pods_CuidooApp.framework */; };
 		E2014FFF23759B4F002D8C8B /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2014FFE23759B4F002D8C8B /* Search.storyboard */; };
 		E201500123759B58002D8C8B /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E201500023759B58002D8C8B /* Profile.storyboard */; };
@@ -38,6 +39,7 @@
 		303077478AF76DECDC033BE2 /* Pods-CuidooApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CuidooApp.debug.xcconfig"; path = "Target Support Files/Pods-CuidooApp/Pods-CuidooApp.debug.xcconfig"; sourceTree = "<group>"; };
 		4C4A3A7F237C2B19009A3B64 /* celulaCuidadoras.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = celulaCuidadoras.xib; sourceTree = "<group>"; };
 		4C765B00237991BC00D3D38B /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		4CE2AC4C2382C24200614B0A /* BabySitterTypeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabySitterTypeTableViewCell.swift; sourceTree = "<group>"; };
 		800AE3D6E1EBAC85C2721D3B /* Pods-CuidooApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CuidooApp.release.xcconfig"; path = "Target Support Files/Pods-CuidooApp/Pods-CuidooApp.release.xcconfig"; sourceTree = "<group>"; };
 		BA842981CFE67996BA18031C /* Pods_CuidooApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CuidooApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2014FFE23759B4F002D8C8B /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 		4C765AFF2379909200D3D38B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4CE2AC4C2382C24200614B0A /* BabySitterTypeTableViewCell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -439,6 +442,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CE2AC4D2382C24200614B0A /* BabySitterTypeTableViewCell.swift in Sources */,
 				E7FF57CD2371A36A00F3FA22 /* AppDelegate.swift in Sources */,
 				E7CCFEF8237C9C0700F9DA94 /* CollectionViewExtension.swift in Sources */,
 				E7CCFEE3237C685B00F9DA94 /* Channel.swift in Sources */,

@@ -17,7 +17,7 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.searchButton.layer.cornerRadius = 20
-        //SearchTableView.delegate = self as! UITableViewDelegate
+        SearchTableView.delegate = self as UITableViewDelegate
         // Do any additional setup after loading the view.
     }
     
@@ -34,14 +34,15 @@ class SearchViewController: UIViewController {
 
 }
 
-//extension SearchViewController: UITableViewDataSource{
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//
-//    }
-//}
-//
-//extension SearchViewController: UITableViewDelegate{
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return 1
-//    }
-//}
+extension SearchViewController: UITableViewDataSource{
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let newCell = SearchTableView.dequeueReusableCell(withIdentifier: "SearchCellIdentifier", for: indexPath)
+        return newCell
+    }
+}
+
+extension SearchViewController: UITableViewDelegate{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+}
