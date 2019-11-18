@@ -20,6 +20,7 @@
 		E201500E23759BD0002D8C8B /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E201500D23759BD0002D8C8B /* History.storyboard */; };
 		E201501023759BDB002D8C8B /* Support.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E201500F23759BDB002D8C8B /* Support.storyboard */; };
 		E2A815C22378C4A0005D9C6F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E2A815C12378C4A0005D9C6F /* GoogleService-Info.plist */; };
+		E2FA40F92382D6BC009B0090 /* profileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FA40F82382D6BC009B0090 /* profileViewController.swift */; };
 		E7CCFEE1237C4FA800F9DA94 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CCFEE0237C4FA800F9DA94 /* ChatViewController.swift */; };
 		E7CCFEE3237C685B00F9DA94 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CCFEE2237C685B00F9DA94 /* Channel.swift */; };
 		E7CCFEE5237C689A00F9DA94 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CCFEE4237C689A00F9DA94 /* Message.swift */; };
@@ -49,6 +50,7 @@
 		E201500D23759BD0002D8C8B /* History.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
 		E201500F23759BDB002D8C8B /* Support.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Support.storyboard; sourceTree = "<group>"; };
 		E2A815C12378C4A0005D9C6F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E2FA40F82382D6BC009B0090 /* profileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileViewController.swift; sourceTree = SOURCE_ROOT; };
 		E7CCFEE0237C4FA800F9DA94 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		E7CCFEE2237C685B00F9DA94 /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
 		E7CCFEE4237C689A00F9DA94 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 		E2014FFA23759765002D8C8B /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				E2255D4B2382D625001B61CB /* Controller */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -198,6 +201,14 @@
 			children = (
 			);
 			path = Support;
+			sourceTree = "<group>";
+		};
+		E2255D4B2382D625001B61CB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E2FA40F82382D6BC009B0090 /* profileViewController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 		E2A815C32378C6D5005D9C6F /* Initial */ = {
@@ -436,6 +447,7 @@
 				4C765B01237991BC00D3D38B /* SearchViewController.swift in Sources */,
 				E7CCFEE5237C689A00F9DA94 /* Message.swift in Sources */,
 				E7CCFEE1237C4FA800F9DA94 /* ChatViewController.swift in Sources */,
+				E2FA40F92382D6BC009B0090 /* profileViewController.swift in Sources */,
 				E7FF57CF2371A36A00F3FA22 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -581,7 +593,7 @@
 			baseConfigurationReference = 303077478AF76DECDC033BE2 /* Pods-CuidooApp.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P8PFF3RBDA;
+				DEVELOPMENT_TEAM = 76DX35F6T7;
 				INFOPLIST_FILE = CuidooApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -599,7 +611,7 @@
 			baseConfigurationReference = 800AE3D6E1EBAC85C2721D3B /* Pods-CuidooApp.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P8PFF3RBDA;
+				DEVELOPMENT_TEAM = 76DX35F6T7;
 				INFOPLIST_FILE = CuidooApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
