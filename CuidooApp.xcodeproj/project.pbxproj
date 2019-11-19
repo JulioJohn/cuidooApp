@@ -490,11 +490,8 @@
 				E7CCFEE3237C685B00F9DA94 /* Channel.swift in Sources */,
 				E7CCFEFB2384192800F9DA94 /* AuthViewController.swift in Sources */,
 				4CEFB1BE238359380073F0D9 /* BabySitterEntity.swift in Sources */,
-<<<<<<< Updated upstream
 				E2F65A8D23840C4400E9EEA8 /* profileViewController.swift in Sources */,
-=======
 				4CEFB1C923840CC90073F0D9 /* MapCell.swift in Sources */,
->>>>>>> Stashed changes
 				E7CCFEEF237C8DA400F9DA94 /* DatabaseRepresentation.swift in Sources */,
 				E7CCFEF6237C9B6B00F9DA94 /* ChatColorsExtension.swift in Sources */,
 				4C765B01237991BC00D3D38B /* SearchViewController.swift in Sources */,
