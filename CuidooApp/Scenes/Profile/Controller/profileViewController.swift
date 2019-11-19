@@ -1,5 +1,5 @@
 //
-//  profileViewController.swift
+//  ProfileViewController.swift
 //  CuidooApp
 //
 //  Created by Victoria Andressa S. M. Faria on 18/11/19.
@@ -8,19 +8,15 @@
 
 import UIKit
 
-class profileViewController: UIViewController {
+class profileViewController: UITableViewController {
+    
+
+ // MARK: - IBOultlets
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
 
-    
-    
-    
-    
-
-} // end class profileViewController
+} // end class ProfileViewController

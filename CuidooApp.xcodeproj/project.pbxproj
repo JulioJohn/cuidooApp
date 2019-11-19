@@ -24,7 +24,8 @@
 		E201500E23759BD0002D8C8B /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E201500D23759BD0002D8C8B /* History.storyboard */; };
 		E201501023759BDB002D8C8B /* Support.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E201500F23759BDB002D8C8B /* Support.storyboard */; };
 		E2A815C22378C4A0005D9C6F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E2A815C12378C4A0005D9C6F /* GoogleService-Info.plist */; };
-		E2FA40F92382D6BC009B0090 /* profileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FA40F82382D6BC009B0090 /* profileViewController.swift */; };
+		E2F65A8D23840C4400E9EEA8 /* profileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F65A8C23840C4400E9EEA8 /* profileViewController.swift */; };
+		E2F65A9323840F3100E9EEA8 /* Config.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2F65A9223840F3100E9EEA8 /* Config.storyboard */; };
 		E7CCFEE1237C4FA800F9DA94 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CCFEE0237C4FA800F9DA94 /* ChatViewController.swift */; };
 		E7CCFEE3237C685B00F9DA94 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CCFEE2237C685B00F9DA94 /* Channel.swift */; };
 		E7CCFEE5237C689A00F9DA94 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CCFEE4237C689A00F9DA94 /* Message.swift */; };
@@ -58,7 +59,8 @@
 		E201500D23759BD0002D8C8B /* History.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
 		E201500F23759BDB002D8C8B /* Support.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Support.storyboard; sourceTree = "<group>"; };
 		E2A815C12378C4A0005D9C6F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		E2FA40F82382D6BC009B0090 /* profileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileViewController.swift; sourceTree = SOURCE_ROOT; };
+		E2F65A8C23840C4400E9EEA8 /* profileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = profileViewController.swift; sourceTree = "<group>"; };
+		E2F65A9223840F3100E9EEA8 /* Config.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Config.storyboard; sourceTree = "<group>"; };
 		E7CCFEE0237C4FA800F9DA94 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		E7CCFEE2237C685B00F9DA94 /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
 		E7CCFEE4237C689A00F9DA94 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
@@ -188,38 +190,9 @@
 		E2014FFA23759765002D8C8B /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				E2255D4B2382D625001B61CB /* Controller */,
+				E2F65A8B23840C4400E9EEA8 /* Controller */,
 			);
 			path = Profile;
-			sourceTree = "<group>";
-		};
-		E2014FFB23759775002D8C8B /* Bio */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Bio;
-			sourceTree = "<group>";
-		};
-		E2014FFC23759789002D8C8B /* History */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = History;
-			sourceTree = "<group>";
-		};
-		E2014FFD2375979C002D8C8B /* Support */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Support;
-			sourceTree = "<group>";
-		};
-		E2255D4B2382D625001B61CB /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				E2FA40F82382D6BC009B0090 /* profileViewController.swift */,
-			);
-			name = Controller;
 			sourceTree = "<group>";
 		};
 		E2A815C32378C6D5005D9C6F /* Initial */ = {
@@ -227,6 +200,35 @@
 			children = (
 			);
 			name = Initial;
+			sourceTree = "<group>";
+		};
+		E2F65A8B23840C4400E9EEA8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E2F65A8C23840C4400E9EEA8 /* profileViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E2F65A8E23840D3000E9EEA8 /* Bio */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Bio;
+			sourceTree = "<group>";
+		};
+		E2F65A9023840DB900E9EEA8 /* History */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		E2F65A9123840DCF00E9EEA8 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Support;
 			sourceTree = "<group>";
 		};
 		E7CCFEF4237C9B4B00F9DA94 /* Extensions */ = {
@@ -284,6 +286,7 @@
 				E201500D23759BD0002D8C8B /* History.storyboard */,
 				E201500F23759BDB002D8C8B /* Support.storyboard */,
 				E7FF57D72371A36F00F3FA22 /* LaunchScreen.storyboard */,
+				E2F65A9223840F3100E9EEA8 /* Config.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -309,9 +312,9 @@
 				E2014FF723759737002D8C8B /* Requested */,
 				E2014FF823759754002D8C8B /* Chat */,
 				E2014FFA23759765002D8C8B /* Profile */,
-				E2014FFB23759775002D8C8B /* Bio */,
-				E2014FFC23759789002D8C8B /* History */,
-				E2014FFD2375979C002D8C8B /* Support */,
+				E2F65A8E23840D3000E9EEA8 /* Bio */,
+				E2F65A9023840DB900E9EEA8 /* History */,
+				E2F65A9123840DCF00E9EEA8 /* Support */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -399,6 +402,7 @@
 				E201500C23759BC7002D8C8B /* Bio.storyboard in Resources */,
 				E2014FFF23759B4F002D8C8B /* Search.storyboard in Resources */,
 				E201500E23759BD0002D8C8B /* History.storyboard in Resources */,
+				E2F65A9323840F3100E9EEA8 /* Config.storyboard in Resources */,
 				E2A815C22378C4A0005D9C6F /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -456,6 +460,7 @@
 				E7CCFEF8237C9C0700F9DA94 /* CollectionViewExtension.swift in Sources */,
 				E7CCFEE3237C685B00F9DA94 /* Channel.swift in Sources */,
 				4CEFB1BE238359380073F0D9 /* BabySitterEntity.swift in Sources */,
+				E2F65A8D23840C4400E9EEA8 /* profileViewController.swift in Sources */,
 				E7CCFEEF237C8DA400F9DA94 /* DatabaseRepresentation.swift in Sources */,
 				E7CCFEF6237C9B6B00F9DA94 /* ChatColorsExtension.swift in Sources */,
 				4C765B01237991BC00D3D38B /* SearchViewController.swift in Sources */,
@@ -463,7 +468,6 @@
 				4CFF8DE023835312000B5DB9 /* BabySitterCell.swift in Sources */,
 				4CEFB1C3238361600073F0D9 /* InfoCell.swift in Sources */,
 				E7CCFEE1237C4FA800F9DA94 /* ChatViewController.swift in Sources */,
-				E2FA40F92382D6BC009B0090 /* profileViewController.swift in Sources */,
 				E7FF57CF2371A36A00F3FA22 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -130,12 +130,27 @@
 			<key>orderHint</key>
 			<integer>16</integer>
 		</dict>
+		<key>InputBarAccessoryView.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>27</integer>
+		</dict>
 		<key>Kingfisher.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>21</integer>
+		</dict>
+		<key>MessageKit-MessageKitAssets.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>29</integer>
+		</dict>
+		<key>MessageKit.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>28</integer>
 		</dict>
 		<key>Pods-CuidooApp.xcscheme</key>
 		<dict>
