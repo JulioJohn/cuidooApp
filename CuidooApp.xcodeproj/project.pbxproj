@@ -32,6 +32,7 @@
 		E7CCFEEF237C8DA400F9DA94 /* DatabaseRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CCFEEE237C8DA400F9DA94 /* DatabaseRepresentation.swift */; };
 		E7CCFEF6237C9B6B00F9DA94 /* ChatColorsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CCFEF5237C9B6B00F9DA94 /* ChatColorsExtension.swift */; };
 		E7CCFEF8237C9C0700F9DA94 /* CollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CCFEF7237C9C0700F9DA94 /* CollectionViewExtension.swift */; };
+		E7CCFEFB2384192800F9DA94 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CCFEFA2384192800F9DA94 /* AuthViewController.swift */; };
 		E7FF57CD2371A36A00F3FA22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FF57CC2371A36A00F3FA22 /* AppDelegate.swift */; };
 		E7FF57CF2371A36A00F3FA22 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FF57CE2371A36A00F3FA22 /* SceneDelegate.swift */; };
 		E7FF57D42371A36A00F3FA22 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7FF57D22371A36A00F3FA22 /* Auth.storyboard */; };
@@ -67,6 +68,7 @@
 		E7CCFEEE237C8DA400F9DA94 /* DatabaseRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseRepresentation.swift; sourceTree = "<group>"; };
 		E7CCFEF5237C9B6B00F9DA94 /* ChatColorsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatColorsExtension.swift; sourceTree = "<group>"; };
 		E7CCFEF7237C9C0700F9DA94 /* CollectionViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewExtension.swift; sourceTree = "<group>"; };
+		E7CCFEFA2384192800F9DA94 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		E7FF57C92371A36A00F3FA22 /* CuidooApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CuidooApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7FF57CC2371A36A00F3FA22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E7FF57CE2371A36A00F3FA22 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -240,6 +242,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		E7CCFEF92384191200F9DA94 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				E7CCFEFA2384192800F9DA94 /* AuthViewController.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
 		E7FF57C02371A36900F3FA22 = {
 			isa = PBXGroup;
 			children = (
@@ -304,6 +314,7 @@
 		E7FF57E22371A59A00F3FA22 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				E7CCFEF92384191200F9DA94 /* Auth */,
 				4C4A3A81237C3450009A3B64 /* Match */,
 				E2A815C32378C6D5005D9C6F /* Initial */,
 				E2014FF5237596E5002D8C8B /* Search */,
@@ -459,6 +470,7 @@
 				E7FF57CD2371A36A00F3FA22 /* AppDelegate.swift in Sources */,
 				E7CCFEF8237C9C0700F9DA94 /* CollectionViewExtension.swift in Sources */,
 				E7CCFEE3237C685B00F9DA94 /* Channel.swift in Sources */,
+				E7CCFEFB2384192800F9DA94 /* AuthViewController.swift in Sources */,
 				4CEFB1BE238359380073F0D9 /* BabySitterEntity.swift in Sources */,
 				E2F65A8D23840C4400E9EEA8 /* profileViewController.swift in Sources */,
 				E7CCFEEF237C8DA400F9DA94 /* DatabaseRepresentation.swift in Sources */,
@@ -613,7 +625,7 @@
 			baseConfigurationReference = 303077478AF76DECDC033BE2 /* Pods-CuidooApp.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 76DX35F6T7;
+				DEVELOPMENT_TEAM = 97PTJ72QJZ;
 				INFOPLIST_FILE = CuidooApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -631,7 +643,7 @@
 			baseConfigurationReference = 800AE3D6E1EBAC85C2721D3B /* Pods-CuidooApp.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 76DX35F6T7;
+				DEVELOPMENT_TEAM = 97PTJ72QJZ;
 				INFOPLIST_FILE = CuidooApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
