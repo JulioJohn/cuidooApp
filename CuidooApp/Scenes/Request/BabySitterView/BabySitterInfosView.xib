@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB" customClass="BabySitterInfosView" customModule="CuidooApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="668"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moça" translatesAutoresizingMaskIntoConstraints="NO" id="wQR-7u-0lV">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="300" id="qb8-6J-haS"/>
+                    </constraints>
+                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pEo-Kw-0Yb">
+                    <rect key="frame" x="0.0" y="300" width="414" height="368"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zyl-kD-jb5">
+                            <rect key="frame" x="16" y="59.5" width="382" height="81.5"/>
+                            <string key="text">Eu moro com a minha mãe, mas meu pai vem me visitar. Eu moro na rua, não tenho ninguém. Eu moro em qualquer lugar. Você é a vergonha da profisson </string>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YiA-M4-x6T">
+                            <rect key="frame" x="0.0" y="149" width="414" height="219"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="751" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="SOBRE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K9s-G6-rhj">
+                            <rect key="frame" x="180" y="24" width="54" height="19.5"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                    <constraints>
+                        <constraint firstItem="Zyl-kD-jb5" firstAttribute="top" secondItem="K9s-G6-rhj" secondAttribute="bottom" constant="16" id="Mse-Lc-GoY"/>
+                        <constraint firstAttribute="trailing" secondItem="YiA-M4-x6T" secondAttribute="trailing" id="Q5h-HA-dD7"/>
+                        <constraint firstAttribute="bottom" secondItem="YiA-M4-x6T" secondAttribute="bottom" id="a1o-8H-cZu"/>
+                        <constraint firstItem="YiA-M4-x6T" firstAttribute="leading" secondItem="pEo-Kw-0Yb" secondAttribute="leading" id="aIn-IU-Wdb"/>
+                        <constraint firstItem="YiA-M4-x6T" firstAttribute="top" secondItem="Zyl-kD-jb5" secondAttribute="bottom" constant="8" id="bdJ-NE-dst"/>
+                        <constraint firstItem="K9s-G6-rhj" firstAttribute="top" secondItem="pEo-Kw-0Yb" secondAttribute="top" constant="24" id="fDK-qd-z0F"/>
+                        <constraint firstItem="K9s-G6-rhj" firstAttribute="centerX" secondItem="pEo-Kw-0Yb" secondAttribute="centerX" id="mh3-Xt-ryj"/>
+                        <constraint firstItem="Zyl-kD-jb5" firstAttribute="leading" secondItem="pEo-Kw-0Yb" secondAttribute="leading" constant="16" id="tAi-6p-gbA"/>
+                        <constraint firstAttribute="trailing" secondItem="Zyl-kD-jb5" secondAttribute="trailing" constant="16" id="xLe-89-f2N"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="pEo-Kw-0Yb" secondAttribute="trailing" id="DHb-Zp-pL5"/>
+                <constraint firstItem="pEo-Kw-0Yb" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="M88-fj-zbd"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="pEo-Kw-0Yb" secondAttribute="trailing" id="MIS-OZ-D74"/>
+                <constraint firstItem="wQR-7u-0lV" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="OtM-82-qpn"/>
+                <constraint firstItem="wQR-7u-0lV" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="YmT-mV-OLO"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="pEo-Kw-0Yb" secondAttribute="bottom" id="oaY-MS-g8a"/>
+                <constraint firstItem="pEo-Kw-0Yb" firstAttribute="top" secondItem="wQR-7u-0lV" secondAttribute="bottom" id="s4t-Oo-FvR"/>
+                <constraint firstItem="wQR-7u-0lV" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="sXe-Y0-su8"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="babySitterImage" destination="wQR-7u-0lV" id="efj-yR-pbO"/>
+                <outlet property="bottomView" destination="pEo-Kw-0Yb" id="a8c-rf-hbK"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="120.53571428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="moça" width="359" height="621"/>
+    </resources>
+</document>
