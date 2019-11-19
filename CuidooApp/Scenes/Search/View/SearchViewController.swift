@@ -24,6 +24,8 @@ class SearchViewController: UIViewController {
         
         searchTableView.register(UINib(nibName: "BabySitterCell", bundle: nil), forCellReuseIdentifier: "babySitterCell")
         searchTableView.register(UINib(nibName: "InfoCell", bundle: nil), forCellReuseIdentifier: "infoCell")
+        searchTableView.register(UINib(nibName: "MapCell", bundle: nil), forCellReuseIdentifier:
+            "mapCell")
         
         searchTableView.tableFooterView = UIView()
         searchTableView.estimatedRowHeight = 200
@@ -67,8 +69,11 @@ extension SearchViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.section {
         case 0:
-            let newCell = searchTableView.dequeueReusableCell(withIdentifier: "locationCell", for: indexPath)
-            return newCell
+            let newCell = searchTableView.dequeueReusableCell(withIdentifier: "mapCell", for: indexPath) as? MapCell
+            newCell?.configure(delegate: self)
+            
+            guard let cell = newCell else { return UITableViewCell()}
+            return cell
         case 1:
             let newCell = searchTableView.dequeueReusableCell(withIdentifier: "infoCell", for: indexPath) as? InfoCell
             newCell?.configure(delegate: self)

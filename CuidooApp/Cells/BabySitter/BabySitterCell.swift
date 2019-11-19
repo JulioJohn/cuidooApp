@@ -24,12 +24,12 @@ class BabySitterCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
         
         if selected {
-            colorView.backgroundColor = .purple
+            colorView.backgroundColor = .cuidooPurple
             titleLabel.textColor = .white
             timeLabel.textColor = .white
             priceLabel.textColor = .white
         } else {
-            colorView.backgroundColor = .lightGray
+            colorView.backgroundColor = .cuidooLightGrey
             titleLabel.textColor = .black
             timeLabel.textColor = .black
             priceLabel.textColor = .black

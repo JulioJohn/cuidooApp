@@ -7,11 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C3D1092238425C2002CAB84 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3D1091238425C2002CAB84 /* UIColorExtensions.swift */; };
 		4C4A3A80237C2B19009A3B64 /* BabySitterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C4A3A7F237C2B19009A3B64 /* BabySitterCell.xib */; };
 		4C765B01237991BC00D3D38B /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C765B00237991BC00D3D38B /* SearchViewController.swift */; };
 		4CEFB1BE238359380073F0D9 /* BabySitterEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEFB1BD238359380073F0D9 /* BabySitterEntity.swift */; };
 		4CEFB1C3238361600073F0D9 /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEFB1C1238361600073F0D9 /* InfoCell.swift */; };
 		4CEFB1C4238361600073F0D9 /* InfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CEFB1C2238361600073F0D9 /* InfoCell.xib */; };
+		4CEFB1C923840CC90073F0D9 /* MapCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEFB1C723840CC90073F0D9 /* MapCell.swift */; };
+		4CEFB1CA23840CC90073F0D9 /* MapCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CEFB1C823840CC90073F0D9 /* MapCell.xib */; };
 		4CFF8DE023835312000B5DB9 /* BabySitterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFF8DDF23835312000B5DB9 /* BabySitterCell.swift */; };
 		7B04F344FDE1CDCE8574C748 /* Pods_CuidooApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA842981CFE67996BA18031C /* Pods_CuidooApp.framework */; };
 		E2014FFF23759B4F002D8C8B /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2014FFE23759B4F002D8C8B /* Search.storyboard */; };
@@ -42,11 +45,14 @@
 
 /* Begin PBXFileReference section */
 		303077478AF76DECDC033BE2 /* Pods-CuidooApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CuidooApp.debug.xcconfig"; path = "Target Support Files/Pods-CuidooApp/Pods-CuidooApp.debug.xcconfig"; sourceTree = "<group>"; };
+		4C3D1091238425C2002CAB84 /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 		4C4A3A7F237C2B19009A3B64 /* BabySitterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BabySitterCell.xib; sourceTree = "<group>"; };
 		4C765B00237991BC00D3D38B /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		4CEFB1BD238359380073F0D9 /* BabySitterEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabySitterEntity.swift; sourceTree = "<group>"; };
 		4CEFB1C1238361600073F0D9 /* InfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCell.swift; sourceTree = "<group>"; };
 		4CEFB1C2238361600073F0D9 /* InfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoCell.xib; sourceTree = "<group>"; };
+		4CEFB1C723840CC90073F0D9 /* MapCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapCell.swift; sourceTree = "<group>"; };
+		4CEFB1C823840CC90073F0D9 /* MapCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapCell.xib; sourceTree = "<group>"; };
 		4CFF8DDF23835312000B5DB9 /* BabySitterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabySitterCell.swift; sourceTree = "<group>"; };
 		800AE3D6E1EBAC85C2721D3B /* Pods-CuidooApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CuidooApp.release.xcconfig"; path = "Target Support Files/Pods-CuidooApp/Pods-CuidooApp.release.xcconfig"; sourceTree = "<group>"; };
 		BA842981CFE67996BA18031C /* Pods_CuidooApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CuidooApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,9 +132,10 @@
 		4CEFB1BF2383611C0073F0D9 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				4CEFB1C0238361240073F0D9 /* BabySitter */,
+				4CEFB1C623840CA00073F0D9 /* map */,
 				4CEFB1C1238361600073F0D9 /* InfoCell.swift */,
 				4CEFB1C2238361600073F0D9 /* InfoCell.xib */,
+				4CEFB1C0238361240073F0D9 /* BabySitter */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -141,6 +148,15 @@
 				4CEFB1BD238359380073F0D9 /* BabySitterEntity.swift */,
 			);
 			path = BabySitter;
+			sourceTree = "<group>";
+		};
+		4CEFB1C623840CA00073F0D9 /* map */ = {
+			isa = PBXGroup;
+			children = (
+				4CEFB1C723840CC90073F0D9 /* MapCell.swift */,
+				4CEFB1C823840CC90073F0D9 /* MapCell.xib */,
+			);
+			path = map;
 			sourceTree = "<group>";
 		};
 		7A10E2F6808C474F7E0A412E /* Frameworks */ = {
@@ -238,6 +254,7 @@
 			children = (
 				E7CCFEF5237C9B6B00F9DA94 /* ChatColorsExtension.swift */,
 				E7CCFEF7237C9C0700F9DA94 /* CollectionViewExtension.swift */,
+				4C3D1091238425C2002CAB84 /* UIColorExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -409,6 +426,7 @@
 				E201501023759BDB002D8C8B /* Support.storyboard in Resources */,
 				E7FF57D62371A36F00F3FA22 /* Assets.xcassets in Resources */,
 				E7FF57D42371A36A00F3FA22 /* Auth.storyboard in Resources */,
+				4CEFB1CA23840CC90073F0D9 /* MapCell.xib in Resources */,
 				E201500A23759BB4002D8C8B /* Chat.storyboard in Resources */,
 				E201500C23759BC7002D8C8B /* Bio.storyboard in Resources */,
 				E2014FFF23759B4F002D8C8B /* Search.storyboard in Resources */,
@@ -472,11 +490,16 @@
 				E7CCFEE3237C685B00F9DA94 /* Channel.swift in Sources */,
 				E7CCFEFB2384192800F9DA94 /* AuthViewController.swift in Sources */,
 				4CEFB1BE238359380073F0D9 /* BabySitterEntity.swift in Sources */,
+<<<<<<< Updated upstream
 				E2F65A8D23840C4400E9EEA8 /* profileViewController.swift in Sources */,
+=======
+				4CEFB1C923840CC90073F0D9 /* MapCell.swift in Sources */,
+>>>>>>> Stashed changes
 				E7CCFEEF237C8DA400F9DA94 /* DatabaseRepresentation.swift in Sources */,
 				E7CCFEF6237C9B6B00F9DA94 /* ChatColorsExtension.swift in Sources */,
 				4C765B01237991BC00D3D38B /* SearchViewController.swift in Sources */,
 				E7CCFEE5237C689A00F9DA94 /* Message.swift in Sources */,
+				4C3D1092238425C2002CAB84 /* UIColorExtensions.swift in Sources */,
 				4CFF8DE023835312000B5DB9 /* BabySitterCell.swift in Sources */,
 				4CEFB1C3238361600073F0D9 /* InfoCell.swift in Sources */,
 				E7CCFEE1237C4FA800F9DA94 /* ChatViewController.swift in Sources */,
