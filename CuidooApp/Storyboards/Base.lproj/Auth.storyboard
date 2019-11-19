@@ -23,10 +23,10 @@
             </objects>
             <point key="canvasLocation" x="-808" y="935"/>
         </scene>
-        <!--View Controller-->
+        <!--Auth View Controller-->
         <scene sceneID="hwR-yc-uew">
             <objects>
-                <viewController id="g3V-da-M1g" sceneMemberID="viewController">
+                <viewController id="g3V-da-M1g" customClass="AuthViewController" customModule="CuidooApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vlt-Dg-zO0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -64,6 +64,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Entrar"/>
                                 <connections>
+                                    <action selector="loginButton:" destination="g3V-da-M1g" eventType="touchUpInside" id="XUl-1w-a2A"/>
                                     <segue destination="qQB-St-NMw" kind="show" id="iml-oo-Vsc"/>
                                 </connections>
                             </button>
@@ -72,6 +73,10 @@
                         <viewLayoutGuide key="safeArea" id="08Z-T7-HaD"/>
                     </view>
                     <navigationItem key="navigationItem" id="c2v-YM-uGg"/>
+                    <connections>
+                        <outlet property="passwordTextField" destination="Owf-aF-nm7" id="5VV-L7-ySp"/>
+                        <outlet property="userTextField" destination="8Ys-lK-up7" id="cP7-kG-H5T"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y64-ar-bK9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -85,7 +90,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Ct-yE-0tK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="426" y="1332"/>
+            <point key="canvasLocation" x="98" y="1371"/>
         </scene>
         <!--Search-->
         <scene sceneID="Xqh-xJ-pkH">
@@ -95,7 +100,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Umb-te-D3g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-638" y="1372"/>
+            <point key="canvasLocation" x="-120" y="1371"/>
         </scene>
     </scenes>
 </document>

@@ -10,5 +10,6 @@ target 'CuidooApp' do
   pod 'Firebase/Database'
   pod 'Firebase/Firestore'
   pod 'MessageKit'
+  pod 'Firebase/Auth'
 
 end
