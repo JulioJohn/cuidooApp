@@ -16,7 +16,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Cfc-EZ-WHE">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="373"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="322"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tqV-7l-3OA">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
@@ -161,11 +161,11 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YVv-Sj-Iqq">
-                                <rect key="frame" x="0.0" y="272" width="414" height="101"/>
+                                <rect key="frame" x="0.0" y="272" width="414" height="50"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pCD-ff-fet">
-                                        <rect key="frame" x="184" y="35.5" width="46" height="30"/>
-                                        <state key="normal" title="Button"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pCD-ff-fet">
+                                        <rect key="frame" x="153" y="12" width="108" height="26"/>
+                                        <state key="normal" backgroundImage="Mais restricoes"/>
                                         <connections>
                                             <action selector="expandButtonAction:" destination="PqJ-fa-vVK" eventType="touchUpInside" id="lnL-GT-ar0"/>
                                         </connections>
@@ -174,7 +174,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstItem="pCD-ff-fet" firstAttribute="centerY" secondItem="YVv-Sj-Iqq" secondAttribute="centerY" id="J5h-hS-8Lx"/>
-                                    <constraint firstAttribute="height" priority="250" constant="101" id="tXF-J0-IbO"/>
+                                    <constraint firstAttribute="height" constant="50" id="tXF-J0-IbO"/>
                                     <constraint firstItem="pCD-ff-fet" firstAttribute="centerX" secondItem="YVv-Sj-Iqq" secondAttribute="centerX" id="yOK-fS-CYS"/>
                                 </constraints>
                             </view>
@@ -184,7 +184,7 @@
                 <constraints>
                     <constraint firstItem="Cfc-EZ-WHE" firstAttribute="top" secondItem="OLa-13-voH" secondAttribute="top" id="AMP-zH-H98"/>
                     <constraint firstItem="Cfc-EZ-WHE" firstAttribute="leading" secondItem="OLa-13-voH" secondAttribute="leading" id="HcL-UO-d31"/>
-                    <constraint firstAttribute="bottom" secondItem="Cfc-EZ-WHE" secondAttribute="bottom" id="JUb-Vz-SRZ"/>
+                    <constraint firstAttribute="bottom" secondItem="Cfc-EZ-WHE" secondAttribute="bottom" priority="750" id="JUb-Vz-SRZ"/>
                     <constraint firstAttribute="trailing" secondItem="Cfc-EZ-WHE" secondAttribute="trailing" id="c8w-cq-3pg"/>
                 </constraints>
             </tableViewCellContentView>
@@ -192,11 +192,13 @@
             <connections>
                 <outlet property="detailsView" destination="Elz-Ob-8y0" id="eIX-2s-7ft"/>
                 <outlet property="favoritesView" destination="yPQ-7T-6Af" id="Rhz-A3-PtX"/>
+                <outlet property="restrictionsButton" destination="pCD-ff-fet" id="RGB-L8-Fe4"/>
             </connections>
             <point key="canvasLocation" x="202.89855072463769" y="177.12053571428569"/>
         </tableViewCell>
     </objects>
     <resources>
+        <image name="Mais restricoes" width="108" height="26"/>
         <image name="heart.fill" catalog="system" width="64" height="54"/>
         <image name="pacifier" width="22" height="22"/>
         <image name="person.2.fill" catalog="system" width="64" height="40"/>
