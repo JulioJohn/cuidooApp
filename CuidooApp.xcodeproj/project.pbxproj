@@ -29,6 +29,7 @@
 		E2A815C22378C4A0005D9C6F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E2A815C12378C4A0005D9C6F /* GoogleService-Info.plist */; };
 		E2F65A8D23840C4400E9EEA8 /* profileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F65A8C23840C4400E9EEA8 /* profileViewController.swift */; };
 		E2F65A9323840F3100E9EEA8 /* Config.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2F65A9223840F3100E9EEA8 /* Config.storyboard */; };
+		E7AC68A72384342F008EC82F /* myUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AC68A62384342F008EC82F /* myUser.swift */; };
 		E7CCFEE1237C4FA800F9DA94 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CCFEE0237C4FA800F9DA94 /* ChatViewController.swift */; };
 		E7CCFEE3237C685B00F9DA94 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CCFEE2237C685B00F9DA94 /* Channel.swift */; };
 		E7CCFEE5237C689A00F9DA94 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CCFEE4237C689A00F9DA94 /* Message.swift */; };
@@ -68,6 +69,7 @@
 		E2A815C12378C4A0005D9C6F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E2F65A8C23840C4400E9EEA8 /* profileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = profileViewController.swift; sourceTree = "<group>"; };
 		E2F65A9223840F3100E9EEA8 /* Config.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Config.storyboard; sourceTree = "<group>"; };
+		E7AC68A62384342F008EC82F /* myUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myUser.swift; sourceTree = "<group>"; };
 		E7CCFEE0237C4FA800F9DA94 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		E7CCFEE2237C685B00F9DA94 /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
 		E7CCFEE4237C689A00F9DA94 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
@@ -263,6 +265,7 @@
 			isa = PBXGroup;
 			children = (
 				E7CCFEFA2384192800F9DA94 /* AuthViewController.swift */,
+				E7AC68A62384342F008EC82F /* myUser.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -492,6 +495,7 @@
 				4CEFB1BE238359380073F0D9 /* BabySitterEntity.swift in Sources */,
 				E2F65A8D23840C4400E9EEA8 /* profileViewController.swift in Sources */,
 				4CEFB1C923840CC90073F0D9 /* MapCell.swift in Sources */,
+				E7AC68A72384342F008EC82F /* myUser.swift in Sources */,
 				E7CCFEEF237C8DA400F9DA94 /* DatabaseRepresentation.swift in Sources */,
 				E7CCFEF6237C9B6B00F9DA94 /* ChatColorsExtension.swift in Sources */,
 				4C765B01237991BC00D3D38B /* SearchViewController.swift in Sources */,
