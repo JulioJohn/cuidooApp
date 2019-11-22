@@ -26,6 +26,7 @@
 		E201500C23759BC7002D8C8B /* Bio.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E201500B23759BC7002D8C8B /* Bio.storyboard */; };
 		E201500E23759BD0002D8C8B /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E201500D23759BD0002D8C8B /* History.storyboard */; };
 		E201501023759BDB002D8C8B /* Support.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E201500F23759BDB002D8C8B /* Support.storyboard */; };
+		E2911E8E238812E800273197 /* ConfigurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2911E8D238812E800273197 /* ConfigurationViewController.swift */; };
 		E299048B2386AE5B0055CB25 /* HistoryEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E299048A2386AE5B0055CB25 /* HistoryEntity.swift */; };
 		E299048D2386B71B0055CB25 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E299048C2386B71B0055CB25 /* DateExtensions.swift */; };
 		E299048F2386C2590055CB25 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E299048E2386C2590055CB25 /* HistoryViewController.swift */; };
@@ -71,6 +72,7 @@
 		E201500B23759BC7002D8C8B /* Bio.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Bio.storyboard; sourceTree = "<group>"; };
 		E201500D23759BD0002D8C8B /* History.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
 		E201500F23759BDB002D8C8B /* Support.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Support.storyboard; sourceTree = "<group>"; };
+		E2911E8D238812E800273197 /* ConfigurationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationViewController.swift; sourceTree = "<group>"; };
 		E299048A2386AE5B0055CB25 /* HistoryEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryEntity.swift; sourceTree = "<group>"; };
 		E299048C2386B71B0055CB25 /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		E299048E2386C2590055CB25 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
@@ -225,6 +227,22 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
+		E2911E8B2388127300273197 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				E2911E8C238812B100273197 /* Controller */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		E2911E8C238812B100273197 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E2911E8D238812E800273197 /* ConfigurationViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		E29904902386CA8F0055CB25 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -369,6 +387,7 @@
 				E2F65A8E23840D3000E9EEA8 /* Bio */,
 				E2F65A9023840DB900E9EEA8 /* History */,
 				E2F65A9123840DCF00E9EEA8 /* Support */,
+				E2911E8B2388127300273197 /* Configuration */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -520,6 +539,7 @@
 				E7CCFEFB2384192800F9DA94 /* AuthViewController.swift in Sources */,
 				4CEFB1BE238359380073F0D9 /* BabySitterEntity.swift in Sources */,
 				E2F65A8D23840C4400E9EEA8 /* ProfileViewController.swift in Sources */,
+				E2911E8E238812E800273197 /* ConfigurationViewController.swift in Sources */,
 				E2F65A962384363E00E9EEA8 /* HistoryCell.swift in Sources */,
 				4CEFB1C923840CC90073F0D9 /* MapCell.swift in Sources */,
 				E7AC68A72384342F008EC82F /* myUser.swift in Sources */,
