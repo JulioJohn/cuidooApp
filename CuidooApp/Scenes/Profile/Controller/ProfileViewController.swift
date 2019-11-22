@@ -8,15 +8,20 @@
 
 import UIKit
 
-class profileViewController: UITableViewController {
+class ProfileViewController: UITableViewController {
     
 
  // MARK: - IBOultlets
     
-
+    @IBOutlet weak var imageProfile: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        imageProfile.layer.cornerRadius = 65
     }
+    
+    
     
 
 } // end class ProfileViewController

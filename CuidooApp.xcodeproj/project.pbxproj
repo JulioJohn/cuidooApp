@@ -26,9 +26,14 @@
 		E201500C23759BC7002D8C8B /* Bio.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E201500B23759BC7002D8C8B /* Bio.storyboard */; };
 		E201500E23759BD0002D8C8B /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E201500D23759BD0002D8C8B /* History.storyboard */; };
 		E201501023759BDB002D8C8B /* Support.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E201500F23759BDB002D8C8B /* Support.storyboard */; };
+		E299048B2386AE5B0055CB25 /* HistoryEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E299048A2386AE5B0055CB25 /* HistoryEntity.swift */; };
+		E299048D2386B71B0055CB25 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E299048C2386B71B0055CB25 /* DateExtensions.swift */; };
+		E299048F2386C2590055CB25 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E299048E2386C2590055CB25 /* HistoryViewController.swift */; };
 		E2A815C22378C4A0005D9C6F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E2A815C12378C4A0005D9C6F /* GoogleService-Info.plist */; };
-		E2F65A8D23840C4400E9EEA8 /* profileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F65A8C23840C4400E9EEA8 /* profileViewController.swift */; };
+		E2F65A8D23840C4400E9EEA8 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F65A8C23840C4400E9EEA8 /* ProfileViewController.swift */; };
 		E2F65A9323840F3100E9EEA8 /* Config.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2F65A9223840F3100E9EEA8 /* Config.storyboard */; };
+		E2F65A962384363E00E9EEA8 /* HistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F65A942384363E00E9EEA8 /* HistoryCell.swift */; };
+		E2F65A972384363E00E9EEA8 /* HistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2F65A952384363E00E9EEA8 /* HistoryCell.xib */; };
 		E7AC68A72384342F008EC82F /* myUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AC68A62384342F008EC82F /* myUser.swift */; };
 		E7CCFEE1237C4FA800F9DA94 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CCFEE0237C4FA800F9DA94 /* ChatViewController.swift */; };
 		E7CCFEE3237C685B00F9DA94 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CCFEE2237C685B00F9DA94 /* Channel.swift */; };
@@ -66,9 +71,14 @@
 		E201500B23759BC7002D8C8B /* Bio.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Bio.storyboard; sourceTree = "<group>"; };
 		E201500D23759BD0002D8C8B /* History.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
 		E201500F23759BDB002D8C8B /* Support.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Support.storyboard; sourceTree = "<group>"; };
+		E299048A2386AE5B0055CB25 /* HistoryEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryEntity.swift; sourceTree = "<group>"; };
+		E299048C2386B71B0055CB25 /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
+		E299048E2386C2590055CB25 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		E2A815C12378C4A0005D9C6F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		E2F65A8C23840C4400E9EEA8 /* profileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = profileViewController.swift; sourceTree = "<group>"; };
+		E2F65A8C23840C4400E9EEA8 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		E2F65A9223840F3100E9EEA8 /* Config.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Config.storyboard; sourceTree = "<group>"; };
+		E2F65A942384363E00E9EEA8 /* HistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCell.swift; sourceTree = "<group>"; };
+		E2F65A952384363E00E9EEA8 /* HistoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryCell.xib; sourceTree = "<group>"; };
 		E7AC68A62384342F008EC82F /* myUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myUser.swift; sourceTree = "<group>"; };
 		E7CCFEE0237C4FA800F9DA94 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		E7CCFEE2237C685B00F9DA94 /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
@@ -215,6 +225,14 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
+		E29904902386CA8F0055CB25 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E299048E2386C2590055CB25 /* HistoryViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		E2A815C32378C6D5005D9C6F /* Initial */ = {
 			isa = PBXGroup;
 			children = (
@@ -225,7 +243,7 @@
 		E2F65A8B23840C4400E9EEA8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				E2F65A8C23840C4400E9EEA8 /* profileViewController.swift */,
+				E2F65A8C23840C4400E9EEA8 /* ProfileViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -240,6 +258,10 @@
 		E2F65A9023840DB900E9EEA8 /* History */ = {
 			isa = PBXGroup;
 			children = (
+				E29904902386CA8F0055CB25 /* Controller */,
+				E2F65A942384363E00E9EEA8 /* HistoryCell.swift */,
+				E2F65A952384363E00E9EEA8 /* HistoryCell.xib */,
+				E299048A2386AE5B0055CB25 /* HistoryEntity.swift */,
 			);
 			path = History;
 			sourceTree = "<group>";
@@ -257,6 +279,7 @@
 				E7CCFEF5237C9B6B00F9DA94 /* ChatColorsExtension.swift */,
 				E7CCFEF7237C9C0700F9DA94 /* CollectionViewExtension.swift */,
 				4C3D1091238425C2002CAB84 /* UIColorExtensions.swift */,
+				E299048C2386B71B0055CB25 /* DateExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -429,6 +452,7 @@
 				E201501023759BDB002D8C8B /* Support.storyboard in Resources */,
 				E7FF57D62371A36F00F3FA22 /* Assets.xcassets in Resources */,
 				E7FF57D42371A36A00F3FA22 /* Auth.storyboard in Resources */,
+				E2F65A972384363E00E9EEA8 /* HistoryCell.xib in Resources */,
 				4CEFB1CA23840CC90073F0D9 /* MapCell.xib in Resources */,
 				E201500A23759BB4002D8C8B /* Chat.storyboard in Resources */,
 				E201500C23759BC7002D8C8B /* Bio.storyboard in Resources */,
@@ -489,14 +513,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7FF57CD2371A36A00F3FA22 /* AppDelegate.swift in Sources */,
+				E299048D2386B71B0055CB25 /* DateExtensions.swift in Sources */,
 				E7CCFEF8237C9C0700F9DA94 /* CollectionViewExtension.swift in Sources */,
+				E299048B2386AE5B0055CB25 /* HistoryEntity.swift in Sources */,
 				E7CCFEE3237C685B00F9DA94 /* Channel.swift in Sources */,
 				E7CCFEFB2384192800F9DA94 /* AuthViewController.swift in Sources */,
 				4CEFB1BE238359380073F0D9 /* BabySitterEntity.swift in Sources */,
-				E2F65A8D23840C4400E9EEA8 /* profileViewController.swift in Sources */,
+				E2F65A8D23840C4400E9EEA8 /* ProfileViewController.swift in Sources */,
+				E2F65A962384363E00E9EEA8 /* HistoryCell.swift in Sources */,
 				4CEFB1C923840CC90073F0D9 /* MapCell.swift in Sources */,
 				E7AC68A72384342F008EC82F /* myUser.swift in Sources */,
 				E7CCFEEF237C8DA400F9DA94 /* DatabaseRepresentation.swift in Sources */,
+				E299048F2386C2590055CB25 /* HistoryViewController.swift in Sources */,
 				E7CCFEF6237C9B6B00F9DA94 /* ChatColorsExtension.swift in Sources */,
 				4C765B01237991BC00D3D38B /* SearchViewController.swift in Sources */,
 				E7CCFEE5237C689A00F9DA94 /* Message.swift in Sources */,
@@ -649,7 +677,7 @@
 			baseConfigurationReference = 303077478AF76DECDC033BE2 /* Pods-CuidooApp.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 97PTJ72QJZ;
+				DEVELOPMENT_TEAM = 76DX35F6T7;
 				INFOPLIST_FILE = CuidooApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -667,7 +695,7 @@
 			baseConfigurationReference = 800AE3D6E1EBAC85C2721D3B /* Pods-CuidooApp.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 97PTJ72QJZ;
+				DEVELOPMENT_TEAM = 76DX35F6T7;
 				INFOPLIST_FILE = CuidooApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

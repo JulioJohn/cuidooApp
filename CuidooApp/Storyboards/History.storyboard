@@ -7,16 +7,31 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--History View Controller-->
         <scene sceneID="GiJ-um-0SH">
             <objects>
-                <viewController id="oVU-99-IDF" sceneMemberID="viewController">
+                <viewController id="oVU-99-IDF" customClass="HistoryViewController" customModule="CuidooApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mig-jQ-j0c">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gGn-I1-WGd">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="mwu-El-g9N" firstAttribute="trailing" secondItem="gGn-I1-WGd" secondAttribute="trailing" id="2cH-So-cFP"/>
+                            <constraint firstItem="mwu-El-g9N" firstAttribute="bottom" secondItem="gGn-I1-WGd" secondAttribute="bottom" id="LCA-Gf-R0I"/>
+                            <constraint firstItem="gGn-I1-WGd" firstAttribute="leading" secondItem="mwu-El-g9N" secondAttribute="leading" id="YuY-i2-oxV"/>
+                            <constraint firstItem="gGn-I1-WGd" firstAttribute="top" secondItem="mwu-El-g9N" secondAttribute="top" id="rVx-53-eSx"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="mwu-El-g9N"/>
                     </view>
+                    <connections>
+                        <outlet property="historyTableView" destination="gGn-I1-WGd" id="4Xs-3L-y5L"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yx0-Ba-lHu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
