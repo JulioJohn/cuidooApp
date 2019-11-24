@@ -18,6 +18,7 @@ class AuthViewController: UIViewController {
     var reference: CollectionReference!
     
     var thisUser: myUser!
+    var actualMatch: Match!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,12 +34,15 @@ class AuthViewController: UIViewController {
             if error != nil {
                 //Fazer o erro caso não consiga entrar
             } else {
+                //Entrou na conta
                 print("Voce logou!")
+                self.updateMyUser()
             }
         }
     }
     
-    @IBAction func howIsLogged(_ sender: Any) {
+    /// Atualiza o usuario local
+    func updateMyUser() {
         let user = Auth.auth().currentUser
         if let user = user {
             let uid = user.uid
@@ -52,6 +56,18 @@ class AuthViewController: UIViewController {
         }
     }
     
+    /// Verifica qual é o usuario que esta logado
+    /// - Parameter sender:
+    @IBAction func howIsLogged(_ sender: Any) {
+        if let user = self.thisUser {
+            user.showClass()
+        }
+        else {
+            print("Não tem usuario logado")
+            return
+        }
+    }
+    
     @IBAction func desconectButton(_ sender: Any) {
         do {
             try Auth.auth().signOut()
@@ -61,4 +77,44 @@ class AuthViewController: UIViewController {
         }
     }
     
+    @IBAction func createMatch(_ sender: Any) {
+        let ref = database.collection("matchs").document()
+        
+        let documentData: [String : Any] = ["documentId": "\(ref.documentID)" ,"uidBaba": "\(self.thisUser.uid)","uidMae": "none", "status": "available"]
+        updateActualMatch(idActualMatch: ref.documentID)
+        ref.setData(documentData)
+    }
+    
+    func updateActualMatch(idActualMatch: String) {
+       print("Atualizou o idActualMatch")
+   
+       //Atualiza o actualMatch do servidor
+        self.database.collection("users").document("\(self.thisUser.uid)").updateData(["actualMatch" : idActualMatch])
+            
+        //Atualizar o myUser local aqui com o novo actualMatch
+        updateMyUser()
+    }
+    
+    @IBAction func seeMatch(_ sender: Any) {
+        self.database.collection("matchs").document(self.thisUser.actualMatch).getDocument { (snapshot, error) in
+            self.actualMatch = Match(data: snapshot?.data()! ?? [:])
+            self.actualMatch.showMatch()
+        }
+    }
+    
+    @IBAction func searchBaba(_ sender: Any) {
+        //self.database.collection("users").document(self.thisUser.uid)
+        self.database.collection("matchs").getDocuments { (snapshot, error) in
+            let newMatch: Match = Match(data: snapshot?.documents[0].data() ?? [:])!
+            newMatch.showMatch()
+        }
+    }
+    
+    @IBAction func momLikesBaba(_ sender: Any) {
+        self.database.collection("matchs").getDocuments { (snapshot, error) in
+            self.actualMatch = Match(data: snapshot?.documents[0].data() ?? [:])!
+            let matchRef = self.database.collection("matchs").document(self.actualMatch.documentId)
+            matchRef.setValuesForKeys(["uidMae" : self.thisUser.uid, "status" : "waitingBaba"])
+        }
+    }
 }
