@@ -10,15 +10,15 @@ import UIKit
 
 class ProfileViewController: UITableViewController {
     
-
- // MARK: - IBOultlets
     
-    @IBOutlet weak var imageProfile: UIImageView!
+    @IBOutlet weak var profilePic: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    
+        profilePic.layer.cornerRadius = 65
         
-        imageProfile.layer.cornerRadius = 65
+         
     }
     
     
