@@ -14,7 +14,7 @@ class MatchServices {
     static var database = Firestore.firestore()
     static var reference: CollectionReference!
     
-    static func createMatch(idBaba: Int) {
+    static func createMatch(idBaba: String) {
         //Uso essa linha para definir a chave do documento como sendo a chave do Id interno
         let ref = database.collection("matchs").document()
         
@@ -29,27 +29,75 @@ class MatchServices {
         
     }
     
-    static func updateActualMatch(idActualMatch: String, idUser: Int) {
+    static func updateActualMatch(idActualMatch: String, idUser: String) {
         print("Atualizou o id do match atual no servidor")
     
         //Atualiza o actualMatch do servidor
         self.database.collection("users").document("\(idUser)").updateData(["actualMatch" : idActualMatch])
-             
-         //Atualizar o myUser local aqui com o novo actualMatch
      }
     
-    static func getUser() -> User? {
+    static func getUser(completion: @escaping (MyUser?) -> Void) {
+        //var userInDatabase: MyUser? = nil
+        
         let user = Auth.auth().currentUser
         if let user = user {
             let uid = user.uid
             let docRef = database.collection("users").document("\(uid)")
 
             docRef.getDocument { (snapshot, error) in
-                //Como pegar apenas um simples coleção: snapshot?.get("nome")
-                //Estou armazenando o usuario logado
-                return MyUser(data: snapshot?.data()! ?? [:])
+                //Armazenando o usuario logado
+                let loggedUser = MyUser(data: snapshot?.data()! ?? [:])
+                completion(loggedUser)
             }
         }
-        return nil
+    }
+    
+    static func getMatch(idMatch: String, completion: @escaping (Match?) -> Void) {
+        self.database.collection("matchs").document(idMatch).getDocument { (snapshot, error) in
+            guard let snapData = snapshot?.data() else {
+                print("Não tem match!")
+                return
+            }
+            let actualMatch = Match(data: snapData ?? [:])
+            completion(actualMatch)
+        }
+    }
+    
+    //FAZER O COMPLETION DISSON, TA CRASHANDO QUANDO VOLTA PQ N DA TEMPO DE CORRIGIR!! LEMBRAR DE FAZER ISSO HOJE!!!
+    static func searchBaba() -> Match? {
+        var newMatch: Match? = nil
+        self.database.collection("matchs").getDocuments { (snapshot, error) in
+            newMatch = Match(data: snapshot?.documents[0].data() ?? [:])!
+            //Imprimindo na tela o match encontrado
+            guard let match = newMatch else {
+                print("Não encontrou nenhum match")
+                return
+            }
+            match.showMatch()
+        }
+        
+        return newMatch
+    }
+    
+    static func momLikesBaba(idMom: String, matchId: String) {
+        self.database.collection("matchs").getDocuments { (snapshot, error) in
+            let matchRef = self.database.collection("matchs").document(matchId)
+            matchRef.updateData(["uidMae" : idMom, "status" : "waitingBaba"])
+            print("Esta funcionando, só não esta alterando o meu usuário")
+        }
+    }
+    
+    static func userLogin(email: String, password: String, completion: @escaping (AuthDataResult?, Error?) -> Void) {
+        //Logar com o usuario
+        Auth.auth().signIn(withEmail: email, password: password, completion: completion)
+    }
+    
+    static func desconnect() {
+        do {
+            try Auth.auth().signOut()
+            print("Desconectado!")
+        } catch let signOutError as NSError {
+          print ("Erro ao desconectar: %@", signOutError)
+        }
     }
 }

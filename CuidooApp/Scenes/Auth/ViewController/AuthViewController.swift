@@ -28,30 +28,16 @@ class AuthViewController: UIViewController {
         //Validar os campos
         let email = userTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
         let password = passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
-                
-        //Logar com o usuario
-        Auth.auth().signIn(withEmail: email!, password: password!) { (result, error) in
+         
+        
+        MatchServices.userLogin(email: email ?? "", password: password ?? "") { (result, error) in
             if error != nil {
                 //Fazer o erro caso não consiga entrar
+                print("Não conseguiu logar")
             } else {
                 //Entrou na conta
                 print("Voce logou!")
-                self.updateMyUser()
-            }
-        }
-    }
-    
-    /// Atualiza o usuario local
-    func updateMyUser() {
-        let user = Auth.auth().currentUser
-        if let user = user {
-            let uid = user.uid
-            let docRef = database.collection("users").document("\(uid)")
-            
-            docRef.getDocument { (snapshot, error) in
-                //Como pegar apenas um simples coleção: snapshot?.get("nome")
-                //Estou armazenando o usuario logado
-                self.thisUser = MyUser(data: snapshot?.data()! ?? [:])
+                self.updateMyLocalUser()
             }
         }
     }
@@ -69,58 +55,50 @@ class AuthViewController: UIViewController {
     }
     
     @IBAction func desconectButton(_ sender: Any) {
-        do {
-            try Auth.auth().signOut()
-            print("Desconectado!")
-        } catch let signOutError as NSError {
-          print ("Erro ao desconectar: %@", signOutError)
-        }
+        MatchServices.desconnect()
     }
     
     @IBAction func createMatch(_ sender: Any) {
-        let ref = database.collection("matchs").document()
+        guard let user = self.thisUser else {
+            print("O usuário não existe")
+            return
+        }
+        MatchServices.createMatch(idBaba: user.uid)
         
-        let documentData: [String : Any] = ["documentId": "\(ref.documentID)" ,"uidBaba": "\(self.thisUser.uid)","uidMae": "none", "status": "available"]
-        updateActualMatch(idActualMatch: ref.documentID)
-        ref.setData(documentData)
+        updateMyLocalUser()
     }
     
-    func updateActualMatch(idActualMatch: String) {
-       print("Atualizou o idActualMatch")
-   
-       //Atualiza o actualMatch do servidor
-        self.database.collection("users").document("\(self.thisUser.uid)").updateData(["actualMatch" : idActualMatch])
-            
+    /// Atualiza o usuario local
+    func updateMyLocalUser() {
         //Atualizar o myUser local aqui com o novo actualMatch
-        updateMyUser()
+        MatchServices.getUser { (user) in
+            if let newUser = user {
+                self.thisUser = newUser
+                OperationQueue.main.addOperation {
+                    //Atualizar UI aqui
+                }
+            } else {
+                //Erros
+            }
+        }
     }
     
     @IBAction func seeMatch(_ sender: Any) {
-        self.database.collection("matchs").document(self.thisUser.actualMatch).getDocument { (snapshot, error) in
-            guard let snapData = snapshot?.data() else {
-                print("Não tem match!")
-                return
+        MatchServices.getMatch(idMatch: self.thisUser.actualMatch) { (match) in
+            if let newMatch = match {
+                self.actualMatch = newMatch
+                self.actualMatch.showMatch()
+            } else {
+                //Erros
             }
-            self.actualMatch = Match(data: snapData ?? [:])
-            self.actualMatch.showMatch()
         }
     }
     
     @IBAction func searchBaba(_ sender: Any) {
-        //self.database.collection("users").document(self.thisUser.uid)
-        self.database.collection("matchs").getDocuments { (snapshot, error) in
-            let newMatch: Match = Match(data: snapshot?.documents[0].data() ?? [:])!
-            newMatch.showMatch()
-        }
+        self.actualMatch = MatchServices.searchBaba()
     }
     
     @IBAction func momLikesBaba(_ sender: Any) {
-        self.database.collection("matchs").getDocuments { (snapshot, error) in
-            
-            self.actualMatch = Match(data: snapshot?.documents[0].data() ?? [:])!
-            let matchRef = self.database.collection("matchs").document(self.actualMatch.documentId)
-            matchRef.updateData(["uidMae" : self.thisUser.uid, "status" : "waitingBaba"])
-            print("Esta funcionando")
-        }
+        MatchServices.momLikesBaba(idMom: self.thisUser.uid, matchId: self.actualMatch.documentId)
     }
 }
