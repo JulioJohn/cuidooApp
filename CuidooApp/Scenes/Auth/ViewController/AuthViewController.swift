@@ -17,7 +17,7 @@ class AuthViewController: UIViewController {
     var database = Firestore.firestore()
     var reference: CollectionReference!
     
-    var thisUser: myUser!
+    var thisUser: MyUser!
     var actualMatch: Match!
     
     override func viewDidLoad() {
@@ -47,11 +47,11 @@ class AuthViewController: UIViewController {
         if let user = user {
             let uid = user.uid
             let docRef = database.collection("users").document("\(uid)")
-
+            
             docRef.getDocument { (snapshot, error) in
                 //Como pegar apenas um simples coleção: snapshot?.get("nome")
                 //Estou armazenando o usuario logado
-                self.thisUser = myUser(data: snapshot?.data()! ?? [:])
+                self.thisUser = MyUser(data: snapshot?.data()! ?? [:])
             }
         }
     }
@@ -97,7 +97,11 @@ class AuthViewController: UIViewController {
     
     @IBAction func seeMatch(_ sender: Any) {
         self.database.collection("matchs").document(self.thisUser.actualMatch).getDocument { (snapshot, error) in
-            self.actualMatch = Match(data: snapshot?.data()! ?? [:])
+            guard let snapData = snapshot?.data() else {
+                print("Não tem match!")
+                return
+            }
+            self.actualMatch = Match(data: snapData ?? [:])
             self.actualMatch.showMatch()
         }
     }
@@ -112,9 +116,11 @@ class AuthViewController: UIViewController {
     
     @IBAction func momLikesBaba(_ sender: Any) {
         self.database.collection("matchs").getDocuments { (snapshot, error) in
+            
             self.actualMatch = Match(data: snapshot?.documents[0].data() ?? [:])!
             let matchRef = self.database.collection("matchs").document(self.actualMatch.documentId)
-            matchRef.setValuesForKeys(["uidMae" : self.thisUser.uid, "status" : "waitingBaba"])
+            matchRef.updateData(["uidMae" : self.thisUser.uid, "status" : "waitingBaba"])
+            print("Esta funcionando")
         }
     }
 }

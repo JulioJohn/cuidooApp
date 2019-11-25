@@ -8,7 +8,7 @@
 
 import Foundation
 
-class myUser {
+class MyUser {
     var name: String
     var uid: String
     var actualMatch: String
