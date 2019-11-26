@@ -13,6 +13,8 @@
 		4C3D10992384346C002CAB84 /* BabySitterInfosView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C3D10982384346C002CAB84 /* BabySitterInfosView.xib */; };
 		4C4A3A80237C2B19009A3B64 /* BabySitterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C4A3A7F237C2B19009A3B64 /* BabySitterCell.xib */; };
 		4C765B01237991BC00D3D38B /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C765B00237991BC00D3D38B /* SearchViewController.swift */; };
+		4C7EAC3F238D9BC6009D3589 /* Nibable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7EAC3E238D9BC6009D3589 /* Nibable.swift */; };
+		4C7EAC41238D9CC9009D3589 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7EAC40238D9CC9009D3589 /* UIViewExtension.swift */; };
 		4CEFB1BE238359380073F0D9 /* BabySitterEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEFB1BD238359380073F0D9 /* BabySitterEntity.swift */; };
 		4CEFB1C3238361600073F0D9 /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEFB1C1238361600073F0D9 /* InfoCell.swift */; };
 		4CEFB1C4238361600073F0D9 /* InfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CEFB1C2238361600073F0D9 /* InfoCell.xib */; };
@@ -71,6 +73,8 @@
 		4C3D10982384346C002CAB84 /* BabySitterInfosView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BabySitterInfosView.xib; sourceTree = "<group>"; };
 		4C4A3A7F237C2B19009A3B64 /* BabySitterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BabySitterCell.xib; sourceTree = "<group>"; };
 		4C765B00237991BC00D3D38B /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		4C7EAC3E238D9BC6009D3589 /* Nibable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nibable.swift; sourceTree = "<group>"; };
+		4C7EAC40238D9CC9009D3589 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		4CEFB1BD238359380073F0D9 /* BabySitterEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabySitterEntity.swift; sourceTree = "<group>"; };
 		4CEFB1C1238361600073F0D9 /* InfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCell.swift; sourceTree = "<group>"; };
 		4CEFB1C2238361600073F0D9 /* InfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoCell.xib; sourceTree = "<group>"; };
@@ -391,6 +395,8 @@
 				E7CCFEF7237C9C0700F9DA94 /* CollectionViewExtension.swift */,
 				4C3D1091238425C2002CAB84 /* UIColorExtensions.swift */,
 				E299048C2386B71B0055CB25 /* DateExtensions.swift */,
+				4C7EAC3E238D9BC6009D3589 /* Nibable.swift */,
+				4C7EAC40238D9CC9009D3589 /* UIViewExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -632,9 +638,11 @@
 				E299048D2386B71B0055CB25 /* DateExtensions.swift in Sources */,
 				E7CCFEF8237C9C0700F9DA94 /* CollectionViewExtension.swift in Sources */,
 				E299048B2386AE5B0055CB25 /* HistoryEntity.swift in Sources */,
+				4C7EAC3F238D9BC6009D3589 /* Nibable.swift in Sources */,
 				4C3D109423843410002CAB84 /* RequestViewController.swift in Sources */,
 				E7CCFEE3237C685B00F9DA94 /* Channel.swift in Sources */,
 				E7CCFEFB2384192800F9DA94 /* AuthViewController.swift in Sources */,
+				4C7EAC41238D9CC9009D3589 /* UIViewExtension.swift in Sources */,
 				4CEFB1BE238359380073F0D9 /* BabySitterEntity.swift in Sources */,
 				E2F65A8D23840C4400E9EEA8 /* ProfileViewController.swift in Sources */,
 				E2911E8E238812E800273197 /* ConfigurationViewController.swift in Sources */,
