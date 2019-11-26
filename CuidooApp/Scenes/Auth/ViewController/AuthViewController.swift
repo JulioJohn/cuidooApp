@@ -10,6 +10,8 @@ import UIKit
 
 class AuthViewController: UIViewController {
 
+    //LEMBRAR: POSSO FAZER UM LISTENER NO FIREBASE PARA MEU USUARIO/MATCH LOCAIS, MAS PARA ISSO PRECISAREI DE UM LISTENER LOCAL PARA ESSE LISTENER
+    
     //Outlets
     @IBOutlet weak var userTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -56,14 +58,9 @@ class AuthViewController: UIViewController {
     /// Atualiza o usuario local
     func updateMyLocalUser() {
         //Atualizar o myUser local aqui com o novo actualMatch
-        MatchServices.getUser { (user) in
-            if let newUser = user {
-                LoggedUser.shared.changeUser(user: newUser)
-                OperationQueue.main.addOperation {
-                    //Atualizar UI aqui
-                }
-            } else {
-                //Erros
+        MatchServices.getUser {
+            OperationQueue.main.addOperation {
+                //Atualizar UI aqui
             }
         }
     }

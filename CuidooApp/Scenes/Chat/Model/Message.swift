@@ -28,7 +28,7 @@ class Message: MessageType {
     var downloadURL: URL? = nil
     
     init(content: String) {
-        sender = Sender(id: "666", displayName: "Julio Trocar depois")
+        sender = Sender(id: LoggedUser.shared.user!.uid, displayName: LoggedUser.shared.user!.name)
         self.content = content
         self.kind = MessageKind.text(content)
         sentDate = Date()

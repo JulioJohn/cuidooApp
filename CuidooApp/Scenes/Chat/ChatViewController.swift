@@ -28,8 +28,11 @@ class ChatViewController: MessagesViewController, MessageInputBarDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        reference = database.collection("match").document(LoggedUser.shared.actualMatch!.documentId)
+        
         //Caminho em que o chat está sendo armazenado
-        reference = database.collection(["channels", "1", "Chat"].joined(separator: "/"))
+        reference = database.collection(["match", LoggedUser.shared.actualMatch!.documentId, "Chat"].joined(separator: "/"))
+        
         
         navigationItem.largeTitleDisplayMode = .never
         
@@ -54,6 +57,10 @@ class ChatViewController: MessagesViewController, MessageInputBarDelegate {
             self.handleDocumentChange(change)
           }
         }
+    }
+    
+    func configureViewController() {
+        
     }
     
     private func insertNewMessage(_ message: Message) {

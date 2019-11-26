@@ -10,14 +10,15 @@ import UIKit
 
 class ProfileViewController: UITableViewController {
     
-    
     @IBOutlet weak var profilePicMomImageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
     
         profilePicMomImageView.layer.cornerRadius = 65
          
+        nameLabel.text = LoggedUser.shared.user?.name
     }
 
 } // end class ProfileViewController

@@ -218,6 +218,7 @@
                     <navigationItem key="navigationItem" title="Nome" id="CaU-hK-MLo"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="nameLabel" destination="ACm-t6-ugi" id="NsY-hK-wAJ"/>
                         <outlet property="profilePicMomImageView" destination="gia-7B-cbH" id="0zA-JR-bjN"/>
                     </connections>
                 </tableViewController>

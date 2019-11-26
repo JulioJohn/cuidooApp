@@ -45,7 +45,7 @@ class MatchServices {
         self.database.collection("users").document("\(idUser)").updateData(["actualMatch" : idActualMatch])
      }
     
-    static func getUser(completion: @escaping (MyUser?) -> Void) {
+    static func getUser(completion: @escaping () -> Void) {
         
         let user = Auth.auth().currentUser
         if let user = user {
@@ -54,8 +54,7 @@ class MatchServices {
 
             docRef.getDocument { (snapshot, error) in
                 //Armazenando o usuario logado
-                let loggedUser = MyUser(data: snapshot?.data()! ?? [:])
-                completion(loggedUser)
+                LoggedUser.shared.changeUser(user: MyUser(data: snapshot?.data()! ?? [:]))
             }
         }
     }
@@ -67,6 +66,12 @@ class MatchServices {
                 return
             }
             let actualMatch = Match(data: snapData ?? [:])
+            
+            //VERIFICAR AQUI SEM TEM MATCH
+            
+            //SE TIVER
+                //ATUALIZAR O MATCH LOCAL
+            
             completion(actualMatch)
         }
     }
@@ -104,6 +109,7 @@ class MatchServices {
             } else {
                 //Entrou na conta
                 print("Voce logou!")
+                
                 completion()
             }
         }
