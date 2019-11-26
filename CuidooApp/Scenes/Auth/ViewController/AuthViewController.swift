@@ -95,7 +95,9 @@ class AuthViewController: UIViewController {
     }
     
     @IBAction func searchBaba(_ sender: Any) {
-        self.actualMatch = MatchServices.searchBaba()
+        MatchServices.searchBaba { (match) in
+            self.actualMatch = match
+        }
     }
     
     @IBAction func momLikesBaba(_ sender: Any) {

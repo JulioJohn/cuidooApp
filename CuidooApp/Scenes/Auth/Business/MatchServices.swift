@@ -64,7 +64,7 @@ class MatchServices {
     }
     
     //FAZER O COMPLETION DISSON, TA CRASHANDO QUANDO VOLTA PQ N DA TEMPO DE CORRIGIR!! LEMBRAR DE FAZER ISSO HOJE!!!
-    static func searchBaba() -> Match? {
+    static func searchBaba(completion: @escaping (Match?) -> Void) {
         var newMatch: Match? = nil
         self.database.collection("matchs").getDocuments { (snapshot, error) in
             newMatch = Match(data: snapshot?.documents[0].data() ?? [:])!
@@ -74,14 +74,14 @@ class MatchServices {
                 return
             }
             match.showMatch()
+            completion(newMatch)
         }
-        
-        return newMatch
     }
     
     static func momLikesBaba(idMom: String, matchId: String) {
-        self.database.collection("matchs").getDocuments { (snapshot, error) in
-            let matchRef = self.database.collection("matchs").document(matchId)
+        let matchCollections = self.database.collection("matchs")
+        matchCollections.getDocuments { (snapshot, error) in
+            let matchRef = matchCollections.document(matchId)
             matchRef.updateData(["uidMae" : idMom, "status" : "waitingBaba"])
             print("Esta funcionando, só não esta alterando o meu usuário")
         }
