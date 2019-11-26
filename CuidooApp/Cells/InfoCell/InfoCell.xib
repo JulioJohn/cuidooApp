@@ -57,6 +57,9 @@
                                     </label>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="8cs-xa-7qW">
                                         <rect key="frame" x="349" y="9.5" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="didClickExpand:" destination="PqJ-fa-vVK" eventType="valueChanged" id="DH4-BF-7Eh"/>
+                                        </connections>
                                     </switch>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="pacifier" translatesAutoresizingMaskIntoConstraints="NO" id="dRV-RH-LVq">
                                         <rect key="frame" x="20" y="15" width="20" height="20"/>

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		4C3D1092238425C2002CAB84 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3D1091238425C2002CAB84 /* UIColorExtensions.swift */; };
+		4C3D109423843410002CAB84 /* RequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3D109323843410002CAB84 /* RequestViewController.swift */; };
+		4C3D10972384345F002CAB84 /* BabySitterInfosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3D10962384345F002CAB84 /* BabySitterInfosView.swift */; };
+		4C3D10992384346C002CAB84 /* BabySitterInfosView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C3D10982384346C002CAB84 /* BabySitterInfosView.xib */; };
 		4C4A3A80237C2B19009A3B64 /* BabySitterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C4A3A7F237C2B19009A3B64 /* BabySitterCell.xib */; };
 		4C765B01237991BC00D3D38B /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C765B00237991BC00D3D38B /* SearchViewController.swift */; };
 		4CEFB1BE238359380073F0D9 /* BabySitterEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEFB1BD238359380073F0D9 /* BabySitterEntity.swift */; };
@@ -62,6 +65,9 @@
 /* Begin PBXFileReference section */
 		303077478AF76DECDC033BE2 /* Pods-CuidooApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CuidooApp.debug.xcconfig"; path = "Target Support Files/Pods-CuidooApp/Pods-CuidooApp.debug.xcconfig"; sourceTree = "<group>"; };
 		4C3D1091238425C2002CAB84 /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
+		4C3D109323843410002CAB84 /* RequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RequestViewController.swift; path = CuidooApp/Extensions/RequestViewController.swift; sourceTree = SOURCE_ROOT; };
+		4C3D10962384345F002CAB84 /* BabySitterInfosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabySitterInfosView.swift; sourceTree = "<group>"; };
+		4C3D10982384346C002CAB84 /* BabySitterInfosView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BabySitterInfosView.xib; sourceTree = "<group>"; };
 		4C4A3A7F237C2B19009A3B64 /* BabySitterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BabySitterCell.xib; sourceTree = "<group>"; };
 		4C765B00237991BC00D3D38B /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		4CEFB1BD238359380073F0D9 /* BabySitterEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabySitterEntity.swift; sourceTree = "<group>"; };
@@ -128,6 +134,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C3D109523843422002CAB84 /* BabySitterView */ = {
+			isa = PBXGroup;
+			children = (
+				4C3D10962384345F002CAB84 /* BabySitterInfosView.swift */,
+				4C3D10982384346C002CAB84 /* BabySitterInfosView.xib */,
+			);
+			path = BabySitterView;
+			sourceTree = "<group>";
+		};
 		4C4A3A7E237C2AC4009A3B64 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -201,6 +216,8 @@
 		E2014FF4237596D5002D8C8B /* Request */ = {
 			isa = PBXGroup;
 			children = (
+				4C3D109523843422002CAB84 /* BabySitterView */,
+				4C3D109323843410002CAB84 /* RequestViewController.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -553,6 +570,7 @@
 				E2014FFF23759B4F002D8C8B /* Search.storyboard in Resources */,
 				E201500E23759BD0002D8C8B /* History.storyboard in Resources */,
 				E2B20046238C1D8200CD103A /* FaqTableViewCell.xib in Resources */,
+				4C3D10992384346C002CAB84 /* BabySitterInfosView.xib in Resources */,
 				E2F65A9323840F3100E9EEA8 /* Config.storyboard in Resources */,
 				E2A815C22378C4A0005D9C6F /* GoogleService-Info.plist in Resources */,
 			);
@@ -611,6 +629,7 @@
 				E299048D2386B71B0055CB25 /* DateExtensions.swift in Sources */,
 				E7CCFEF8237C9C0700F9DA94 /* CollectionViewExtension.swift in Sources */,
 				E299048B2386AE5B0055CB25 /* HistoryEntity.swift in Sources */,
+				4C3D109423843410002CAB84 /* RequestViewController.swift in Sources */,
 				E7CCFEE3237C685B00F9DA94 /* Channel.swift in Sources */,
 				E7CCFEFB2384192800F9DA94 /* AuthViewController.swift in Sources */,
 				4CEFB1BE238359380073F0D9 /* BabySitterEntity.swift in Sources */,
@@ -630,6 +649,7 @@
 				4C765B01237991BC00D3D38B /* SearchViewController.swift in Sources */,
 				E7CCFEE5237C689A00F9DA94 /* Message.swift in Sources */,
 				4C3D1092238425C2002CAB84 /* UIColorExtensions.swift in Sources */,
+				4C3D10972384345F002CAB84 /* BabySitterInfosView.swift in Sources */,
 				4CFF8DE023835312000B5DB9 /* BabySitterCell.swift in Sources */,
 				E2B20039238C07C400CD103A /* BioEntity.swift in Sources */,
 				E2B20048238C22AE00CD103A /* FaqEntity.swift in Sources */,

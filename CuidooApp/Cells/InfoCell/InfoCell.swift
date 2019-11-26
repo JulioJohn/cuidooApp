@@ -49,4 +49,8 @@ class InfoCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    @IBAction func didClickExpand(_ sender: Any) {
+        print("lala")
+    }
+    
 }

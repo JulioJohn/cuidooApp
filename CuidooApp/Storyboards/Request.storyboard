@@ -14,10 +14,19 @@
                     <view key="view" contentMode="scaleToFill" id="V3e-vx-kR0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GbP-8m-rRx">
+                                <rect key="frame" x="254" y="772" width="87" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="CONFIRMAR"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="1ZU-Sq-gDP"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Confirmar cuidadora" id="kLC-YT-Yl5"/>
+                    <navigationItem key="navigationItem" title="Confirmar cuidadora" id="kLC-YT-Yl5">
+                        <barButtonItem key="backBarButtonItem" title="Cancelar" id="IK9-lk-WIV"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ip3-3G-Ydx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

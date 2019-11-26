@@ -67,6 +67,7 @@
                         <viewLayoutGuide key="safeArea" id="p1P-hf-pNX"/>
                     </view>
                     <navigationItem key="navigationItem" title="Cuidoo" id="Jab-k6-Wd2">
+                        <barButtonItem key="backBarButtonItem" title=" " id="l2s-km-THx"/>
                         <barButtonItem key="rightBarButtonItem" image="person.crop.circle" catalog="system" id="inK-Y6-fla">
                             <color key="tintColor" red="1" green="0.38701313729999998" blue="0.3767012656" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
