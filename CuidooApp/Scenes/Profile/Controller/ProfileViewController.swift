@@ -11,17 +11,13 @@ import UIKit
 class ProfileViewController: UITableViewController {
     
     
-    @IBOutlet weak var profilePic: UIImageView!
+    @IBOutlet weak var profilePicMomImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
     
-        profilePic.layer.cornerRadius = 65
-        
+        profilePicMomImageView.layer.cornerRadius = 65
          
     }
-    
-    
-    
 
 } // end class ProfileViewController
