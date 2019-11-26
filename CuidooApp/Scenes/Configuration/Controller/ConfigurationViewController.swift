@@ -9,11 +9,12 @@
 import UIKit
 
 class ConfigurationViewController: UITableViewController {
-
     
-    @IBAction func logout(_ sender: Any) {
+    @IBAction func logoutButton(_ sender: Any) {
+        dismiss(animated: true) {
+            MatchServices.desconnect()
+        }
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()

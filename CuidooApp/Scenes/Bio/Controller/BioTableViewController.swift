@@ -10,7 +10,6 @@ import UIKit
 
 class BioTableViewController: UITableViewController {
 
-
     @IBOutlet weak var profilePic: UIImageView!
     @IBOutlet weak var nameMomLabel: UILabel!
     @IBOutlet weak var bioLabel: UILabel!

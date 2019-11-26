@@ -26,6 +26,11 @@ class MyUser {
         self.isBaba = isBaba
     }
     
+    func transformInDatabaseType() -> [String: Any] {
+        let data: [String: Any] = ["nome" : self.name, "uid" : self.uid, "actualMatch" : self.actualMatch, "isBaba" : self.isBaba]
+        return data
+    }
+    
     func showClass() {
         print(self.name)
         //print(self.uid)

@@ -82,6 +82,10 @@
                                                     <state key="normal" title="Sair">
                                                         <color key="titleColor" red="1" green="0.34509803919999998" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="logoutButton:" destination="Lea-3H-pOs" eventType="touchUpInside" id="yBR-wE-w8L"/>
+                                                        <segue destination="byK-O1-A2p" kind="show" id="6Kg-OX-YBe"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -106,6 +110,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XjA-C9-S6W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="755" y="42"/>
+        </scene>
+        <!--Auth-->
+        <scene sceneID="KZj-q4-v5Q">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Auth" id="byK-O1-A2p" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="bGY-nX-f5l"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7g8-ZR-pq4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1263" y="41"/>
         </scene>
     </scenes>
     <resources>

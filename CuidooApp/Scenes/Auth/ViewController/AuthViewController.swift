@@ -7,18 +7,12 @@
 //
 
 import UIKit
-import Firebase
 
 class AuthViewController: UIViewController {
 
+    //Outlets
     @IBOutlet weak var userTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    
-    var database = Firestore.firestore()
-    var reference: CollectionReference!
-    
-    var thisUser: MyUser!
-    var actualMatch: Match!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,32 +20,24 @@ class AuthViewController: UIViewController {
 
     @IBAction func loginButton(_ sender: Any) {
         //Validar os campos
-        let email = userTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
-        let password = passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+        let email = userTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+        let password = passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
          
         
-        MatchServices.userLogin(email: email ?? "", password: password ?? "") { (result, error) in
-            if error != nil {
-                //Fazer o erro caso não consiga entrar
-                print("Não conseguiu logar")
-            } else {
-                //Entrou na conta
-                print("Voce logou!")
-                self.updateMyLocalUser()
-            }
+        MatchServices.userLogin(email: email, password: password) {
+            self.updateMyLocalUser()
         }
     }
     
     /// Verifica qual é o usuario que esta logado
     /// - Parameter sender:
     @IBAction func howIsLogged(_ sender: Any) {
-        if let user = self.thisUser {
-            user.showClass()
-        }
-        else {
+        if !(LoggedUser.shared.userIsLogged()) {
             print("Não tem usuario logado")
             return
         }
+        
+        LoggedUser.shared.user!.showClass()
     }
     
     @IBAction func desconectButton(_ sender: Any) {
@@ -59,13 +45,12 @@ class AuthViewController: UIViewController {
     }
     
     @IBAction func createMatch(_ sender: Any) {
-        guard let user = self.thisUser else {
+        if LoggedUser.shared.userIsLogged() {
+            MatchServices.createMatch(idBaba: LoggedUser.shared.user!.uid)
+            updateMyLocalUser()
+        } else {
             print("O usuário não existe")
-            return
         }
-        MatchServices.createMatch(idBaba: user.uid)
-        
-        updateMyLocalUser()
     }
     
     /// Atualiza o usuario local
@@ -73,7 +58,7 @@ class AuthViewController: UIViewController {
         //Atualizar o myUser local aqui com o novo actualMatch
         MatchServices.getUser { (user) in
             if let newUser = user {
-                self.thisUser = newUser
+                LoggedUser.shared.changeUser(user: newUser)
                 OperationQueue.main.addOperation {
                     //Atualizar UI aqui
                 }
@@ -84,10 +69,10 @@ class AuthViewController: UIViewController {
     }
     
     @IBAction func seeMatch(_ sender: Any) {
-        MatchServices.getMatch(idMatch: self.thisUser.actualMatch) { (match) in
+        MatchServices.getMatch(idMatch: LoggedUser.shared.user!.uid) { (match) in
             if let newMatch = match {
-                self.actualMatch = newMatch
-                self.actualMatch.showMatch()
+                LoggedUser.shared.changeActualMatch(match: newMatch)
+                LoggedUser.shared.actualMatch?.showMatch()
             } else {
                 //Erros
             }
@@ -96,11 +81,11 @@ class AuthViewController: UIViewController {
     
     @IBAction func searchBaba(_ sender: Any) {
         MatchServices.searchBaba { (match) in
-            self.actualMatch = match
+            LoggedUser.shared.changeActualMatch(match: match)
         }
     }
     
     @IBAction func momLikesBaba(_ sender: Any) {
-        MatchServices.momLikesBaba(idMom: self.thisUser.uid, matchId: self.actualMatch.documentId)
+        MatchServices.momLikesBaba(idMom: LoggedUser.shared.user!.uid, matchId: LoggedUser.shared.actualMatch!.documentId)
     }
 }

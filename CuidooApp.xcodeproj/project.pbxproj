@@ -47,6 +47,7 @@
 		E7565B8E2388262E00946D19 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7565B8D2388262E00946D19 /* Match.swift */; };
 		E7565B90238826A000946D19 /* StatusEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7565B8F238826A000946D19 /* StatusEnum.swift */; };
 		E7565B96238C002A00946D19 /* MatchServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7565B95238C002A00946D19 /* MatchServices.swift */; };
+		E77DECD4238DA82700C81A92 /* LoggedUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77DECD3238DA82700C81A92 /* LoggedUser.swift */; };
 		E7AC68A72384342F008EC82F /* MyUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AC68A62384342F008EC82F /* MyUser.swift */; };
 		E7CCFEE1237C4FA800F9DA94 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CCFEE0237C4FA800F9DA94 /* ChatViewController.swift */; };
 		E7CCFEE3237C685B00F9DA94 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CCFEE2237C685B00F9DA94 /* Channel.swift */; };
@@ -105,6 +106,7 @@
 		E7565B8D2388262E00946D19 /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
 		E7565B8F238826A000946D19 /* StatusEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusEnum.swift; sourceTree = "<group>"; };
 		E7565B95238C002A00946D19 /* MatchServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchServices.swift; sourceTree = "<group>"; };
+		E77DECD3238DA82700C81A92 /* LoggedUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedUser.swift; sourceTree = "<group>"; };
 		E7AC68A62384342F008EC82F /* MyUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyUser.swift; sourceTree = "<group>"; };
 		E7CCFEE0237C4FA800F9DA94 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		E7CCFEE2237C685B00F9DA94 /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
@@ -352,6 +354,7 @@
 			children = (
 				E7565B8D2388262E00946D19 /* Match.swift */,
 				E7AC68A62384342F008EC82F /* MyUser.swift */,
+				E77DECD3238DA82700C81A92 /* LoggedUser.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -647,6 +650,7 @@
 				E299048F2386C2590055CB25 /* HistoryViewController.swift in Sources */,
 				E7CCFEF6237C9B6B00F9DA94 /* ChatColorsExtension.swift in Sources */,
 				4C765B01237991BC00D3D38B /* SearchViewController.swift in Sources */,
+				E77DECD4238DA82700C81A92 /* LoggedUser.swift in Sources */,
 				E7CCFEE5237C689A00F9DA94 /* Message.swift in Sources */,
 				4C3D1092238425C2002CAB84 /* UIColorExtensions.swift in Sources */,
 				4C3D10972384345F002CAB84 /* BabySitterInfosView.swift in Sources */,

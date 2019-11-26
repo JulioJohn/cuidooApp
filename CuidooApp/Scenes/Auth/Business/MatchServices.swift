@@ -29,6 +29,15 @@ class MatchServices {
         
     }
     
+    static func updateUser() {
+        if !LoggedUser.shared.userIsLogged() { return }
+        
+        let userDatabase = self.database.collection("users")
+        let userId = "\(LoggedUser.shared.user?.uid)"
+        //Atualizo no database o user, baseado no user local
+        userDatabase.document(userId).updateData((LoggedUser.shared.user?.transformInDatabaseType())!)
+    }
+    
     static func updateActualMatch(idActualMatch: String, idUser: String) {
         print("Atualizou o id do match atual no servidor")
     
@@ -37,7 +46,6 @@ class MatchServices {
      }
     
     static func getUser(completion: @escaping (MyUser?) -> Void) {
-        //var userInDatabase: MyUser? = nil
         
         let user = Auth.auth().currentUser
         if let user = user {
@@ -63,7 +71,6 @@ class MatchServices {
         }
     }
     
-    //FAZER O COMPLETION DISSON, TA CRASHANDO QUANDO VOLTA PQ N DA TEMPO DE CORRIGIR!! LEMBRAR DE FAZER ISSO HOJE!!!
     static func searchBaba(completion: @escaping (Match?) -> Void) {
         var newMatch: Match? = nil
         self.database.collection("matchs").getDocuments { (snapshot, error) in
@@ -83,18 +90,29 @@ class MatchServices {
         matchCollections.getDocuments { (snapshot, error) in
             let matchRef = matchCollections.document(matchId)
             matchRef.updateData(["uidMae" : idMom, "status" : "waitingBaba"])
+            
             print("Esta funcionando, só não esta alterando o meu usuário")
         }
     }
     
-    static func userLogin(email: String, password: String, completion: @escaping (AuthDataResult?, Error?) -> Void) {
+    static func userLogin(email: String, password: String, completion: @escaping () -> Void) {
         //Logar com o usuario
-        Auth.auth().signIn(withEmail: email, password: password, completion: completion)
+        Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
+            if error != nil {
+                //Fazer o erro caso não consiga entrar
+                print("Não conseguiu logar")
+            } else {
+                //Entrou na conta
+                print("Voce logou!")
+                completion()
+            }
+        }
     }
     
     static func desconnect() {
         do {
             try Auth.auth().signOut()
+            LoggedUser.shared.logoutUser()
             print("Desconectado!")
         } catch let signOutError as NSError {
           print ("Erro ao desconectar: %@", signOutError)
