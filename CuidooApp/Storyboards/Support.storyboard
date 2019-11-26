@@ -7,20 +7,48 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Faq View Controller-->
         <scene sceneID="7xs-8S-7gi">
             <objects>
-                <viewController id="zKg-Jh-GZ4" sceneMemberID="viewController">
+                <viewController id="zKg-Jh-GZ4" customClass="FaqViewController" customModule="CuidooApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2W8-bE-0uO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rDZ-7E-xAD">
+                                <rect key="frame" x="0.0" y="44" width="414" height="750"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iK8-sa-hdt">
+                                <rect key="frame" x="0.0" y="802" width="414" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="WO3-9f-aj1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Entrar em contato">
+                                    <color key="titleColor" red="1" green="0.34509803919999998" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="iK8-sa-hdt" firstAttribute="top" secondItem="rDZ-7E-xAD" secondAttribute="bottom" constant="8" id="3xj-Yb-Noc"/>
+                            <constraint firstItem="miV-ZM-RD8" firstAttribute="bottom" secondItem="iK8-sa-hdt" secondAttribute="bottom" id="6Wn-c0-zsK"/>
+                            <constraint firstItem="rDZ-7E-xAD" firstAttribute="leading" secondItem="miV-ZM-RD8" secondAttribute="leading" id="ESh-5Q-zrB"/>
+                            <constraint firstItem="miV-ZM-RD8" firstAttribute="trailing" secondItem="rDZ-7E-xAD" secondAttribute="trailing" id="LYP-UU-zfb"/>
+                            <constraint firstItem="miV-ZM-RD8" firstAttribute="trailing" secondItem="iK8-sa-hdt" secondAttribute="trailing" id="UGQ-jr-OQB"/>
+                            <constraint firstItem="iK8-sa-hdt" firstAttribute="leading" secondItem="miV-ZM-RD8" secondAttribute="leading" id="ett-qo-MD4"/>
+                            <constraint firstItem="rDZ-7E-xAD" firstAttribute="top" secondItem="miV-ZM-RD8" secondAttribute="top" id="xqd-x8-V8a"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="miV-ZM-RD8"/>
                     </view>
+                    <connections>
+                        <outlet property="faqTableView" destination="rDZ-7E-xAD" id="XHi-xX-cf0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QEM-bw-16v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="328" y="216"/>
+            <point key="canvasLocation" x="327.536231884058" y="215.625"/>
         </scene>
     </scenes>
 </document>
