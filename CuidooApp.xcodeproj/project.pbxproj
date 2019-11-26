@@ -164,9 +164,8 @@
 		4CEFB1BF2383611C0073F0D9 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				4CEFB1C623840CA00073F0D9 /* map */,
-				4CEFB1C1238361600073F0D9 /* InfoCell.swift */,
-				4CEFB1C2238361600073F0D9 /* InfoCell.xib */,
+				E77DECD2238D92D600C81A92 /* InfoCell */,
+				4CEFB1C623840CA00073F0D9 /* Map */,
 				4CEFB1C0238361240073F0D9 /* BabySitter */,
 			);
 			path = Cells;
@@ -182,13 +181,13 @@
 			path = BabySitter;
 			sourceTree = "<group>";
 		};
-		4CEFB1C623840CA00073F0D9 /* map */ = {
+		4CEFB1C623840CA00073F0D9 /* Map */ = {
 			isa = PBXGroup;
 			children = (
 				4CEFB1C723840CC90073F0D9 /* MapCell.swift */,
 				4CEFB1C823840CC90073F0D9 /* MapCell.xib */,
 			);
-			path = map;
+			path = Map;
 			sourceTree = "<group>";
 		};
 		7A10E2F6808C474F7E0A412E /* Frameworks */ = {
@@ -354,6 +353,15 @@
 				E7565B95238C002A00946D19 /* MatchServices.swift */,
 			);
 			path = Business;
+			sourceTree = "<group>";
+		};
+		E77DECD2238D92D600C81A92 /* InfoCell */ = {
+			isa = PBXGroup;
+			children = (
+				4CEFB1C1238361600073F0D9 /* InfoCell.swift */,
+				4CEFB1C2238361600073F0D9 /* InfoCell.xib */,
+			);
+			path = InfoCell;
 			sourceTree = "<group>";
 		};
 		E7CCFEF4237C9B4B00F9DA94 /* Extensions */ = {
