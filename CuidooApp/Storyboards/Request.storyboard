@@ -37,10 +37,27 @@
                                     <action selector="didClickSeeNext:" destination="ymi-OD-QlD" eventType="touchUpInside" id="8ab-A0-eNd"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KYG-Th-P9N" customClass="BabySitterInfosView" customModule="CuidooApp" customModuleProvider="target">
-                                <rect key="frame" x="16" y="104" width="382" height="628"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R8N-PZ-850">
+                                <rect key="frame" x="16" y="104" width="382" height="644"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KYG-Th-P9N" customClass="BabySitterInfosView" customModule="CuidooApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="644"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="382" id="d8E-GV-pOf"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="KYG-Th-P9N" secondAttribute="trailing" constant="16" id="8tA-MC-Dx5"/>
+                                    <constraint firstAttribute="bottom" secondItem="KYG-Th-P9N" secondAttribute="bottom" constant="16" id="V9M-xd-7f7"/>
+                                    <constraint firstItem="KYG-Th-P9N" firstAttribute="leading" secondItem="KWO-cd-HCr" secondAttribute="leading" id="Vf6-ne-DJo"/>
+                                    <constraint firstItem="KYG-Th-P9N" firstAttribute="top" secondItem="KWO-cd-HCr" secondAttribute="top" id="WgY-Ec-KMW"/>
+                                    <constraint firstItem="KWO-cd-HCr" firstAttribute="bottom" secondItem="KYG-Th-P9N" secondAttribute="bottom" id="t0x-II-uca"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="riK-lD-rcq"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="KWO-cd-HCr"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -48,11 +65,11 @@
                             <constraint firstItem="WHe-9f-Q24" firstAttribute="width" secondItem="GbP-8m-rRx" secondAttribute="width" id="5UM-Iw-MrG"/>
                             <constraint firstItem="GbP-8m-rRx" firstAttribute="centerY" secondItem="WHe-9f-Q24" secondAttribute="centerY" id="5tv-Ab-anE"/>
                             <constraint firstItem="1ZU-Sq-gDP" firstAttribute="trailing" secondItem="GbP-8m-rRx" secondAttribute="trailing" constant="16" id="7CN-Sb-WBn"/>
-                            <constraint firstItem="GbP-8m-rRx" firstAttribute="top" secondItem="KYG-Th-P9N" secondAttribute="bottom" constant="32" id="Dks-QY-GH6"/>
+                            <constraint firstItem="R8N-PZ-850" firstAttribute="leading" secondItem="1ZU-Sq-gDP" secondAttribute="leading" constant="16" id="HSP-2r-ZmV"/>
                             <constraint firstItem="WHe-9f-Q24" firstAttribute="leading" secondItem="1ZU-Sq-gDP" secondAttribute="leading" constant="16" id="O0Z-QJ-IBr"/>
-                            <constraint firstItem="KYG-Th-P9N" firstAttribute="leading" secondItem="1ZU-Sq-gDP" secondAttribute="leading" constant="16" id="YV7-Xu-Fjb"/>
-                            <constraint firstItem="1ZU-Sq-gDP" firstAttribute="trailing" secondItem="KYG-Th-P9N" secondAttribute="trailing" constant="16" id="Yqr-rR-Sd0"/>
-                            <constraint firstItem="KYG-Th-P9N" firstAttribute="top" secondItem="1ZU-Sq-gDP" secondAttribute="top" constant="16" id="f6P-vR-Dvt"/>
+                            <constraint firstItem="1ZU-Sq-gDP" firstAttribute="trailing" secondItem="R8N-PZ-850" secondAttribute="trailing" constant="16" id="OC0-XJ-LLg"/>
+                            <constraint firstItem="R8N-PZ-850" firstAttribute="top" secondItem="1ZU-Sq-gDP" secondAttribute="top" constant="16" id="Udb-lW-qU9"/>
+                            <constraint firstItem="GbP-8m-rRx" firstAttribute="top" secondItem="R8N-PZ-850" secondAttribute="bottom" constant="16" id="nAJ-Jr-yyi"/>
                             <constraint firstItem="GbP-8m-rRx" firstAttribute="leading" secondItem="WHe-9f-Q24" secondAttribute="trailing" constant="16" id="vkN-ky-ce6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1ZU-Sq-gDP"/>

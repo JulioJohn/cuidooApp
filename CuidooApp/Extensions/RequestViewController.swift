@@ -18,6 +18,7 @@ class RequestViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        babySitterView.layoutIfNeeded()
         babySitterView.layer.cornerRadius = 13
         confirm.layer.cornerRadius = 13
         seeNext.layer.cornerRadius = 13
