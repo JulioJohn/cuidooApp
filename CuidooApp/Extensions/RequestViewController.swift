@@ -10,15 +10,26 @@ import UIKit
 
 class RequestViewController: UIViewController {
 
+    @IBOutlet weak var babySitterView: BabySitterInfosView!
+    
+    @IBOutlet weak var confirm: UIButton!
+    @IBOutlet weak var seeNext: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        babySitterView.layer.cornerRadius = 13
+        confirm.layer.cornerRadius = 13
+        seeNext.layer.cornerRadius = 13
+        
     }
 
-
+    @IBAction func didClickConfirm(_ sender: Any) {
+        
+    }
+    
+    @IBAction func didClickSeeNext(_ sender: Any) {
+        
+    }
+    
 }

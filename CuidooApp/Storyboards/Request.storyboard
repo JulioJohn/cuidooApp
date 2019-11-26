@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VdH-3P-VeZ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
@@ -10,23 +10,61 @@
         <!--Confirmar cuidadora-->
         <scene sceneID="DCa-Pl-0WH">
             <objects>
-                <viewController id="ymi-OD-QlD" sceneMemberID="viewController">
+                <viewController id="ymi-OD-QlD" customClass="RequestViewController" customModule="CuidooApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="V3e-vx-kR0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GbP-8m-rRx">
-                                <rect key="frame" x="254" y="772" width="87" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GbP-8m-rRx">
+                                <rect key="frame" x="215" y="764" width="183" height="66"/>
+                                <color key="backgroundColor" red="0.92923806980000001" green="0.92923806980000001" blue="0.92923806980000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="IOK-iM-WTu"/>
+                                </constraints>
                                 <state key="normal" title="CONFIRMAR"/>
+                                <connections>
+                                    <action selector="didClickConfirm:" destination="ymi-OD-QlD" eventType="touchUpInside" id="yL5-BV-7zs"/>
+                                </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WHe-9f-Q24">
+                                <rect key="frame" x="16" y="764" width="183" height="66"/>
+                                <color key="backgroundColor" red="0.92923806980000001" green="0.92923806980000001" blue="0.92923806980000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="NhK-e4-gmS"/>
+                                </constraints>
+                                <state key="normal" title="VER PRÓXIMA"/>
+                                <connections>
+                                    <action selector="didClickSeeNext:" destination="ymi-OD-QlD" eventType="touchUpInside" id="8ab-A0-eNd"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KYG-Th-P9N" customClass="BabySitterInfosView" customModule="CuidooApp" customModuleProvider="target">
+                                <rect key="frame" x="16" y="104" width="382" height="628"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="1ZU-Sq-gDP" firstAttribute="bottom" secondItem="WHe-9f-Q24" secondAttribute="bottom" constant="32" id="1UC-ob-kpb"/>
+                            <constraint firstItem="WHe-9f-Q24" firstAttribute="width" secondItem="GbP-8m-rRx" secondAttribute="width" id="5UM-Iw-MrG"/>
+                            <constraint firstItem="GbP-8m-rRx" firstAttribute="centerY" secondItem="WHe-9f-Q24" secondAttribute="centerY" id="5tv-Ab-anE"/>
+                            <constraint firstItem="1ZU-Sq-gDP" firstAttribute="trailing" secondItem="GbP-8m-rRx" secondAttribute="trailing" constant="16" id="7CN-Sb-WBn"/>
+                            <constraint firstItem="GbP-8m-rRx" firstAttribute="top" secondItem="KYG-Th-P9N" secondAttribute="bottom" constant="32" id="Dks-QY-GH6"/>
+                            <constraint firstItem="WHe-9f-Q24" firstAttribute="leading" secondItem="1ZU-Sq-gDP" secondAttribute="leading" constant="16" id="O0Z-QJ-IBr"/>
+                            <constraint firstItem="KYG-Th-P9N" firstAttribute="leading" secondItem="1ZU-Sq-gDP" secondAttribute="leading" constant="16" id="YV7-Xu-Fjb"/>
+                            <constraint firstItem="1ZU-Sq-gDP" firstAttribute="trailing" secondItem="KYG-Th-P9N" secondAttribute="trailing" constant="16" id="Yqr-rR-Sd0"/>
+                            <constraint firstItem="KYG-Th-P9N" firstAttribute="top" secondItem="1ZU-Sq-gDP" secondAttribute="top" constant="16" id="f6P-vR-Dvt"/>
+                            <constraint firstItem="GbP-8m-rRx" firstAttribute="leading" secondItem="WHe-9f-Q24" secondAttribute="trailing" constant="16" id="vkN-ky-ce6"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="1ZU-Sq-gDP"/>
                     </view>
                     <navigationItem key="navigationItem" title="Confirmar cuidadora" id="kLC-YT-Yl5">
                         <barButtonItem key="backBarButtonItem" title="Cancelar" id="IK9-lk-WIV"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="babySitterView" destination="KYG-Th-P9N" id="Hgm-bc-0ge"/>
+                        <outlet property="confirm" destination="GbP-8m-rRx" id="nRQ-0p-1tk"/>
+                        <outlet property="seeNext" destination="WHe-9f-Q24" id="Qbh-dc-U85"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ip3-3G-Ydx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

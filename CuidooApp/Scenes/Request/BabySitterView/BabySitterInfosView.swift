@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BabySitterInfosView: UIView {
+class BabySitterInfosView: UIView, Nibable {
 
     @IBOutlet weak var babySitterImage: UIImageView!
     @IBOutlet weak var bottomView: UIView!
@@ -23,8 +23,16 @@ class BabySitterInfosView: UIView {
             self.heartbutton.setBackgroundImage(UIImage(named: "heart"), for: .normal)
         }
      }
-     // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        loadNib()
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        loadNib()
+    }
     
 
 }

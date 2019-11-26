@@ -7,9 +7,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BabySitterInfosView" customModule="CuidooApp" customModuleProvider="target">
+            <connections>
+                <outlet property="babySitterImage" destination="wQR-7u-0lV" id="lz2-0H-ucp"/>
+                <outlet property="bottomView" destination="pEo-Kw-0Yb" id="14D-nG-hf5"/>
+                <outlet property="descriptionText" destination="Zyl-kD-jb5" id="xQa-zR-0wm"/>
+                <outlet property="heartbutton" destination="yR4-yf-zmB" id="pBA-rr-u7X"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB" customClass="BabySitterInfosView" customModule="CuidooApp" customModuleProvider="target">
+        <view contentMode="scaleToFill" restorationIdentifier="BabySitterInfosView" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="414" height="663"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -198,7 +205,7 @@
                         <color key="titleColor" red="0.92923806980000001" green="0.92923806980000001" blue="0.92923806980000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>
-                        <action selector="heartButtonClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="kOO-CE-EfD"/>
+                        <action selector="heartButtonClick:" destination="-1" eventType="touchUpInside" id="0jY-qc-oUW"/>
                     </connections>
                 </button>
             </subviews>
@@ -226,12 +233,6 @@
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <connections>
-                <outlet property="babySitterImage" destination="wQR-7u-0lV" id="efj-yR-pbO"/>
-                <outlet property="bottomView" destination="pEo-Kw-0Yb" id="a8c-rf-hbK"/>
-                <outlet property="descriptionText" destination="Zyl-kD-jb5" id="aOT-Zo-v7G"/>
-                <outlet property="heartbutton" destination="yR4-yf-zmB" id="2Lf-UE-fyw"/>
-            </connections>
             <point key="canvasLocation" x="131.8840579710145" y="118.86160714285714"/>
         </view>
     </objects>
