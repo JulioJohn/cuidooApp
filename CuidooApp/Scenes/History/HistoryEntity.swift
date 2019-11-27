@@ -16,8 +16,10 @@ class HistoryEntity {
     var value: Double
     var favoriteHeart: Bool
     var rating: Int
-    
-    
+    var textEvaluation: String?
+    var age: String?
+    var ocupation: String?
+     
     init(name: String, timestamp: Date, value: Double, favoriteHeart: Bool, rating: Int) {
         self.name = name
         self.timestamp = timestamp

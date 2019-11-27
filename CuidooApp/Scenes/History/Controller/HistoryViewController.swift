@@ -30,7 +30,6 @@ class HistoryViewController: UIViewController {
                  HistoryEntity(name: "Maria", timestamp: Date(), value: 12.90, favoriteHeart: false, rating: 3),
                  HistoryEntity(name: "Cláudia", timestamp: Date(), value: 00.00, favoriteHeart: true, rating: 1)
                ]
-        
     }
 
 } // end class HistoryViewController

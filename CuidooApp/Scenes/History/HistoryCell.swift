@@ -60,7 +60,6 @@ class HistoryCell: UITableViewCell {
         heartFlag = entity.favoriteHeart
         
         let rating = entity.rating
-        
         for star in ratingStackView {
             if star.tag < rating {
                 star.image = UIImage(systemName: "star.fill")

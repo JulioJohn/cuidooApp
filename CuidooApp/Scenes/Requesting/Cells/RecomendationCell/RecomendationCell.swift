@@ -1,5 +1,5 @@
 //
-//  RecomendationCell.swift
+//  RecommendationCell.swift
 //  CuidooApp
 //
 //  Created by Victoria Andressa S. M. Faria on 27/11/19.
@@ -8,17 +8,46 @@
 
 import UIKit
 
-class RecomendationCell: UITableViewCell {
+class RecommendationCell: UITableViewCell {
 
+    
+    @IBOutlet weak var imageViewBabySitter: UIImageView!
+    @IBOutlet weak var nameBabySitter: UILabel!
+    @IBOutlet weak var timestampLabel: UILabel!
+    @IBOutlet var ratingStackView: [UIImageView]!
+    @IBOutlet weak var textEvaluationLabel: UILabel!
+    @IBOutlet weak var backView: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        backView.backgroundColor = .cuidooLightGrey
+        backView.layer.cornerRadius = 20
+        imageViewBabySitter.layer.cornerRadius = 45
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
     
-}
+    func configure(entity: HistoryEntity){
+        self.nameBabySitter.text = entity.name
+        self.timestampLabel.text = entity.timestamp.toString()
+        self.textEvaluationLabel.text  = entity.textEvaluation
+        
+        // rating star
+        let rating = entity.rating
+        for star in ratingStackView {
+            if star.tag < rating {
+                star.image = UIImage(systemName: "star.fill")
+                star.tintColor = .cuidooPink
+            } else {
+                star.image = UIImage(systemName: "star")
+                star.tintColor = .gray
+            }
+        }
+    }
+    
+} // end class RecommendationCell
