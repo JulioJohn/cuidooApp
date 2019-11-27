@@ -14,6 +14,7 @@ class MatchServices {
     static var database = Firestore.firestore()
     static var reference: CollectionReference!
     
+    //FAZER O DAO
     static func createMatch(idBaba: String) {
         //Uso essa linha para definir a chave do documento como sendo a chave do Id interno
         let ref = database.collection("matchs").document()
@@ -29,6 +30,7 @@ class MatchServices {
         
     }
     
+    //FAZER O DAO
     static func updateUser() {
         if !LoggedUser.shared.userIsLogged() { return }
         
@@ -38,6 +40,7 @@ class MatchServices {
         userDatabase.document(userId).updateData((LoggedUser.shared.user?.transformInDatabaseType())!)
     }
     
+    //FAZER O DAO
     static func updateActualMatch(idActualMatch: String, idUser: String) {
         print("Atualizou o id do match atual no servidor")
     
@@ -47,6 +50,10 @@ class MatchServices {
     
     static func getUser(completion: @escaping () -> Void) {
         UserDAO.getUser {
+            UserDAO.updateInformations {
+                print("Informacoes atualizadas")
+                LoggedUser.shared.user?.printInformations()
+            }
             //O actual match local é atualizado aqui
             if let actualMatch = LoggedUser.shared.user?.actualMatch {
                 getMatch(idMatch: actualMatch) {
@@ -69,6 +76,7 @@ class MatchServices {
         completion()
     }
     
+    //FAZER O DAO
     static func searchBaba(completion: @escaping (Match?) -> Void) {
         var newMatch: Match? = nil
         self.database.collection("matchs").getDocuments { (snapshot, error) in
@@ -83,6 +91,7 @@ class MatchServices {
         }
     }
     
+    //FAZER O DAO
     static func momLikesBaba(idMom: String, matchId: String) {
         let matchCollections = self.database.collection("matchs")
         matchCollections.getDocuments { (snapshot, error) in
@@ -93,6 +102,7 @@ class MatchServices {
         }
     }
     
+    //FAZER O DAO
     static func userLogin(email: String, password: String, completion: @escaping () -> Void) {
         //Logar com o usuario
         Auth.auth().signIn(withEmail: email, password: password) { (result, error) in

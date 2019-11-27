@@ -29,4 +29,8 @@ class MatchDAO {
         }
     }
     
+    static func createMatch(completion: @escaping () -> Void) {
+        let document = databaseMatch.document()
+    }
+    
 }
