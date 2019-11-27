@@ -14,20 +14,10 @@ class MatchServices {
     static var database = Firestore.firestore()
     static var reference: CollectionReference!
     
-    //FAZER O DAO
     static func createMatch(idBaba: String) {
-        //Uso essa linha para definir a chave do documento como sendo a chave do Id interno
-        let ref = database.collection("matchs").document()
-        
-        let documentData: [String : Any] = ["documentId": "\(ref.documentID)", "uidBaba": "\(idBaba)","uidMae": "none", "status": "available"]
-        
-        updateActualMatch(idActualMatch: ref.documentID, idUser: idBaba)
-        
-        ref.setData(documentData)
-    }
-    
-    static func updateMatch(match: Match) {
-        
+        MatchDAO.createMatch(idBaba: idBaba) {
+            
+        }
     }
     
     //FAZER O DAO
@@ -39,14 +29,6 @@ class MatchServices {
         //Atualizo no database o user, baseado no user local
         userDatabase.document(userId).updateData((LoggedUser.shared.user?.transformInDatabaseType())!)
     }
-    
-    //FAZER O DAO
-    static func updateActualMatch(idActualMatch: String, idUser: String) {
-        print("Atualizou o id do match atual no servidor")
-    
-        //Atualiza o actualMatch do servidor
-        self.database.collection("users").document("\(idUser)").updateData(["actualMatch" : idActualMatch])
-     }
     
     static func getUser(completion: @escaping () -> Void) {
         UserDAO.getUser {
@@ -80,8 +62,8 @@ class MatchServices {
         MatchDAO.getAllMatchs(completion: { (match) in
             //Guardar o match atual
             LoggedUser.shared.changeActualMatch(match: match)
-            //Guardar o outro usuario do match atual para recolher informações
             
+            //Guardar o outro usuario do match atual para recolher informações
             //Atualiza a baba do match local
             if LoggedUser.shared.user?.isBaba == false {
                 let babaId = LoggedUser.shared.actualMatch!.uidBaba
@@ -106,14 +88,11 @@ class MatchServices {
         })
     }
     
-    //FAZER O DAO
     static func momLikesBaba(idMom: String, matchId: String) {
-        let matchCollections = self.database.collection("matchs")
-        matchCollections.getDocuments { (snapshot, error) in
-            let matchRef = matchCollections.document(matchId)
-            matchRef.updateData(["uidMae" : idMom, "status" : "waitingBaba"])
-            
-            print("Esta funcionando, só não esta alterando o meu usuário")
+        MatchDAO.momLikesBaba(idMom: idMom) {
+            UserDAO.updateUserActualMatch {
+                print("Atualizou o match atual do usuario na nuvem!")
+            }
         }
     }
     

@@ -75,7 +75,7 @@ class Message: MessageType {
         return nil
       }
     }
-} // end class Message 
+}
 
 extension Message: DatabaseRepresentation {
     var representation: [String : Any] {
@@ -93,7 +93,7 @@ extension Message: DatabaseRepresentation {
         
         return rep
     }
-} // end extension Message: DatabaseRepresentation
+}
 
 //É necessário para cumprir o protocolo Equatable
 extension Message: Comparable {
@@ -106,4 +106,4 @@ extension Message: Comparable {
     return lhs.sentDate < rhs.sentDate
   }
   
-} // end extension Message: Comparable
+}

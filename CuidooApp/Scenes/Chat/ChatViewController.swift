@@ -28,11 +28,8 @@ class ChatViewController: MessagesViewController, MessageInputBarDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        reference = database.collection("match").document(LoggedUser.shared.actualMatch!.documentId)
-        
         //Caminho em que o chat está sendo armazenado
-        reference = database.collection(["match", LoggedUser.shared.actualMatch!.documentId, "Chat"].joined(separator: "/"))
-        
+        reference = database.collection(["matchs", LoggedUser.shared.actualMatch!.documentId, "Chat"].joined(separator: "/"))
         
         navigationItem.largeTitleDisplayMode = .never
         
@@ -57,10 +54,6 @@ class ChatViewController: MessagesViewController, MessageInputBarDelegate {
             self.handleDocumentChange(change)
           }
         }
-    }
-    
-    func configureViewController() {
-        
     }
     
     private func insertNewMessage(_ message: Message) {
@@ -96,23 +89,18 @@ class ChatViewController: MessagesViewController, MessageInputBarDelegate {
     }
     
     private func save(_ message: Message) {
-      reference?.addDocument(data: message.representation) { error in
-        if let e = error {
-          print("Error sending message: \(e.localizedDescription)")
-          return
+        ChatServices.save(message) {
+            self.messagesCollectionView.scrollToBottom()
         }
-        self.messagesCollectionView.scrollToBottom()
-      }
     }
     
-    // função de funcionamento do botão com o novo MessageKit
+    // Função de funcionamento do botão com o novo MessageKit
     func inputBar(_ inputBar: InputBarAccessoryView, didPressSendButtonWith text: String) {
-         print("apertou o botao")
            let message = Message(content: text)
            save(message)
            inputBar.inputTextView.text = ""
     }
-} // end class ChatViewController
+}
 
 
 // MARK: - MessageInputBarDelegate
@@ -138,22 +126,23 @@ extension ChatViewController: MessagesDisplayDelegate {
     return .bubbleTail(corner, .curved)
   }
   
-} // end extension ChatViewController: MessagesDisplayDelegate
+}
 
 // MARK: - UIImagePickerControllerDelegate
 
 extension ChatViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
   
-} // end extension ChatViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate
+}
 
 // MARK: - MessagesDataSource
 extension ChatViewController: MessagesDataSource {
+
     func messageForItem(at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> MessageType {
         return messages[indexPath.section]
     }
     
     func currentSender() -> SenderType {
-        return Sender(id: "666", displayName: "Júlio John teste")
+        return Sender(id: LoggedUser.shared.user!.uid, displayName: LoggedUser.shared.user!.name)
     }
     
     func numberOfSections(in messagesCollectionView: MessagesCollectionView) -> Int {
@@ -164,19 +153,16 @@ extension ChatViewController: MessagesDataSource {
         return messages.count
     }
 
-  func cellTopLabelAttributedText(for message: MessageType,
-    at indexPath: IndexPath) -> NSAttributedString? {
-
-    let name = message.sender.displayName
-    return NSAttributedString(
-      string: name,
-      attributes: [
-        .font: UIFont.preferredFont(forTextStyle: .caption1),
-        .foregroundColor: UIColor(white: 0.3, alpha: 1)
-      ]
-    )
-  }
-} // end extension ChatViewController: MessagesDataSource
+    func cellTopLabelAttributedText(for message: MessageType, at indexPath: IndexPath) -> NSAttributedString? {
+        let name = message.sender.displayName
+        return NSAttributedString (
+            string: name,
+            attributes: [.font: UIFont.preferredFont(forTextStyle: .caption1),
+                         .foregroundColor: UIColor(white: 0.3, alpha: 1)
+            ]
+        )
+    }
+}
 
 
 // MARK: - MessageLayoutDelegate
@@ -199,6 +185,4 @@ extension ChatViewController: MessagesLayoutDelegate {
 
     return 0
   }
-} // end extension ChatViewController: MessagesLayoutDelegate
-
-
+}

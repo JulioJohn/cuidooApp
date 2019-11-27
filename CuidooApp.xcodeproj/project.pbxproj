@@ -62,6 +62,8 @@
 		E7565B90238826A000946D19 /* StatusEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7565B8F238826A000946D19 /* StatusEnum.swift */; };
 		E7565B96238C002A00946D19 /* MatchServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7565B95238C002A00946D19 /* MatchServices.swift */; };
 		E76322FB238EA6FD009BE203 /* Informations.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76322FA238EA6FD009BE203 /* Informations.swift */; };
+		E76322FD238F06D0009BE203 /* ChatServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76322FC238F06D0009BE203 /* ChatServices.swift */; };
+		E76322FF238F06E2009BE203 /* ChatDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76322FE238F06E2009BE203 /* ChatDAO.swift */; };
 		E77DECD4238DA82700C81A92 /* LoggedUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77DECD3238DA82700C81A92 /* LoggedUser.swift */; };
 		E7AC68A72384342F008EC82F /* MyUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AC68A62384342F008EC82F /* MyUser.swift */; };
 		E7CCFEE1237C4FA800F9DA94 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CCFEE0237C4FA800F9DA94 /* ChatViewController.swift */; };
@@ -136,6 +138,8 @@
 		E7565B8F238826A000946D19 /* StatusEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusEnum.swift; sourceTree = "<group>"; };
 		E7565B95238C002A00946D19 /* MatchServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchServices.swift; sourceTree = "<group>"; };
 		E76322FA238EA6FD009BE203 /* Informations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Informations.swift; sourceTree = "<group>"; };
+		E76322FC238F06D0009BE203 /* ChatServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatServices.swift; sourceTree = "<group>"; };
+		E76322FE238F06E2009BE203 /* ChatDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDAO.swift; sourceTree = "<group>"; };
 		E77DECD3238DA82700C81A92 /* LoggedUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedUser.swift; sourceTree = "<group>"; };
 		E7AC68A62384342F008EC82F /* MyUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyUser.swift; sourceTree = "<group>"; };
 		E7CCFEE0237C4FA800F9DA94 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
@@ -442,6 +446,7 @@
 			children = (
 				E7444B51238DD5F600001EC0 /* UserDAO.swift */,
 				E7444B4F238DD5C600001EC0 /* MatchDAO.swift */,
+				E76322FE238F06E2009BE203 /* ChatDAO.swift */,
 			);
 			path = DAO;
 			sourceTree = "<group>";
@@ -468,6 +473,7 @@
 		E7565B94238C000600946D19 /* Business */ = {
 			isa = PBXGroup;
 			children = (
+				E76322FC238F06D0009BE203 /* ChatServices.swift */,
 				E7565B95238C002A00946D19 /* MatchServices.swift */,
 				E7444B53238DD62400001EC0 /* DAO */,
 			);
@@ -741,6 +747,7 @@
 				4C7EAC3F238D9BC6009D3589 /* Nibable.swift in Sources */,
 				4C3D109423843410002CAB84 /* RequestViewController.swift in Sources */,
 				E7CCFEE3237C685B00F9DA94 /* Channel.swift in Sources */,
+				E76322FF238F06E2009BE203 /* ChatDAO.swift in Sources */,
 				E7CCFEFB2384192800F9DA94 /* AuthViewController.swift in Sources */,
 				4C7EAC41238D9CC9009D3589 /* UIViewExtension.swift in Sources */,
 				E2800F46238EA5C6004FB8C4 /* EvaluationCell.swift in Sources */,
@@ -755,6 +762,7 @@
 				4CEFB1C923840CC90073F0D9 /* MapCell.swift in Sources */,
 				E7AC68A72384342F008EC82F /* MyUser.swift in Sources */,
 				E7444B50238DD5C600001EC0 /* MatchDAO.swift in Sources */,
+				E76322FD238F06D0009BE203 /* ChatServices.swift in Sources */,
 				E7565B90238826A000946D19 /* StatusEnum.swift in Sources */,
 				E7CCFEEF237C8DA400F9DA94 /* DatabaseRepresentation.swift in Sources */,
 				E7444B52238DD5F600001EC0 /* UserDAO.swift in Sources */,

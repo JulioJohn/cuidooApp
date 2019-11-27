@@ -29,13 +29,6 @@ class AuthViewController: UIViewController {
         MatchServices.userLogin(email: email, password: password) {
             self.updateMyLocalUser()
         }
-        
-//        if !(LoggedUser.shared.userIsLogged()) {
-//            print("Não tem usuario logado")
-//            return
-//        }
-        
-        LoggedUser.shared.user!.showClass()
     }
     
     @IBAction func createMatch(_ sender: Any) {
@@ -50,14 +43,11 @@ class AuthViewController: UIViewController {
     /// Atualiza o usuario local
     func updateMyLocalUser() {
         MatchServices.getUser {
+            LoggedUser.shared.user!.showClass()
             OperationQueue.main.addOperation {
                 //Atualizar UI aqui
             }
         }
-    }
-    
-    func updateMyLocalMatch() {
-        
     }
     
     @IBAction func seeMatch(_ sender: Any) {

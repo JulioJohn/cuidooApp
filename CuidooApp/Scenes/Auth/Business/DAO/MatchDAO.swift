@@ -29,8 +29,17 @@ class MatchDAO {
         }
     }
     
-    static func createMatch(completion: @escaping () -> Void) {
+    static func createMatch(idBaba: String, completion: @escaping () -> Void) {
+        //Uso essa linha para definir a chave do documento como sendo a chave do Id interno
         let document = databaseMatch.document()
+        
+        let documentData: [String : Any] = ["documentId": "\(document.documentID)", "uidBaba": "\(idBaba)","uidMae": "none", "status": "available"]
+        
+        self.database.collection("users").document("\(idBaba)").updateData(["actualMatch" : document.documentID])
+        
+        document.setData(documentData)
+        
+        completion()
     }
     
     static func getAllMatchs(completion: @escaping (Match?) -> Void) {
@@ -45,6 +54,14 @@ class MatchDAO {
             }
             match.showMatch()
             completion(newMatch)
+        }
+    }
+    
+    static func momLikesBaba(idMom: String, completion: @escaping () -> Void) {
+        databaseMatch.getDocuments { (snapshot, error) in
+            let matchId: String = LoggedUser.shared.actualMatch!.documentId
+            databaseMatch.document(matchId).updateData(["uidMae" : idMom, "status" : "waitingBaba"])
+            completion()
         }
     }
     
