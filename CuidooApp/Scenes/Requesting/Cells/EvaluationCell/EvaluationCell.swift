@@ -10,6 +10,11 @@ import UIKit
 
 class EvaluationCell: UITableViewCell {
 
+    @IBOutlet weak var numberOfJobs: UILabel!
+    @IBOutlet weak var evaluation: UILabel!
+    @IBOutlet weak var experience: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -19,6 +24,12 @@ class EvaluationCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    public func configure(entity: EvaluationEntity) {
+        self.numberOfJobs.text = entity.jobs
+        self.evaluation.text = entity.evaluation
+        self.experience.text = entity.experience
     }
     
 }
