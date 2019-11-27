@@ -39,7 +39,7 @@
 		E2800F4B238EA5EE004FB8C4 /* AboutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2800F49238EA5EE004FB8C4 /* AboutCell.swift */; };
 		E2800F4C238EA5EE004FB8C4 /* AboutCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2800F4A238EA5EE004FB8C4 /* AboutCell.xib */; };
 		E2800F50238EA613004FB8C4 /* RecommendationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2800F4E238EA613004FB8C4 /* RecommendationCell.swift */; };
-		E2800F51238EA613004FB8C4 /* RecomendationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2800F4F238EA613004FB8C4 /* RecomendationCell.xib */; };
+		E2800F51238EA613004FB8C4 /* RecommendationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2800F4F238EA613004FB8C4 /* RecommendationCell.xib */; };
 		E2800F53238EB872004FB8C4 /* aboutBabySitterEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2800F52238EB872004FB8C4 /* aboutBabySitterEntity.swift */; };
 		E2911E8E238812E800273197 /* ConfigurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2911E8D238812E800273197 /* ConfigurationViewController.swift */; };
 		E299048B2386AE5B0055CB25 /* HistoryEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E299048A2386AE5B0055CB25 /* HistoryEntity.swift */; };
@@ -113,7 +113,7 @@
 		E2800F49238EA5EE004FB8C4 /* AboutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCell.swift; sourceTree = "<group>"; };
 		E2800F4A238EA5EE004FB8C4 /* AboutCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutCell.xib; sourceTree = "<group>"; };
 		E2800F4E238EA613004FB8C4 /* RecommendationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationCell.swift; sourceTree = "<group>"; };
-		E2800F4F238EA613004FB8C4 /* RecomendationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecomendationCell.xib; sourceTree = "<group>"; };
+		E2800F4F238EA613004FB8C4 /* RecommendationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendationCell.xib; sourceTree = "<group>"; };
 		E2800F52238EB872004FB8C4 /* aboutBabySitterEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aboutBabySitterEntity.swift; sourceTree = "<group>"; };
 		E2911E8D238812E800273197 /* ConfigurationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationViewController.swift; sourceTree = "<group>"; };
 		E299048A2386AE5B0055CB25 /* HistoryEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryEntity.swift; sourceTree = "<group>"; };
@@ -298,7 +298,7 @@
 		E2800F3C238EA4B5004FB8C4 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				E2800F4D238EA5F3004FB8C4 /* RecomendationCell */,
+				E2800F4D238EA5F3004FB8C4 /* RecommendationCell */,
 				E2800F48238EA5CE004FB8C4 /* AboutCell */,
 				E2800F43238EA582004FB8C4 /* EvaluationCell */,
 				E2800F3E238EA520004FB8C4 /* DataPictureCell */,
@@ -342,13 +342,13 @@
 			path = AboutCell;
 			sourceTree = "<group>";
 		};
-		E2800F4D238EA5F3004FB8C4 /* RecomendationCell */ = {
+		E2800F4D238EA5F3004FB8C4 /* RecommendationCell */ = {
 			isa = PBXGroup;
 			children = (
 				E2800F4E238EA613004FB8C4 /* RecommendationCell.swift */,
-				E2800F4F238EA613004FB8C4 /* RecomendationCell.xib */,
+				E2800F4F238EA613004FB8C4 /* RecommendationCell.xib */,
 			);
-			path = RecomendationCell;
+			path = RecommendationCell;
 			sourceTree = "<group>";
 		};
 		E2911E8B2388127300273197 /* Configuration */ = {
@@ -663,7 +663,7 @@
 				4CEFB1C4238361600073F0D9 /* InfoCell.xib in Resources */,
 				E201500123759B58002D8C8B /* Profile.storyboard in Resources */,
 				E201500323759B86002D8C8B /* Request.storyboard in Resources */,
-				E2800F51238EA613004FB8C4 /* RecomendationCell.xib in Resources */,
+				E2800F51238EA613004FB8C4 /* RecommendationCell.xib in Resources */,
 				E7FF57D92371A36F00F3FA22 /* LaunchScreen.storyboard in Resources */,
 				E201500823759BAA002D8C8B /* Requested.storyboard in Resources */,
 				E201500523759B96002D8C8B /* Requesting.storyboard in Resources */,
