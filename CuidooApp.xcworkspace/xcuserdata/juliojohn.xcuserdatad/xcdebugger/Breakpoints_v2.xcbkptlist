@@ -148,5 +148,229 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A4D83AF5-4590-4198-9EE6-14CA4E9FFB55"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CuidooApp/Scenes/Auth/ViewController/AuthViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "loginButton(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A4D83AF5-4590-4198-9EE6-14CA4E9FFB55 - 1d9ec1edccdda651"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CuidooApp.AuthViewController.loginButton(Any) -&gt; ()"
+                  moduleName = "CuidooApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juliojohn/Desktop/CuidooApp/CuidooApp/Scenes/Auth/ViewController/AuthViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "1761">
+               </Location>
+               <Location
+                  uuid = "A4D83AF5-4590-4198-9EE6-14CA4E9FFB55 - a79b83df670e5c45"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in CuidooApp.AuthViewController.loginButton(Any) -&gt; ()"
+                  moduleName = "CuidooApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juliojohn/Desktop/CuidooApp/CuidooApp/Scenes/Auth/ViewController/AuthViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "19">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C5B40DA4-55AB-45C4-851F-7B789FF8251A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CuidooApp/Scenes/Auth/ViewController/AuthViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "updateMyLocalUser()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C5B40DA4-55AB-45C4-851F-7B789FF8251A - 4ba3569868e654b8"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CuidooApp.AuthViewController.updateMyLocalUser() -&gt; ()"
+                  moduleName = "CuidooApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juliojohn/Desktop/CuidooApp/CuidooApp/Scenes/Auth/ViewController/AuthViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "27">
+               </Location>
+               <Location
+                  uuid = "C5B40DA4-55AB-45C4-851F-7B789FF8251A - e8586e5e8cd733ac"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in CuidooApp.AuthViewController.updateMyLocalUser() -&gt; ()"
+                  moduleName = "CuidooApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juliojohn/Desktop/CuidooApp/CuidooApp/Scenes/Auth/ViewController/AuthViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "8">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4BF5C6A5-5F04-4424-92E1-3104D23B8744"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CuidooApp/Scenes/Auth/Business/DAO/UserDAO.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "getUser(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "90819942-4A7D-467E-832D-663FA1CBF168"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CuidooApp/Scenes/Auth/Business/DAO/UserDAO.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "getUser(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "96AB67C1-89A8-4E81-9DFE-97A4C60E9787"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CuidooApp/Scenes/Auth/Business/DAO/UserDAO.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "getUser(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B5A6E7ED-E684-49FF-99F0-1D9F8D63E70E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CuidooApp/Scenes/Auth/Business/DAO/UserDAO.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "getUser(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B5A6E7ED-E684-49FF-99F0-1D9F8D63E70E - 34f35e876d680ec6"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static CuidooApp.UserDAO.getUser(completion: () -&gt; ()) -&gt; ()"
+                  moduleName = "CuidooApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juliojohn/Desktop/CuidooApp/CuidooApp/Scenes/Auth/Business/DAO/UserDAO.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "474">
+               </Location>
+               <Location
+                  uuid = "B5A6E7ED-E684-49FF-99F0-1D9F8D63E70E - 64a7490c251e4b12"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRDocumentSnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in static CuidooApp.UserDAO.getUser(completion: () -&gt; ()) -&gt; ()"
+                  moduleName = "CuidooApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juliojohn/Desktop/CuidooApp/CuidooApp/Scenes/Auth/Business/DAO/UserDAO.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "132">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E1EE7C89-A60B-4271-AD19-2864ACC82FD2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CuidooApp/Scenes/Auth/Business/DAO/UserDAO.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "getUser(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A5026A6B-A4A5-42EC-8B35-0D727677A4C1"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CuidooApp/Scenes/Auth/Business/DAO/UserDAO.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "getUser(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

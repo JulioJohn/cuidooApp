@@ -46,34 +46,27 @@ class MatchServices {
      }
     
     static func getUser(completion: @escaping () -> Void) {
-        
-        let user = Auth.auth().currentUser
-        if let user = user {
-            let uid = user.uid
-            let docRef = database.collection("users").document("\(uid)")
-
-            docRef.getDocument { (snapshot, error) in
-                //Armazenando o usuario logado
-                LoggedUser.shared.changeUser(user: MyUser(data: snapshot?.data()! ?? [:]))
+        UserDAO.getUser {
+            //O actual match local é atualizado aqui
+            if let actualMatch = LoggedUser.shared.user?.actualMatch {
+                getMatch(idMatch: actualMatch) {
+                    
+                }
             }
         }
     }
     
-    static func getMatch(idMatch: String, completion: @escaping (Match?) -> Void) {
-        self.database.collection("matchs").document(idMatch).getDocument { (snapshot, error) in
-            guard let snapData = snapshot?.data() else {
-                print("Não tem match!")
-                return
+    static func getMatch(idMatch: String, completion: @escaping () -> Void) {
+        MatchDAO.getMatch(idMatch: idMatch) { (match) in
+            if let newMatch = match {
+                //Atualiza o actualMatch
+                LoggedUser.shared.changeActualMatch(match: newMatch)
+                LoggedUser.shared.actualMatch?.showMatch()
+            } else {
+                //Erros
             }
-            let actualMatch = Match(data: snapData ?? [:])
-            
-            //VERIFICAR AQUI SEM TEM MATCH
-            
-            //SE TIVER
-                //ATUALIZAR O MATCH LOCAL
-            
-            completion(actualMatch)
         }
+        completion()
     }
     
     static func searchBaba(completion: @escaping (Match?) -> Void) {

@@ -57,7 +57,6 @@ class AuthViewController: UIViewController {
     
     /// Atualiza o usuario local
     func updateMyLocalUser() {
-        //Atualizar o myUser local aqui com o novo actualMatch
         MatchServices.getUser {
             OperationQueue.main.addOperation {
                 //Atualizar UI aqui
@@ -65,14 +64,13 @@ class AuthViewController: UIViewController {
         }
     }
     
+    func updateMyLocalMatch() {
+        
+    }
+    
     @IBAction func seeMatch(_ sender: Any) {
-        MatchServices.getMatch(idMatch: LoggedUser.shared.user!.uid) { (match) in
-            if let newMatch = match {
-                LoggedUser.shared.changeActualMatch(match: newMatch)
-                LoggedUser.shared.actualMatch?.showMatch()
-            } else {
-                //Erros
-            }
+        MatchServices.getMatch(idMatch: LoggedUser.shared.user!.actualMatch) { () in
+            
         }
     }
     
