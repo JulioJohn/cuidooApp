@@ -31,6 +31,14 @@
 		E201500C23759BC7002D8C8B /* Bio.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E201500B23759BC7002D8C8B /* Bio.storyboard */; };
 		E201500E23759BD0002D8C8B /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E201500D23759BD0002D8C8B /* History.storyboard */; };
 		E201501023759BDB002D8C8B /* Support.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E201500F23759BDB002D8C8B /* Support.storyboard */; };
+		E2800F41238EA579004FB8C4 /* DataPictureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2800F3F238EA579004FB8C4 /* DataPictureCell.swift */; };
+		E2800F42238EA579004FB8C4 /* DataPictureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2800F40238EA579004FB8C4 /* DataPictureCell.xib */; };
+		E2800F46238EA5C6004FB8C4 /* EvaluationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2800F44238EA5C6004FB8C4 /* EvaluationCell.swift */; };
+		E2800F47238EA5C6004FB8C4 /* EvaluationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2800F45238EA5C6004FB8C4 /* EvaluationCell.xib */; };
+		E2800F4B238EA5EE004FB8C4 /* AboutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2800F49238EA5EE004FB8C4 /* AboutCell.swift */; };
+		E2800F4C238EA5EE004FB8C4 /* AboutCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2800F4A238EA5EE004FB8C4 /* AboutCell.xib */; };
+		E2800F50238EA613004FB8C4 /* RecomendationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2800F4E238EA613004FB8C4 /* RecomendationCell.swift */; };
+		E2800F51238EA613004FB8C4 /* RecomendationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2800F4F238EA613004FB8C4 /* RecomendationCell.xib */; };
 		E2911E8E238812E800273197 /* ConfigurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2911E8D238812E800273197 /* ConfigurationViewController.swift */; };
 		E299048B2386AE5B0055CB25 /* HistoryEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E299048A2386AE5B0055CB25 /* HistoryEntity.swift */; };
 		E299048D2386B71B0055CB25 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E299048C2386B71B0055CB25 /* DateExtensions.swift */; };
@@ -94,6 +102,14 @@
 		E201500B23759BC7002D8C8B /* Bio.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Bio.storyboard; sourceTree = "<group>"; };
 		E201500D23759BD0002D8C8B /* History.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
 		E201500F23759BDB002D8C8B /* Support.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Support.storyboard; sourceTree = "<group>"; };
+		E2800F3F238EA579004FB8C4 /* DataPictureCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPictureCell.swift; sourceTree = "<group>"; };
+		E2800F40238EA579004FB8C4 /* DataPictureCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DataPictureCell.xib; sourceTree = "<group>"; };
+		E2800F44238EA5C6004FB8C4 /* EvaluationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationCell.swift; sourceTree = "<group>"; };
+		E2800F45238EA5C6004FB8C4 /* EvaluationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EvaluationCell.xib; sourceTree = "<group>"; };
+		E2800F49238EA5EE004FB8C4 /* AboutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCell.swift; sourceTree = "<group>"; };
+		E2800F4A238EA5EE004FB8C4 /* AboutCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutCell.xib; sourceTree = "<group>"; };
+		E2800F4E238EA613004FB8C4 /* RecomendationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecomendationCell.swift; sourceTree = "<group>"; };
+		E2800F4F238EA613004FB8C4 /* RecomendationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecomendationCell.xib; sourceTree = "<group>"; };
 		E2911E8D238812E800273197 /* ConfigurationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationViewController.swift; sourceTree = "<group>"; };
 		E299048A2386AE5B0055CB25 /* HistoryEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryEntity.swift; sourceTree = "<group>"; };
 		E299048C2386B71B0055CB25 /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
@@ -243,6 +259,8 @@
 		E2014FF6237596F6002D8C8B /* Requesting */ = {
 			isa = PBXGroup;
 			children = (
+				E2800F3D238EA4CE004FB8C4 /* View */,
+				E2800F3C238EA4B5004FB8C4 /* Cells */,
 			);
 			path = Requesting;
 			sourceTree = "<group>";
@@ -269,6 +287,60 @@
 				E2F65A8B23840C4400E9EEA8 /* Controller */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		E2800F3C238EA4B5004FB8C4 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E2800F4D238EA5F3004FB8C4 /* RecomendationCell */,
+				E2800F48238EA5CE004FB8C4 /* AboutCell */,
+				E2800F43238EA582004FB8C4 /* EvaluationCell */,
+				E2800F3E238EA520004FB8C4 /* DataPictureCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		E2800F3D238EA4CE004FB8C4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E2800F3E238EA520004FB8C4 /* DataPictureCell */ = {
+			isa = PBXGroup;
+			children = (
+				E2800F3F238EA579004FB8C4 /* DataPictureCell.swift */,
+				E2800F40238EA579004FB8C4 /* DataPictureCell.xib */,
+			);
+			path = DataPictureCell;
+			sourceTree = "<group>";
+		};
+		E2800F43238EA582004FB8C4 /* EvaluationCell */ = {
+			isa = PBXGroup;
+			children = (
+				E2800F44238EA5C6004FB8C4 /* EvaluationCell.swift */,
+				E2800F45238EA5C6004FB8C4 /* EvaluationCell.xib */,
+			);
+			path = EvaluationCell;
+			sourceTree = "<group>";
+		};
+		E2800F48238EA5CE004FB8C4 /* AboutCell */ = {
+			isa = PBXGroup;
+			children = (
+				E2800F49238EA5EE004FB8C4 /* AboutCell.swift */,
+				E2800F4A238EA5EE004FB8C4 /* AboutCell.xib */,
+			);
+			path = AboutCell;
+			sourceTree = "<group>";
+		};
+		E2800F4D238EA5F3004FB8C4 /* RecomendationCell */ = {
+			isa = PBXGroup;
+			children = (
+				E2800F4E238EA613004FB8C4 /* RecomendationCell.swift */,
+				E2800F4F238EA613004FB8C4 /* RecomendationCell.xib */,
+			);
+			path = RecomendationCell;
 			sourceTree = "<group>";
 		};
 		E2911E8B2388127300273197 /* Configuration */ = {
@@ -576,10 +648,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2800F42238EA579004FB8C4 /* DataPictureCell.xib in Resources */,
 				4C4A3A80237C2B19009A3B64 /* BabySitterCell.xib in Resources */,
+				E2800F4C238EA5EE004FB8C4 /* AboutCell.xib in Resources */,
 				4CEFB1C4238361600073F0D9 /* InfoCell.xib in Resources */,
 				E201500123759B58002D8C8B /* Profile.storyboard in Resources */,
 				E201500323759B86002D8C8B /* Request.storyboard in Resources */,
+				E2800F51238EA613004FB8C4 /* RecomendationCell.xib in Resources */,
 				E7FF57D92371A36F00F3FA22 /* LaunchScreen.storyboard in Resources */,
 				E201500823759BAA002D8C8B /* Requested.storyboard in Resources */,
 				E201500523759B96002D8C8B /* Requesting.storyboard in Resources */,
@@ -590,6 +665,7 @@
 				4CEFB1CA23840CC90073F0D9 /* MapCell.xib in Resources */,
 				E201500A23759BB4002D8C8B /* Chat.storyboard in Resources */,
 				E201500C23759BC7002D8C8B /* Bio.storyboard in Resources */,
+				E2800F47238EA5C6004FB8C4 /* EvaluationCell.xib in Resources */,
 				E2014FFF23759B4F002D8C8B /* Search.storyboard in Resources */,
 				E201500E23759BD0002D8C8B /* History.storyboard in Resources */,
 				E2B20046238C1D8200CD103A /* FaqTableViewCell.xib in Resources */,
@@ -652,11 +728,13 @@
 				E299048D2386B71B0055CB25 /* DateExtensions.swift in Sources */,
 				E7CCFEF8237C9C0700F9DA94 /* CollectionViewExtension.swift in Sources */,
 				E299048B2386AE5B0055CB25 /* HistoryEntity.swift in Sources */,
+				E2800F41238EA579004FB8C4 /* DataPictureCell.swift in Sources */,
 				4C7EAC3F238D9BC6009D3589 /* Nibable.swift in Sources */,
 				4C3D109423843410002CAB84 /* RequestViewController.swift in Sources */,
 				E7CCFEE3237C685B00F9DA94 /* Channel.swift in Sources */,
 				E7CCFEFB2384192800F9DA94 /* AuthViewController.swift in Sources */,
 				4C7EAC41238D9CC9009D3589 /* UIViewExtension.swift in Sources */,
+				E2800F46238EA5C6004FB8C4 /* EvaluationCell.swift in Sources */,
 				4CEFB1BE238359380073F0D9 /* BabySitterEntity.swift in Sources */,
 				E2F65A8D23840C4400E9EEA8 /* ProfileViewController.swift in Sources */,
 				E2911E8E238812E800273197 /* ConfigurationViewController.swift in Sources */,
@@ -683,8 +761,10 @@
 				E2B20048238C22AE00CD103A /* FaqEntity.swift in Sources */,
 				4CEFB1C3238361600073F0D9 /* InfoCell.swift in Sources */,
 				E7565B8E2388262E00946D19 /* Match.swift in Sources */,
+				E2800F4B238EA5EE004FB8C4 /* AboutCell.swift in Sources */,
 				E7CCFEE1237C4FA800F9DA94 /* ChatViewController.swift in Sources */,
 				E7FF57CF2371A36A00F3FA22 /* SceneDelegate.swift in Sources */,
+				E2800F50238EA613004FB8C4 /* RecomendationCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

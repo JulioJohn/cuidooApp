@@ -28,7 +28,7 @@
                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                 </imageView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Retângulo 312" translatesAutoresizingMaskIntoConstraints="NO" id="afx-pw-pOY">
-                    <rect key="frame" x="0.0" y="374" width="414" height="80"/>
+                    <rect key="frame" x="0.0" y="294" width="414" height="160"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pEo-Kw-0Yb">
                     <rect key="frame" x="0.0" y="454" width="414" height="252"/>
