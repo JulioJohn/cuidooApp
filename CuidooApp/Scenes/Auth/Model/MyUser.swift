@@ -13,20 +13,20 @@ class MyUser {
     var uid: String
     var actualMatch: String
     var isBaba: Bool
-    var description: String
+    var informations: Informations
     
     init?(data: [String:Any]) {
         guard let name = data["nome"] as? String else { return nil }
         guard let uid = data["uid"] as? String  else { return nil }
         guard let actualMatch = data["actualMatch"] as? String else { return nil }
         guard let isBaba = data["isBaba"] as? Bool else { return nil }
-        guard let description = data["descricao"] as? String else { return nil }
         
         self.name = name
         self.uid = uid
         self.actualMatch = actualMatch
         self.isBaba = isBaba
-        self.description = description
+        
+        self.informations = Informations()
     }
     
     func transformInDatabaseType() -> [String: Any] {
@@ -44,6 +44,14 @@ class MyUser {
         }
         print(self.actualMatch)
         self.isBaba ? print("É baba") : print("Não é babá")
+    }
+    
+    func changeUserInformations(informations: [String: Any]) {
+        self.informations = Informations(data: informations)!
+    }
+    
+    func printInformations() {
+        self.informations.printInformations()
     }
     
 }

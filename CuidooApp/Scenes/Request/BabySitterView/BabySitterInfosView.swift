@@ -15,6 +15,16 @@ class BabySitterInfosView: UIView, Nibable {
     @IBOutlet weak var descriptionText: UILabel!
     @IBOutlet weak var heartbutton: UIButton!
     
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var profissionLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var cuidadosLabel: UILabel!
+    @IBOutlet weak var avaliationLabel: UILabel!
+    @IBOutlet weak var twoYearsLabel: UILabel!
+    
+    
+    
      @IBAction func heartButtonClick(_ sender: Any) {
         if self.heartbutton.backgroundImage(for: .normal) == UIImage(named: "heart"){
             self.heartbutton.setBackgroundImage(UIImage(named: "heart.fill"), for: .normal)

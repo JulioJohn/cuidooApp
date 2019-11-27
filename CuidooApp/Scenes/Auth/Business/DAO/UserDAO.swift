@@ -24,9 +24,19 @@ class UserDAO {
             databaseUser.document("\(uid)").getDocument { (snapshot, error) in
                 //Armazenando o usuario logado
                 LoggedUser.shared.changeUser(user: MyUser(data: snapshot?.data()! ?? [:]))
+                
                 //Após armazenado roda a completion
                 completion()
             }
+        }
+    }
+    
+    static func updateInformations(completion: @escaping () -> Void) {
+        databaseUser.document(LoggedUser.shared.user!.uid).collection("informations").document("1").getDocument { (snapshot, error) in
+            print(snapshot)
+            LoggedUser.shared.user?.changeUserInformations(informations: snapshot?.data()! ?? [:])
+            
+            completion()
         }
     }
     
