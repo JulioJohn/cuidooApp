@@ -15,6 +15,7 @@
 		4C765B01237991BC00D3D38B /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C765B00237991BC00D3D38B /* SearchViewController.swift */; };
 		4C7EAC3F238D9BC6009D3589 /* Nibable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7EAC3E238D9BC6009D3589 /* Nibable.swift */; };
 		4C7EAC41238D9CC9009D3589 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7EAC40238D9CC9009D3589 /* UIViewExtension.swift */; };
+		4C7EAC43238EB100009D3589 /* EvaluationEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7EAC42238EB100009D3589 /* EvaluationEntity.swift */; };
 		4CEFB1BE238359380073F0D9 /* BabySitterEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEFB1BD238359380073F0D9 /* BabySitterEntity.swift */; };
 		4CEFB1C3238361600073F0D9 /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEFB1C1238361600073F0D9 /* InfoCell.swift */; };
 		4CEFB1C4238361600073F0D9 /* InfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CEFB1C2238361600073F0D9 /* InfoCell.xib */; };
@@ -37,8 +38,9 @@
 		E2800F47238EA5C6004FB8C4 /* EvaluationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2800F45238EA5C6004FB8C4 /* EvaluationCell.xib */; };
 		E2800F4B238EA5EE004FB8C4 /* AboutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2800F49238EA5EE004FB8C4 /* AboutCell.swift */; };
 		E2800F4C238EA5EE004FB8C4 /* AboutCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2800F4A238EA5EE004FB8C4 /* AboutCell.xib */; };
-		E2800F50238EA613004FB8C4 /* RecomendationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2800F4E238EA613004FB8C4 /* RecomendationCell.swift */; };
-		E2800F51238EA613004FB8C4 /* RecomendationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2800F4F238EA613004FB8C4 /* RecomendationCell.xib */; };
+		E2800F50238EA613004FB8C4 /* RecommendationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2800F4E238EA613004FB8C4 /* RecommendationCell.swift */; };
+		E2800F51238EA613004FB8C4 /* RecommendationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2800F4F238EA613004FB8C4 /* RecommendationCell.xib */; };
+		E2800F53238EB872004FB8C4 /* aboutBabySitterEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2800F52238EB872004FB8C4 /* aboutBabySitterEntity.swift */; };
 		E2911E8E238812E800273197 /* ConfigurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2911E8D238812E800273197 /* ConfigurationViewController.swift */; };
 		E299048B2386AE5B0055CB25 /* HistoryEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E299048A2386AE5B0055CB25 /* HistoryEntity.swift */; };
 		E299048D2386B71B0055CB25 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E299048C2386B71B0055CB25 /* DateExtensions.swift */; };
@@ -86,6 +88,7 @@
 		4C765B00237991BC00D3D38B /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		4C7EAC3E238D9BC6009D3589 /* Nibable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nibable.swift; sourceTree = "<group>"; };
 		4C7EAC40238D9CC9009D3589 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		4C7EAC42238EB100009D3589 /* EvaluationEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationEntity.swift; sourceTree = "<group>"; };
 		4CEFB1BD238359380073F0D9 /* BabySitterEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabySitterEntity.swift; sourceTree = "<group>"; };
 		4CEFB1C1238361600073F0D9 /* InfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCell.swift; sourceTree = "<group>"; };
 		4CEFB1C2238361600073F0D9 /* InfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoCell.xib; sourceTree = "<group>"; };
@@ -109,8 +112,9 @@
 		E2800F45238EA5C6004FB8C4 /* EvaluationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EvaluationCell.xib; sourceTree = "<group>"; };
 		E2800F49238EA5EE004FB8C4 /* AboutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCell.swift; sourceTree = "<group>"; };
 		E2800F4A238EA5EE004FB8C4 /* AboutCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutCell.xib; sourceTree = "<group>"; };
-		E2800F4E238EA613004FB8C4 /* RecomendationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecomendationCell.swift; sourceTree = "<group>"; };
-		E2800F4F238EA613004FB8C4 /* RecomendationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecomendationCell.xib; sourceTree = "<group>"; };
+		E2800F4E238EA613004FB8C4 /* RecommendationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationCell.swift; sourceTree = "<group>"; };
+		E2800F4F238EA613004FB8C4 /* RecommendationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendationCell.xib; sourceTree = "<group>"; };
+		E2800F52238EB872004FB8C4 /* aboutBabySitterEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aboutBabySitterEntity.swift; sourceTree = "<group>"; };
 		E2911E8D238812E800273197 /* ConfigurationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationViewController.swift; sourceTree = "<group>"; };
 		E299048A2386AE5B0055CB25 /* HistoryEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryEntity.swift; sourceTree = "<group>"; };
 		E299048C2386B71B0055CB25 /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
@@ -294,7 +298,7 @@
 		E2800F3C238EA4B5004FB8C4 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				E2800F4D238EA5F3004FB8C4 /* RecomendationCell */,
+				E2800F4D238EA5F3004FB8C4 /* RecommendationCell */,
 				E2800F48238EA5CE004FB8C4 /* AboutCell */,
 				E2800F43238EA582004FB8C4 /* EvaluationCell */,
 				E2800F3E238EA520004FB8C4 /* DataPictureCell */,
@@ -323,6 +327,7 @@
 			children = (
 				E2800F44238EA5C6004FB8C4 /* EvaluationCell.swift */,
 				E2800F45238EA5C6004FB8C4 /* EvaluationCell.xib */,
+				4C7EAC42238EB100009D3589 /* EvaluationEntity.swift */,
 			);
 			path = EvaluationCell;
 			sourceTree = "<group>";
@@ -332,17 +337,18 @@
 			children = (
 				E2800F49238EA5EE004FB8C4 /* AboutCell.swift */,
 				E2800F4A238EA5EE004FB8C4 /* AboutCell.xib */,
+				E2800F52238EB872004FB8C4 /* aboutBabySitterEntity.swift */,
 			);
 			path = AboutCell;
 			sourceTree = "<group>";
 		};
-		E2800F4D238EA5F3004FB8C4 /* RecomendationCell */ = {
+		E2800F4D238EA5F3004FB8C4 /* RecommendationCell */ = {
 			isa = PBXGroup;
 			children = (
-				E2800F4E238EA613004FB8C4 /* RecomendationCell.swift */,
-				E2800F4F238EA613004FB8C4 /* RecomendationCell.xib */,
+				E2800F4E238EA613004FB8C4 /* RecommendationCell.swift */,
+				E2800F4F238EA613004FB8C4 /* RecommendationCell.xib */,
 			);
-			path = RecomendationCell;
+			path = RecommendationCell;
 			sourceTree = "<group>";
 		};
 		E2911E8B2388127300273197 /* Configuration */ = {
@@ -657,7 +663,7 @@
 				4CEFB1C4238361600073F0D9 /* InfoCell.xib in Resources */,
 				E201500123759B58002D8C8B /* Profile.storyboard in Resources */,
 				E201500323759B86002D8C8B /* Request.storyboard in Resources */,
-				E2800F51238EA613004FB8C4 /* RecomendationCell.xib in Resources */,
+				E2800F51238EA613004FB8C4 /* RecommendationCell.xib in Resources */,
 				E7FF57D92371A36F00F3FA22 /* LaunchScreen.storyboard in Resources */,
 				E201500823759BAA002D8C8B /* Requested.storyboard in Resources */,
 				E201500523759B96002D8C8B /* Requesting.storyboard in Resources */,
@@ -745,6 +751,7 @@
 				E2B20037238BFD4D00CD103A /* BioTableViewController.swift in Sources */,
 				E2F65A962384363E00E9EEA8 /* HistoryCell.swift in Sources */,
 				E2B2004B238C25DC00CD103A /* FaqViewController.swift in Sources */,
+				4C7EAC43238EB100009D3589 /* EvaluationEntity.swift in Sources */,
 				4CEFB1C923840CC90073F0D9 /* MapCell.swift in Sources */,
 				E7AC68A72384342F008EC82F /* MyUser.swift in Sources */,
 				E7444B50238DD5C600001EC0 /* MatchDAO.swift in Sources */,
@@ -767,8 +774,9 @@
 				E7565B8E2388262E00946D19 /* Match.swift in Sources */,
 				E2800F4B238EA5EE004FB8C4 /* AboutCell.swift in Sources */,
 				E7CCFEE1237C4FA800F9DA94 /* ChatViewController.swift in Sources */,
+				E2800F53238EB872004FB8C4 /* aboutBabySitterEntity.swift in Sources */,
 				E7FF57CF2371A36A00F3FA22 /* SceneDelegate.swift in Sources */,
-				E2800F50238EA613004FB8C4 /* RecomendationCell.swift in Sources */,
+				E2800F50238EA613004FB8C4 /* RecommendationCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
