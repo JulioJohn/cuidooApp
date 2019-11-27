@@ -40,6 +40,7 @@
 		E2800F4C238EA5EE004FB8C4 /* AboutCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2800F4A238EA5EE004FB8C4 /* AboutCell.xib */; };
 		E2800F50238EA613004FB8C4 /* RecommendationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2800F4E238EA613004FB8C4 /* RecommendationCell.swift */; };
 		E2800F51238EA613004FB8C4 /* RecomendationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2800F4F238EA613004FB8C4 /* RecomendationCell.xib */; };
+		E2800F53238EB872004FB8C4 /* aboutBabySitterEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2800F52238EB872004FB8C4 /* aboutBabySitterEntity.swift */; };
 		E2911E8E238812E800273197 /* ConfigurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2911E8D238812E800273197 /* ConfigurationViewController.swift */; };
 		E299048B2386AE5B0055CB25 /* HistoryEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E299048A2386AE5B0055CB25 /* HistoryEntity.swift */; };
 		E299048D2386B71B0055CB25 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E299048C2386B71B0055CB25 /* DateExtensions.swift */; };
@@ -113,6 +114,7 @@
 		E2800F4A238EA5EE004FB8C4 /* AboutCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutCell.xib; sourceTree = "<group>"; };
 		E2800F4E238EA613004FB8C4 /* RecommendationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationCell.swift; sourceTree = "<group>"; };
 		E2800F4F238EA613004FB8C4 /* RecomendationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecomendationCell.xib; sourceTree = "<group>"; };
+		E2800F52238EB872004FB8C4 /* aboutBabySitterEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aboutBabySitterEntity.swift; sourceTree = "<group>"; };
 		E2911E8D238812E800273197 /* ConfigurationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationViewController.swift; sourceTree = "<group>"; };
 		E299048A2386AE5B0055CB25 /* HistoryEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryEntity.swift; sourceTree = "<group>"; };
 		E299048C2386B71B0055CB25 /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
@@ -335,6 +337,7 @@
 			children = (
 				E2800F49238EA5EE004FB8C4 /* AboutCell.swift */,
 				E2800F4A238EA5EE004FB8C4 /* AboutCell.xib */,
+				E2800F52238EB872004FB8C4 /* aboutBabySitterEntity.swift */,
 			);
 			path = AboutCell;
 			sourceTree = "<group>";
@@ -771,6 +774,7 @@
 				E7565B8E2388262E00946D19 /* Match.swift in Sources */,
 				E2800F4B238EA5EE004FB8C4 /* AboutCell.swift in Sources */,
 				E7CCFEE1237C4FA800F9DA94 /* ChatViewController.swift in Sources */,
+				E2800F53238EB872004FB8C4 /* aboutBabySitterEntity.swift in Sources */,
 				E7FF57CF2371A36A00F3FA22 /* SceneDelegate.swift in Sources */,
 				E2800F50238EA613004FB8C4 /* RecommendationCell.swift in Sources */,
 			);

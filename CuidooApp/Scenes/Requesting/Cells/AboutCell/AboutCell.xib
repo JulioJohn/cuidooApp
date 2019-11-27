@@ -55,6 +55,9 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="aboutBabySitterLabel" destination="ggn-Vx-Q8z" id="PM4-VN-dLg"/>
+            </connections>
             <point key="canvasLocation" x="155.07246376811597" y="164.73214285714286"/>
         </tableViewCell>
     </objects>
