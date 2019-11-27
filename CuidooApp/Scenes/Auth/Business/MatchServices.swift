@@ -35,6 +35,7 @@ class MatchServices {
             UserDAO.updateInformations {
                 print("Informacoes atualizadas")
                 LoggedUser.shared.user?.printInformations()
+                completion()
             }
             //O actual match local é atualizado aqui
             if let actualMatch = LoggedUser.shared.user?.actualMatch {

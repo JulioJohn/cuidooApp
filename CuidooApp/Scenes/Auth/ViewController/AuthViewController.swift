@@ -27,28 +27,45 @@ class AuthViewController: UIViewController {
          
         
         MatchServices.userLogin(email: email, password: password) {
-            self.updateMyLocalUser()
+            //Atualiza meu usuario local
+            MatchServices.getUser {
+                LoggedUser.shared.user!.showClass()
+                if LoggedUser.shared.user!.isBaba {
+                    self.performSegue(withIdentifier: "SearchBabaSegue", sender: nil)
+                } else {
+                    self.performSegue(withIdentifier: "SearchSegue", sender: nil)
+                }
+                OperationQueue.main.addOperation {
+                    //Atualizar UI aqui
+                }
+            }
         }
     }
     
     @IBAction func createMatch(_ sender: Any) {
         if LoggedUser.shared.userIsLogged() {
             MatchServices.createMatch(idBaba: LoggedUser.shared.user!.uid)
-            updateMyLocalUser()
+            //Atualiza meu usuario local
+            MatchServices.getUser {
+                LoggedUser.shared.user!.showClass()
+                OperationQueue.main.addOperation {
+                    //Atualizar UI aqui
+                }
+            }
         } else {
             print("O usuário não existe")
         }
     }
     
-    /// Atualiza o usuario local
-    func updateMyLocalUser() {
-        MatchServices.getUser {
-            LoggedUser.shared.user!.showClass()
-            OperationQueue.main.addOperation {
-                //Atualizar UI aqui
-            }
-        }
-    }
+//    /// Atualiza o usuario local
+//    func updateMyLocalUser() {
+//        MatchServices.getUser {
+//            LoggedUser.shared.user!.showClass()
+//            OperationQueue.main.addOperation {
+//                //Atualizar UI aqui
+//            }
+//        }
+//    }
     
     @IBAction func seeMatch(_ sender: Any) {
         MatchServices.getMatch(idMatch: LoggedUser.shared.user!.actualMatch) { () in
