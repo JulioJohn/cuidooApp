@@ -13,6 +13,11 @@ class Match {
     var status: StatusEnum
     var uidBaba: String
     var uidMae: String
+    var otherUser: MyUser!
+    
+    func updateOtherUserOfMatch(user: MyUser) {
+        self.otherUser = user
+    }
     
     init?(data: [String:Any]) {
         guard let documentId = data["documentId"] as? String else { return nil }

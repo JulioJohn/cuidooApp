@@ -37,7 +37,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="68C-0S-Vgb" kind="modal" modalPresentationStyle="fullScreen" id="Umq-bW-bnM"/>
+                                            <action selector="searchButton:" destination="ln4-Yv-ycu" eventType="touchUpInside" id="Zz0-YE-6cy"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forma de pagamento" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mgS-UQ-EXU">
@@ -81,6 +81,7 @@
                     <connections>
                         <outlet property="searchButton" destination="9z5-u0-nMU" id="l38-Wd-r80"/>
                         <outlet property="searchTableView" destination="jXd-NC-Slu" id="xdu-FV-bQa"/>
+                        <segue destination="68C-0S-Vgb" kind="show" identifier="goToRequestScene" id="SBW-N4-11v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q2m-qT-mcr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

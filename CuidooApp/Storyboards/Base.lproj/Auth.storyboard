@@ -39,20 +39,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oz4-8q-saM">
-                                <rect key="frame" x="160" y="494" width="84" height="30"/>
+                                <rect key="frame" x="157" y="463" width="111" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <state key="normal" title="Proxima tela"/>
                                 <connections>
                                     <segue destination="qQB-St-NMw" kind="presentation" modalPresentationStyle="fullScreen" id="iml-oo-Vsc"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YtD-Ox-q4V">
-                                <rect key="frame" x="172" y="644" width="77" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="CHAT"/>
-                                <connections>
-                                    <segue destination="dD2-0E-MRh" kind="show" id="AFW-vI-DiU"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Usuario" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Ys-lK-up7">
@@ -76,52 +68,29 @@
                                     <action selector="loginButton:" destination="g3V-da-M1g" eventType="touchUpInside" id="9Iu-j0-iak"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zhA-7V-cc6">
-                                <rect key="frame" x="317" y="399" width="58" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Sair"/>
-                                <connections>
-                                    <action selector="desconectButton:" destination="g3V-da-M1g" eventType="touchUpInside" id="EOg-I6-t5q"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TEM-hV-HwC">
-                                <rect key="frame" x="20" y="433" width="139" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="QUEM TA LOGADO?"/>
-                                <connections>
-                                    <action selector="howIsLogged:" destination="g3V-da-M1g" eventType="touchUpInside" id="Kmc-v1-y1f"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qPf-h9-W1g">
-                                <rect key="frame" x="49" y="494" width="80" height="30"/>
+                                <rect key="frame" x="67" y="121" width="123" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Criar match"/>
+                                <state key="normal" title="Baba: Criar match"/>
                                 <connections>
                                     <action selector="createMatch:" destination="g3V-da-M1g" eventType="touchUpInside" id="0Ad-PR-uLD"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Enx-jg-ib5">
-                                <rect key="frame" x="295" y="494" width="70" height="30"/>
+                                <rect key="frame" x="67" y="159" width="70" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Ver match"/>
                                 <connections>
                                     <action selector="seeMatch:" destination="g3V-da-M1g" eventType="touchUpInside" id="cAq-z5-bz0"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A3o-Yb-p68">
-                                <rect key="frame" x="45" y="107" width="135" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YtD-Ox-q4V">
+                                <rect key="frame" x="298" y="390" width="77" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Mãe: Procurar baba"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="CHAT"/>
                                 <connections>
-                                    <action selector="searchBaba:" destination="g3V-da-M1g" eventType="touchUpInside" id="40q-Yp-bwt"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Hq-OR-TH5">
-                                <rect key="frame" x="45" y="145" width="113" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Mae: curtir baba"/>
-                                <connections>
-                                    <action selector="momLikesBaba:" destination="g3V-da-M1g" eventType="touchUpInside" id="rKd-PS-c3f"/>
+                                    <segue destination="dD2-0E-MRh" kind="show" id="AFW-vI-DiU"/>
                                 </connections>
                             </button>
                         </subviews>

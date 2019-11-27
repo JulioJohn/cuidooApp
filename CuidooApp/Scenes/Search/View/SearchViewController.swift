@@ -37,17 +37,12 @@ class SearchViewController: UIViewController {
                     BabySitterEntity(title: "Cuidadora profissional", time: "12 minutos de você", value: "R$84,00")]
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func searchButton(_ sender: Any) {
+        MatchServices.searchBaba { () in
+            self.performSegue(withIdentifier: "goToRequestScene", sender: nil)
+        }
     }
-    */
-
+    
 }
 
 extension SearchViewController: InfoCellDelegate {

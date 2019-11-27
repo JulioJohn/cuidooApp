@@ -31,10 +31,25 @@ class UserDAO {
         }
     }
     
+    static func getUser(byId: String, completion: @escaping (MyUser?) -> Void) {
+        databaseUser.document("\(byId)").getDocument { (snapshot, error) in
+            
+            //Após armazenado roda a completion
+            completion(MyUser(data: snapshot?.data()! ?? [:]))
+        }
+    }
+    
     static func updateInformations(completion: @escaping () -> Void) {
         databaseUser.document(LoggedUser.shared.user!.uid).collection("informations").document("1").getDocument { (snapshot, error) in
-            print(snapshot)
             LoggedUser.shared.user?.changeUserInformations(informations: snapshot?.data()! ?? [:])
+            
+            completion()
+        }
+    }
+    
+    static func updateInformations(byId: String, user: MyUser, completion: @escaping () -> Void) {
+        databaseUser.document(byId).collection("informations").document("1").getDocument { (snapshot, error) in
+            user.changeUserInformations(informations: snapshot?.data()! ?? [:])
             
             completion()
         }

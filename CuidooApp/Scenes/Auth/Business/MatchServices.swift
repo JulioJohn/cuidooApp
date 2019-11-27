@@ -76,19 +76,34 @@ class MatchServices {
         completion()
     }
     
-    //FAZER O DAO
-    static func searchBaba(completion: @escaping (Match?) -> Void) {
-        var newMatch: Match? = nil
-        self.database.collection("matchs").getDocuments { (snapshot, error) in
-            newMatch = Match(data: snapshot?.documents[0].data() ?? [:])!
-            //Imprimindo na tela o match encontrado
-            guard let match = newMatch else {
-                print("Não encontrou nenhum match")
-                return
+    static func searchBaba(completion: @escaping () -> Void) {
+        MatchDAO.getAllMatchs(completion: { (match) in
+            //Guardar o match atual
+            LoggedUser.shared.changeActualMatch(match: match)
+            //Guardar o outro usuario do match atual para recolher informações
+            
+            //Atualiza a baba do match local
+            if LoggedUser.shared.user?.isBaba == false {
+                let babaId = LoggedUser.shared.actualMatch!.uidBaba
+                UserDAO.getUser(byId: babaId) { (user) in
+                    LoggedUser.shared.actualMatch?.otherUser = user
+                    UserDAO.updateInformations(byId: babaId, user: LoggedUser.shared.actualMatch!.otherUser) {
+                        print("Atualizou as informacoes locais do Match")
+                        completion()
+                    }
+                }
+            } else {
+                //Atualiza a mãe do match local
+                UserDAO.getUser(byId: LoggedUser.shared.actualMatch!.uidMae) { (user) in
+                    let momId = LoggedUser.shared.actualMatch!.uidMae
+                    LoggedUser.shared.actualMatch?.otherUser = user
+                    UserDAO.updateInformations(byId: momId, user: LoggedUser.shared.actualMatch!.otherUser) {
+                        print("Atualizou as informacoes locais do Match")
+                        completion()
+                    }
+                }
             }
-            match.showMatch()
-            completion(newMatch)
-        }
+        })
     }
     
     //FAZER O DAO

@@ -29,21 +29,13 @@ class AuthViewController: UIViewController {
         MatchServices.userLogin(email: email, password: password) {
             self.updateMyLocalUser()
         }
-    }
-    
-    /// Verifica qual é o usuario que esta logado
-    /// - Parameter sender:
-    @IBAction func howIsLogged(_ sender: Any) {
-        if !(LoggedUser.shared.userIsLogged()) {
-            print("Não tem usuario logado")
-            return
-        }
+        
+//        if !(LoggedUser.shared.userIsLogged()) {
+//            print("Não tem usuario logado")
+//            return
+//        }
         
         LoggedUser.shared.user!.showClass()
-    }
-    
-    @IBAction func desconectButton(_ sender: Any) {
-        MatchServices.desconnect()
     }
     
     @IBAction func createMatch(_ sender: Any) {
@@ -72,15 +64,5 @@ class AuthViewController: UIViewController {
         MatchServices.getMatch(idMatch: LoggedUser.shared.user!.actualMatch) { () in
             
         }
-    }
-    
-    @IBAction func searchBaba(_ sender: Any) {
-        MatchServices.searchBaba { (match) in
-            LoggedUser.shared.changeActualMatch(match: match)
-        }
-    }
-    
-    @IBAction func momLikesBaba(_ sender: Any) {
-        MatchServices.momLikesBaba(idMom: LoggedUser.shared.user!.uid, matchId: LoggedUser.shared.actualMatch!.documentId)
     }
 }

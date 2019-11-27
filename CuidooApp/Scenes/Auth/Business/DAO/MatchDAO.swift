@@ -33,4 +33,19 @@ class MatchDAO {
         let document = databaseMatch.document()
     }
     
+    static func getAllMatchs(completion: @escaping (Match?) -> Void) {
+        var newMatch: Match? = nil
+        
+        self.database.collection("matchs").getDocuments { (snapshot, error) in
+            newMatch = Match(data: snapshot?.documents[0].data() ?? [:])!
+            //Imprimindo na tela o match encontrado
+            guard let match = newMatch else {
+                print("Não encontrou nenhum match")
+                return
+            }
+            match.showMatch()
+            completion(newMatch)
+        }
+    }
+    
 }

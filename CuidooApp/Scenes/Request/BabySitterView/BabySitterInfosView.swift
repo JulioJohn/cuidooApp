@@ -23,7 +23,14 @@ class BabySitterInfosView: UIView, Nibable {
     @IBOutlet weak var avaliationLabel: UILabel!
     @IBOutlet weak var twoYearsLabel: UILabel!
     
-    
+    func setInformations(name: String, informations: Informations) {
+        self.nameLabel.text = name
+        self.profissionLabel.text = informations.profission
+        self.descriptionText.text = informations.description
+        self.cuidadosLabel.text = "\(informations.cuidados)"
+        self.avaliationLabel.text = "\(informations.avaliation)"
+        self.twoYearsLabel.text = informations.experience
+    }
     
      @IBAction func heartButtonClick(_ sender: Any) {
         if self.heartbutton.backgroundImage(for: .normal) == UIImage(named: "heart"){
