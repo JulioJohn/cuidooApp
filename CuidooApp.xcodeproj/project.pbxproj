@@ -65,6 +65,7 @@
 		E76322FD238F06D0009BE203 /* ChatServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76322FC238F06D0009BE203 /* ChatServices.swift */; };
 		E76322FF238F06E2009BE203 /* ChatDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76322FE238F06E2009BE203 /* ChatDAO.swift */; };
 		E7632301238F1C4C009BE203 /* SearchBaba.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7632300238F1C4C009BE203 /* SearchBaba.storyboard */; };
+		E7632304238F6F01009BE203 /* SearchBabaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7632303238F6F01009BE203 /* SearchBabaViewController.swift */; };
 		E77DECD4238DA82700C81A92 /* LoggedUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77DECD3238DA82700C81A92 /* LoggedUser.swift */; };
 		E7AC68A72384342F008EC82F /* MyUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AC68A62384342F008EC82F /* MyUser.swift */; };
 		E7CCFEE1237C4FA800F9DA94 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CCFEE0237C4FA800F9DA94 /* ChatViewController.swift */; };
@@ -142,6 +143,7 @@
 		E76322FC238F06D0009BE203 /* ChatServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatServices.swift; sourceTree = "<group>"; };
 		E76322FE238F06E2009BE203 /* ChatDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDAO.swift; sourceTree = "<group>"; };
 		E7632300238F1C4C009BE203 /* SearchBaba.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchBaba.storyboard; sourceTree = "<group>"; };
+		E7632303238F6F01009BE203 /* SearchBabaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBabaViewController.swift; sourceTree = "<group>"; };
 		E77DECD3238DA82700C81A92 /* LoggedUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedUser.swift; sourceTree = "<group>"; };
 		E7AC68A62384342F008EC82F /* MyUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyUser.swift; sourceTree = "<group>"; };
 		E7CCFEE0237C4FA800F9DA94 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
@@ -482,6 +484,14 @@
 			path = Business;
 			sourceTree = "<group>";
 		};
+		E7632302238F6EDE009BE203 /* Search Baba */ = {
+			isa = PBXGroup;
+			children = (
+				E7632303238F6F01009BE203 /* SearchBabaViewController.swift */,
+			);
+			path = "Search Baba";
+			sourceTree = "<group>";
+		};
 		E77DECD2238D92D600C81A92 /* InfoCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -584,6 +594,7 @@
 				4C4A3A81237C3450009A3B64 /* Match */,
 				E2A815C32378C6D5005D9C6F /* Initial */,
 				E2014FF5237596E5002D8C8B /* Search */,
+				E7632302238F6EDE009BE203 /* Search Baba */,
 				E2014FF4237596D5002D8C8B /* Request */,
 				E2014FF6237596F6002D8C8B /* Requesting */,
 				E2014FF723759737002D8C8B /* Requested */,
@@ -749,6 +760,7 @@
 				E299048B2386AE5B0055CB25 /* HistoryEntity.swift in Sources */,
 				E2800F41238EA579004FB8C4 /* DataPictureCell.swift in Sources */,
 				4C7EAC3F238D9BC6009D3589 /* Nibable.swift in Sources */,
+				E7632304238F6F01009BE203 /* SearchBabaViewController.swift in Sources */,
 				4C3D109423843410002CAB84 /* RequestViewController.swift in Sources */,
 				E7CCFEE3237C685B00F9DA94 /* Channel.swift in Sources */,
 				E76322FF238F06E2009BE203 /* ChatDAO.swift in Sources */,

@@ -97,22 +97,14 @@ class MatchServices {
         }
     }
     
-    //FAZER O DAO
     static func userLogin(email: String, password: String, completion: @escaping () -> Void) {
         //Logar com o usuario
-        Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
-            if error != nil {
-                //Fazer o erro caso não consiga entrar
-                print("Não conseguiu logar")
-            } else {
-                //Entrou na conta
-                print("Voce logou!")
-                
-                completion()
-            }
+        UserDAO.login(email: email, password: password) {
+            completion()
         }
     }
     
+    //FAZER O DAO
     static func desconnect() {
         do {
             try Auth.auth().signOut()

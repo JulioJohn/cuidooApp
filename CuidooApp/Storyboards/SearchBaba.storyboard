@@ -23,11 +23,11 @@
             </objects>
             <point key="canvasLocation" x="-2099" y="7"/>
         </scene>
-        <!--View Controller-->
+        <!--Search Baba View Controller-->
         <scene sceneID="CUW-dq-AR2">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nJ2-zn-yDc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewController id="aBr-Zp-hgc" sceneMemberID="viewController">
+                <viewController id="aBr-Zp-hgc" customClass="SearchBabaViewController" customModule="CuidooApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eGw-J8-KOj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -36,21 +36,42 @@
                                 <rect key="frame" x="137" y="342" width="140" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Comecar a trabalhar"/>
+                                <connections>
+                                    <action selector="startWorkButton:" destination="aBr-Zp-hgc" eventType="touchUpInside" id="TJL-nt-kUG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Tr-eE-XQf">
+                                <rect key="frame" x="138" y="578" width="140" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Chat do Match Atual"/>
+                                <connections>
+                                    <segue destination="fAO-tk-Osh" kind="show" id="08O-XO-8QD"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OTo-iV-hcd">
                                 <rect key="frame" x="112" y="483" width="49" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Aceitar"/>
+                                <connections>
+                                    <action selector="acceptButton:" destination="aBr-Zp-hgc" eventType="touchUpInside" id="gdF-ua-8s9"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LBJ-oq-RUQ">
                                 <rect key="frame" x="269" y="483" width="56" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Recusar"/>
+                                <connections>
+                                    <action selector="cancelButton:" destination="aBr-Zp-hgc" eventType="touchUpInside" id="yUq-tH-Gn3"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Tr-eE-XQf">
-                                <rect key="frame" x="191" y="578" width="33" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ghe-hd-quj">
+                                <rect key="frame" x="193" y="672" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Chat"/>
+                                <state key="normal" title="Sair"/>
+                                <connections>
+                                    <action selector="leaveButton:" destination="aBr-Zp-hgc" eventType="touchUpInside" id="RU8-cz-I4c"/>
+                                    <segue destination="ipz-Fb-NMr" kind="show" id="6zT-HG-ihe"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -60,6 +81,26 @@
                 </viewController>
             </objects>
             <point key="canvasLocation" x="-1262" y="7"/>
+        </scene>
+        <!--Chat-->
+        <scene sceneID="fbe-cI-pIM">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Chat" id="fAO-tk-Osh" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Rg9-5G-nDq"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bzj-Wm-CkC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1466" y="404"/>
+        </scene>
+        <!--Auth-->
+        <scene sceneID="ZD6-cP-wsg">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Auth" id="ipz-Fb-NMr" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Zcc-lw-ITJ"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mFc-HZ-XdH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1225" y="404"/>
         </scene>
     </scenes>
 </document>

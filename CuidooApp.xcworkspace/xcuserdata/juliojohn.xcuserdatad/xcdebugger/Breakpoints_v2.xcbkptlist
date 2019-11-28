@@ -196,53 +196,5 @@
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "C5B40DA4-55AB-45C4-851F-7B789FF8251A"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CuidooApp/Scenes/Auth/ViewController/AuthViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
-            landmarkName = "AuthViewController"
-            landmarkType = "3">
-            <Locations>
-               <Location
-                  uuid = "C5B40DA4-55AB-45C4-851F-7B789FF8251A - 4ba3569868e654b8"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CuidooApp.AuthViewController.updateMyLocalUser() -&gt; ()"
-                  moduleName = "CuidooApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/juliojohn/Desktop/CuidooApp/CuidooApp/Scenes/Auth/ViewController/AuthViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "60"
-                  endingLineNumber = "60"
-                  offsetFromSymbolStart = "27">
-               </Location>
-               <Location
-                  uuid = "C5B40DA4-55AB-45C4-851F-7B789FF8251A - e8586e5e8cd733ac"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in CuidooApp.AuthViewController.updateMyLocalUser() -&gt; ()"
-                  moduleName = "CuidooApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/juliojohn/Desktop/CuidooApp/CuidooApp/Scenes/Auth/ViewController/AuthViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "61"
-                  endingLineNumber = "61"
-                  offsetFromSymbolStart = "8">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

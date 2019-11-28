@@ -12,7 +12,6 @@ import Firebase
 class UserDAO {
     static var database = Firestore.firestore()
     static var databaseUser = database.collection("users")
-    static var reference: CollectionReference!
     
     /// Pega o id do usuario autenticado, bate no banco e atualiza o usuario local
     /// - Parameter completion: Ocorre após atribuir valor ao usuário local atualizado
@@ -63,4 +62,17 @@ class UserDAO {
         }
     }
     
+    static func login(email: String, password: String, completion: @escaping () -> Void) {
+        Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
+            if error != nil {
+                //Fazer o erro caso não consiga entrar
+                print("Não conseguiu logar")
+            } else {
+                //Entrou na conta
+                print("Voce logou!")
+                
+                completion()
+            }
+        }
+    }
 }

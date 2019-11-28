@@ -42,34 +42,12 @@ class AuthViewController: UIViewController {
         }
     }
     
-    @IBAction func createMatch(_ sender: Any) {
-        if LoggedUser.shared.userIsLogged() {
-            MatchServices.createMatch(idBaba: LoggedUser.shared.user!.uid)
-            //Atualiza meu usuario local
-            MatchServices.getUser {
-                LoggedUser.shared.user!.showClass()
-                OperationQueue.main.addOperation {
-                    //Atualizar UI aqui
-                }
-            }
-        } else {
-            print("O usuário não existe")
-        }
-    }
     
-//    /// Atualiza o usuario local
-//    func updateMyLocalUser() {
-//        MatchServices.getUser {
-//            LoggedUser.shared.user!.showClass()
-//            OperationQueue.main.addOperation {
-//                //Atualizar UI aqui
-//            }
+    //CASO QUEIRA VER ALGUM MATCH EM ESPECIFICO, UTILIZAR ESSA FUNCAO :)
+    //DELETA-LA QUANDO OS DOIS FLUXOS ESTIVEREM COMPLETOS
+//    @IBAction func seeMatch(_ sender: Any) {
+//        MatchServices.getMatch(idMatch: LoggedUser.shared.user!.actualMatch) { () in
+//
 //        }
 //    }
-    
-    @IBAction func seeMatch(_ sender: Any) {
-        MatchServices.getMatch(idMatch: LoggedUser.shared.user!.actualMatch) { () in
-            
-        }
-    }
 }
