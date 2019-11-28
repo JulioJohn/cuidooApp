@@ -42,6 +42,7 @@
 		E2800F51238EA613004FB8C4 /* RecommendationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2800F4F238EA613004FB8C4 /* RecommendationCell.xib */; };
 		E2800F53238EB872004FB8C4 /* aboutBabySitterEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2800F52238EB872004FB8C4 /* aboutBabySitterEntity.swift */; };
 		E2911E8E238812E800273197 /* ConfigurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2911E8D238812E800273197 /* ConfigurationViewController.swift */; };
+		E296F6B2238EBFC600C83544 /* RequestingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E296F6B1238EBFC600C83544 /* RequestingViewController.swift */; };
 		E299048B2386AE5B0055CB25 /* HistoryEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E299048A2386AE5B0055CB25 /* HistoryEntity.swift */; };
 		E299048D2386B71B0055CB25 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E299048C2386B71B0055CB25 /* DateExtensions.swift */; };
 		E299048F2386C2590055CB25 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E299048E2386C2590055CB25 /* HistoryViewController.swift */; };
@@ -120,6 +121,7 @@
 		E2800F4F238EA613004FB8C4 /* RecommendationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendationCell.xib; sourceTree = "<group>"; };
 		E2800F52238EB872004FB8C4 /* aboutBabySitterEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aboutBabySitterEntity.swift; sourceTree = "<group>"; };
 		E2911E8D238812E800273197 /* ConfigurationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationViewController.swift; sourceTree = "<group>"; };
+		E296F6B1238EBFC600C83544 /* RequestingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestingViewController.swift; sourceTree = "<group>"; };
 		E299048A2386AE5B0055CB25 /* HistoryEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryEntity.swift; sourceTree = "<group>"; };
 		E299048C2386B71B0055CB25 /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		E299048E2386C2590055CB25 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
@@ -317,6 +319,7 @@
 		E2800F3D238EA4CE004FB8C4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E296F6B1238EBFC600C83544 /* RequestingViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -762,6 +765,7 @@
 				4C7EAC3F238D9BC6009D3589 /* Nibable.swift in Sources */,
 				E7632304238F6F01009BE203 /* SearchBabaViewController.swift in Sources */,
 				4C3D109423843410002CAB84 /* RequestViewController.swift in Sources */,
+				E296F6B2238EBFC600C83544 /* RequestingViewController.swift in Sources */,
 				E7CCFEE3237C685B00F9DA94 /* Channel.swift in Sources */,
 				E76322FF238F06E2009BE203 /* ChatDAO.swift in Sources */,
 				E7CCFEFB2384192800F9DA94 /* AuthViewController.swift in Sources */,

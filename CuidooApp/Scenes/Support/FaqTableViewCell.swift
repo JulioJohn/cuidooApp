@@ -12,6 +12,7 @@ class FaqTableViewCell: UITableViewCell {
 
     
     static let reuseIdentifier = "FaqTableViewCell"
+    
     static var nib: UINib {
         let nibName = String(describing: FaqTableViewCell.self)
         return UINib(nibName: nibName, bundle: nil)

@@ -12,6 +12,13 @@ class AboutCell: UITableViewCell {
 
     @IBOutlet weak var aboutBabySitterLabel: UILabel!
     
+    static let reuseIdentifier = "AboutCell"
+    
+    static var nib: UINib {
+        let nibName = String(describing: AboutCell.self)
+        return UINib(nibName: nibName, bundle: nil)
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

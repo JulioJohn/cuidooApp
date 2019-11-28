@@ -54,12 +54,12 @@ class HistoryCell: UITableViewCell {
     
     func configure(entity: HistoryEntity){
         self.nameBabySitter.text = entity.name
-        self.timestampLabel.text = entity.timestamp.toString()
+        self.timestampLabel.text = entity.timestamp!.toString()
         self.valueLabel.text = "R$ \(entity.valueFormatted)"
-        setHeartImage(entity.favoriteHeart)
-        heartFlag = entity.favoriteHeart
+        setHeartImage(entity.favoriteHeart!)
+        heartFlag = entity.favoriteHeart!
         
-        let rating = entity.rating
+        let rating = entity.rating!
         for star in ratingStackView {
             if star.tag < rating {
                 star.image = UIImage(systemName: "star.fill")

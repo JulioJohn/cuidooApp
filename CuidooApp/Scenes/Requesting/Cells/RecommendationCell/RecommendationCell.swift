@@ -18,12 +18,20 @@ class RecommendationCell: UITableViewCell {
     @IBOutlet weak var textEvaluationLabel: UILabel!
     @IBOutlet weak var backView: UIView!
     
+    static let reuseIdentifier = "RecommendationCell"
+    
+    static var nib: UINib {
+        let nibName = String(describing: RecommendationCell.self)
+        return UINib(nibName: nibName, bundle: nil)
+    }
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
         backView.backgroundColor = .cuidooLightGrey
         backView.layer.cornerRadius = 20
-        imageViewBabySitter.layer.cornerRadius = 45
+        imageViewBabySitter.layer.cornerRadius = 22
         
     }
 
@@ -34,13 +42,13 @@ class RecommendationCell: UITableViewCell {
     
     func configure(entity: HistoryEntity){
         self.nameBabySitter.text = entity.name
-        self.timestampLabel.text = entity.timestamp.toString()
+        self.timestampLabel.text = entity.timestamp!.toString()
         self.textEvaluationLabel.text  = entity.textEvaluation
         
         // rating star
         let rating = entity.rating
         for star in ratingStackView {
-            if star.tag < rating {
+            if star.tag < rating! {
                 star.image = UIImage(systemName: "star.fill")
                 star.tintColor = .cuidooPink
             } else {

@@ -11,11 +11,11 @@ import Foundation
 class HistoryEntity {
     
     var profilePicture: String?
-    var name: String
-    var timestamp: Date
-    var value: Double
-    var favoriteHeart: Bool
-    var rating: Int
+    var name: String?
+    var timestamp: Date?
+    var value: Double?
+    var favoriteHeart: Bool?
+    var rating: Int?
     var textEvaluation: String?
     var age: String?
     var ocupation: String?
@@ -28,8 +28,27 @@ class HistoryEntity {
         self.rating = rating
     }
     
+    init(name: String, timestamp: Date, rating: Int, textEvaluation: String) {
+        self.name = name
+        self.timestamp = timestamp
+        self.rating = rating
+        self.textEvaluation = textEvaluation
+    }
+    
+    
+    init(name: String?, timestamp: Date?, value: Double?, favoriteHeart: Bool?, rating: Int?, age:String?, ocupation:String?) {
+        self.name = name
+        self.timestamp = timestamp
+        self.value = value
+        self.favoriteHeart = favoriteHeart
+        self.rating = rating
+        self.age = age
+        self.ocupation = ocupation
+    }
+    
     // formata o valor colocando 2 casas decimais
-    var valueFormatted: String { return String(format: "%.2f", value)}
+    var valueFormatted: String { return String(format: "%.2f", value ?? 0)}
+    
     
     
 } // end class HistoryEntity

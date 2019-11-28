@@ -14,6 +14,12 @@ class EvaluationCell: UITableViewCell {
     @IBOutlet weak var evaluation: UILabel!
     @IBOutlet weak var experience: UILabel!
     
+    static let reuseIdentifier = "EvaluationCell"
+       
+       static var nib: UINib {
+           let nibName = String(describing: EvaluationCell.self)
+           return UINib(nibName: nibName, bundle: nil)
+       }
     
     override func awakeFromNib() {
         super.awakeFromNib()

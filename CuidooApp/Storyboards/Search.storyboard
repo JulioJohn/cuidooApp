@@ -81,7 +81,7 @@
                     <connections>
                         <outlet property="searchButton" destination="9z5-u0-nMU" id="l38-Wd-r80"/>
                         <outlet property="searchTableView" destination="jXd-NC-Slu" id="xdu-FV-bQa"/>
-                        <segue destination="68C-0S-Vgb" kind="show" identifier="goToRequestScene" id="SBW-N4-11v"/>
+                        <segue destination="68C-0S-Vgb" kind="presentation" identifier="goToRequestScene" modalPresentationStyle="fullScreen" id="SBW-N4-11v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q2m-qT-mcr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

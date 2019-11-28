@@ -16,11 +16,17 @@ class DataPictureCell: UITableViewCell {
     @IBOutlet weak var ageLabel: UILabel!
     @IBOutlet weak var ocupationLabel: UILabel!
     
+    static let reuseIdentifier = "DataPictureCell"
+    
+    static var nib: UINib {
+        let nibName = String(describing: DataPictureCell.self)
+        return UINib(nibName: nibName, bundle: nil)
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        self.babySitterImage.layer.cornerRadius = 65
+        self.babySitterImage.layer.cornerRadius = 50
         // Initialization code
     }
 
