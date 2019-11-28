@@ -15,9 +15,12 @@ class AuthViewController: UIViewController {
     //Outlets
     @IBOutlet weak var userTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var loginButtonOutlet: UIButton!
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.loginButtonOutlet.layer.cornerRadius = 13
     }
 
     @IBAction func loginButton(_ sender: Any) {
