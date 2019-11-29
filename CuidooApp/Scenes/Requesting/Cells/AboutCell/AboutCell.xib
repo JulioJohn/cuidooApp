@@ -30,7 +30,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggn-Vx-Q8z">
-                                <rect key="frame" x="16" y="44" width="316" height="54"/>
+                                <rect key="frame" x="16" y="44" width="316" height="46"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -38,7 +38,7 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="ggn-Vx-Q8z" secondAttribute="bottom" constant="8" id="Lmd-Ud-icE"/>
+                            <constraint firstAttribute="bottom" secondItem="ggn-Vx-Q8z" secondAttribute="bottom" constant="16" id="Lmd-Ud-icE"/>
                             <constraint firstAttribute="trailing" secondItem="ggn-Vx-Q8z" secondAttribute="trailing" constant="16" id="MTq-7f-5Kg"/>
                             <constraint firstItem="ggn-Vx-Q8z" firstAttribute="top" secondItem="lrj-7f-DrE" secondAttribute="bottom" constant="8" id="PXm-d2-sYX"/>
                             <constraint firstItem="lrj-7f-DrE" firstAttribute="top" secondItem="xci-C5-dYK" secondAttribute="top" constant="16" id="bhg-Ob-I2s"/>
