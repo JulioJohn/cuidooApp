@@ -30,6 +30,9 @@
                                     <constraint firstAttribute="height" constant="66" id="qLr-EX-LOO"/>
                                 </constraints>
                                 <state key="normal" title="FINALIZAR"/>
+                                <connections>
+                                    <action selector="endButton:" destination="8xf-md-nD6" eventType="touchUpInside" id="3bz-cG-TA5"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Fu0-E1-n9P">
                                 <rect key="frame" x="0.0" y="88" width="414" height="684"/>
@@ -54,15 +57,40 @@
                     <navigationItem key="navigationItem" title="Confirmar Cuidadora" id="qsS-3H-rq3">
                         <barButtonItem key="rightBarButtonItem" image="text.bubble" catalog="system" id="E8q-lV-UaG">
                             <color key="tintColor" red="1" green="0.34509803919999998" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="chatButton:" destination="8xf-md-nD6" id="we5-0b-gFc"/>
+                                <segue destination="P8u-Cx-XDD" kind="show" id="08k-1g-1yq"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="requestingTableView" destination="Fu0-E1-n9P" id="szb-Pq-rdf"/>
+                        <segue destination="3Ah-ig-dse" kind="presentation" modalPresentationStyle="fullScreen" id="mKa-Gc-B92"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bhn-U3-aCn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1249.2753623188407" y="50.892857142857139"/>
+        </scene>
+        <!--Chat-->
+        <scene sceneID="ILT-k3-8Kt">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Chat" id="P8u-Cx-XDD" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="02I-zE-u4N"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WuQ-2r-FtG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1928" y="-15"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="Buc-Nv-A7c">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Search" id="3Ah-ig-dse" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="OwB-qX-GHB"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dis-Jv-UYV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1924" y="120"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="iaD-Li-ogv">

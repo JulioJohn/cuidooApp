@@ -520,7 +520,6 @@
 		E7CCFEF92384191200F9DA94 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
-				E7565B94238C000600946D19 /* Business */,
 				E7565B93238BFF4B00946D19 /* ViewController */,
 				E7565B92238BFF4100946D19 /* Model */,
 				E7565B8F238826A000946D19 /* StatusEnum.swift */,
@@ -551,6 +550,7 @@
 			children = (
 				4CEFB1BF2383611C0073F0D9 /* Cells */,
 				E7CCFEF4237C9B4B00F9DA94 /* Extensions */,
+				E7565B94238C000600946D19 /* Business */,
 				E7FF57E22371A59A00F3FA22 /* Scenes */,
 				E7FF57E12371A4A600F3FA22 /* Resources */,
 				E7FF57E02371A49F00F3FA22 /* Storyboards */,

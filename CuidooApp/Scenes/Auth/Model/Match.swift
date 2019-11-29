@@ -30,15 +30,17 @@ class Match {
         self.status = StatusEnum.none
         self.uidMae = uidMae
         
-        self.status = transformEnum(inStatus: status)
+        self.status = Match.transformEnum(inStatus: status)
     }
     
-    func transformEnum(inStatus: String) -> StatusEnum {
+    static func transformEnum(inStatus: String) -> StatusEnum {
         switch inStatus {
         case "available":
             return StatusEnum.available
         case "waitingBaba":
             return StatusEnum.waitingBaba
+        case "waitingMom":
+            return StatusEnum.waitingMom
         case "inProgress":
             return StatusEnum.inProgress
         case "finished":

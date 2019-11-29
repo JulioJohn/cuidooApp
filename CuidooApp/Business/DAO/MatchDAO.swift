@@ -65,4 +65,17 @@ class MatchDAO {
         }
     }
     
+    static func changeMatchStatus(status: String, completion: @escaping () -> Void) {
+        let matchId: String = LoggedUser.shared.actualMatch!.documentId
+        databaseMatch.document(matchId).updateData(["status" : status])
+        completion()
+    }
+    
+    static func getMatchStatus(completion: @escaping (String) -> Void) {
+        let matchId: String = LoggedUser.shared.actualMatch!.documentId
+        databaseMatch.document(matchId).getDocument { (snapshot, error) in
+            let status = snapshot?.get("status")
+            completion(status as! String)
+        }
+    }
 }

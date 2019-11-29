@@ -62,8 +62,18 @@ class RequestingViewController: UIViewController {
     } // end vewDidLoad()
     
     
+    @IBAction func chatButton(_ sender: Any) {
+        
+    }
     
-
+    @IBAction func endButton(_ sender: Any) {
+        MatchServices.momFinalizeMatch {
+            print("Finalizou chamado!")
+        }
+        //O IDEAL É SÓ PULAR DEPOIS DE ALTERAR OS DADOS NO BANCO!!! LEMBRAR DISSO!!!
+        self.performSegue(withIdentifier: "searchSegue", sender: nil)
+    }
+    
 } // end class RequestingViewController
 
 extension RequestingViewController: UITableViewDataSource, UITableViewDelegate {

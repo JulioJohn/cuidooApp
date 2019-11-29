@@ -23,7 +23,6 @@ class RequestViewController: UIViewController {
         confirm.layer.cornerRadius = 13
         seeNext.layer.cornerRadius = 13
         
-        //TEM QUE DEMORAR PARA PULAR PARA ESSA TELA, TA PULANDO MUITO CEDO!!
         let otherUser = (LoggedUser.shared.actualMatch?.otherUser)!
         babySitterView.setInformations(name: otherUser.name, informations: otherUser.informations)
         

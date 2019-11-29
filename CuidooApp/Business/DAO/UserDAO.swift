@@ -57,7 +57,7 @@ class UserDAO {
     static func updateUserActualMatch(completion: @escaping () -> Void) {
         let loggedUserId = LoggedUser.shared.user?.uid
         let actualMatchId = LoggedUser.shared.actualMatch?.documentId
-        databaseUser.document(loggedUserId!).updateData(["actualMatch": actualMatchId]) { (error) in
+        databaseUser.document(loggedUserId!).updateData(["actualMatch": actualMatchId!]) { (error) in
             completion()
         }
     }

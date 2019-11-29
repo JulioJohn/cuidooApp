@@ -20,16 +20,6 @@ class MatchServices {
         }
     }
     
-    //FAZER O DAO
-    static func updateUser() {
-        if !LoggedUser.shared.userIsLogged() { return }
-        
-        let userDatabase = self.database.collection("users")
-        let userId = "\(LoggedUser.shared.user?.uid)"
-        //Atualizo no database o user, baseado no user local
-        userDatabase.document(userId).updateData((LoggedUser.shared.user?.transformInDatabaseType())!)
-    }
-    
     static func getUser(completion: @escaping () -> Void) {
         UserDAO.getUser {
             UserDAO.updateInformations {
@@ -101,6 +91,18 @@ class MatchServices {
         //Logar com o usuario
         UserDAO.login(email: email, password: password) {
             completion()
+        }
+    }
+    
+    static func momFinalizeMatch(completion: @escaping () -> Void) {
+        MatchDAO.getMatchStatus { (status) in
+            print("Verificando status!")
+            if status == "inProgress" {
+                MatchDAO.changeMatchStatus(status: "Finished") {
+                    print("Status modificado com sucesso!")
+                    completion()
+                }
+            }
         }
     }
     

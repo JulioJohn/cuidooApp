@@ -11,6 +11,7 @@ import Foundation
 enum StatusEnum {
     case available
     case waitingBaba
+    case waitingMom
     case inProgress
     case finished
     case none
