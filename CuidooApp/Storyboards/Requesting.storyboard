@@ -65,7 +65,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="requestingTableView" destination="Fu0-E1-n9P" id="szb-Pq-rdf"/>
-                        <segue destination="3Ah-ig-dse" kind="presentation" modalPresentationStyle="fullScreen" id="mKa-Gc-B92"/>
+                        <segue destination="3Ah-ig-dse" kind="presentation" identifier="searchSegue" modalPresentationStyle="fullScreen" id="mKa-Gc-B92"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bhn-U3-aCn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

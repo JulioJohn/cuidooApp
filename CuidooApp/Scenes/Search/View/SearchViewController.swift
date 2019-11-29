@@ -54,7 +54,7 @@ extension SearchViewController: InfoCellDelegate {
 
 extension SearchViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return section == 2 ? 3 : 1
+        return 1//section == 2 ? 3 : 1
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

@@ -40,15 +40,17 @@ class RequestingViewController: UIViewController {
         
         // ---------------------------------------------------------
         
+        let user = LoggedUser.shared.actualMatch?.otherUser
+        
         //sessão 1
         entityDataPicture =
-            HistoryEntity(name: "Barbara", timestamp: nil, value: nil, favoriteHeart: nil, rating: nil, age: "34", ocupation: "Enfermeira")
+            HistoryEntity(name: user?.name, timestamp: nil, value: nil, favoriteHeart: nil, rating: nil, age: "34", ocupation: user?.informations.profission)
         
         //sessão2
-        entityEvaluation = EvaluationEntity(jobs: "28", evaluation: "4.5", experience: "2 anos")
+        entityEvaluation = EvaluationEntity(jobs: "\(user?.informations.cuidados)", evaluation:"\( user?.informations.avaliation)", experience: user?.informations.experience ?? "")
         
         //sessão 3
-        entityAbout = aboutBabySitterEntity(aboutBabySitter: "Moro com minha mãe e estudo há dois anos, preciso de uma renda extra e como amo crianças resolvi entrar no app :)")
+        entityAbout = aboutBabySitterEntity(aboutBabySitter: user?.informations.description ?? "")
         
         //sessão 4
         entityRecommendation = [ HistoryEntity(name: "Camila", timestamp: Date(), rating: 4, textEvaluation: "Minha filha amou a Claudia, muito cuidadosa e brincalhona."),
@@ -71,7 +73,10 @@ class RequestingViewController: UIViewController {
             print("Finalizou chamado!")
         }
         //O IDEAL É SÓ PULAR DEPOIS DE ALTERAR OS DADOS NO BANCO!!! LEMBRAR DISSO!!!
-        self.performSegue(withIdentifier: "searchSegue", sender: nil)
+        self.dismiss(animated: true) {
+            self.performSegue(withIdentifier: "searchSegue", sender: nil)
+        }
+        
     }
     
 } // end class RequestingViewController

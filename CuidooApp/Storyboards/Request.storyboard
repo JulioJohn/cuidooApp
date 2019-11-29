@@ -24,7 +24,6 @@
                                 <state key="normal" title="CONFIRMAR"/>
                                 <connections>
                                     <action selector="didClickConfirm:" destination="ymi-OD-QlD" eventType="touchUpInside" id="yL5-BV-7zs"/>
-                                    <segue destination="B8G-Ve-Fm0" kind="presentation" modalPresentationStyle="fullScreen" id="3UT-ua-Zdd"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WHe-9f-Q24">
@@ -82,6 +81,7 @@
                         <outlet property="babySitterView" destination="KYG-Th-P9N" id="Hgm-bc-0ge"/>
                         <outlet property="confirm" destination="GbP-8m-rRx" id="nRQ-0p-1tk"/>
                         <outlet property="seeNext" destination="WHe-9f-Q24" id="Qbh-dc-U85"/>
+                        <segue destination="B8G-Ve-Fm0" kind="presentation" identifier="requestingSegue" modalPresentationStyle="fullScreen" id="PkB-n9-X0Y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ip3-3G-Ydx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
