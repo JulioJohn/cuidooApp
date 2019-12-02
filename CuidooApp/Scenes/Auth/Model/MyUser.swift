@@ -14,6 +14,7 @@ class MyUser {
     var actualMatch: String
     var isBaba: Bool
     var informations: Informations
+    var matchHistory: [MatchHistory?]
     
     init?(data: [String:Any]) {
         guard let name = data["nome"] as? String else { return nil }
@@ -26,6 +27,7 @@ class MyUser {
         self.actualMatch = actualMatch
         self.isBaba = isBaba
         
+        self.matchHistory = [nil]
         self.informations = Informations()
     }
     
@@ -52,6 +54,10 @@ class MyUser {
     
     func printInformations() {
         self.informations.printInformations()
+    }
+    
+    func updateMatchHistory(matchHistory: [MatchHistory]) {
+        self.matchHistory = matchHistory
     }
     
 }

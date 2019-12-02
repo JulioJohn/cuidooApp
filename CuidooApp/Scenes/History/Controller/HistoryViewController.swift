@@ -22,14 +22,22 @@ class HistoryViewController: UIViewController {
         self.historyTableView.delegate = self
         self.historyTableView.dataSource = self
         
-        
           historyTableView.register(UINib(nibName: "HistoryCell", bundle: nil), forCellReuseIdentifier: "HistoryCellIdentifier")
         
-        histories =
-               [ HistoryEntity(name: "Renata", timestamp: Date(), value: 23.00, favoriteHeart: false, rating: 4),
-                 HistoryEntity(name: "Maria", timestamp: Date(), value: 12.90, favoriteHeart: false, rating: 3),
-                 HistoryEntity(name: "Cláudia", timestamp: Date(), value: 00.00, favoriteHeart: true, rating: 1)
-               ]
+        MatchServices.updateMatchHistory { (matchs) in
+            OperationQueue.main.addOperation {
+                for i in 0 ... matchs.count - 1 {
+                    self.histories.append(HistoryEntity(name: "Fulana", timestamp: matchs[i].date, value: matchs[i].price, favoriteHeart: false, rating: Int(matchs[i].avaliation)))
+                }
+                self.historyTableView.reloadData()
+            }
+        }
+        
+//        histories =
+//               [ HistoryEntity(name: "Renata", timestamp: Date(), value: 23.00, favoriteHeart: false, rating: 4),
+//                 HistoryEntity(name: "Maria", timestamp: Date(), value: 12.90, favoriteHeart: false, rating: 3),
+//                 HistoryEntity(name: "Cláudia", timestamp: Date(), value: 00.00, favoriteHeart: true, rating: 1)
+//               ]
     }
 
 } // end class HistoryViewController

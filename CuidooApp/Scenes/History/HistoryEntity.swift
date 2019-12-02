@@ -12,7 +12,7 @@ class HistoryEntity {
     
     var profilePicture: String?
     var name: String?
-    var timestamp: Date?
+    var timestamp: String?
     var value: Double?
     var favoriteHeart: Bool?
     var rating: Int?
@@ -20,7 +20,7 @@ class HistoryEntity {
     var age: String?
     var ocupation: String?
      
-    init(name: String, timestamp: Date, value: Double, favoriteHeart: Bool, rating: Int) {
+    init(name: String, timestamp: String, value: Double, favoriteHeart: Bool, rating: Int) {
         self.name = name
         self.timestamp = timestamp
         self.value = value
@@ -28,7 +28,7 @@ class HistoryEntity {
         self.rating = rating
     }
     
-    init(name: String, timestamp: Date, rating: Int, textEvaluation: String) {
+    init(name: String, timestamp: String, rating: Int, textEvaluation: String) {
         self.name = name
         self.timestamp = timestamp
         self.rating = rating
@@ -36,7 +36,7 @@ class HistoryEntity {
     }
     
     
-    init(name: String?, timestamp: Date?, value: Double?, favoriteHeart: Bool?, rating: Int?, age:String?, ocupation:String?) {
+    init(name: String?, timestamp: String?, value: Double?, favoriteHeart: Bool?, rating: Int?, age:String?, ocupation:String?) {
         self.name = name
         self.timestamp = timestamp
         self.value = value

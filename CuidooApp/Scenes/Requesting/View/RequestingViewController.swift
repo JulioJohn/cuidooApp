@@ -53,9 +53,9 @@ class RequestingViewController: UIViewController {
         entityAbout = aboutBabySitterEntity(aboutBabySitter: user?.informations.description ?? "")
         
         //sessão 4
-        entityRecommendation = [ HistoryEntity(name: "Camila", timestamp: Date(), rating: 4, textEvaluation: "Minha filha amou a Claudia, muito cuidadosa e brincalhona."),
-                                 HistoryEntity(name: "Roberta", timestamp: Date(), rating: 3, textEvaluation: "Minha filha amou a Claudia, muito cuidadosa e brincalhona."),
-                                 HistoryEntity(name: "Aline", timestamp: Date(), rating: 4, textEvaluation: "Minha filha amou a Claudia, muito cuidadosa e brincalhona."),
+        entityRecommendation = [ HistoryEntity(name: "Camila", timestamp: "Trocar DATA!!", rating: 4, textEvaluation: "Minha filha amou a Claudia, muito cuidadosa e brincalhona."),
+                                 HistoryEntity(name: "Roberta", timestamp: "Trocar DATA!!", rating: 3, textEvaluation: "Minha filha amou a Claudia, muito cuidadosa e brincalhona."),
+                                 HistoryEntity(name: "Aline", timestamp: "Trocar DATA!!", rating: 4, textEvaluation: "Minha filha amou a Claudia, muito cuidadosa e brincalhona."),
                                  
         ]
         

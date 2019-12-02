@@ -75,4 +75,16 @@ class UserDAO {
             }
         }
     }
+    
+    static func getMatchHistory(completion: @escaping ([MatchHistory?]) -> Void) {
+        let userId: String = LoggedUser.shared.user!.uid
+        databaseUser.document(userId).collection("matchsFinalizados").getDocuments(completion: { (snapshot, error) in
+            let size = (snapshot!.count - 1) as Int
+            var matchs: [MatchHistory?] = []
+            for i in 0 ... size {
+                matchs.append(MatchHistory(data: (snapshot?.documents[i].data())!))
+            }
+            completion(matchs)
+        })
+    }
 }

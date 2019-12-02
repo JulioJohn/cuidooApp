@@ -54,7 +54,7 @@ class HistoryCell: UITableViewCell {
     
     func configure(entity: HistoryEntity){
         self.nameBabySitter.text = entity.name
-        self.timestampLabel.text = entity.timestamp!.toString()
+        self.timestampLabel.text = entity.timestamp
         self.valueLabel.text = "R$ \(entity.valueFormatted)"
         setHeartImage(entity.favoriteHeart!)
         heartFlag = entity.favoriteHeart!

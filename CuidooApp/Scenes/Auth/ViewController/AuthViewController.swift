@@ -44,13 +44,4 @@ class AuthViewController: UIViewController {
             }
         }
     }
-    
-    
-    //CASO QUEIRA VER ALGUM MATCH EM ESPECIFICO, UTILIZAR ESSA FUNCAO :)
-    //DELETA-LA QUANDO OS DOIS FLUXOS ESTIVEREM COMPLETOS
-//    @IBAction func seeMatch(_ sender: Any) {
-//        MatchServices.getMatch(idMatch: LoggedUser.shared.user!.actualMatch) { () in
-//
-//        }
-//    }
 }

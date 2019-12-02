@@ -116,4 +116,13 @@ class MatchServices {
           print ("Erro ao desconectar: %@", signOutError)
         }
     }
+    
+    static func updateMatchHistory(completion: @escaping ([MatchHistory]) -> Void) {
+        print("Atualizando historico de matchs")
+        UserDAO.getMatchHistory { (matchHistory) in
+            print("Historico de matchs atualizado!")
+            LoggedUser.shared.user?.updateMatchHistory(matchHistory: matchHistory as! [MatchHistory])
+            completion(LoggedUser.shared.user!.matchHistory as! [MatchHistory])
+        }
+    }
 }

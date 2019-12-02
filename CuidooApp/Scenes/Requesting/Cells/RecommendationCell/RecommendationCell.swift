@@ -42,7 +42,7 @@ class RecommendationCell: UITableViewCell {
     
     func configure(entity: HistoryEntity){
         self.nameBabySitter.text = entity.name
-        self.timestampLabel.text = entity.timestamp!.toString()
+        self.timestampLabel.text = entity.timestamp
         self.textEvaluationLabel.text  = entity.textEvaluation
         
         // rating star
