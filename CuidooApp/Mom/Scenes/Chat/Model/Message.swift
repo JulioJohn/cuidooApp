@@ -35,15 +35,6 @@ class Message: MessageType {
         id = nil
     }
     
-//    init(image: UIImage) {
-//      sender = Sender(id: "666", displayName: "Julio Trocar depois")
-//      self.image = image
-//        self.kind = MessageKind.photo(MediaItem(image))
-//      content = ""
-//      sentDate = Date()
-//      id = nil
-//    }
-    
     init?(document: QueryDocumentSnapshot) {
       let data = document.data()
         

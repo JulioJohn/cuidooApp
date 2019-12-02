@@ -26,9 +26,6 @@ class ChatViewController: MessagesViewController, MessageInputBarDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //Caminho em que o chat está sendo armazenado
-        //reference = database.collection(["matchs", LoggedUser.shared.actualMatch!.documentId, "Chat"].joined(separator: "/"))
-        
         navigationItem.largeTitleDisplayMode = .never
         
         scrollsToBottomOnKeyboardBeginsEditing = true

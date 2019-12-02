@@ -16,7 +16,6 @@ class ChatServices {
     
     init(matchId: String) {
         //LoggedUser.shared.actualMatch!.documentId
-        chatDatabase = Firestore.firestore().collection(["matchs", matchId, "Chat"].joined(separator: "/"))
         chatDAO = ChatDAO(matchId: matchId)
     }
     
@@ -27,6 +26,7 @@ class ChatServices {
     }
     
     func addListener(completion: @escaping (Message?,Error?) -> Void) {
+        
         chatDatabase?.addSnapshotListener { (snapshot, error) in
             if let error = error {
                 completion(nil, error)
@@ -42,14 +42,13 @@ class ChatServices {
         }
     }
     
-    private func handleDocumentChange(_ change: DocumentChange, completion: @escaping (Message) -> Void) {
+    private func handleDocumentChange(_ change: DocumentChange, completion: @escaping (Message) -> Void) {        
         guard let message = Message(document: change.document) else {
             return
         }
         switch change.type {
         case .added:
             completion(message)
-//            insertNewMessage(message)
         default:
             break
         }

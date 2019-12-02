@@ -16,7 +16,7 @@
 		4C7EAC3F238D9BC6009D3589 /* Nibable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7EAC3E238D9BC6009D3589 /* Nibable.swift */; };
 		4C7EAC41238D9CC9009D3589 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7EAC40238D9CC9009D3589 /* UIViewExtension.swift */; };
 		4C7EAC43238EB100009D3589 /* EvaluationEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7EAC42238EB100009D3589 /* EvaluationEntity.swift */; };
-		4CA50DBE23914A0C004203BB /* profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CA50DBD23914A0C004203BB /* profile.storyboard */; };
+		4CA50DBE23914A0C004203BB /* ProfileBabysitter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CA50DBD23914A0C004203BB /* ProfileBabysitter.storyboard */; };
 		4CA50DC223918AD6004203BB /* babySitterProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA50DC123918AD6004203BB /* babySitterProfileViewController.swift */; };
 		4CA50DC52391A5AA004203BB /* babbySitterConfirmMatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA50DC42391A5AA004203BB /* babbySitterConfirmMatchView.swift */; };
 		4CA50DC72391A5BF004203BB /* babySitterConfirmMatchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CA50DC62391A5BF004203BB /* babySitterConfirmMatchView.xib */; };
@@ -102,7 +102,7 @@
 		4C7EAC3E238D9BC6009D3589 /* Nibable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nibable.swift; sourceTree = "<group>"; };
 		4C7EAC40238D9CC9009D3589 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		4C7EAC42238EB100009D3589 /* EvaluationEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationEntity.swift; sourceTree = "<group>"; };
-		4CA50DBD23914A0C004203BB /* profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = profile.storyboard; sourceTree = "<group>"; };
+		4CA50DBD23914A0C004203BB /* ProfileBabysitter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileBabysitter.storyboard; sourceTree = "<group>"; };
 		4CA50DC123918AD6004203BB /* babySitterProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = babySitterProfileViewController.swift; sourceTree = "<group>"; };
 		4CA50DC42391A5AA004203BB /* babbySitterConfirmMatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = babbySitterConfirmMatchView.swift; sourceTree = "<group>"; };
 		4CA50DC62391A5BF004203BB /* babySitterConfirmMatchView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = babySitterConfirmMatchView.xib; sourceTree = "<group>"; };
@@ -234,21 +234,13 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		4CA50DBA239149A0004203BB /* babySitterStoryBoards */ = {
+		4CA50DBF23918A9F004203BB /* Babysitter */ = {
 			isa = PBXGroup;
 			children = (
-				4CA50DBD23914A0C004203BB /* profile.storyboard */,
+				E713185E23958EC7005525C5 /* Storyboards */,
+				E713185D23958EB2005525C5 /* Scenes */,
 			);
-			path = babySitterStoryBoards;
-			sourceTree = "<group>";
-		};
-		4CA50DBF23918A9F004203BB /* babySitterScenes */ = {
-			isa = PBXGroup;
-			children = (
-				4CA50DC32391A558004203BB /* confirmMatch */,
-				4CA50DC023918AB5004203BB /* Profile */,
-			);
-			path = babySitterScenes;
+			path = Babysitter;
 			sourceTree = "<group>";
 		};
 		4CA50DC023918AB5004203BB /* Profile */ = {
@@ -259,13 +251,13 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
-		4CA50DC32391A558004203BB /* confirmMatch */ = {
+		4CA50DC32391A558004203BB /* ConfirmMatch */ = {
 			isa = PBXGroup;
 			children = (
 				4CA50DC42391A5AA004203BB /* babbySitterConfirmMatchView.swift */,
 				4CA50DC62391A5BF004203BB /* babySitterConfirmMatchView.xib */,
 			);
-			path = confirmMatch;
+			path = ConfirmMatch;
 			sourceTree = "<group>";
 		};
 		4CEFB1BF2383611C0073F0D9 /* Cells */ = {
@@ -514,6 +506,40 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		E713185D23958EB2005525C5 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				4CA50DC32391A558004203BB /* ConfirmMatch */,
+				4CA50DC023918AB5004203BB /* Profile */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		E713185E23958EC7005525C5 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				4CA50DBD23914A0C004203BB /* ProfileBabysitter.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		E713185F23958F84005525C5 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E76322FC238F06D0009BE203 /* ChatServices.swift */,
+				E7565B95238C002A00946D19 /* MatchServices.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		E713186023958F98005525C5 /* Mom */ = {
+			isa = PBXGroup;
+			children = (
+				E7FF57E22371A59A00F3FA22 /* Scenes */,
+			);
+			path = Mom;
+			sourceTree = "<group>";
+		};
 		E7444B53238DD62400001EC0 /* DAO */ = {
 			isa = PBXGroup;
 			children = (
@@ -547,8 +573,7 @@
 		E7565B94238C000600946D19 /* Business */ = {
 			isa = PBXGroup;
 			children = (
-				E76322FC238F06D0009BE203 /* ChatServices.swift */,
-				E7565B95238C002A00946D19 /* MatchServices.swift */,
+				E713185F23958F84005525C5 /* Services */,
 				E7444B53238DD62400001EC0 /* DAO */,
 			);
 			path = Business;
@@ -619,10 +644,9 @@
 				4CEFB1BF2383611C0073F0D9 /* Cells */,
 				E7CCFEF4237C9B4B00F9DA94 /* Extensions */,
 				E7565B94238C000600946D19 /* Business */,
-				4CA50DBF23918A9F004203BB /* babySitterScenes */,
-				E7FF57E22371A59A00F3FA22 /* Scenes */,
+				4CA50DBF23918A9F004203BB /* Babysitter */,
+				E713186023958F98005525C5 /* Mom */,
 				E7FF57E12371A4A600F3FA22 /* Resources */,
-				4CA50DBA239149A0004203BB /* babySitterStoryBoards */,
 				E7FF57E02371A49F00F3FA22 /* Storyboards */,
 				E7FF57DA2371A36F00F3FA22 /* Info.plist */,
 				E2A815C12378C4A0005D9C6F /* GoogleService-Info.plist */,
@@ -754,7 +778,7 @@
 			files = (
 				E2800F42238EA579004FB8C4 /* DataPictureCell.xib in Resources */,
 				4C4A3A80237C2B19009A3B64 /* BabySitterCell.xib in Resources */,
-				4CA50DBE23914A0C004203BB /* profile.storyboard in Resources */,
+				4CA50DBE23914A0C004203BB /* ProfileBabysitter.storyboard in Resources */,
 				E2800F4C238EA5EE004FB8C4 /* AboutCell.xib in Resources */,
 				E7632301238F1C4C009BE203 /* SearchBaba.storyboard in Resources */,
 				4CEFB1C4238361600073F0D9 /* InfoCell.xib in Resources */,
@@ -1029,7 +1053,7 @@
 			baseConfigurationReference = 303077478AF76DECDC033BE2 /* Pods-CuidooApp.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 76DX35F6T7;
+				DEVELOPMENT_TEAM = 97PTJ72QJZ;
 				INFOPLIST_FILE = CuidooApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1047,7 +1071,7 @@
 			baseConfigurationReference = 800AE3D6E1EBAC85C2721D3B /* Pods-CuidooApp.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 76DX35F6T7;
+				DEVELOPMENT_TEAM = 97PTJ72QJZ;
 				INFOPLIST_FILE = CuidooApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

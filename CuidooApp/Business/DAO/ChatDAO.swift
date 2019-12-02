@@ -30,5 +30,32 @@ class ChatDAO {
       }
     }
     
+    func addListener(completion: @escaping (Message?, Error?) -> Void) {
+        chatDatabase?.addSnapshotListener { (snapshot, error) in
+            if let error = error {
+                //Falha
+                completion(nil, error)
+            } else {
+                //Sucesso
+               snapshot!.documentChanges.forEach { change in
+                    self.handleDocumentChange(change) { (message) in
+                        completion(message, nil)
+                    }
+                }
+            }
+        }
+    }
+    
+    private func handleDocumentChange(_ change: DocumentChange, completion: @escaping (Message) -> Void) {
+            guard let message = Message(document: change.document) else {
+                return
+            }
+            switch change.type {
+            case .added:
+                completion(message)
+            default:
+                break
+            }
+        }
     
 }
