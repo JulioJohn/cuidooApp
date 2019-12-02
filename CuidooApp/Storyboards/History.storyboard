@@ -31,7 +31,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gGn-I1-WGd">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gGn-I1-WGd">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
@@ -48,11 +48,22 @@
                     <navigationItem key="navigationItem" title="Histórico" id="B2U-hQ-LOG"/>
                     <connections>
                         <outlet property="historyTableView" destination="gGn-I1-WGd" id="4Xs-3L-y5L"/>
+                        <segue destination="2xc-hp-vt2" kind="show" identifier="HistoryChatSegue" id="Wre-UA-SQm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yx0-Ba-lHu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-523" y="297"/>
+        </scene>
+        <!--Chat-->
+        <scene sceneID="srI-p0-Lgf">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Chat" id="2xc-hp-vt2" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="BE1-a1-yYx"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Acr-Go-tG0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="114" y="417"/>
         </scene>
     </scenes>
 </document>

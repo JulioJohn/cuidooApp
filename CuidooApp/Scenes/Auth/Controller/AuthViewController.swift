@@ -17,10 +17,10 @@ class AuthViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButtonOutlet: UIButton!
     
-
-    @IBAction func unwindHere(_ segue : UIStoryboardSegue){
+    @IBAction func backToAuthScreenUnwind(_ segue : UIStoryboardSegue){
         
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.loginButtonOutlet.layer.cornerRadius = 13

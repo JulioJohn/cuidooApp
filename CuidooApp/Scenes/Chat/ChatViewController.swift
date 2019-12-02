@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Firebase
 import MessageKit
 import InputBarAccessoryView
 
@@ -20,15 +19,9 @@ class ChatViewController: MessagesViewController, MessageInputBarDelegate {
     
     //Mensagens
     private var messages: [Message] = []
-    private var messageListener: ListenerRegistration?
-    
-    //Banco de dados
-    private let database = Firestore.firestore()
-    private var reference: CollectionReference?
     
     var chatServices: ChatServices!
     var matchId: String!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,19 +43,17 @@ class ChatViewController: MessagesViewController, MessageInputBarDelegate {
         
         //match ID deve  ser setado na tela anterior
         self.matchId = LoggedUser.shared.actualMatch?.documentId
+        
         self.chatServices = ChatServices(matchId: matchId)
         self.chatServices.addListener { (message, error) in
             if error != nil {
                 print(error)
-                //print("Error listening for channel updates: \(error?.localizedDescription ?? "No error")")
                 return
             } else {
-                print("Entrou aqui")
                 self.insertNewMessage(message!)
             }
         }
     }
-    
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)

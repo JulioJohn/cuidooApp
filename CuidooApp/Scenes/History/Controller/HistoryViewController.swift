@@ -9,11 +9,12 @@
 import UIKit
 
 class HistoryViewController: UIViewController {
-
     
     @IBOutlet weak var historyTableView: UITableView!
     
-    var histories:[HistoryEntity] = []
+    var histories: [HistoryEntity] = []
+    var matchs: [MatchHistory] = []
+    var idMatchClicked: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,28 +22,25 @@ class HistoryViewController: UIViewController {
         self.historyTableView.delegate = self
         self.historyTableView.dataSource = self
         
-          historyTableView.register(UINib(nibName: "HistoryCell", bundle: nil), forCellReuseIdentifier: "HistoryCellIdentifier")
+        //Célula padrão
+        historyTableView.register(UINib(nibName: "HistoryCell", bundle: nil), forCellReuseIdentifier: "HistoryCellIdentifier")
         
+        //Atualizar a table view com as informacoes do Firebase
         MatchServices.updateMatchHistory { (matchs) in
+            //Atualiza assicronamente
             OperationQueue.main.addOperation {
+                self.matchs = matchs
                 for i in 0 ... matchs.count - 1 {
                     self.histories.append(HistoryEntity(name: "Fulana", timestamp: matchs[i].date, value: matchs[i].price, favoriteHeart: false, rating: Int(matchs[i].avaliation)))
                 }
                 self.historyTableView.reloadData()
             }
         }
-        
-//        histories =
-//               [ HistoryEntity(name: "Renata", timestamp: Date(), value: 23.00, favoriteHeart: false, rating: 4),
-//                 HistoryEntity(name: "Maria", timestamp: Date(), value: 12.90, favoriteHeart: false, rating: 3),
-//                 HistoryEntity(name: "Cláudia", timestamp: Date(), value: 00.00, favoriteHeart: true, rating: 1)
-//               ]
     }
 
 }
 
 extension HistoryViewController: UITableViewDataSource, UITableViewDelegate {
-    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return histories.count
@@ -57,8 +55,18 @@ extension HistoryViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedTrail =  histories[indexPath.row]
-        
+        //Pegar o chat do match correspondente a linha selecionada
+        self.idMatchClicked = matchs[indexPath.row].idMatch
+        performSegue(withIdentifier: "HistoryChatSegue", sender: nil)
+    }
+    
+    //Antes de entrar no chat, atualiza o id do match que o chat está dentro
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "HistoryChatSegue" {
+            if let viewController = segue.destination as? ChatViewController {
+                viewController.matchId = idMatchClicked
+            }
+        }
     }
   
 }

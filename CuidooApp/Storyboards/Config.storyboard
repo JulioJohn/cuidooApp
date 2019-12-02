@@ -106,7 +106,7 @@
                         </connections>
                     </tableView>
                     <connections>
-                        <segue destination="3Kk-Tn-9pK" kind="unwind" identifier="goToAuthSegue" unwindAction="unwindHere:" id="UI8-WV-5JO"/>
+                        <segue destination="3Kk-Tn-9pK" kind="unwind" identifier="goToAuthSegue" unwindAction="backToAuthScreenUnwind:" id="r9x-vX-JQM"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XjA-C9-S6W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
