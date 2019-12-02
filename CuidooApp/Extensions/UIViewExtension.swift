@@ -25,4 +25,13 @@ public extension UIView {
                                                                 metrics: nil,
                                                                 views: ["subview": self]))
     }
+    
+    func rotateView(imageView: UIImageView) {
+        let rotation: CABasicAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
+        rotation.toValue = Double.pi * 2
+        rotation.duration = 1.0
+        rotation.isCumulative = true
+        rotation.repeatCount = Float.greatestFiniteMagnitude
+        imageView.layer.add(rotation, forKey: "rotationAnimation")
+    }
 }

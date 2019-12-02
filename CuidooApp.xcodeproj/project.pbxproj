@@ -61,6 +61,9 @@
 		E2F65A9323840F3100E9EEA8 /* Config.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2F65A9223840F3100E9EEA8 /* Config.storyboard */; };
 		E2F65A962384363E00E9EEA8 /* HistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F65A942384363E00E9EEA8 /* HistoryCell.swift */; };
 		E2F65A972384363E00E9EEA8 /* HistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2F65A952384363E00E9EEA8 /* HistoryCell.xib */; };
+		E713185423953ACE005525C5 /* WaitingSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E713185323953ACE005525C5 /* WaitingSearch.storyboard */; };
+		E713185923953DFA005525C5 /* WaitingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E713185823953DFA005525C5 /* WaitingViewController.swift */; };
+		E713185B23954CB8005525C5 /* WaitingSceneAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = E713185A23954CB8005525C5 /* WaitingSceneAnimations.swift */; };
 		E7444B50238DD5C600001EC0 /* MatchDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7444B4F238DD5C600001EC0 /* MatchDAO.swift */; };
 		E7444B52238DD5F600001EC0 /* UserDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7444B51238DD5F600001EC0 /* UserDAO.swift */; };
 		E7565B8E2388262E00946D19 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7565B8D2388262E00946D19 /* Match.swift */; };
@@ -145,6 +148,9 @@
 		E2F65A9223840F3100E9EEA8 /* Config.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Config.storyboard; sourceTree = "<group>"; };
 		E2F65A942384363E00E9EEA8 /* HistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCell.swift; sourceTree = "<group>"; };
 		E2F65A952384363E00E9EEA8 /* HistoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryCell.xib; sourceTree = "<group>"; };
+		E713185323953ACE005525C5 /* WaitingSearch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WaitingSearch.storyboard; sourceTree = "<group>"; };
+		E713185823953DFA005525C5 /* WaitingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingViewController.swift; sourceTree = "<group>"; };
+		E713185A23954CB8005525C5 /* WaitingSceneAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingSceneAnimations.swift; sourceTree = "<group>"; };
 		E7444B4F238DD5C600001EC0 /* MatchDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDAO.swift; sourceTree = "<group>"; };
 		E7444B51238DD5F600001EC0 /* UserDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDAO.swift; sourceTree = "<group>"; };
 		E7565B8D2388262E00946D19 /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
@@ -492,6 +498,22 @@
 			path = Support;
 			sourceTree = "<group>";
 		};
+		E713185623953DC0005525C5 /* Waiting */ = {
+			isa = PBXGroup;
+			children = (
+				E713185723953DCF005525C5 /* Controller */,
+			);
+			path = Waiting;
+			sourceTree = "<group>";
+		};
+		E713185723953DCF005525C5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E713185823953DFA005525C5 /* WaitingViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		E7444B53238DD62400001EC0 /* DAO */ = {
 			isa = PBXGroup;
 			children = (
@@ -514,12 +536,12 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		E7565B93238BFF4B00946D19 /* ViewController */ = {
+		E7565B93238BFF4B00946D19 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				E7CCFEFA2384192800F9DA94 /* AuthViewController.swift */,
 			);
-			path = ViewController;
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		E7565B94238C000600946D19 /* Business */ = {
@@ -558,6 +580,7 @@
 				E299048C2386B71B0055CB25 /* DateExtensions.swift */,
 				4C7EAC3E238D9BC6009D3589 /* Nibable.swift */,
 				4C7EAC40238D9CC9009D3589 /* UIViewExtension.swift */,
+				E713185A23954CB8005525C5 /* WaitingSceneAnimations.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -565,7 +588,7 @@
 		E7CCFEF92384191200F9DA94 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
-				E7565B93238BFF4B00946D19 /* ViewController */,
+				E7565B93238BFF4B00946D19 /* Controller */,
 				E7565B92238BFF4100946D19 /* Model */,
 				E7565B8F238826A000946D19 /* StatusEnum.swift */,
 			);
@@ -613,6 +636,7 @@
 				E7FF57D22371A36A00F3FA22 /* Auth.storyboard */,
 				E2014FFE23759B4F002D8C8B /* Search.storyboard */,
 				E7632300238F1C4C009BE203 /* SearchBaba.storyboard */,
+				E713185323953ACE005525C5 /* WaitingSearch.storyboard */,
 				E201500023759B58002D8C8B /* Profile.storyboard */,
 				E201500223759B86002D8C8B /* Request.storyboard */,
 				E201500423759B96002D8C8B /* Requesting.storyboard */,
@@ -640,6 +664,7 @@
 		E7FF57E22371A59A00F3FA22 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				E713185623953DC0005525C5 /* Waiting */,
 				E7CCFEF92384191200F9DA94 /* Auth */,
 				4C4A3A81237C3450009A3B64 /* Match */,
 				E2A815C32378C6D5005D9C6F /* Initial */,
@@ -739,6 +764,7 @@
 				E7FF57D92371A36F00F3FA22 /* LaunchScreen.storyboard in Resources */,
 				E201500823759BAA002D8C8B /* Requested.storyboard in Resources */,
 				E201500523759B96002D8C8B /* Requesting.storyboard in Resources */,
+				E713185423953ACE005525C5 /* WaitingSearch.storyboard in Resources */,
 				E201501023759BDB002D8C8B /* Support.storyboard in Resources */,
 				E7FF57D62371A36F00F3FA22 /* Assets.xcassets in Resources */,
 				E7FF57D42371A36A00F3FA22 /* Auth.storyboard in Resources */,
@@ -833,11 +859,13 @@
 				E7444B50238DD5C600001EC0 /* MatchDAO.swift in Sources */,
 				E76322FD238F06D0009BE203 /* ChatServices.swift in Sources */,
 				E7565B90238826A000946D19 /* StatusEnum.swift in Sources */,
+				E713185B23954CB8005525C5 /* WaitingSceneAnimations.swift in Sources */,
 				E7CCFEEF237C8DA400F9DA94 /* DatabaseRepresentation.swift in Sources */,
 				E7444B52238DD5F600001EC0 /* UserDAO.swift in Sources */,
 				4CA50DC52391A5AA004203BB /* babbySitterConfirmMatchView.swift in Sources */,
 				E7565B96238C002A00946D19 /* MatchServices.swift in Sources */,
 				E299048F2386C2590055CB25 /* HistoryViewController.swift in Sources */,
+				E713185923953DFA005525C5 /* WaitingViewController.swift in Sources */,
 				E7CCFEF6237C9B6B00F9DA94 /* ChatColorsExtension.swift in Sources */,
 				4C765B01237991BC00D3D38B /* SearchViewController.swift in Sources */,
 				E77DECD4238DA82700C81A92 /* LoggedUser.swift in Sources */,

@@ -39,7 +39,7 @@ class SearchViewController: UIViewController {
     
     @IBAction func searchButton(_ sender: Any) {
         MatchServices.searchBaba { () in
-            self.performSegue(withIdentifier: "goToRequestScene", sender: nil)
+            self.performSegue(withIdentifier: "goToWaitingScene", sender: nil)
         }
     }
     
