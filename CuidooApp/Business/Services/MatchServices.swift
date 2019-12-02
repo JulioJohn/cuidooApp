@@ -11,9 +11,6 @@ import Firebase
 
 class MatchServices {
     
-    static var database = Firestore.firestore()
-    static var reference: CollectionReference!
-    
     static func createMatch(idBaba: String) {
         MatchDAO.createMatch(idBaba: idBaba) {
             
@@ -106,14 +103,9 @@ class MatchServices {
         }
     }
     
-    //FAZER O DAO
     static func desconnect() {
-        do {
-            try Auth.auth().signOut()
+        UserDAO.disconnect {
             LoggedUser.shared.logoutUser()
-            print("Desconectado!")
-        } catch let signOutError as NSError {
-          print ("Erro ao desconectar: %@", signOutError)
         }
     }
     
@@ -124,9 +116,5 @@ class MatchServices {
             LoggedUser.shared.user?.updateMatchHistory(matchHistory: matchHistory as! [MatchHistory])
             completion(LoggedUser.shared.user!.matchHistory as! [MatchHistory])
         }
-    }
-    
-    static func getChatFromMatch(matchId: String, completion: @escaping () -> Void) {
-        
     }
 }

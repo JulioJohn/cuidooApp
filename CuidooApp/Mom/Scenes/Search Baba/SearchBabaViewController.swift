@@ -12,6 +12,9 @@ class SearchBabaViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //COLOCAR UM OBSERVADOR AQUI QUE VERIFICA SE MUDOU O ESTADO DO MATCH DA BABA!!
+        
 
     }
     @IBAction func startWorkButton(_ sender: Any) {

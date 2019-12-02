@@ -46,7 +46,7 @@ class ChatDAO {
         }
     }
     
-    private func handleDocumentChange(_ change: DocumentChange, completion: @escaping (Message) -> Void) {
+    func handleDocumentChange(_ change: DocumentChange, completion: @escaping (Message) -> Void) {
             guard let message = Message(document: change.document) else {
                 return
             }

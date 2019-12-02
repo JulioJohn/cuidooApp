@@ -518,6 +518,7 @@
 		E713185E23958EC7005525C5 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				E7632300238F1C4C009BE203 /* SearchBaba.storyboard */,
 				4CA50DBD23914A0C004203BB /* ProfileBabysitter.storyboard */,
 			);
 			path = Storyboards;
@@ -536,6 +537,7 @@
 			isa = PBXGroup;
 			children = (
 				E7FF57E22371A59A00F3FA22 /* Scenes */,
+				E7FF57E02371A49F00F3FA22 /* Storyboards */,
 			);
 			path = Mom;
 			sourceTree = "<group>";
@@ -647,7 +649,6 @@
 				4CA50DBF23918A9F004203BB /* Babysitter */,
 				E713186023958F98005525C5 /* Mom */,
 				E7FF57E12371A4A600F3FA22 /* Resources */,
-				E7FF57E02371A49F00F3FA22 /* Storyboards */,
 				E7FF57DA2371A36F00F3FA22 /* Info.plist */,
 				E2A815C12378C4A0005D9C6F /* GoogleService-Info.plist */,
 			);
@@ -659,7 +660,6 @@
 			children = (
 				E7FF57D22371A36A00F3FA22 /* Auth.storyboard */,
 				E2014FFE23759B4F002D8C8B /* Search.storyboard */,
-				E7632300238F1C4C009BE203 /* SearchBaba.storyboard */,
 				E713185323953ACE005525C5 /* WaitingSearch.storyboard */,
 				E201500023759B58002D8C8B /* Profile.storyboard */,
 				E201500223759B86002D8C8B /* Request.storyboard */,

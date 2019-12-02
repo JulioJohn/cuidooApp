@@ -87,4 +87,14 @@ class UserDAO {
             completion(matchs)
         })
     }
+    
+    static func disconnect(completion: @escaping () -> Void) {
+        do {
+            try Auth.auth().signOut()
+            completion()
+            print("Desconectado!")
+        } catch let signOutError as NSError {
+          print ("Erro ao desconectar: %@", signOutError)
+        }
+    }
 }

@@ -7,15 +7,12 @@
 //
 
 import Foundation
-import Firebase
 
 class ChatServices {
     
-    var chatDatabase: CollectionReference?
     var chatDAO: ChatDAO!
     
     init(matchId: String) {
-        //LoggedUser.shared.actualMatch!.documentId
         chatDAO = ChatDAO(matchId: matchId)
     }
     
@@ -26,35 +23,13 @@ class ChatServices {
     }
     
     func addListener(completion: @escaping (Message?,Error?) -> Void) {
-        
-        chatDatabase?.addSnapshotListener { (snapshot, error) in
+        self.chatDAO.addListener { (message, error) in
             if let error = error {
                 completion(nil, error)
             } else {
-                //Success
-                //Convert query to output
-               snapshot!.documentChanges.forEach { change in
-                    self.handleDocumentChange(change) { (message) in
-                        completion(message, nil)
-                    }
-                }
+                completion(message, nil)
             }
         }
     }
     
-    private func handleDocumentChange(_ change: DocumentChange, completion: @escaping (Message) -> Void) {        
-        guard let message = Message(document: change.document) else {
-            return
-        }
-        switch change.type {
-        case .added:
-            completion(message)
-        default:
-            break
-        }
-    }
-    
-    
-    
-
 }
