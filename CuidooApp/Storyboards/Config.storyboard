@@ -84,7 +84,6 @@
                                                     </state>
                                                     <connections>
                                                         <action selector="logoutButton:" destination="Lea-3H-pOs" eventType="touchUpInside" id="yBR-wE-w8L"/>
-                                                        <segue destination="byK-O1-A2p" kind="show" id="6Kg-OX-YBe"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -106,8 +105,12 @@
                             <outlet property="delegate" destination="Lea-3H-pOs" id="XhW-Ls-yMp"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="3Kk-Tn-9pK" kind="unwind" identifier="goToAuthSegue" unwindAction="unwindHere:" id="UI8-WV-5JO"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XjA-C9-S6W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="3Kk-Tn-9pK" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="755" y="42"/>
         </scene>

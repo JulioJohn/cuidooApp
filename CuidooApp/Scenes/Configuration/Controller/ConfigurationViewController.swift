@@ -11,9 +11,8 @@ import UIKit
 class ConfigurationViewController: UITableViewController {
     
     @IBAction func logoutButton(_ sender: Any) {
-        dismiss(animated: true) {
-            MatchServices.desconnect()
-        }
+        MatchServices.desconnect()
+        performSegue(withIdentifier: "goToAuthSegue", sender: nil)
     }
     
     override func viewDidLoad() {

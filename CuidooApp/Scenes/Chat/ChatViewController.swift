@@ -57,6 +57,7 @@ class ChatViewController: MessagesViewController, MessageInputBarDelegate {
                 //print("Error listening for channel updates: \(error?.localizedDescription ?? "No error")")
                 return
             } else {
+                print("Entrou aqui")
                 self.insertNewMessage(message!)
             }
         }
