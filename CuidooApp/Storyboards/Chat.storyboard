@@ -14,13 +14,75 @@
                     <view key="view" contentMode="scaleToFill" id="zoh-0E-aJ6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VwK-JX-1Gg">
+                                <rect key="frame" x="0.0" y="44" width="414" height="62"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" misplaced="YES" text="Bárbara" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QoQ-UQ-t73">
+                                        <rect key="frame" x="67" y="10" width="241" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="online" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bqx-hh-QxX">
+                                        <rect key="frame" x="67" y="33" width="148" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RnX-ME-Vec">
+                                        <rect key="frame" x="377.5" y="17" width="20.5" height="34"/>
+                                        <state key="normal" image="phone" catalog="system"/>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="woman" translatesAutoresizingMaskIntoConstraints="NO" id="IFv-bo-40D">
+                                        <rect key="frame" x="16" y="11" width="43" height="43"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="43" id="Sgn-9D-rgG"/>
+                                            <constraint firstAttribute="width" constant="43" id="jte-NJ-ZNU"/>
+                                            <constraint firstAttribute="width" secondItem="IFv-bo-40D" secondAttribute="height" multiplier="1:1" id="lsX-8U-R1Q"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="3X7-FG-xZi"/>
+                                    <constraint firstAttribute="bottom" secondItem="IFv-bo-40D" secondAttribute="bottom" constant="8" id="CdB-hL-fwd"/>
+                                    <constraint firstItem="Bqx-hh-QxX" firstAttribute="leading" secondItem="IFv-bo-40D" secondAttribute="trailing" constant="8" id="E9N-J2-MXc"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="62" id="MZs-Gk-7EJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="RnX-ME-Vec" secondAttribute="trailing" constant="16" id="Mmp-wk-bEd"/>
+                                    <constraint firstItem="QoQ-UQ-t73" firstAttribute="top" secondItem="VwK-JX-1Gg" secondAttribute="top" constant="10" id="N7o-Ng-iph"/>
+                                    <constraint firstItem="RnX-ME-Vec" firstAttribute="top" secondItem="VwK-JX-1Gg" secondAttribute="top" constant="17" id="Usa-uD-4ln"/>
+                                    <constraint firstAttribute="bottom" secondItem="Bqx-hh-QxX" secondAttribute="bottom" constant="11" id="W2J-rV-0R7"/>
+                                    <constraint firstItem="QoQ-UQ-t73" firstAttribute="leading" secondItem="IFv-bo-40D" secondAttribute="trailing" constant="8" id="eT1-dz-rc6"/>
+                                    <constraint firstAttribute="bottom" secondItem="RnX-ME-Vec" secondAttribute="bottom" constant="11" id="gse-h7-Tu8"/>
+                                    <constraint firstItem="Bqx-hh-QxX" firstAttribute="top" secondItem="QoQ-UQ-t73" secondAttribute="bottom" constant="2" id="qlO-dH-GNa"/>
+                                    <constraint firstItem="IFv-bo-40D" firstAttribute="leading" secondItem="VwK-JX-1Gg" secondAttribute="leading" constant="16" id="s5z-lH-D4q"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <accessibility key="accessibilityConfiguration">
+                            <accessibilityTraits key="traits" keyboardKey="YES"/>
+                        </accessibility>
+                        <constraints>
+                            <constraint firstItem="VwK-JX-1Gg" firstAttribute="top" secondItem="557-K8-zUT" secondAttribute="top" id="3wn-If-6K3"/>
+                            <constraint firstItem="VwK-JX-1Gg" firstAttribute="leading" secondItem="557-K8-zUT" secondAttribute="leading" id="44Q-Ce-d9U"/>
+                            <constraint firstItem="VwK-JX-1Gg" firstAttribute="trailing" secondItem="557-K8-zUT" secondAttribute="trailing" id="QCV-cl-Ocg"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="557-K8-zUT"/>
                     </view>
+                    <navigationItem key="navigationItem" id="9th-tE-0MZ"/>
+                    <connections>
+                        <outlet property="headView" destination="VwK-JX-1Gg" id="Pdl-i0-ycO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qir-ZD-Yac" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="43" y="62"/>
+            <point key="canvasLocation" x="917" y="138"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="phone" catalog="system" width="64" height="56"/>
+        <image name="woman" width="1000" height="667"/>
+    </resources>
 </document>

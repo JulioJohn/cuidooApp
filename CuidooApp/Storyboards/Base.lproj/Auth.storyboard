@@ -31,13 +31,13 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nQ9-Jo-way" userLabel="bloco">
                                                 <rect key="frame" x="24" y="268" width="366" height="108"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Ys-lK-up7">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="mae@teste.com" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Ys-lK-up7">
                                                         <rect key="frame" x="31" y="1" width="335" height="60"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Owf-aF-nm7">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123456" placeholder="Senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Owf-aF-nm7">
                                                         <rect key="frame" x="31" y="54.5" width="335" height="60"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -169,16 +169,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y64-ar-bK9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-4.3478260869565224" y="934.82142857142856"/>
-        </scene>
-        <!--Chat-->
-        <scene sceneID="Dde-sp-Hr2">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Chat" id="dD2-0E-MRh" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="YBi-I5-Sgj"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3Ct-yE-0tK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-262" y="1359"/>
         </scene>
         <!--Search-->
         <scene sceneID="Xqh-xJ-pkH">

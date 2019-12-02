@@ -13,6 +13,8 @@ import InputBarAccessoryView
 
 class ChatViewController: MessagesViewController, MessageInputBarDelegate {
 
+    @IBOutlet weak var headView: UIView!
+    
     //private let user: User
     private let channel: Channel! = nil
     
@@ -32,7 +34,9 @@ class ChatViewController: MessagesViewController, MessageInputBarDelegate {
         reference = database.collection(["matchs", LoggedUser.shared.actualMatch!.documentId, "Chat"].joined(separator: "/"))
         
         navigationItem.largeTitleDisplayMode = .never
+    
         
+        scrollsToBottomOnKeyboardBeginsEditing = true
         maintainPositionOnKeyboardFrameChanged = true
         messageInputBar.inputTextView.tintColor = .primary
         messageInputBar.sendButton.setTitleColor(.primary, for: .normal)
@@ -41,7 +45,6 @@ class ChatViewController: MessagesViewController, MessageInputBarDelegate {
         messagesCollectionView.messagesDataSource = self
         messagesCollectionView.messagesLayoutDelegate = self
         messagesCollectionView.messagesDisplayDelegate = self
-        
         
         //Atualiza a mensagem quando é adicionado uma nova
         messageListener = reference?.addSnapshotListener { querySnapshot, error in
@@ -54,6 +57,12 @@ class ChatViewController: MessagesViewController, MessageInputBarDelegate {
             self.handleDocumentChange(change)
           }
         }
+    }
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.view.bringSubviewToFront(headView)
     }
     
     private func insertNewMessage(_ message: Message) {
@@ -90,6 +99,7 @@ class ChatViewController: MessagesViewController, MessageInputBarDelegate {
     
     private func save(_ message: Message) {
         ChatServices.save(message) {
+            print(message.sender.senderId)
             self.messagesCollectionView.scrollToBottom()
         }
     }
@@ -100,6 +110,8 @@ class ChatViewController: MessagesViewController, MessageInputBarDelegate {
            save(message)
            inputBar.inputTextView.text = ""
     }
+
+    
 }
 
 
@@ -107,24 +119,29 @@ class ChatViewController: MessagesViewController, MessageInputBarDelegate {
 extension ChatViewController: MessagesDisplayDelegate {
   
     internal func backgroundColor(for message: MessageType, at indexPath: IndexPath,
-    in messagesCollectionView: MessagesCollectionView) -> UIColor {
+                                  in messagesCollectionView: MessagesCollectionView) -> UIColor {
+        
+        return isFromCurrentSender(message: message) ? .cuidooPurple : .incomingMessage
+    }
     
-    return isFromCurrentSender(message: message) ? .primary : .incomingMessage
-  }
-
-  func shouldDisplayHeader(for message: MessageType, at indexPath: IndexPath,
-    in messagesCollectionView: MessagesCollectionView) -> Bool {
-
-    return false
-  }
-
-  func messageStyle(for message: MessageType, at indexPath: IndexPath,
-    in messagesCollectionView: MessagesCollectionView) -> MessageStyle {
-
-    let corner: MessageStyle.TailCorner = isFromCurrentSender(message: message) ? .bottomRight : .bottomLeft
-
-    return .bubbleTail(corner, .curved)
-  }
+    func shouldDisplayHeader(for message: MessageType, at indexPath: IndexPath,
+                             in messagesCollectionView: MessagesCollectionView) -> Bool {
+        
+        return false
+    }
+    
+    func messageStyle(for message: MessageType, at indexPath: IndexPath,
+                      in messagesCollectionView: MessagesCollectionView) -> MessageStyle {
+        
+        //    let corner: MessageStyle.TailCorner = isFromCurrentSender(message: message) ? .bottomRight : .bottomLeft
+        
+        return .bubble
+    }
+    
+    func configureAvatarView(_ avatarView: AvatarView, for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) {
+        avatarView.isHidden = true
+    }
+    
   
 }
 
@@ -185,4 +202,6 @@ extension ChatViewController: MessagesLayoutDelegate {
 
     return 0
   }
+   
+    
 }

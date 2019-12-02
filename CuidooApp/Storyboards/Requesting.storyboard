@@ -59,7 +59,7 @@
                             <color key="tintColor" red="1" green="0.34509803919999998" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
                                 <action selector="chatButton:" destination="8xf-md-nD6" id="we5-0b-gFc"/>
-                                <segue destination="P8u-Cx-XDD" kind="show" id="08k-1g-1yq"/>
+                                <segue destination="P8u-Cx-XDD" kind="presentation" modalPresentationStyle="automatic" id="08k-1g-1yq"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
