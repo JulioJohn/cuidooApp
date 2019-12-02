@@ -517,9 +517,9 @@
 		E7444B53238DD62400001EC0 /* DAO */ = {
 			isa = PBXGroup;
 			children = (
+				E76322FE238F06E2009BE203 /* ChatDAO.swift */,
 				E7444B51238DD5F600001EC0 /* UserDAO.swift */,
 				E7444B4F238DD5C600001EC0 /* MatchDAO.swift */,
-				E76322FE238F06E2009BE203 /* ChatDAO.swift */,
 			);
 			path = DAO;
 			sourceTree = "<group>";

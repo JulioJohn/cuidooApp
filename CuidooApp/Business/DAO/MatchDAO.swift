@@ -78,4 +78,10 @@ class MatchDAO {
             completion(status as! String)
         }
     }
+    
+    static func getChatFromMatch(matchId: String, completion: @escaping () -> Void) {
+        databaseMatch.document(matchId).collection("Chat").getDocuments { (snapshot, error) in
+            
+        }
+    }
 }

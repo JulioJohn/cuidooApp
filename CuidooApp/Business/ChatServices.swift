@@ -7,12 +7,55 @@
 //
 
 import Foundation
+import Firebase
 
 class ChatServices {
-    static func save(_ message: Message, completion: @escaping () -> Void) {
-        ChatDAO.save(message) {
+    
+    var chatDatabase: CollectionReference?
+    var chatDAO: ChatDAO!
+    
+    init(matchId: String) {
+        //LoggedUser.shared.actualMatch!.documentId
+        chatDatabase = Firestore.firestore().collection(["matchs", matchId, "Chat"].joined(separator: "/"))
+        chatDAO = ChatDAO(matchId: matchId)
+    }
+    
+    func save(_ message: Message, completion: @escaping () -> Void) {
+        self.chatDAO.save(message) {
             completion()
         }
     }
+    
+    func addListener(completion: @escaping (Message?,Error?) -> Void) {
+        chatDatabase?.addSnapshotListener { (snapshot, error) in
+            if let error = error {
+                completion(nil, error)
+            } else {
+                //Success
+                //Convert query to output
+               snapshot!.documentChanges.forEach { change in
+                    self.handleDocumentChange(change) { (message) in
+                        completion(message, nil)
+                    }
+                }
+            }
+        }
+    }
+    
+    private func handleDocumentChange(_ change: DocumentChange, completion: @escaping (Message) -> Void) {
+        guard let message = Message(document: change.document) else {
+            return
+        }
+        switch change.type {
+        case .added:
+            completion(message)
+//            insertNewMessage(message)
+        default:
+            break
+        }
+    }
+    
+    
+    
 
 }

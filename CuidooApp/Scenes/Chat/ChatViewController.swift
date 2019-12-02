@@ -26,15 +26,17 @@ class ChatViewController: MessagesViewController, MessageInputBarDelegate {
     private let database = Firestore.firestore()
     private var reference: CollectionReference?
     
+    var chatServices: ChatServices!
+    var matchId: String!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //Caminho em que o chat está sendo armazenado
-        reference = database.collection(["matchs", LoggedUser.shared.actualMatch!.documentId, "Chat"].joined(separator: "/"))
+        //reference = database.collection(["matchs", LoggedUser.shared.actualMatch!.documentId, "Chat"].joined(separator: "/"))
         
         navigationItem.largeTitleDisplayMode = .never
-    
         
         scrollsToBottomOnKeyboardBeginsEditing = true
         maintainPositionOnKeyboardFrameChanged = true
@@ -46,16 +48,17 @@ class ChatViewController: MessagesViewController, MessageInputBarDelegate {
         messagesCollectionView.messagesLayoutDelegate = self
         messagesCollectionView.messagesDisplayDelegate = self
         
-        //Atualiza a mensagem quando é adicionado uma nova
-        messageListener = reference?.addSnapshotListener { querySnapshot, error in
-          guard let snapshot = querySnapshot else {
-            print("Error listening for channel updates: \(error?.localizedDescription ?? "No error")")
-            return
-          }
-          
-          snapshot.documentChanges.forEach { change in
-            self.handleDocumentChange(change)
-          }
+        //match ID deve  ser setado na tela anterior
+        self.matchId = LoggedUser.shared.actualMatch?.documentId
+        self.chatServices = ChatServices(matchId: matchId)
+        self.chatServices.addListener { (message, error) in
+            if error != nil {
+                print(error)
+                //print("Error listening for channel updates: \(error?.localizedDescription ?? "No error")")
+                return
+            } else {
+                self.insertNewMessage(message!)
+            }
         }
     }
     
@@ -85,20 +88,8 @@ class ChatViewController: MessagesViewController, MessageInputBarDelegate {
       }
     }
     
-    private func handleDocumentChange(_ change: DocumentChange) {
-      guard let message = Message(document: change.document) else {
-        return
-      }
-      switch change.type {
-      case .added:
-        insertNewMessage(message)
-      default:
-        break
-      }
-    }
-    
     private func save(_ message: Message) {
-        ChatServices.save(message) {
+        chatServices.save(message) {
             print(message.sender.senderId)
             self.messagesCollectionView.scrollToBottom()
         }

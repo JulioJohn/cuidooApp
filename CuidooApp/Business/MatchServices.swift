@@ -125,4 +125,8 @@ class MatchServices {
             completion(LoggedUser.shared.user!.matchHistory as! [MatchHistory])
         }
     }
+    
+    static func getChatFromMatch(matchId: String, completion: @escaping () -> Void) {
+        
+    }
 }

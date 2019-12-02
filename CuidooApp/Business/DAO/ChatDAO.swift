@@ -13,10 +13,15 @@ class ChatDAO {
     //Banco de dados
     private let database = Firestore.firestore()
     private var reference: CollectionReference?
-    static var chatDatabase = Firestore.firestore().collection(["matchs", LoggedUser.shared.actualMatch!.documentId, "Chat"].joined(separator: "/"))
+    var chatDatabase: CollectionReference?
     
-    static func save(_ message: Message, completion: @escaping () -> Void) {
-        chatDatabase.addDocument(data: message.representation) { error in
+    init(matchId: String) {
+        //LoggedUser.shared.actualMatch!.documentId
+        chatDatabase = Firestore.firestore().collection(["matchs", matchId, "Chat"].joined(separator: "/"))
+    }
+    
+    func save(_ message: Message, completion: @escaping () -> Void) {
+        chatDatabase!.addDocument(data: message.representation) { error in
         if let e = error {
           print("Error sending message: \(e.localizedDescription)")
           return
@@ -24,5 +29,6 @@ class ChatDAO {
             completion()
       }
     }
+    
     
 }

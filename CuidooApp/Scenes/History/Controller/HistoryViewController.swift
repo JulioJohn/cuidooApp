@@ -15,7 +15,6 @@ class HistoryViewController: UIViewController {
     
     var histories:[HistoryEntity] = []
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
          
@@ -40,7 +39,7 @@ class HistoryViewController: UIViewController {
 //               ]
     }
 
-} // end class HistoryViewController
+}
 
 extension HistoryViewController: UITableViewDataSource, UITableViewDelegate {
     
@@ -57,6 +56,10 @@ extension HistoryViewController: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
-    
-} // end extension HistoryViewController: UITableViewDataSource, UITableViewDelegate
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedTrail =  histories[indexPath.row]
+        
+    }
+  
+}
 
