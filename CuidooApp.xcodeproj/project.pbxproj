@@ -16,6 +16,10 @@
 		4C7EAC3F238D9BC6009D3589 /* Nibable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7EAC3E238D9BC6009D3589 /* Nibable.swift */; };
 		4C7EAC41238D9CC9009D3589 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7EAC40238D9CC9009D3589 /* UIViewExtension.swift */; };
 		4C7EAC43238EB100009D3589 /* EvaluationEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7EAC42238EB100009D3589 /* EvaluationEntity.swift */; };
+		4CA50DBE23914A0C004203BB /* profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CA50DBD23914A0C004203BB /* profile.storyboard */; };
+		4CA50DC223918AD6004203BB /* babySitterProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA50DC123918AD6004203BB /* babySitterProfileViewController.swift */; };
+		4CA50DC52391A5AA004203BB /* babbySitterConfirmMatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA50DC42391A5AA004203BB /* babbySitterConfirmMatchView.swift */; };
+		4CA50DC72391A5BF004203BB /* babySitterConfirmMatchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CA50DC62391A5BF004203BB /* babySitterConfirmMatchView.xib */; };
 		4CEFB1BE238359380073F0D9 /* BabySitterEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEFB1BD238359380073F0D9 /* BabySitterEntity.swift */; };
 		4CEFB1C3238361600073F0D9 /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEFB1C1238361600073F0D9 /* InfoCell.swift */; };
 		4CEFB1C4238361600073F0D9 /* InfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CEFB1C2238361600073F0D9 /* InfoCell.xib */; };
@@ -95,6 +99,10 @@
 		4C7EAC3E238D9BC6009D3589 /* Nibable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nibable.swift; sourceTree = "<group>"; };
 		4C7EAC40238D9CC9009D3589 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		4C7EAC42238EB100009D3589 /* EvaluationEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationEntity.swift; sourceTree = "<group>"; };
+		4CA50DBD23914A0C004203BB /* profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = profile.storyboard; sourceTree = "<group>"; };
+		4CA50DC123918AD6004203BB /* babySitterProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = babySitterProfileViewController.swift; sourceTree = "<group>"; };
+		4CA50DC42391A5AA004203BB /* babbySitterConfirmMatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = babbySitterConfirmMatchView.swift; sourceTree = "<group>"; };
+		4CA50DC62391A5BF004203BB /* babySitterConfirmMatchView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = babySitterConfirmMatchView.xib; sourceTree = "<group>"; };
 		4CEFB1BD238359380073F0D9 /* BabySitterEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabySitterEntity.swift; sourceTree = "<group>"; };
 		4CEFB1C1238361600073F0D9 /* InfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCell.swift; sourceTree = "<group>"; };
 		4CEFB1C2238361600073F0D9 /* InfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoCell.xib; sourceTree = "<group>"; };
@@ -218,6 +226,40 @@
 				E7CCFEEE237C8DA400F9DA94 /* DatabaseRepresentation.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		4CA50DBA239149A0004203BB /* babySitterStoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				4CA50DBD23914A0C004203BB /* profile.storyboard */,
+			);
+			path = babySitterStoryBoards;
+			sourceTree = "<group>";
+		};
+		4CA50DBF23918A9F004203BB /* babySitterScenes */ = {
+			isa = PBXGroup;
+			children = (
+				4CA50DC32391A558004203BB /* confirmMatch */,
+				4CA50DC023918AB5004203BB /* Profile */,
+			);
+			path = babySitterScenes;
+			sourceTree = "<group>";
+		};
+		4CA50DC023918AB5004203BB /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				4CA50DC123918AD6004203BB /* babySitterProfileViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		4CA50DC32391A558004203BB /* confirmMatch */ = {
+			isa = PBXGroup;
+			children = (
+				4CA50DC42391A5AA004203BB /* babbySitterConfirmMatchView.swift */,
+				4CA50DC62391A5BF004203BB /* babySitterConfirmMatchView.xib */,
+			);
+			path = confirmMatch;
 			sourceTree = "<group>";
 		};
 		4CEFB1BF2383611C0073F0D9 /* Cells */ = {
@@ -554,8 +596,10 @@
 				4CEFB1BF2383611C0073F0D9 /* Cells */,
 				E7CCFEF4237C9B4B00F9DA94 /* Extensions */,
 				E7565B94238C000600946D19 /* Business */,
+				4CA50DBF23918A9F004203BB /* babySitterScenes */,
 				E7FF57E22371A59A00F3FA22 /* Scenes */,
 				E7FF57E12371A4A600F3FA22 /* Resources */,
+				4CA50DBA239149A0004203BB /* babySitterStoryBoards */,
 				E7FF57E02371A49F00F3FA22 /* Storyboards */,
 				E7FF57DA2371A36F00F3FA22 /* Info.plist */,
 				E2A815C12378C4A0005D9C6F /* GoogleService-Info.plist */,
@@ -685,6 +729,7 @@
 			files = (
 				E2800F42238EA579004FB8C4 /* DataPictureCell.xib in Resources */,
 				4C4A3A80237C2B19009A3B64 /* BabySitterCell.xib in Resources */,
+				4CA50DBE23914A0C004203BB /* profile.storyboard in Resources */,
 				E2800F4C238EA5EE004FB8C4 /* AboutCell.xib in Resources */,
 				E7632301238F1C4C009BE203 /* SearchBaba.storyboard in Resources */,
 				4CEFB1C4238361600073F0D9 /* InfoCell.xib in Resources */,
@@ -698,6 +743,7 @@
 				E7FF57D62371A36F00F3FA22 /* Assets.xcassets in Resources */,
 				E7FF57D42371A36A00F3FA22 /* Auth.storyboard in Resources */,
 				E2F65A972384363E00E9EEA8 /* HistoryCell.xib in Resources */,
+				4CA50DC72391A5BF004203BB /* babySitterConfirmMatchView.xib in Resources */,
 				4CEFB1CA23840CC90073F0D9 /* MapCell.xib in Resources */,
 				E201500A23759BB4002D8C8B /* Chat.storyboard in Resources */,
 				E201500C23759BC7002D8C8B /* Bio.storyboard in Resources */,
@@ -789,11 +835,13 @@
 				E7565B90238826A000946D19 /* StatusEnum.swift in Sources */,
 				E7CCFEEF237C8DA400F9DA94 /* DatabaseRepresentation.swift in Sources */,
 				E7444B52238DD5F600001EC0 /* UserDAO.swift in Sources */,
+				4CA50DC52391A5AA004203BB /* babbySitterConfirmMatchView.swift in Sources */,
 				E7565B96238C002A00946D19 /* MatchServices.swift in Sources */,
 				E299048F2386C2590055CB25 /* HistoryViewController.swift in Sources */,
 				E7CCFEF6237C9B6B00F9DA94 /* ChatColorsExtension.swift in Sources */,
 				4C765B01237991BC00D3D38B /* SearchViewController.swift in Sources */,
 				E77DECD4238DA82700C81A92 /* LoggedUser.swift in Sources */,
+				4CA50DC223918AD6004203BB /* babySitterProfileViewController.swift in Sources */,
 				E7CCFEE5237C689A00F9DA94 /* Message.swift in Sources */,
 				4C3D1092238425C2002CAB84 /* UIColorExtensions.swift in Sources */,
 				E76322FB238EA6FD009BE203 /* Informations.swift in Sources */,

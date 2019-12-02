@@ -34,7 +34,7 @@
                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                 </imageView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Retângulo 312" translatesAutoresizingMaskIntoConstraints="NO" id="afx-pw-pOY">
-                    <rect key="frame" x="0.0" y="294" width="414" height="160"/>
+                    <rect key="frame" x="0.0" y="374" width="414" height="80"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pEo-Kw-0Yb">
                     <rect key="frame" x="0.0" y="454" width="414" height="252"/>
@@ -215,11 +215,18 @@
                         <action selector="heartButtonClick:" destination="-1" eventType="touchUpInside" id="0jY-qc-oUW"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="34" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eMU-GV-IXG">
+                    <rect key="frame" x="131" y="385" width="29.5" height="29"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                    <color key="textColor" red="0.97647720579999997" green="0.9764588475" blue="0.97647124529999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <constraints>
                 <constraint firstItem="pEo-Kw-0Yb" firstAttribute="top" secondItem="yR4-yf-zmB" secondAttribute="bottom" constant="16" id="2hi-IH-OIg"/>
                 <constraint firstItem="pEo-Kw-0Yb" firstAttribute="top" secondItem="afx-pw-pOY" secondAttribute="bottom" id="2tf-u1-w94"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="pEo-Kw-0Yb" secondAttribute="trailing" id="DHb-Zp-pL5"/>
+                <constraint firstItem="eMU-GV-IXG" firstAttribute="centerY" secondItem="erF-RK-9nG" secondAttribute="centerY" id="JGj-Ik-tOo"/>
                 <constraint firstItem="pEo-Kw-0Yb" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="M88-fj-zbd"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="pEo-Kw-0Yb" secondAttribute="trailing" id="MIS-OZ-D74"/>
                 <constraint firstItem="z8z-jy-6AQ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="NwU-CV-TD6"/>
@@ -228,6 +235,7 @@
                 <constraint firstItem="wQR-7u-0lV" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="YmT-mV-OLO"/>
                 <constraint firstItem="z8z-jy-6AQ" firstAttribute="top" secondItem="erF-RK-9nG" secondAttribute="bottom" id="YyP-QJ-6DR"/>
                 <constraint firstItem="pEo-Kw-0Yb" firstAttribute="top" secondItem="z8z-jy-6AQ" secondAttribute="bottom" constant="16" id="gQv-tO-c7F"/>
+                <constraint firstItem="eMU-GV-IXG" firstAttribute="leading" secondItem="erF-RK-9nG" secondAttribute="trailing" constant="8" id="heC-XH-lAY"/>
                 <constraint firstItem="EbB-M8-oL4" firstAttribute="width" secondItem="vUN-kp-3ea" secondAttribute="width" multiplier="0.333" constant="1" id="jTc-Kh-QQN"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="yR4-yf-zmB" secondAttribute="trailing" constant="16" id="oW7-Dh-ojh"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="pEo-Kw-0Yb" secondAttribute="bottom" id="oaY-MS-g8a"/>
