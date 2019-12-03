@@ -79,7 +79,6 @@ class ChatViewController: MessagesViewController, MessageInputBarDelegate {
     
     private func save(_ message: Message) {
         chatServices.save(message) {
-            print(message.sender.senderId)
             self.messagesCollectionView.scrollToBottom()
         }
     }
@@ -113,13 +112,9 @@ extension ChatViewController: MessagesDisplayDelegate {
     func messageStyle(for message: MessageType, at indexPath: IndexPath,
                       in messagesCollectionView: MessagesCollectionView) -> MessageStyle {
         
-        //    let corner: MessageStyle.TailCorner = isFromCurrentSender(message: message) ? .bottomRight : .bottomLeft
+        //  let corner: MessageStyle.TailCorner = isFromCurrentSender(message: message) ? .bottomRight : .bottomLeft
         
         return .bubble
-    }
-    
-    func configureAvatarView(_ avatarView: AvatarView, for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) {
-        avatarView.isHidden = true
     }
     
   
@@ -149,16 +144,7 @@ extension ChatViewController: MessagesDataSource {
     func numberOfMessages(in messagesCollectionView: MessagesCollectionView) -> Int {
         return messages.count
     }
-
-    func cellTopLabelAttributedText(for message: MessageType, at indexPath: IndexPath) -> NSAttributedString? {
-        let name = message.sender.displayName
-        return NSAttributedString (
-            string: name,
-            attributes: [.font: UIFont.preferredFont(forTextStyle: .caption1),
-                         .foregroundColor: UIColor(white: 0.3, alpha: 1)
-            ]
-        )
-    }
+    
 }
 
 
@@ -183,5 +169,20 @@ extension ChatViewController: MessagesLayoutDelegate {
     return 0
   }
    
+    func cellTopLabelAttributedText(for message: MessageType, at indexPath: IndexPath) -> NSAttributedString? {
+        let name = message.sender.displayName
+        return NSAttributedString (
+            string: name,
+            attributes: [.font: UIFont.preferredFont(forTextStyle: .caption1),
+                         .foregroundColor: UIColor(white: 0.3, alpha: 1)
+            ]
+        )
+    }
+    
+    func configureAvatarView(_ avatarView: AvatarView, for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) {
+        avatarView.isHidden = true
+    }
+    
+    
     
 }
