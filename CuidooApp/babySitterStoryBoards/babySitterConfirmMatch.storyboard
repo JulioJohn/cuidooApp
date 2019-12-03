@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Now-mF-usl">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Em andamento-->
+        <scene sceneID="HVW-vi-1dY">
+            <objects>
+                <viewController id="P9h-Am-v7v" customClass="confirmMatchViewController" customModule="CuidooApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Tad-Qj-8A8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hNe-Au-7bf">
+                                <rect key="frame" x="16" y="780" width="183" height="66"/>
+                                <color key="backgroundColor" red="0.92923806980000001" green="0.92923806980000001" blue="0.92923806980000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="1e7-bu-zWl"/>
+                                </constraints>
+                                <state key="normal" title="Reportar"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jis-Vn-KbT">
+                                <rect key="frame" x="215" y="780" width="183" height="66"/>
+                                <color key="backgroundColor" red="0.92923806980000001" green="0.92923806980000001" blue="0.92923806980000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="M8m-Pm-XMo"/>
+                                </constraints>
+                                <state key="normal" title="Finalizar"/>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xsN-qj-dos" customClass="babbySitterConfirmMatchView" customModule="CuidooApp" customModuleProvider="target">
+                                <rect key="frame" x="8" y="96" width="398" height="668"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="xsN-qj-dos" firstAttribute="leading" secondItem="yGO-jV-APE" secondAttribute="leading" constant="8" id="3Ir-yk-CB2"/>
+                            <constraint firstItem="yGO-jV-APE" firstAttribute="trailing" secondItem="xsN-qj-dos" secondAttribute="trailing" constant="8" id="Doq-8b-GHX"/>
+                            <constraint firstItem="hNe-Au-7bf" firstAttribute="width" secondItem="Jis-Vn-KbT" secondAttribute="width" id="O4b-nv-5kq"/>
+                            <constraint firstItem="hNe-Au-7bf" firstAttribute="top" secondItem="xsN-qj-dos" secondAttribute="bottom" constant="16" id="UoN-2d-5hD"/>
+                            <constraint firstItem="yGO-jV-APE" firstAttribute="bottom" secondItem="hNe-Au-7bf" secondAttribute="bottom" constant="16" id="Utu-kW-70u"/>
+                            <constraint firstItem="hNe-Au-7bf" firstAttribute="leading" secondItem="yGO-jV-APE" secondAttribute="leading" constant="16" id="bAb-tj-Yyh"/>
+                            <constraint firstItem="yGO-jV-APE" firstAttribute="trailing" secondItem="Jis-Vn-KbT" secondAttribute="trailing" constant="16" id="dYm-R4-AnV"/>
+                            <constraint firstItem="Jis-Vn-KbT" firstAttribute="centerY" secondItem="hNe-Au-7bf" secondAttribute="centerY" id="pCA-W9-Pts"/>
+                            <constraint firstItem="xsN-qj-dos" firstAttribute="top" secondItem="yGO-jV-APE" secondAttribute="top" constant="8" id="rmQ-2b-lDP"/>
+                            <constraint firstItem="Jis-Vn-KbT" firstAttribute="leading" secondItem="hNe-Au-7bf" secondAttribute="trailing" constant="16" id="sv2-kV-mzi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yGO-jV-APE"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Em andamento" id="LpF-N9-Ruf">
+                        <barButtonItem key="rightBarButtonItem" image="text.bubble" catalog="system" id="P8f-dp-Vv5">
+                            <color key="tintColor" red="0.99824029209999998" green="0.39281293750000001" blue="0.39213877920000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oql-qt-7T9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1084.0579710144928" y="169.41964285714286"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="M27-y2-YPk">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Now-mF-usl" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ALD-93-2qn">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="P9h-Am-v7v" kind="relationship" relationship="rootViewController" id="1ER-eI-P3b"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lUb-mq-2tz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="173.91304347826087" y="169.41964285714286"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="text.bubble" catalog="system" width="64" height="54"/>
+    </resources>
+</document>
