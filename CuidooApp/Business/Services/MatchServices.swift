@@ -48,6 +48,11 @@ class MatchServices {
     
     static func searchBaba(completion: @escaping () -> Void) {
         MatchDAO.getAllMatchs(completion: { (match) in
+            if match == nil {
+                print("Search não funcionou!")
+                return
+            }
+            
             //Guardar o match atual
             LoggedUser.shared.changeActualMatch(match: match)
             
@@ -58,7 +63,7 @@ class MatchServices {
                 UserDAO.getUser(byId: babaId) { (user) in
                     LoggedUser.shared.actualMatch?.otherUser = user
                     UserDAO.updateInformations(byId: babaId, user: LoggedUser.shared.actualMatch!.otherUser) {
-                        print("Atualizou as informacoes locais do Match")
+                        print("Atualizou as informações locais do Match")
                         completion()
                     }
                 }
@@ -103,6 +108,30 @@ class MatchServices {
         }
     }
     
+    static func changeMatchStatus(completion: @escaping () -> Void) {
+        MatchDAO.getMatchStatus { (status) in
+            var newStatus: String = "none"
+            print("Verificando status!")
+            switch status {
+            case "available":
+                newStatus = "waitingBaba"
+            case "waitingBaba":
+                newStatus = "waitingMom"
+            case "waitingMom":
+                newStatus = "inProgress"
+            case "inProgress":
+                newStatus = "finished"
+            default:
+                print("Erro na mudanca de status")
+            }
+            
+            MatchDAO.changeMatchStatus(status: newStatus) {
+                    print("Status modificado com sucesso!")
+                    completion()
+            }
+        }
+    }
+    
     static func desconnect() {
         UserDAO.disconnect {
             LoggedUser.shared.logoutUser()
@@ -115,6 +144,13 @@ class MatchServices {
             print("Historico de matchs atualizado!")
             LoggedUser.shared.user?.updateMatchHistory(matchHistory: matchHistory as! [MatchHistory])
             completion(LoggedUser.shared.user!.matchHistory as! [MatchHistory])
+        }
+    }
+    
+    static func addListener(matchId: String, completion: @escaping (String) -> Void) {
+        MatchDAO.addListener(matchId: matchId) { (status) in
+            completion(status)
+            print("Apareceu o perfil aqui!")
         }
     }
 }

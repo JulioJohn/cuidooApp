@@ -10,21 +10,21 @@ import UIKit
 
 class SearchBabaViewController: UIViewController {
 
+    @IBOutlet weak var acceptButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //COLOCAR UM OBSERVADOR AQUI QUE VERIFICA SE MUDOU O ESTADO DO MATCH DA BABA!!
-        
-
     }
+    
     @IBAction func startWorkButton(_ sender: Any) {
         if LoggedUser.shared.userIsLogged() {
             MatchServices.createMatch(idBaba: LoggedUser.shared.user!.uid)
             //Atualiza meu usuario local
             MatchServices.getUser {
                 LoggedUser.shared.user!.showClass()
-                OperationQueue.main.addOperation {
-                    //Atualizar UI aqui
+                //Observa se ouve mudança de status!
+                MatchDAO.addListener(matchId: LoggedUser.shared.actualMatch!.documentId) { (error) in
+                    print("Chamar a tela aqui!")
                 }
             }
         } else {
@@ -33,7 +33,11 @@ class SearchBabaViewController: UIViewController {
     }
     
     @IBAction func acceptButton(_ sender: Any) {
-        
+        self.acceptButton.isEnabled = false
+        MatchServices.changeMatchStatus {
+            print("Aparece a tela de waiting da baba aqui!")
+            self.acceptButton.isEnabled = true
+        }
     }
     
     @IBAction func cancelButton(_ sender: Any) {

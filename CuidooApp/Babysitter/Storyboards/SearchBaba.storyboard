@@ -26,7 +26,6 @@
         <!--Search Baba View Controller-->
         <scene sceneID="CUW-dq-AR2">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nJ2-zn-yDc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="aBr-Zp-hgc" customClass="SearchBabaViewController" customModule="CuidooApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eGw-J8-KOj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -78,7 +77,11 @@
                         <viewLayoutGuide key="safeArea" id="lS7-FV-FtP"/>
                     </view>
                     <navigationItem key="navigationItem" id="LCe-fk-T9K"/>
+                    <connections>
+                        <outlet property="acceptButton" destination="OTo-iV-hcd" id="MuW-lu-gU5"/>
+                    </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nJ2-zn-yDc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1262" y="7"/>
         </scene>
