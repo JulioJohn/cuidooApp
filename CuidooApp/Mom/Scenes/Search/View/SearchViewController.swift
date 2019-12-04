@@ -61,7 +61,7 @@ extension SearchViewController: UITableViewDataSource{
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return 4
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -74,6 +74,12 @@ extension SearchViewController: UITableViewDataSource{
             return cell
         case 1:
             let newCell = searchTableView.dequeueReusableCell(withIdentifier: "infoCell", for: indexPath) as? InfoCell
+            newCell?.configure(delegate: self)
+            
+            guard let cell = newCell else { return UITableViewCell() }
+            return cell
+        case 2:
+            let newCell = searchTableView.dequeueReusableCell(withIdentifier: "addDetailsCell", for: indexPath) as? AddDetailsCell
             newCell?.configure(delegate: self)
             
             guard let cell = newCell else { return UITableViewCell() }

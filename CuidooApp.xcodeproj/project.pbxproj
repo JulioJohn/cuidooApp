@@ -20,10 +20,11 @@
 		4C9145B62397D1410028870E /* babySitterConfirmMatch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C9145B32397D1410028870E /* babySitterConfirmMatch.storyboard */; };
 		4C9145BA2397D1700028870E /* babySitterProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9145B92397D1700028870E /* babySitterProfileViewController.swift */; };
 		4C9145BD2397D17B0028870E /* babySitterConfirmMatchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C9145BB2397D1780028870E /* babySitterConfirmMatchView.xib */; };
-		4C9145BE2397D17B0028870E /* babbySitterConfirmMatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9145BC2397D17B0028870E /* babbySitterConfirmMatchView.swift */; };
+		4C9145BE2397D17B0028870E /* babySitterConfirmMatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9145BC2397D17B0028870E /* babySitterConfirmMatchView.swift */; };
 		4C9145BF2397D34A0028870E /* SearchBaba.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C9145B12397D13C0028870E /* SearchBaba.storyboard */; };
 		4C9145C32397E7F90028870E /* AddDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9145C12397E7F90028870E /* AddDetailsCell.swift */; };
 		4C9145C42397E7F90028870E /* AddDetailsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C9145C22397E7F90028870E /* AddDetailsCell.xib */; };
+		4C9145C62397FA980028870E /* ConfirmMatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9145C52397FA980028870E /* ConfirmMatchViewController.swift */; };
 		4CEFB1BE238359380073F0D9 /* BabySitterEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEFB1BD238359380073F0D9 /* BabySitterEntity.swift */; };
 		4CEFB1C3238361600073F0D9 /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEFB1C1238361600073F0D9 /* InfoCell.swift */; };
 		4CEFB1C4238361600073F0D9 /* InfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CEFB1C2238361600073F0D9 /* InfoCell.xib */; };
@@ -109,9 +110,10 @@
 		4C9145B32397D1410028870E /* babySitterConfirmMatch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = babySitterConfirmMatch.storyboard; sourceTree = "<group>"; };
 		4C9145B92397D1700028870E /* babySitterProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = babySitterProfileViewController.swift; sourceTree = "<group>"; };
 		4C9145BB2397D1780028870E /* babySitterConfirmMatchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = babySitterConfirmMatchView.xib; sourceTree = "<group>"; };
-		4C9145BC2397D17B0028870E /* babbySitterConfirmMatchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = babbySitterConfirmMatchView.swift; sourceTree = "<group>"; };
+		4C9145BC2397D17B0028870E /* babySitterConfirmMatchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = babySitterConfirmMatchView.swift; sourceTree = "<group>"; };
 		4C9145C12397E7F90028870E /* AddDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDetailsCell.swift; sourceTree = "<group>"; };
 		4C9145C22397E7F90028870E /* AddDetailsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddDetailsCell.xib; sourceTree = "<group>"; };
+		4C9145C52397FA980028870E /* ConfirmMatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmMatchViewController.swift; sourceTree = "<group>"; };
 		4CA50DBD23914A0C004203BB /* ProfileBabysitter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileBabysitter.storyboard; sourceTree = "<group>"; };
 		4CA50DCD23953F3E004203BB /* babySitterConfirmMatch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = babySitterConfirmMatch.storyboard; sourceTree = "<group>"; };
 		4CEFB1BD238359380073F0D9 /* BabySitterEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabySitterEntity.swift; sourceTree = "<group>"; };
@@ -282,8 +284,9 @@
 		4C9145B72397D1570028870E /* ConfirmMatch */ = {
 			isa = PBXGroup;
 			children = (
-				4C9145BC2397D17B0028870E /* babbySitterConfirmMatchView.swift */,
+				4C9145BC2397D17B0028870E /* babySitterConfirmMatchView.swift */,
 				4C9145BB2397D1780028870E /* babySitterConfirmMatchView.xib */,
+				4C9145C52397FA980028870E /* ConfirmMatchViewController.swift */,
 			);
 			path = ConfirmMatch;
 			sourceTree = "<group>";
@@ -920,7 +923,7 @@
 				E299048F2386C2590055CB25 /* HistoryViewController.swift in Sources */,
 				E713185923953DFA005525C5 /* WaitingViewController.swift in Sources */,
 				E7CCFEF6237C9B6B00F9DA94 /* ChatColorsExtension.swift in Sources */,
-				4C9145BE2397D17B0028870E /* babbySitterConfirmMatchView.swift in Sources */,
+				4C9145BE2397D17B0028870E /* babySitterConfirmMatchView.swift in Sources */,
 				4C765B01237991BC00D3D38B /* SearchViewController.swift in Sources */,
 				E77DECD4238DA82700C81A92 /* LoggedUser.swift in Sources */,
 				E7CCFEE5237C689A00F9DA94 /* Message.swift in Sources */,
@@ -938,6 +941,7 @@
 				E7CCFEE1237C4FA800F9DA94 /* ChatViewController.swift in Sources */,
 				E2800F53238EB872004FB8C4 /* aboutBabySitterEntity.swift in Sources */,
 				E7FF57CF2371A36A00F3FA22 /* SceneDelegate.swift in Sources */,
+				4C9145C62397FA980028870E /* ConfirmMatchViewController.swift in Sources */,
 				E2800F50238EA613004FB8C4 /* RecommendationCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

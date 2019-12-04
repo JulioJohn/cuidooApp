@@ -9,7 +9,8 @@
 import UIKit
 
 class AddDetailsCell: UITableViewCell {
-
+    
+    private weak var delegate: InfoCellDelegate?
     @IBOutlet weak var addDetailsTextField: UITextField!
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,4 +23,7 @@ class AddDetailsCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func configure(delegate: InfoCellDelegate){
+        self.delegate = delegate
+    }
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class babbySitterConfirmMatchView: UIView, Nibable {
+class babySitterConfirmMatchView: UIView, Nibable {
 
     @IBOutlet weak var babySitterImageView: UIImageView!
     /*
