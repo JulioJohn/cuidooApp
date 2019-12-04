@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Q9o-OT-GA1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6fu-D6-Vtz">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
@@ -7,23 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
-        <scene sceneID="bni-vB-1Q3">
-            <objects>
-                <navigationController id="Q9o-OT-GA1" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RCa-P5-RCk">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="pf3-PV-SEo" kind="relationship" relationship="rootViewController" id="R5J-39-uv0"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0rI-qD-Ele" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-704" y="212"/>
-        </scene>
-        <!--Baby Sitter Profile View Controller-->
+        <!--Cuidoo-->
         <scene sceneID="EkA-4f-GZA">
             <objects>
                 <viewController id="pf3-PV-SEo" customClass="babySitterProfileViewController" customModule="CuidooApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -52,8 +36,8 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="person" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="qwz-Ci-3wt">
-                                                    <rect key="frame" x="16" y="8.5" width="27" height="27.5"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="qwz-Ci-3wt">
+                                                    <rect key="frame" x="16" y="8.5" width="27" height="27"/>
                                                     <color key="tintColor" red="1" green="0.34509803919999998" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="27" id="Ij9-LT-w0E"/>
@@ -136,9 +120,6 @@
                                                 <constraint firstItem="Myr-zG-BNR" firstAttribute="leading" secondItem="4Nu-UO-YFp" secondAttribute="leading" constant="16" id="pfQ-Qg-23x"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="Kqf-Wq-Teg" kind="show" id="ubD-16-xUx"/>
-                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="owd-Ss-Kcx">
                                         <rect key="frame" x="0.0" y="158.5" width="414" height="43.5"/>
@@ -173,12 +154,8 @@
                                                 <constraint firstItem="mgm-G7-HvQ" firstAttribute="centerY" secondItem="hMV-DG-Bq4" secondAttribute="centerY" id="rgm-8I-9XW"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="wqe-dm-vGx" kind="show" id="TCI-39-bJf"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
-                                <sections/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5rv-0s-nJS">
                                 <rect key="frame" x="0.0" y="782" width="414" height="80"/>
@@ -199,10 +176,10 @@
                                 </state>
                                 <connections>
                                     <action selector="startJobButtonAction:" destination="pf3-PV-SEo" eventType="touchUpInside" id="ylG-3N-KmT"/>
-                                    <segue destination="3ue-q7-x5X" kind="show" id="8tE-IN-L0Y"/>
+                                    <segue destination="wf3-a0-YHo" kind="show" id="Udb-Gs-BRk"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7h0-PC-ihX">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BhD-7b-G2Z">
                                 <rect key="frame" x="0.0" y="88" width="414" height="240"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mom" translatesAutoresizingMaskIntoConstraints="NO" id="cMe-yc-iBk">
@@ -213,6 +190,12 @@
                                             <constraint firstAttribute="width" secondItem="cMe-yc-iBk" secondAttribute="height" multiplier="1:1" id="e1j-1x-J6C"/>
                                         </constraints>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sanda.branco@icloud.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vVf-Qo-w9P">
+                                        <rect key="frame" x="106.5" y="164" width="201" height="39"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Offline" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="81W-jZ-4D7">
                                         <rect key="frame" x="182.5" y="211" width="49" height="21"/>
                                         <constraints>
@@ -223,92 +206,86 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sanda.branco@icloud.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vVf-Qo-w9P">
-                                        <rect key="frame" x="106.5" y="164" width="201" height="43"/>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="81W-jZ-4D7" secondAttribute="bottom" constant="8" id="D6K-WK-Jel"/>
-                                    <constraint firstItem="cMe-yc-iBk" firstAttribute="top" secondItem="7h0-PC-ihX" secondAttribute="top" constant="24" id="VXj-Dh-qwr"/>
-                                    <constraint firstItem="81W-jZ-4D7" firstAttribute="top" secondItem="vVf-Qo-w9P" secondAttribute="bottom" constant="4" id="Zaz-Dc-I2D"/>
-                                    <constraint firstItem="81W-jZ-4D7" firstAttribute="centerX" secondItem="vVf-Qo-w9P" secondAttribute="centerX" id="dyw-NN-Zv2"/>
-                                    <constraint firstItem="vVf-Qo-w9P" firstAttribute="centerX" secondItem="cMe-yc-iBk" secondAttribute="centerX" id="gX5-GY-Tdh"/>
-                                    <constraint firstAttribute="height" constant="240" id="k5B-uR-A4Q"/>
-                                    <constraint firstItem="cMe-yc-iBk" firstAttribute="centerX" secondItem="7h0-PC-ihX" secondAttribute="centerX" id="pMe-bv-4y3"/>
-                                    <constraint firstItem="vVf-Qo-w9P" firstAttribute="top" secondItem="cMe-yc-iBk" secondAttribute="bottom" constant="8" id="plh-Xz-VfT"/>
+                                    <constraint firstAttribute="height" constant="240" id="45u-7u-stv"/>
+                                    <constraint firstItem="vVf-Qo-w9P" firstAttribute="centerX" secondItem="cMe-yc-iBk" secondAttribute="centerX" id="77Z-wp-sqS"/>
+                                    <constraint firstAttribute="bottom" secondItem="81W-jZ-4D7" secondAttribute="bottom" constant="8" id="7rd-er-1aS"/>
+                                    <constraint firstItem="vVf-Qo-w9P" firstAttribute="top" secondItem="cMe-yc-iBk" secondAttribute="bottom" constant="8" id="Bg1-Yx-ulN"/>
+                                    <constraint firstItem="81W-jZ-4D7" firstAttribute="top" secondItem="vVf-Qo-w9P" secondAttribute="bottom" constant="8" id="DOc-b1-Iw5"/>
+                                    <constraint firstItem="81W-jZ-4D7" firstAttribute="centerX" secondItem="vVf-Qo-w9P" secondAttribute="centerX" id="Egs-a3-zGJ"/>
+                                    <constraint firstItem="cMe-yc-iBk" firstAttribute="top" secondItem="BhD-7b-G2Z" secondAttribute="top" constant="24" id="a9x-fO-H3h"/>
+                                    <constraint firstItem="cMe-yc-iBk" firstAttribute="centerX" secondItem="BhD-7b-G2Z" secondAttribute="centerX" id="jI1-9M-p4A"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="zYg-OO-ABW" firstAttribute="top" secondItem="BhD-7b-G2Z" secondAttribute="bottom" id="C6s-be-dQ7"/>
                             <constraint firstItem="t2H-eo-nj5" firstAttribute="centerX" secondItem="5rv-0s-nJS" secondAttribute="centerX" id="HU7-Pt-Yc4"/>
-                            <constraint firstItem="yrg-hj-tOR" firstAttribute="trailing" secondItem="7h0-PC-ihX" secondAttribute="trailing" id="IhT-0C-Q46"/>
-                            <constraint firstItem="7h0-PC-ihX" firstAttribute="top" secondItem="yrg-hj-tOR" secondAttribute="top" id="Qph-CS-iUQ"/>
                             <constraint firstItem="yrg-hj-tOR" firstAttribute="trailing" secondItem="t2H-eo-nj5" secondAttribute="trailing" constant="16" id="T5d-bN-k63"/>
                             <constraint firstItem="t2H-eo-nj5" firstAttribute="leading" secondItem="yrg-hj-tOR" secondAttribute="leading" constant="16" id="TKc-rl-Ktj"/>
+                            <constraint firstItem="BhD-7b-G2Z" firstAttribute="top" secondItem="yrg-hj-tOR" secondAttribute="top" id="VGd-eJ-Vo4"/>
                             <constraint firstItem="yrg-hj-tOR" firstAttribute="trailing" secondItem="5rv-0s-nJS" secondAttribute="trailing" id="Z78-Gr-hJ2"/>
                             <constraint firstItem="yrg-hj-tOR" firstAttribute="bottom" secondItem="5rv-0s-nJS" secondAttribute="bottom" id="dew-2M-u3l"/>
                             <constraint firstItem="yrg-hj-tOR" firstAttribute="trailing" secondItem="zYg-OO-ABW" secondAttribute="trailing" id="eNs-s1-hT6"/>
                             <constraint firstItem="t2H-eo-nj5" firstAttribute="centerY" secondItem="5rv-0s-nJS" secondAttribute="centerY" id="gY0-YM-LCM"/>
-                            <constraint firstItem="zYg-OO-ABW" firstAttribute="top" secondItem="7h0-PC-ihX" secondAttribute="bottom" id="h4y-63-sFo"/>
                             <constraint firstItem="zYg-OO-ABW" firstAttribute="leading" secondItem="yrg-hj-tOR" secondAttribute="leading" id="jSC-h0-EF1"/>
-                            <constraint firstItem="7h0-PC-ihX" firstAttribute="leading" secondItem="yrg-hj-tOR" secondAttribute="leading" id="mwE-96-poe"/>
+                            <constraint firstItem="BhD-7b-G2Z" firstAttribute="leading" secondItem="yrg-hj-tOR" secondAttribute="leading" id="kiJ-eZ-WEk"/>
                             <constraint firstItem="5rv-0s-nJS" firstAttribute="leading" secondItem="yrg-hj-tOR" secondAttribute="leading" id="nST-Z8-opP"/>
+                            <constraint firstItem="yrg-hj-tOR" firstAttribute="trailing" secondItem="BhD-7b-G2Z" secondAttribute="trailing" id="uE5-dx-Zi2"/>
                             <constraint firstItem="5rv-0s-nJS" firstAttribute="top" secondItem="zYg-OO-ABW" secondAttribute="bottom" id="v9h-Lk-JFO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yrg-hj-tOR"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Cvj-4P-ggO"/>
+                    <navigationItem key="navigationItem" title="Cuidoo" id="fFQ-tf-eBZ">
+                        <barButtonItem key="backBarButtonItem" title="Cancelar" id="5Ht-ud-ZA4"/>
+                    </navigationItem>
                     <connections>
-                        <outlet property="babySItterImageOutlet" destination="cMe-yc-iBk" id="DL2-Pz-OUd"/>
-                        <outlet property="babySitterProfileTableView" destination="zYg-OO-ABW" id="0xm-kf-zrn"/>
+                        <outlet property="babySItterImageOutlet" destination="cMe-yc-iBk" id="ASa-h4-KlY"/>
+                        <outlet property="babySitterProfileTableView" destination="zYg-OO-ABW" id="ghp-A6-G1c"/>
                         <outlet property="startJobButtonOutlet" destination="t2H-eo-nj5" id="2TX-ox-hg2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3nQ-Oi-d8o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="31.884057971014496" y="211.60714285714286"/>
+            <point key="canvasLocation" x="589.85507246376812" y="161.38392857142856"/>
         </scene>
         <!--babySitterConfirmMatch-->
-        <scene sceneID="jEF-Z5-PH2">
+        <scene sceneID="Svq-yH-v8T">
             <objects>
-                <viewControllerPlaceholder storyboardName="babySitterConfirmMatch" id="3ue-q7-x5X" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="7hM-On-9ew"/>
+                <viewControllerPlaceholder storyboardIdentifier="babySitterConfirmMatch" storyboardName="babySitterConfirmMatch" id="wf3-a0-YHo" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="KL7-Ju-hRY"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cpv-ay-uhu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iMc-vi-Tiz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="894" y="376"/>
+            <point key="canvasLocation" x="1214" y="422"/>
         </scene>
-        <!--Support-->
-        <scene sceneID="XAI-hb-b0u">
+        <!--Navigation Controller-->
+        <scene sceneID="i5Z-p4-zTB">
             <objects>
-                <viewControllerPlaceholder storyboardName="Support" id="Kqf-Wq-Teg" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="I1v-y8-k6V"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ApU-mZ-oZG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6fu-D6-Vtz" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="edi-qZ-iJo">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="pf3-PV-SEo" kind="relationship" relationship="rootViewController" id="pZC-8F-2U4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QVq-lx-IfK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="745" y="216"/>
-        </scene>
-        <!--Config-->
-        <scene sceneID="f2s-EK-xVT">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Config" id="wqe-dm-vGx" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="QAg-8f-4Fx"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Vj4-x6-Hbd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="752" y="250"/>
+            <point key="canvasLocation" x="-320.28985507246381" y="161.38392857142856"/>
         </scene>
     </scenes>
     <resources>
         <image name="doc.text.magnifyingglass" catalog="system" width="58" height="64"/>
         <image name="gear" catalog="system" width="64" height="58"/>
         <image name="mom" width="842" height="782"/>
-        <image name="person" catalog="system" width="64" height="58"/>
+        <image name="person.fill" catalog="system" width="64" height="60"/>
         <image name="questionmark.circle" catalog="system" width="64" height="60"/>
     </resources>
 </document>

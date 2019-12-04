@@ -16,7 +16,6 @@
 		4C7EAC3F238D9BC6009D3589 /* Nibable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7EAC3E238D9BC6009D3589 /* Nibable.swift */; };
 		4C7EAC41238D9CC9009D3589 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7EAC40238D9CC9009D3589 /* UIViewExtension.swift */; };
 		4C7EAC43238EB100009D3589 /* EvaluationEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7EAC42238EB100009D3589 /* EvaluationEntity.swift */; };
-		4C9145B52397D1410028870E /* ProfileBabysitter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C9145B22397D13E0028870E /* ProfileBabysitter.storyboard */; };
 		4C9145B62397D1410028870E /* babySitterConfirmMatch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C9145B32397D1410028870E /* babySitterConfirmMatch.storyboard */; };
 		4C9145BA2397D1700028870E /* babySitterProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9145B92397D1700028870E /* babySitterProfileViewController.swift */; };
 		4C9145BD2397D17B0028870E /* babySitterConfirmMatchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C9145BB2397D1780028870E /* babySitterConfirmMatchView.xib */; };
@@ -25,6 +24,7 @@
 		4C9145C32397E7F90028870E /* AddDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9145C12397E7F90028870E /* AddDetailsCell.swift */; };
 		4C9145C42397E7F90028870E /* AddDetailsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C9145C22397E7F90028870E /* AddDetailsCell.xib */; };
 		4C9145C62397FA980028870E /* ConfirmMatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9145C52397FA980028870E /* ConfirmMatchViewController.swift */; };
+		4C9145CA239801830028870E /* BabySitterProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C9145C9239801820028870E /* BabySitterProfile.storyboard */; };
 		4CEFB1BE238359380073F0D9 /* BabySitterEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEFB1BD238359380073F0D9 /* BabySitterEntity.swift */; };
 		4CEFB1C3238361600073F0D9 /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEFB1C1238361600073F0D9 /* InfoCell.swift */; };
 		4CEFB1C4238361600073F0D9 /* InfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CEFB1C2238361600073F0D9 /* InfoCell.xib */; };
@@ -106,7 +106,6 @@
 		4C7EAC40238D9CC9009D3589 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		4C7EAC42238EB100009D3589 /* EvaluationEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationEntity.swift; sourceTree = "<group>"; };
 		4C9145B12397D13C0028870E /* SearchBaba.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SearchBaba.storyboard; sourceTree = "<group>"; };
-		4C9145B22397D13E0028870E /* ProfileBabysitter.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProfileBabysitter.storyboard; sourceTree = "<group>"; };
 		4C9145B32397D1410028870E /* babySitterConfirmMatch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = babySitterConfirmMatch.storyboard; sourceTree = "<group>"; };
 		4C9145B92397D1700028870E /* babySitterProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = babySitterProfileViewController.swift; sourceTree = "<group>"; };
 		4C9145BB2397D1780028870E /* babySitterConfirmMatchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = babySitterConfirmMatchView.xib; sourceTree = "<group>"; };
@@ -114,6 +113,7 @@
 		4C9145C12397E7F90028870E /* AddDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDetailsCell.swift; sourceTree = "<group>"; };
 		4C9145C22397E7F90028870E /* AddDetailsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddDetailsCell.xib; sourceTree = "<group>"; };
 		4C9145C52397FA980028870E /* ConfirmMatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmMatchViewController.swift; sourceTree = "<group>"; };
+		4C9145C9239801820028870E /* BabySitterProfile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BabySitterProfile.storyboard; sourceTree = "<group>"; };
 		4CA50DBD23914A0C004203BB /* ProfileBabysitter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileBabysitter.storyboard; sourceTree = "<group>"; };
 		4CA50DCD23953F3E004203BB /* babySitterConfirmMatch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = babySitterConfirmMatch.storyboard; sourceTree = "<group>"; };
 		4CEFB1BD238359380073F0D9 /* BabySitterEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabySitterEntity.swift; sourceTree = "<group>"; };
@@ -275,7 +275,7 @@
 			isa = PBXGroup;
 			children = (
 				4C9145B32397D1410028870E /* babySitterConfirmMatch.storyboard */,
-				4C9145B22397D13E0028870E /* ProfileBabysitter.storyboard */,
+				4C9145C9239801820028870E /* BabySitterProfile.storyboard */,
 				4C9145B12397D13C0028870E /* SearchBaba.storyboard */,
 			);
 			path = Storyboards;
@@ -810,7 +810,6 @@
 				4C9145BF2397D34A0028870E /* SearchBaba.storyboard in Resources */,
 				E2800F42238EA579004FB8C4 /* DataPictureCell.xib in Resources */,
 				4C4A3A80237C2B19009A3B64 /* BabySitterCell.xib in Resources */,
-				4C9145B52397D1410028870E /* ProfileBabysitter.storyboard in Resources */,
 				4C9145BD2397D17B0028870E /* babySitterConfirmMatchView.xib in Resources */,
 				4C9145B62397D1410028870E /* babySitterConfirmMatch.storyboard in Resources */,
 				E2800F4C238EA5EE004FB8C4 /* AboutCell.xib in Resources */,
@@ -830,6 +829,7 @@
 				E201500A23759BB4002D8C8B /* Chat.storyboard in Resources */,
 				E2800F47238EA5C6004FB8C4 /* EvaluationCell.xib in Resources */,
 				E2014FFF23759B4F002D8C8B /* Search.storyboard in Resources */,
+				4C9145CA239801830028870E /* BabySitterProfile.storyboard in Resources */,
 				E201500E23759BD0002D8C8B /* History.storyboard in Resources */,
 				E2B20046238C1D8200CD103A /* FaqTableViewCell.xib in Resources */,
 				4C3D10992384346C002CAB84 /* BabySitterInfosView.xib in Resources */,
