@@ -45,15 +45,20 @@ class MatchDAO {
     static func getAllMatchs(completion: @escaping (Match?) -> Void) {
         var newMatch: Match? = nil
         
-        self.database.collection("matchs").getDocuments { (snapshot, error) in
-            newMatch = Match(data: snapshot?.documents[0].data() ?? [:])!
-            //Imprimindo na tela o match encontrado
-            guard let match = newMatch else {
-                print("Não encontrou nenhum match")
-                return
+        self.databaseMatch.getDocuments { (snapshot, error) in
+            if snapshot!.isEmpty {
+                print("Não existem matchs!")
+                completion(nil)
+            } else {
+                newMatch = Match(data: snapshot?.documents[0].data() ?? [:])!
+                //Imprimindo na tela o match encontrado
+                guard let match = newMatch else {
+                    print("Não encontrou nenhum match")
+                    return
+                }
+                match.showMatch()
+                completion(newMatch)
             }
-            match.showMatch()
-            completion(newMatch)
         }
     }
     
@@ -65,6 +70,10 @@ class MatchDAO {
         }
     }
     
+    /// Altera o status do match atual
+    /// - Parameters:
+    ///   - status: status novo
+    ///   - completion: ao termino da alteração
     static func changeMatchStatus(status: String, completion: @escaping () -> Void) {
         let matchId: String = LoggedUser.shared.actualMatch!.documentId
         databaseMatch.document(matchId).updateData(["status" : status])
@@ -84,4 +93,24 @@ class MatchDAO {
             
         }
     }
+    
+    static func addListener(matchId: String, completion: @escaping (String) -> Void) {
+        databaseMatch.addSnapshotListener { (snapshot, error) in
+            snapshot?.documentChanges.forEach({ (change) in
+                if change.document.documentID == matchId {
+                    switch change.type {
+                    case .modified:
+                        //atualizar status do match atual aqui
+                        let newStatus = change.document.get("status")
+                        print(newStatus)
+                        //deve exibir o perfil da mae aqui!!!
+                        completion(newStatus as! String)
+                    default:
+                        break
+                    }
+                }
+            })
+        }
+    }
+    
 }
