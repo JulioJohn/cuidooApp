@@ -19,7 +19,7 @@
                         <view contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="R4W-kF-x2b">
                             <rect key="frame" x="0.0" y="0.0" width="380" height="285"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moça" translatesAutoresizingMaskIntoConstraints="NO" id="D5F-Hl-3f6">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mom" translatesAutoresizingMaskIntoConstraints="NO" id="D5F-Hl-3f6">
                                     <rect key="frame" x="130" y="24" width="120" height="120"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="120" id="E5I-t4-lgd"/>
@@ -107,21 +107,21 @@
                                             <rect key="frame" x="0.0" y="0.0" width="124" height="89"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="z3Y-q8-DdG">
-                                                    <rect key="frame" x="33.5" y="16" width="57" height="33"/>
+                                                    <rect key="frame" x="41" y="16" width="42" height="22.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="28" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="opx-iY-rZY">
-                                                            <rect key="frame" x="0.0" y="0.0" width="22" height="33"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="22" height="22.5"/>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                             <color key="textColor" red="0.38823807240000002" green="0.38823020460000002" blue="0.388235569" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <color key="highlightedColor" red="0.39603209499999997" green="0.39610502120000002" blue="0.39602747560000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </label>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Bebe" translatesAutoresizingMaskIntoConstraints="NO" id="ZmX-7P-Sbm">
-                                                            <rect key="frame" x="27" y="0.0" width="30" height="33"/>
+                                                            <rect key="frame" x="27" y="0.0" width="15" height="22.5"/>
                                                         </imageView>
                                                     </subviews>
                                                 </stackView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CUIDADOS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="klL-MQ-HlS">
-                                                    <rect key="frame" x="26.5" y="51" width="71" height="17"/>
+                                                    <rect key="frame" x="26.5" y="40.5" width="71" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -139,7 +139,7 @@
                                             <rect key="frame" x="124" y="0.0" width="124" height="89"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AVALIAÇÃO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uKK-0A-P1J">
-                                                    <rect key="frame" x="25" y="37" width="74.5" height="45"/>
+                                                    <rect key="frame" x="25" y="37" width="74.5" height="24"/>
                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -175,13 +175,13 @@
                                             <rect key="frame" x="248" y="0.0" width="124" height="89"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 anos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y6Q-mz-zoc">
-                                                    <rect key="frame" x="35" y="16" width="54" height="31"/>
+                                                    <rect key="frame" x="35" y="16" width="54" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <color key="textColor" red="0.38823807240000002" green="0.38823020460000002" blue="0.388235569" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EXPERIÊNCIA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VSg-T8-LcY">
-                                                    <rect key="frame" x="19" y="51" width="86.5" height="17"/>
+                                                    <rect key="frame" x="19" y="40.5" width="86.5" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -237,7 +237,7 @@
     </objects>
     <resources>
         <image name="Bebe" width="15" height="16.5"/>
-        <image name="moça" width="359" height="621"/>
+        <image name="mom" width="842" height="782"/>
         <image name="star.fill" catalog="system" width="64" height="58"/>
     </resources>
 </document>

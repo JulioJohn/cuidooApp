@@ -163,6 +163,9 @@
                                                 <constraint firstItem="Myr-zG-BNR" firstAttribute="leading" secondItem="4Nu-UO-YFp" secondAttribute="leading" constant="16" id="pfQ-Qg-23x"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Kqf-Wq-Teg" kind="show" id="ubD-16-xUx"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="owd-Ss-Kcx">
                                         <rect key="frame" x="0.0" y="387.5" width="414" height="43.5"/>
@@ -197,6 +200,9 @@
                                                 <constraint firstItem="mgm-G7-HvQ" firstAttribute="centerY" secondItem="hMV-DG-Bq4" secondAttribute="centerY" id="rgm-8I-9XW"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="wqe-dm-vGx" kind="show" id="TCI-39-bJf"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -250,6 +256,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3nQ-Oi-d8o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="31.884057971014496" y="211.60714285714286"/>
+        </scene>
+        <!--Storyboard Reference-->
+        <scene sceneID="jEF-Z5-PH2">
+            <objects>
+                <viewControllerPlaceholder id="3ue-q7-x5X" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cpv-ay-uhu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="757" y="157"/>
+        </scene>
+        <!--Support-->
+        <scene sceneID="XAI-hb-b0u">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Support" id="Kqf-Wq-Teg" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="I1v-y8-k6V"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ApU-mZ-oZG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="745" y="216"/>
+        </scene>
+        <!--Config-->
+        <scene sceneID="f2s-EK-xVT">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Config" id="wqe-dm-vGx" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="QAg-8f-4Fx"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vj4-x6-Hbd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="752" y="250"/>
         </scene>
     </scenes>
     <resources>

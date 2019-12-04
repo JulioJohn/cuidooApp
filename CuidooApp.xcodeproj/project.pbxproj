@@ -35,7 +35,6 @@
 		E201500523759B96002D8C8B /* Requesting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E201500423759B96002D8C8B /* Requesting.storyboard */; };
 		E201500823759BAA002D8C8B /* Requested.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E201500723759BAA002D8C8B /* Requested.storyboard */; };
 		E201500A23759BB4002D8C8B /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E201500923759BB4002D8C8B /* Chat.storyboard */; };
-		E201500C23759BC7002D8C8B /* Bio.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E201500B23759BC7002D8C8B /* Bio.storyboard */; };
 		E201500E23759BD0002D8C8B /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E201500D23759BD0002D8C8B /* History.storyboard */; };
 		E201501023759BDB002D8C8B /* Support.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E201500F23759BDB002D8C8B /* Support.storyboard */; };
 		E2800F41238EA579004FB8C4 /* DataPictureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2800F3F238EA579004FB8C4 /* DataPictureCell.swift */; };
@@ -125,7 +124,6 @@
 		E201500423759B96002D8C8B /* Requesting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Requesting.storyboard; sourceTree = "<group>"; };
 		E201500723759BAA002D8C8B /* Requested.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Requested.storyboard; sourceTree = "<group>"; };
 		E201500923759BB4002D8C8B /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
-		E201500B23759BC7002D8C8B /* Bio.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Bio.storyboard; sourceTree = "<group>"; };
 		E201500D23759BD0002D8C8B /* History.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
 		E201500F23759BDB002D8C8B /* Support.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Support.storyboard; sourceTree = "<group>"; };
 		E2800F3F238EA579004FB8C4 /* DataPictureCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPictureCell.swift; sourceTree = "<group>"; };
@@ -683,7 +681,6 @@
 				E201500423759B96002D8C8B /* Requesting.storyboard */,
 				E201500723759BAA002D8C8B /* Requested.storyboard */,
 				E201500923759BB4002D8C8B /* Chat.storyboard */,
-				E201500B23759BC7002D8C8B /* Bio.storyboard */,
 				E201500D23759BD0002D8C8B /* History.storyboard */,
 				E201500F23759BDB002D8C8B /* Support.storyboard */,
 				E7FF57D72371A36F00F3FA22 /* LaunchScreen.storyboard */,
@@ -814,7 +811,6 @@
 				E2F65A972384363E00E9EEA8 /* HistoryCell.xib in Resources */,
 				4CEFB1CA23840CC90073F0D9 /* MapCell.xib in Resources */,
 				E201500A23759BB4002D8C8B /* Chat.storyboard in Resources */,
-				E201500C23759BC7002D8C8B /* Bio.storyboard in Resources */,
 				E2800F47238EA5C6004FB8C4 /* EvaluationCell.xib in Resources */,
 				E2014FFF23759B4F002D8C8B /* Search.storyboard in Resources */,
 				E201500E23759BD0002D8C8B /* History.storyboard in Resources */,
@@ -1071,7 +1067,7 @@
 			baseConfigurationReference = 303077478AF76DECDC033BE2 /* Pods-CuidooApp.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P8PFF3RBDA;
+				DEVELOPMENT_TEAM = 76DX35F6T7;
 				INFOPLIST_FILE = CuidooApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1089,7 +1085,7 @@
 			baseConfigurationReference = 800AE3D6E1EBAC85C2721D3B /* Pods-CuidooApp.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P8PFF3RBDA;
+				DEVELOPMENT_TEAM = 76DX35F6T7;
 				INFOPLIST_FILE = CuidooApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
