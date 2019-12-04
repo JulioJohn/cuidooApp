@@ -22,6 +22,8 @@
 		4C9145BD2397D17B0028870E /* babySitterConfirmMatchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C9145BB2397D1780028870E /* babySitterConfirmMatchView.xib */; };
 		4C9145BE2397D17B0028870E /* babbySitterConfirmMatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9145BC2397D17B0028870E /* babbySitterConfirmMatchView.swift */; };
 		4C9145BF2397D34A0028870E /* SearchBaba.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C9145B12397D13C0028870E /* SearchBaba.storyboard */; };
+		4C9145C32397E7F90028870E /* AddDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9145C12397E7F90028870E /* AddDetailsCell.swift */; };
+		4C9145C42397E7F90028870E /* AddDetailsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C9145C22397E7F90028870E /* AddDetailsCell.xib */; };
 		4CEFB1BE238359380073F0D9 /* BabySitterEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEFB1BD238359380073F0D9 /* BabySitterEntity.swift */; };
 		4CEFB1C3238361600073F0D9 /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEFB1C1238361600073F0D9 /* InfoCell.swift */; };
 		4CEFB1C4238361600073F0D9 /* InfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CEFB1C2238361600073F0D9 /* InfoCell.xib */; };
@@ -108,6 +110,8 @@
 		4C9145B92397D1700028870E /* babySitterProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = babySitterProfileViewController.swift; sourceTree = "<group>"; };
 		4C9145BB2397D1780028870E /* babySitterConfirmMatchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = babySitterConfirmMatchView.xib; sourceTree = "<group>"; };
 		4C9145BC2397D17B0028870E /* babbySitterConfirmMatchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = babbySitterConfirmMatchView.swift; sourceTree = "<group>"; };
+		4C9145C12397E7F90028870E /* AddDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDetailsCell.swift; sourceTree = "<group>"; };
+		4C9145C22397E7F90028870E /* AddDetailsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddDetailsCell.xib; sourceTree = "<group>"; };
 		4CA50DBD23914A0C004203BB /* ProfileBabysitter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileBabysitter.storyboard; sourceTree = "<group>"; };
 		4CA50DCD23953F3E004203BB /* babySitterConfirmMatch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = babySitterConfirmMatch.storyboard; sourceTree = "<group>"; };
 		4CEFB1BD238359380073F0D9 /* BabySitterEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabySitterEntity.swift; sourceTree = "<group>"; };
@@ -292,9 +296,19 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
+		4C9145C02397E7CC0028870E /* Add Details */ = {
+			isa = PBXGroup;
+			children = (
+				4C9145C12397E7F90028870E /* AddDetailsCell.swift */,
+				4C9145C22397E7F90028870E /* AddDetailsCell.xib */,
+			);
+			path = "Add Details";
+			sourceTree = "<group>";
+		};
 		4CEFB1BF2383611C0073F0D9 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				4C9145C02397E7CC0028870E /* Add Details */,
 				E77DECD2238D92D600C81A92 /* InfoCell */,
 				4CEFB1C623840CA00073F0D9 /* Map */,
 				4CEFB1C0238361240073F0D9 /* BabySitter */,
@@ -817,6 +831,7 @@
 				E2B20046238C1D8200CD103A /* FaqTableViewCell.xib in Resources */,
 				4C3D10992384346C002CAB84 /* BabySitterInfosView.xib in Resources */,
 				E2F65A9323840F3100E9EEA8 /* Config.storyboard in Resources */,
+				4C9145C42397E7F90028870E /* AddDetailsCell.xib in Resources */,
 				E2A815C22378C4A0005D9C6F /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -870,6 +885,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C9145C32397E7F90028870E /* AddDetailsCell.swift in Sources */,
 				E7FF57CD2371A36A00F3FA22 /* AppDelegate.swift in Sources */,
 				E299048D2386B71B0055CB25 /* DateExtensions.swift in Sources */,
 				E7CCFEF8237C9C0700F9DA94 /* CollectionViewExtension.swift in Sources */,

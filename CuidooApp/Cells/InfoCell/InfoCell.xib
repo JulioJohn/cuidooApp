@@ -8,15 +8,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="infoCell" rowHeight="362" id="PqJ-fa-vVK" customClass="InfoCell" customModule="CuidooApp" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="362"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="infoCell" rowHeight="292" id="PqJ-fa-vVK" customClass="InfoCell" customModule="CuidooApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="292"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PqJ-fa-vVK" id="OLa-13-voH">
-                <rect key="frame" x="0.0" y="0.0" width="414" height="362"/>
+                <rect key="frame" x="0.0" y="0.0" width="414" height="292"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Cfc-EZ-WHE">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="322"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tqV-7l-3OA">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
@@ -143,44 +143,6 @@
                                     <constraint firstItem="ogo-AM-F9Z" firstAttribute="leading" secondItem="eML-bL-iU0" secondAttribute="trailing" constant="13.5" id="v6M-DS-OYa"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Elz-Ob-8y0">
-                                <rect key="frame" x="0.0" y="200" width="414" height="72"/>
-                                <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Adicionar detalhes" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3hg-4k-kSg">
-                                        <rect key="frame" x="16" y="4" width="382" height="64"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="64" id="Bp8-hS-o7f"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="3hg-4k-kSg" secondAttribute="trailing" constant="16" id="0vB-Sj-NAq"/>
-                                    <constraint firstAttribute="bottom" secondItem="3hg-4k-kSg" secondAttribute="bottom" constant="4" id="A2f-cQ-KUu"/>
-                                    <constraint firstItem="3hg-4k-kSg" firstAttribute="top" secondItem="Elz-Ob-8y0" secondAttribute="top" constant="4" id="AB0-GS-BRr"/>
-                                    <constraint firstItem="3hg-4k-kSg" firstAttribute="leading" secondItem="Elz-Ob-8y0" secondAttribute="leading" constant="16" id="tKs-1n-6tQ"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YVv-Sj-Iqq">
-                                <rect key="frame" x="0.0" y="272" width="414" height="50"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pCD-ff-fet">
-                                        <rect key="frame" x="153" y="12" width="108" height="26"/>
-                                        <state key="normal" backgroundImage="Mais restricoes"/>
-                                        <connections>
-                                            <action selector="expandButtonAction:" destination="PqJ-fa-vVK" eventType="touchUpInside" id="lnL-GT-ar0"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <constraints>
-                                    <constraint firstItem="pCD-ff-fet" firstAttribute="centerY" secondItem="YVv-Sj-Iqq" secondAttribute="centerY" id="J5h-hS-8Lx"/>
-                                    <constraint firstAttribute="height" constant="50" id="tXF-J0-IbO"/>
-                                    <constraint firstItem="pCD-ff-fet" firstAttribute="centerX" secondItem="YVv-Sj-Iqq" secondAttribute="centerX" id="yOK-fS-CYS"/>
-                                </constraints>
-                            </view>
                         </subviews>
                     </stackView>
                 </subviews>
@@ -193,15 +155,12 @@
             </tableViewCellContentView>
             <inset key="separatorInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
             <connections>
-                <outlet property="detailsView" destination="Elz-Ob-8y0" id="eIX-2s-7ft"/>
                 <outlet property="favoritesView" destination="yPQ-7T-6Af" id="Rhz-A3-PtX"/>
-                <outlet property="restrictionsButton" destination="pCD-ff-fet" id="RGB-L8-Fe4"/>
             </connections>
-            <point key="canvasLocation" x="202.89855072463769" y="173.4375"/>
+            <point key="canvasLocation" x="202.89855072463769" y="150"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="Mais restricoes" width="108" height="26"/>
         <image name="heart.fill" catalog="system" width="64" height="54"/>
         <image name="pacifier" width="22" height="22"/>
         <image name="person.2.fill" catalog="system" width="64" height="40"/>

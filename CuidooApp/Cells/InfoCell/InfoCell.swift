@@ -39,9 +39,7 @@ class InfoCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        favoritesView.isHidden = true
-        detailsView.isHidden = true
-    }
+        }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
