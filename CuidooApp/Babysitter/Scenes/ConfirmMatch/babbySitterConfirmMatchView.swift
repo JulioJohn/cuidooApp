@@ -8,8 +8,9 @@
 
 import UIKit
 
-class babbySitterConfirmMatchView: UIView {
+class babbySitterConfirmMatchView: UIView, Nibable {
 
+    @IBOutlet weak var babySitterImageView: UIImageView!
     /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
@@ -17,5 +18,15 @@ class babbySitterConfirmMatchView: UIView {
         // Drawing code
     }
     */
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        babySitterImageView.layer.cornerRadius = 30
+        loadNib()
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        loadNib()
+    }
 
 }
