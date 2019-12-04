@@ -68,6 +68,13 @@
 		E713185423953ACE005525C5 /* WaitingSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E713185323953ACE005525C5 /* WaitingSearch.storyboard */; };
 		E713185923953DFA005525C5 /* WaitingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E713185823953DFA005525C5 /* WaitingViewController.swift */; };
 		E713185B23954CB8005525C5 /* WaitingSceneAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = E713185A23954CB8005525C5 /* WaitingSceneAnimations.swift */; };
+		E72CE8672397F0AC00DA9861 /* AlertExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72CE8662397F0AC00DA9861 /* AlertExtensions.swift */; };
+		E72CE8692397F10B00DA9861 /* AlertType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72CE8682397F10B00DA9861 /* AlertType.swift */; };
+		E72CE86B2397F47600DA9861 /* AlertErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72CE86A2397F47600DA9861 /* AlertErrors.swift */; };
+		E72CE86F2398091400DA9861 /* GoingOnMatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72CE86D2398091400DA9861 /* GoingOnMatchViewController.swift */; };
+		E72CE8702398091400DA9861 /* GoingOnMatchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E72CE86E2398091400DA9861 /* GoingOnMatchViewController.xib */; };
+		E72CE872239809E500DA9861 /* GoingOnMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72CE871239809E500DA9861 /* GoingOnMatch.swift */; };
+		E72CE87423980B3E00DA9861 /* OnGoingMatch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E72CE87323980B3E00DA9861 /* OnGoingMatch.storyboard */; };
 		E7444B50238DD5C600001EC0 /* MatchDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7444B4F238DD5C600001EC0 /* MatchDAO.swift */; };
 		E7444B52238DD5F600001EC0 /* UserDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7444B51238DD5F600001EC0 /* UserDAO.swift */; };
 		E7565B8E2388262E00946D19 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7565B8D2388262E00946D19 /* Match.swift */; };
@@ -160,6 +167,13 @@
 		E713185323953ACE005525C5 /* WaitingSearch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WaitingSearch.storyboard; sourceTree = "<group>"; };
 		E713185823953DFA005525C5 /* WaitingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingViewController.swift; sourceTree = "<group>"; };
 		E713185A23954CB8005525C5 /* WaitingSceneAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingSceneAnimations.swift; sourceTree = "<group>"; };
+		E72CE8662397F0AC00DA9861 /* AlertExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertExtensions.swift; sourceTree = "<group>"; };
+		E72CE8682397F10B00DA9861 /* AlertType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertType.swift; sourceTree = "<group>"; };
+		E72CE86A2397F47600DA9861 /* AlertErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertErrors.swift; sourceTree = "<group>"; };
+		E72CE86D2398091400DA9861 /* GoingOnMatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoingOnMatchViewController.swift; sourceTree = "<group>"; };
+		E72CE86E2398091400DA9861 /* GoingOnMatchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GoingOnMatchViewController.xib; sourceTree = "<group>"; };
+		E72CE871239809E500DA9861 /* GoingOnMatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoingOnMatch.swift; sourceTree = "<group>"; };
+		E72CE87323980B3E00DA9861 /* OnGoingMatch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnGoingMatch.storyboard; sourceTree = "<group>"; };
 		E7444B4F238DD5C600001EC0 /* MatchDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDAO.swift; sourceTree = "<group>"; };
 		E7444B51238DD5F600001EC0 /* UserDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDAO.swift; sourceTree = "<group>"; };
 		E7565B8D2388262E00946D19 /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
@@ -265,6 +279,7 @@
 		4C9145AF2397D0FD0028870E /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				E72CE86C239808BA00DA9861 /* GoingOnMatch */,
 				4C9145B82397D1610028870E /* Profile */,
 				4C9145B72397D1570028870E /* ConfirmMatch */,
 			);
@@ -277,6 +292,7 @@
 				4C9145B32397D1410028870E /* babySitterConfirmMatch.storyboard */,
 				4C9145C9239801820028870E /* BabySitterProfile.storyboard */,
 				4C9145B12397D13C0028870E /* SearchBaba.storyboard */,
+				E72CE87323980B3E00DA9861 /* OnGoingMatch.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -573,6 +589,16 @@
 			path = Mom;
 			sourceTree = "<group>";
 		};
+		E72CE86C239808BA00DA9861 /* GoingOnMatch */ = {
+			isa = PBXGroup;
+			children = (
+				E72CE86D2398091400DA9861 /* GoingOnMatchViewController.swift */,
+				E72CE86E2398091400DA9861 /* GoingOnMatchViewController.xib */,
+				E72CE871239809E500DA9861 /* GoingOnMatch.swift */,
+			);
+			path = GoingOnMatch;
+			sourceTree = "<group>";
+		};
 		E7444B53238DD62400001EC0 /* DAO */ = {
 			isa = PBXGroup;
 			children = (
@@ -639,6 +665,9 @@
 				4C7EAC3E238D9BC6009D3589 /* Nibable.swift */,
 				4C7EAC40238D9CC9009D3589 /* UIViewExtension.swift */,
 				E713185A23954CB8005525C5 /* WaitingSceneAnimations.swift */,
+				E72CE8662397F0AC00DA9861 /* AlertExtensions.swift */,
+				E72CE8682397F10B00DA9861 /* AlertType.swift */,
+				E72CE86A2397F47600DA9861 /* AlertErrors.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -831,10 +860,12 @@
 				E2014FFF23759B4F002D8C8B /* Search.storyboard in Resources */,
 				4C9145CA239801830028870E /* BabySitterProfile.storyboard in Resources */,
 				E201500E23759BD0002D8C8B /* History.storyboard in Resources */,
+				E72CE87423980B3E00DA9861 /* OnGoingMatch.storyboard in Resources */,
 				E2B20046238C1D8200CD103A /* FaqTableViewCell.xib in Resources */,
 				4C3D10992384346C002CAB84 /* BabySitterInfosView.xib in Resources */,
 				E2F65A9323840F3100E9EEA8 /* Config.storyboard in Resources */,
 				4C9145C42397E7F90028870E /* AddDetailsCell.xib in Resources */,
+				E72CE8702398091400DA9861 /* GoingOnMatchViewController.xib in Resources */,
 				E2A815C22378C4A0005D9C6F /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -892,6 +923,7 @@
 				E7FF57CD2371A36A00F3FA22 /* AppDelegate.swift in Sources */,
 				E299048D2386B71B0055CB25 /* DateExtensions.swift in Sources */,
 				E7CCFEF8237C9C0700F9DA94 /* CollectionViewExtension.swift in Sources */,
+				E72CE8672397F0AC00DA9861 /* AlertExtensions.swift in Sources */,
 				E299048B2386AE5B0055CB25 /* HistoryEntity.swift in Sources */,
 				E2800F41238EA579004FB8C4 /* DataPictureCell.swift in Sources */,
 				4C7EAC3F238D9BC6009D3589 /* Nibable.swift in Sources */,
@@ -907,6 +939,7 @@
 				E2F65A8D23840C4400E9EEA8 /* ProfileViewController.swift in Sources */,
 				E2911E8E238812E800273197 /* ConfigurationViewController.swift in Sources */,
 				E2B20045238C1D8200CD103A /* FaqTableViewCell.swift in Sources */,
+				E72CE8692397F10B00DA9861 /* AlertType.swift in Sources */,
 				E2B20037238BFD4D00CD103A /* BioTableViewController.swift in Sources */,
 				E2F65A962384363E00E9EEA8 /* HistoryCell.swift in Sources */,
 				E2B2004B238C25DC00CD103A /* FaqViewController.swift in Sources */,
@@ -915,6 +948,9 @@
 				E7AC68A72384342F008EC82F /* MyUser.swift in Sources */,
 				E7444B50238DD5C600001EC0 /* MatchDAO.swift in Sources */,
 				E76322FD238F06D0009BE203 /* ChatServices.swift in Sources */,
+				E72CE86F2398091400DA9861 /* GoingOnMatchViewController.swift in Sources */,
+				E72CE86B2397F47600DA9861 /* AlertErrors.swift in Sources */,
+				E72CE872239809E500DA9861 /* GoingOnMatch.swift in Sources */,
 				E7565B90238826A000946D19 /* StatusEnum.swift in Sources */,
 				E713185B23954CB8005525C5 /* WaitingSceneAnimations.swift in Sources */,
 				E7CCFEEF237C8DA400F9DA94 /* DatabaseRepresentation.swift in Sources */,

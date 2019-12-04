@@ -11,21 +11,19 @@ import UIKit
 class ConfirmMatchViewController: UIViewController {
     
     @IBOutlet weak var babySitterConfirmMatchView: babySitterConfirmMatchView!
+    @IBOutlet weak var acceptButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func acceptButton(_ sender: Any) {
+        self.acceptButton.isEnabled = false
+        MatchServices.changeMatchStatus {
+            print("Aparece a tela de waiting da baba aqui!")
+            self.acceptButton.isEnabled = true
+        }
     }
-    */
-
+    
 }

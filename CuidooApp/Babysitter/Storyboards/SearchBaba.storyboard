@@ -39,22 +39,6 @@
                                     <segue destination="fAO-tk-Osh" kind="show" id="08O-XO-8QD"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OTo-iV-hcd">
-                                <rect key="frame" x="112" y="483" width="49" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Aceitar"/>
-                                <connections>
-                                    <action selector="acceptButton:" destination="aBr-Zp-hgc" eventType="touchUpInside" id="gdF-ua-8s9"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LBJ-oq-RUQ">
-                                <rect key="frame" x="269" y="483" width="56" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Recusar"/>
-                                <connections>
-                                    <action selector="cancelButton:" destination="aBr-Zp-hgc" eventType="touchUpInside" id="yUq-tH-Gn3"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ghe-hd-quj">
                                 <rect key="frame" x="193" y="672" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -69,9 +53,6 @@
                         <viewLayoutGuide key="safeArea" id="lS7-FV-FtP"/>
                     </view>
                     <navigationItem key="navigationItem" id="LCe-fk-T9K"/>
-                    <connections>
-                        <outlet property="acceptButton" destination="OTo-iV-hcd" id="MuW-lu-gU5"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nJ2-zn-yDc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

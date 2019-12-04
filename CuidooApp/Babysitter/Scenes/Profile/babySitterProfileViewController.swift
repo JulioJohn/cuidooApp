@@ -9,8 +9,6 @@
 import UIKit
 
 class babySitterProfileViewController: UIViewController {
-    
-    
 
     @IBOutlet weak var babySitterProfileTableView: UITableView!
     @IBOutlet weak var startJobButtonOutlet: UIButton!
@@ -24,23 +22,22 @@ class babySitterProfileViewController: UIViewController {
     }
     
     @IBAction func startJobButtonAction(_ sender: Any) {
-//        //FAZER DEIXAR OFFLINE!!! E FAZER FICAR ONLINE
-//
-//        if LoggedUser.shared.userIsLogged() {
-//            MatchServices.createMatch(idBaba: LoggedUser.shared.user!.uid)
-//            //Atualiza meu usuario local
-//            MatchServices.getUser {
-//                LoggedUser.shared.user!.showClass()
-//                //Observa se ouve mudança de status!
-//                MatchDAO.addListener(matchId: LoggedUser.shared.actualMatch!.documentId) { (error) in
-//                    print("Chamar a tela aqui!")
-//                }
-//            }
-//        } else {
-//            print("O usuário não existe")
-//        }
+        //FAZER DEIXAR OFFLINE!!! E FAZER FICAR ONLINE
+
+        if LoggedUser.shared.userIsLogged() {
+            MatchServices.createMatch(idBaba: LoggedUser.shared.user!.uid)
+            //Atualiza meu usuario local
+            MatchServices.getUser {
+                LoggedUser.shared.user!.showClass()
+                //Observa se ouve mudança de status!
+                MatchDAO.addListener(matchId: LoggedUser.shared.actualMatch!.documentId) { (error) in
+                    print("Chamar a tela aqui!")
+                }
+            }
+        } else {
+            print("O usuário não existe")
+        }
     }
-    
 
 }
 

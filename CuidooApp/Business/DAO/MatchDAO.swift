@@ -65,7 +65,7 @@ class MatchDAO {
     static func momLikesBaba(idMom: String, completion: @escaping () -> Void) {
         databaseMatch.getDocuments { (snapshot, error) in
             let matchId: String = LoggedUser.shared.actualMatch!.documentId
-            databaseMatch.document(matchId).updateData(["uidMae" : idMom, "status" : "waitingBaba"])
+            databaseMatch.document(matchId).updateData(["uidMae" : idMom, "status" : "inProgress"])
             completion()
         }
     }

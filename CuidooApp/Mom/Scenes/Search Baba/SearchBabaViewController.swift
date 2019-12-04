@@ -16,18 +16,6 @@ class SearchBabaViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    @IBAction func acceptButton(_ sender: Any) {
-        self.acceptButton.isEnabled = false
-        MatchServices.changeMatchStatus {
-            print("Aparece a tela de waiting da baba aqui!")
-            self.acceptButton.isEnabled = true
-        }
-    }
-    
-    @IBAction func cancelButton(_ sender: Any) {
-        
-    }
-    
     @IBAction func leaveButton(_ sender: Any) {
         dismiss(animated: true) {
             MatchServices.desconnect()

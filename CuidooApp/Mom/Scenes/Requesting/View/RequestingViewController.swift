@@ -17,10 +17,6 @@ class RequestingViewController: UIViewController {
     var entityAbout: aboutBabySitterEntity?
     var entityRecommendation: [HistoryEntity] = []
     
-    @IBAction func goToRequestingUnwind(_ segue : UIStoryboardSegue){
-        
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -72,17 +68,13 @@ class RequestingViewController: UIViewController {
     }
     
     @IBAction func endButton(_ sender: Any) {
-        MatchServices.momFinalizeMatch {
+        MatchServices.changeMatchStatus {
             print("Finalizou chamado!")
-        }
-        //O IDEAL É SÓ PULAR DEPOIS DE ALTERAR OS DADOS NO BANCO!!! LEMBRAR DISSO!!!
-        self.dismiss(animated: true) {
             self.performSegue(withIdentifier: "searchSegue", sender: nil)
         }
-        
     }
     
-} // end class RequestingViewController
+}
 
 extension RequestingViewController: UITableViewDataSource, UITableViewDelegate {
     

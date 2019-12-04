@@ -30,8 +30,7 @@ class RequestViewController: UIViewController {
 
     @IBAction func didClickConfirm(_ sender: Any) {
         MatchServices.momLikesBaba(idMom: LoggedUser.shared.user!.uid, matchId: LoggedUser.shared.actualMatch!.documentId)
-        
-            performSegue(withIdentifier: "requestingSegue", sender: nil)
+        performSegue(withIdentifier: "requestingSegue", sender: nil)
     }
     
     @IBAction func didClickSeeNext(_ sender: Any) {

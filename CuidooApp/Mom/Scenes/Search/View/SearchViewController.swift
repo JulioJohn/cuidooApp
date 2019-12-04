@@ -16,6 +16,10 @@ class SearchViewController: UIViewController {
     
     private var entities: [BabySitterEntity]?
     
+    @IBAction func goToSearchUnwind(_ segue : UIStoryboardSegue){
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.searchButton.layer.cornerRadius = 20
@@ -39,11 +43,23 @@ class SearchViewController: UIViewController {
     }
     
     @IBAction func searchButton(_ sender: Any) {
-        MatchServices.searchBaba { () in
-            MatchServices.changeMatchStatus {
-                self.performSegue(withIdentifier: "goToWaitingScene", sender: nil)
+        MatchServices.searchBaba { (error) in
+            if error != nil {
+                self.noBabySitterAlert()
+            } else {
+                MatchServices.changeMatchStatus {
+                    self.performSegue(withIdentifier: "goToWaitingScene", sender: nil)
+                }
             }
         }
+    }
+    
+    func noBabySitterAlert() {
+        let alert = UIAlertController(title: "Ops", message: "Não temos nenhuma cuidadora disponível na sua região no momento.", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        
+        self.present(alert, animated: true)
     }
     
 }

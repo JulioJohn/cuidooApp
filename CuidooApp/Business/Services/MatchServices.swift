@@ -46,10 +46,10 @@ class MatchServices {
         completion()
     }
     
-    static func searchBaba(completion: @escaping () -> Void) {
+    static func searchBaba(completion: @escaping (AlertErrors?) -> Void) {
         MatchDAO.getAllMatchs(completion: { (match) in
             if match == nil {
-                print("Search não funcionou!")
+                completion(AlertErrors.noBabysitterAvailable)
                 return
             }
             
@@ -64,7 +64,7 @@ class MatchServices {
                     LoggedUser.shared.actualMatch?.otherUser = user
                     UserDAO.updateInformations(byId: babaId, user: LoggedUser.shared.actualMatch!.otherUser) {
                         print("Atualizou as informações locais do Match")
-                        completion()
+                        completion(nil)
                     }
                 }
             } else {
@@ -74,7 +74,7 @@ class MatchServices {
                     LoggedUser.shared.actualMatch?.otherUser = user
                     UserDAO.updateInformations(byId: momId, user: LoggedUser.shared.actualMatch!.otherUser) {
                         print("Atualizou as informacoes locais do Match")
-                        completion()
+                        completion(nil)
                     }
                 }
             }
@@ -98,7 +98,6 @@ class MatchServices {
     
     static func momFinalizeMatch(completion: @escaping () -> Void) {
         MatchDAO.getMatchStatus { (status) in
-            print("Verificando status!")
             if status == "inProgress" {
                 MatchDAO.changeMatchStatus(status: "Finished") {
                     print("Status modificado com sucesso!")
@@ -112,6 +111,7 @@ class MatchServices {
         MatchDAO.getMatchStatus { (status) in
             var newStatus: String = "none"
             print("Verificando status!")
+            print(status)
             switch status {
             case "available":
                 newStatus = "waitingBaba"

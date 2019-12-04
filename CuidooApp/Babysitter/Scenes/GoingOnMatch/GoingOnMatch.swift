@@ -1,20 +1,17 @@
 //
-//  babbySitterConfirmMatchView.swift
+//  GoingOnMatch.swift
 //  CuidooApp
 //
-//  Created by Victor Toon de Araújo on 29/11/19.
+//  Created by Júlio John Tavares Ramos on 04/12/19.
 //  Copyright © 2019 Júlio John Tavares Ramos. All rights reserved.
 //
 
 import UIKit
 
-class babySitterConfirmMatchView: UIView, Nibable {
-
-    @IBOutlet weak var babySitterImageView: UIImageView!
+class GoingOnMatch: UIView, Nibable {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        babySitterImageView.layer.cornerRadius = 30
         loadNib()
     }
 
