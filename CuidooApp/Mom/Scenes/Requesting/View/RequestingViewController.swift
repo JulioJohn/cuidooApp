@@ -9,7 +9,6 @@
 import UIKit
 
 class RequestingViewController: UIViewController {
-
     
     @IBOutlet weak var requestingTableView: UITableView!
     
@@ -17,6 +16,10 @@ class RequestingViewController: UIViewController {
     var entityEvaluation: EvaluationEntity?
     var entityAbout: aboutBabySitterEntity?
     var entityRecommendation: [HistoryEntity] = []
+    
+    @IBAction func goToRequestingUnwind(_ segue : UIStoryboardSegue){
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

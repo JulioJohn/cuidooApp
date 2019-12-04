@@ -1083,7 +1083,7 @@
 			baseConfigurationReference = 303077478AF76DECDC033BE2 /* Pods-CuidooApp.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 76DX35F6T7;
+				DEVELOPMENT_TEAM = 97PTJ72QJZ;
 				INFOPLIST_FILE = CuidooApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1101,7 +1101,7 @@
 			baseConfigurationReference = 800AE3D6E1EBAC85C2721D3B /* Pods-CuidooApp.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 76DX35F6T7;
+				DEVELOPMENT_TEAM = 97PTJ72QJZ;
 				INFOPLIST_FILE = CuidooApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

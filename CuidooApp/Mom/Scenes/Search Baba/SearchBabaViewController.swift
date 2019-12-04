@@ -16,22 +16,6 @@ class SearchBabaViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    @IBAction func startWorkButton(_ sender: Any) {
-        if LoggedUser.shared.userIsLogged() {
-            MatchServices.createMatch(idBaba: LoggedUser.shared.user!.uid)
-            //Atualiza meu usuario local
-            MatchServices.getUser {
-                LoggedUser.shared.user!.showClass()
-                //Observa se ouve mudança de status!
-                MatchDAO.addListener(matchId: LoggedUser.shared.actualMatch!.documentId) { (error) in
-                    print("Chamar a tela aqui!")
-                }
-            }
-        } else {
-            print("O usuário não existe")
-        }
-    }
-    
     @IBAction func acceptButton(_ sender: Any) {
         self.acceptButton.isEnabled = false
         MatchServices.changeMatchStatus {
