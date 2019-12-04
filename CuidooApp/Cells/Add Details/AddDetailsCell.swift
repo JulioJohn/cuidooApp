@@ -10,6 +10,7 @@ import UIKit
 
 class AddDetailsCell: UITableViewCell {
 
+    @IBOutlet weak var addDetailsTextField: UITextField!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

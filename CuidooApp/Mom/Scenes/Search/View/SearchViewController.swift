@@ -26,6 +26,7 @@ class SearchViewController: UIViewController {
         searchTableView.register(UINib(nibName: "InfoCell", bundle: nil), forCellReuseIdentifier: "infoCell")
         searchTableView.register(UINib(nibName: "MapCell", bundle: nil), forCellReuseIdentifier:
             "mapCell")
+        searchTableView.register(UINib(nibName: "AddDetailsCell", bundle: nil), forCellReuseIdentifier: "addDetailsCell")
         
         searchTableView.tableFooterView = UIView()
         searchTableView.estimatedRowHeight = 200
