@@ -10,16 +10,17 @@ import UIKit
 
 class babySitterProfileViewController: UIViewController {
 
-    @IBOutlet weak var babySitterProfileTableView: UITableView!
+    
     @IBOutlet weak var startJobButtonOutlet: UIButton!
     @IBOutlet weak var babySItterImageOutlet: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         startJobButtonOutlet.layer.cornerRadius = 13
-        babySitterProfileTableView.delegate = self
-        babySitterProfileTableView.dataSource = self
+       
     }
+    
+    
     
     @IBAction func startJobButtonAction(_ sender: Any) {
         //FAZER DEIXAR OFFLINE!!! E FAZER FICAR ONLINE
@@ -43,18 +44,4 @@ class babySitterProfileViewController: UIViewController {
 
 }
 
-extension babySitterProfileViewController: UITableViewDelegate{
-    
-}
 
-extension babySitterProfileViewController: UITableViewDataSource{
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
-    }
-    
-    
-}
