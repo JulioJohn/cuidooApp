@@ -17,15 +17,29 @@ class WaitingViewController: UIViewController {
 
         self.cancelButton.layer.cornerRadius = 15.0
         
-        //Listener que verifica se o estado atual mudou!
-        MatchServices.addListener(matchId: LoggedUser.shared.actualMatch!.documentId) { (status) in
-            //se for recusado, deve ser chamado o search novamente, atualisado o actual match
-            //se for aceito, deve pular para a tela de request
-            if status == "waitingMom" {
-                print("Aguardando mãe aceitar baba!")
-                self.performSegue(withIdentifier: "goToRequest", sender: nil)
+        MatchServices.tryMatchWithBabysitter { error in
+            if let error = error {
+                if error == .thisMatchIsNotAvailable {
+                    //Resolve dentro da função mesmo!
+                }
+            } else {
+                //Listener que verifica se o estado atual mudou!
+                MatchServices.addListener(matchId: LoggedUser.shared.actualMatch!.documentId) { (status) in
+                    //se for recusado, deve ser chamado o search novamente, atualisado o actual match
+                    //se for aceito, deve pular para a tela de request
+                    if status == "waitingMom" {
+                        print("Aguardando mãe aceitar baba!")
+                        self.performSegue(withIdentifier: "goToRequest", sender: nil)
+                    }
+                }
+                print("Tentando parear com uma baba!")
+                print("Status modificados com sucesso!")
+                MatchServices.listenerActualMatch {
+                    print("Listener setado com sucesso!")
+                }
             }
         }
+        
         
     }
     

@@ -62,11 +62,22 @@
                     <connections>
                         <outlet property="acceptButton" destination="Jis-Vn-KbT" id="CCK-VR-f2h"/>
                         <outlet property="babySitterConfirmMatchView" destination="xsN-qj-dos" id="LdB-Kl-A6t"/>
+                        <segue destination="dL7-9P-9XV" kind="show" identifier="goToWaitingBabysitterSegue" id="EKu-NG-De2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oql-qt-7T9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1084.0579710144928" y="169.41964285714286"/>
+            <point key="canvasLocation" x="1104" y="181"/>
+        </scene>
+        <!--WaitingSearchBabysitter-->
+        <scene sceneID="JbM-tV-dkp">
+            <objects>
+                <viewControllerPlaceholder storyboardName="WaitingSearchBabysitter" id="dL7-9P-9XV" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="fge-ed-vhA"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VDW-5n-cBZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1285" y="597"/>
         </scene>
     </scenes>
     <resources>

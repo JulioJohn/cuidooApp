@@ -15,14 +15,27 @@ class ConfirmMatchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        if LoggedUser.shared.userIsLogged() {
+            MatchServices.createMatch(idBaba: LoggedUser.shared.user!.uid)
+            //Atualiza meu usuario local
+            MatchServices.getUser {
+                LoggedUser.shared.user!.showClass()
+                //Observa se ouve mudança de status!
+                MatchDAO.addListener(matchId: LoggedUser.shared.actualMatch!.documentId) { (error) in
+                    self.performSegue(withIdentifier: "goToConfirmMatchSegue", sender: nil)
+                }
+            }
+        } else {
+            print("O usuário não existe")
+        }
     }
     
     @IBAction func acceptButton(_ sender: Any) {
         self.acceptButton.isEnabled = false
         MatchServices.changeMatchStatus {
-            print("Aparece a tela de waiting da baba aqui!")
             self.acceptButton.isEnabled = true
+            self.performSegue(withIdentifier: "goToWaitingBabysitterSegue", sender: nil)
         }
     }
     

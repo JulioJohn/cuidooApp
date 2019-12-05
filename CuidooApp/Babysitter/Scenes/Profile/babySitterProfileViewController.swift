@@ -23,6 +23,8 @@ class babySitterProfileViewController: UIViewController {
     
     @IBAction func startJobButtonAction(_ sender: Any) {
         //FAZER DEIXAR OFFLINE!!! E FAZER FICAR ONLINE
+        //Verificar se tem algum match atual em progresso, se tiver, abrir a tela dele
+        
 
         if LoggedUser.shared.userIsLogged() {
             MatchServices.createMatch(idBaba: LoggedUser.shared.user!.uid)
@@ -31,7 +33,7 @@ class babySitterProfileViewController: UIViewController {
                 LoggedUser.shared.user!.showClass()
                 //Observa se ouve mudança de status!
                 MatchDAO.addListener(matchId: LoggedUser.shared.actualMatch!.documentId) { (error) in
-                    print("Chamar a tela aqui!")
+                    self.performSegue(withIdentifier: "goToConfirmMatchSegue", sender: nil)
                 }
             }
         } else {

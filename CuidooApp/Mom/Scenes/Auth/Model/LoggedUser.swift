@@ -14,6 +14,8 @@ class LoggedUser {
     
     var user: MyUser?
     var actualMatch: Match?
+    var allMatchs: [Match]?
+    var allMatchsIndex: Int = 0
     
     private init(){}
     
@@ -27,6 +29,35 @@ class LoggedUser {
         print("Match atual local atualizado!")
     }
     
+    func updateAllMatchs(matchs: [Match]?) {
+        self.allMatchs = matchs
+        print("All matchs atualizado")
+    }
+    
+    func resetAllMatchsIndex() {
+        self.allMatchsIndex = 0
+    }
+    
+    //Se false ultrapassou o index, se true ainda esta ok!
+    func increaseAllMatchsIndex() -> Bool {
+        if self.allMatchsIndex == self.allMatchs?.capacity {
+            print("Ultrapassou a capacidade, a lista deve ser renovada!!")
+            return false
+        } else {
+            self.allMatchsIndex += 1
+            return true
+        }
+    }
+    
+    func printAllMatchs() {
+        for i in 0 ... allMatchs!.count - 1 {
+            if let match = allMatchs {
+                print("Match \(i) de \(allMatchs!.count - 1) id \(match[i].documentId)")
+                print("Status: \(match[i].status)")
+            }
+        }
+    }
+    
     func userIsLogged() -> Bool {
         return self.user != nil ? true : false
     }
@@ -35,5 +66,4 @@ class LoggedUser {
         self.user = nil
         print("Usuario local removido!")
     }
-    
 }

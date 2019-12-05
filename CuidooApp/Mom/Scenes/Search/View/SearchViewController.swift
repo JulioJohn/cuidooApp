@@ -47,9 +47,7 @@ class SearchViewController: UIViewController {
             if error != nil {
                 self.noBabySitterAlert()
             } else {
-                MatchServices.changeMatchStatus {
-                    self.performSegue(withIdentifier: "goToWaitingScene", sender: nil)
-                }
+                self.performSegue(withIdentifier: "goToWaitingScene", sender: nil)
             }
         }
     }

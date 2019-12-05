@@ -176,7 +176,6 @@
                                 </state>
                                 <connections>
                                     <action selector="startJobButtonAction:" destination="pf3-PV-SEo" eventType="touchUpInside" id="ylG-3N-KmT"/>
-                                    <segue destination="wf3-a0-YHo" kind="presentation" modalPresentationStyle="fullScreen" id="Udb-Gs-BRk"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BhD-7b-G2Z">
@@ -246,6 +245,7 @@
                         <outlet property="babySItterImageOutlet" destination="cMe-yc-iBk" id="ASa-h4-KlY"/>
                         <outlet property="babySitterProfileTableView" destination="zYg-OO-ABW" id="ghp-A6-G1c"/>
                         <outlet property="startJobButtonOutlet" destination="t2H-eo-nj5" id="2TX-ox-hg2"/>
+                        <segue destination="wf3-a0-YHo" kind="show" identifier="goToConfirmMatchSegue" id="rnS-tP-KkO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3nQ-Oi-d8o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

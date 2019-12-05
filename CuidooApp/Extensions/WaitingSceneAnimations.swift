@@ -19,3 +19,14 @@ extension WaitingViewController{
         imageView.layer.add(rotation, forKey: "rotationAnimation")
     }
 }
+
+extension WaitingSearchBabysitterViewController{
+    func rotateView(imageView: UIImageView) {
+        let rotation: CABasicAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
+        rotation.toValue = Double.pi * 2
+        rotation.duration = 2.0 // or however long you want ...
+        rotation.isCumulative = true
+        rotation.repeatCount = Float.greatestFiniteMagnitude
+        imageView.layer.add(rotation, forKey: "rotationAnimation")
+    }
+}

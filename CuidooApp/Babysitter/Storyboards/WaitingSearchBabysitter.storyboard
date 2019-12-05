@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZWl-rj-O64">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Waiting Search Babysitter View Controller-->
+        <scene sceneID="zqg-4f-3FU">
+            <objects>
+                <viewController id="ZWl-rj-O64" customClass="WaitingSearchBabysitterViewController" customModule="CuidooApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Br3-Sp-Op0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="axu-FG-THB">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aguarde a mãe confirmar sua solicitação…" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lsr-tg-Hsg">
+                                        <rect key="frame" x="42" y="369.5" width="330" height="42"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="42" id="dVG-Zd-Whl"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ne-T1-xQh">
+                                        <rect key="frame" x="17" y="767" width="380" height="58"/>
+                                        <color key="backgroundColor" red="1" green="0.35686274509999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="58" id="Ze6-5g-Mcq"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Cancelar">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancelButtonAction:" destination="ZWl-rj-O64" eventType="touchUpInside" id="arE-Oc-fUH"/>
+                                        </connections>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="waitingCircle" translatesAutoresizingMaskIntoConstraints="NO" id="QFv-0t-o8K">
+                                        <rect key="frame" x="173" y="279.5" width="68" height="66"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="68" id="0Bw-3o-TZc"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="headerCuidoo" translatesAutoresizingMaskIntoConstraints="NO" id="suO-VN-Wly">
+                                        <rect key="frame" x="32" y="92" width="350" height="30"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="0Cz-VU-22L" firstAttribute="bottom" secondItem="3Ne-T1-xQh" secondAttribute="bottom" constant="37" id="1Sm-ZN-8fC"/>
+                                    <constraint firstItem="lsr-tg-Hsg" firstAttribute="leading" secondItem="0Cz-VU-22L" secondAttribute="leading" constant="42" id="7SD-Lc-HGW"/>
+                                    <constraint firstItem="suO-VN-Wly" firstAttribute="centerX" secondItem="0Cz-VU-22L" secondAttribute="centerX" id="Daa-fH-Q1X"/>
+                                    <constraint firstItem="QFv-0t-o8K" firstAttribute="centerY" secondItem="0Cz-VU-22L" secondAttribute="centerY" multiplier="0.69" id="H0M-UR-1AP"/>
+                                    <constraint firstItem="lsr-tg-Hsg" firstAttribute="top" secondItem="QFv-0t-o8K" secondAttribute="bottom" constant="24" id="OgE-s2-0Fz"/>
+                                    <constraint firstItem="0Cz-VU-22L" firstAttribute="trailing" secondItem="lsr-tg-Hsg" secondAttribute="trailing" constant="42" id="Xew-Eb-hru"/>
+                                    <constraint firstItem="QFv-0t-o8K" firstAttribute="centerX" secondItem="0Cz-VU-22L" secondAttribute="centerX" id="d5m-i4-1gg"/>
+                                    <constraint firstItem="3Ne-T1-xQh" firstAttribute="centerX" secondItem="0Cz-VU-22L" secondAttribute="centerX" id="gvf-80-Xk8"/>
+                                    <constraint firstItem="0Cz-VU-22L" firstAttribute="trailing" secondItem="suO-VN-Wly" secondAttribute="trailing" constant="32" id="lPM-L4-Gg0"/>
+                                    <constraint firstItem="suO-VN-Wly" firstAttribute="leading" secondItem="0Cz-VU-22L" secondAttribute="leading" constant="32" id="nCy-HE-2K7"/>
+                                    <constraint firstItem="3Ne-T1-xQh" firstAttribute="leading" secondItem="0Cz-VU-22L" secondAttribute="leading" constant="17" id="ppf-Rt-KC4"/>
+                                    <constraint firstItem="0Cz-VU-22L" firstAttribute="trailing" secondItem="3Ne-T1-xQh" secondAttribute="trailing" constant="17" id="sOZ-92-8w9"/>
+                                    <constraint firstItem="suO-VN-Wly" firstAttribute="top" secondItem="0Cz-VU-22L" secondAttribute="top" constant="48" id="vhj-kw-op5"/>
+                                </constraints>
+                                <viewLayoutGuide key="safeArea" id="0Cz-VU-22L"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="ytA-50-4v1"/>
+                    </view>
+                    <connections>
+                        <outlet property="waitingBall" destination="QFv-0t-o8K" id="Tzl-5X-XlF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mQ3-MB-JAQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="99" y="151"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="headerCuidoo" width="312" height="30"/>
+        <image name="waitingCircle" width="68" height="66"/>
+    </resources>
+</document>

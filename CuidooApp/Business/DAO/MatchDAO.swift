@@ -21,6 +21,7 @@ class MatchDAO {
     static func getMatch(idMatch: String, completion: @escaping (Match?) -> Void) {
         databaseMatch.document(idMatch).getDocument { (snapshot, error) in
             guard let snapData = snapshot?.data() else {
+                completion(nil)
                 print("Não tem match!")
                 return
             }
@@ -42,22 +43,28 @@ class MatchDAO {
         completion()
     }
     
-    static func getAllMatchs(completion: @escaping (Match?) -> Void) {
-        var newMatch: Match? = nil
+    static func getAllMatchs(completion: @escaping ([Match]?) -> Void) {
+        var matchsAvailable: [Match]? = []
         
         self.databaseMatch.getDocuments { (snapshot, error) in
             if snapshot!.isEmpty {
                 print("Não existem matchs!")
                 completion(nil)
             } else {
-                newMatch = Match(data: snapshot?.documents[0].data() ?? [:])!
-                //Imprimindo na tela o match encontrado
-                guard let match = newMatch else {
-                    print("Não encontrou nenhum match")
-                    return
+                for i in 0 ... (snapshot?.documents.count)! - 1 {
+                    matchsAvailable?.append(Match(data: snapshot?.documents[i].data() ?? [:])!)
                 }
-                match.showMatch()
-                completion(newMatch)
+                completion(matchsAvailable)
+            }
+        }
+    }
+    
+    static func deleteMatch(matchId: String, completion: @escaping () -> Void) {
+        databaseMatch.document(matchId).delete { (error) in
+            if error == nil {
+                completion()
+            } else {
+                print("Deu erro ao tentar deletar o Match!")
             }
         }
     }
@@ -102,8 +109,6 @@ class MatchDAO {
                     case .modified:
                         //atualizar status do match atual aqui
                         let newStatus = change.document.get("status")
-                        print(newStatus)
-                        //deve exibir o perfil da mae aqui!!!
                         completion(newStatus as! String)
                     default:
                         break

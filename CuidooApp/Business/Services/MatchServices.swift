@@ -9,6 +9,7 @@
 import Foundation
 import Firebase
 
+//FUNÇÕES BÁSICAS
 class MatchServices {
     
     static func createMatch(idBaba: String) {
@@ -38,7 +39,6 @@ class MatchServices {
             if let newMatch = match {
                 //Atualiza o actualMatch
                 LoggedUser.shared.changeActualMatch(match: newMatch)
-                LoggedUser.shared.actualMatch?.showMatch()
             } else {
                 //Erros
             }
@@ -46,39 +46,16 @@ class MatchServices {
         completion()
     }
     
-    static func searchBaba(completion: @escaping (AlertErrors?) -> Void) {
-        MatchDAO.getAllMatchs(completion: { (match) in
-            if match == nil {
-                completion(AlertErrors.noBabysitterAvailable)
-                return
-            }
-            
-            //Guardar o match atual
-            LoggedUser.shared.changeActualMatch(match: match)
-            
-            //Guardar o outro usuario do match atual para recolher informações
-            //Atualiza a baba do match local
-            if LoggedUser.shared.user?.isBaba == false {
-                let babaId = LoggedUser.shared.actualMatch!.uidBaba
-                UserDAO.getUser(byId: babaId) { (user) in
-                    LoggedUser.shared.actualMatch?.otherUser = user
-                    UserDAO.updateInformations(byId: babaId, user: LoggedUser.shared.actualMatch!.otherUser) {
-                        print("Atualizou as informações locais do Match")
-                        completion(nil)
-                    }
-                }
-            } else {
-                //Atualiza a mãe do match local
-                UserDAO.getUser(byId: LoggedUser.shared.actualMatch!.uidMae) { (user) in
-                    let momId = LoggedUser.shared.actualMatch!.uidMae
-                    LoggedUser.shared.actualMatch?.otherUser = user
-                    UserDAO.updateInformations(byId: momId, user: LoggedUser.shared.actualMatch!.otherUser) {
-                        print("Atualizou as informacoes locais do Match")
-                        completion(nil)
-                    }
+    func verifyActualMatch(completion: @escaping () -> Void) {
+        MatchDAO.getMatchStatus { (status) in
+            if status == "waitingBaba" || status == "waitingMom" {
+                //Se for um desses dois, pode ser deletado e procurar outro
+                let matchId = LoggedUser.shared.actualMatch?.documentId
+                MatchDAO.deleteMatch(matchId: matchId!) {
+                    print("Deletado com sucesso!")
                 }
             }
-        })
+        }
     }
     
     static func momLikesBaba(idMom: String, matchId: String) {
@@ -107,6 +84,39 @@ class MatchServices {
         }
     }
     
+    static func desconnect() {
+        UserDAO.disconnect {
+            LoggedUser.shared.logoutUser()
+        }
+    }
+}
+
+//LISTENERS
+extension MatchServices {
+    
+    static func addListener(matchId: String, completion: @escaping (String) -> Void) {
+        MatchDAO.addListener(matchId: matchId) { (status) in
+            completion(status)
+            print("Apareceu o perfil aqui!")
+        }
+    }
+    
+    static func listenerActualMatch(completion: @escaping () -> Void) {
+        let id = LoggedUser.shared.actualMatch?.documentId
+        MatchDAO.addListener(matchId: id!) { (status) in
+            if status == "available" {
+                LoggedUser.shared.increaseAllMatchsIndex()
+                tryMatchWithBabysitter {_ in 
+                    
+                }
+                completion()
+            }
+        }
+    }
+}
+
+//FUNÇÕES COMPLEXAS
+extension MatchServices {
     static func changeMatchStatus(completion: @escaping () -> Void) {
         MatchDAO.getMatchStatus { (status) in
             var newStatus: String = "none"
@@ -132,9 +142,28 @@ class MatchServices {
         }
     }
     
-    static func desconnect() {
-        UserDAO.disconnect {
-            LoggedUser.shared.logoutUser()
+    static func updateOtherUserLocal(completion: @escaping (AlertErrors?) -> Void) {
+        //Guardar o outro usuario do match atual para recolher informações
+        //Atualiza a baba do match local
+        if LoggedUser.shared.user?.isBaba == false {
+            let babaId = LoggedUser.shared.actualMatch!.uidBaba
+            UserDAO.getUser(byId: babaId) { (user) in
+                LoggedUser.shared.actualMatch?.otherUser = user
+                UserDAO.updateInformations(byId: babaId, user: LoggedUser.shared.actualMatch!.otherUser) {
+                    print("Atualizou as informações locais do Match")
+                    completion(nil)
+                }
+            }
+        } else {
+            //Atualiza a mãe do match local
+            UserDAO.getUser(byId: LoggedUser.shared.actualMatch!.uidMae) { (user) in
+                let momId = LoggedUser.shared.actualMatch!.uidMae
+                LoggedUser.shared.actualMatch?.otherUser = user
+                UserDAO.updateInformations(byId: momId, user: LoggedUser.shared.actualMatch!.otherUser) {
+                    print("Atualizou as informacoes locais do Match")
+                    completion(nil)
+                }
+            }
         }
     }
     
@@ -147,10 +176,68 @@ class MatchServices {
         }
     }
     
-    static func addListener(matchId: String, completion: @escaping (String) -> Void) {
-        MatchDAO.addListener(matchId: matchId) { (status) in
-            completion(status)
-            print("Apareceu o perfil aqui!")
+    static func searchBaba(completion: @escaping (AlertErrors?) -> Void) {
+        //Reseta dados locais no inicio da busca
+        LoggedUser.shared.resetAllMatchsIndex()
+        
+        //Procura todos os match existentes
+        MatchDAO.getAllMatchs(completion: { (match) in
+            
+            guard let matchs = match else {
+                completion(AlertErrors.noBabysitterAvailable)
+                return
+            }
+            LoggedUser.shared.allMatchs = matchs
+            LoggedUser.shared.printAllMatchs()
+            completion(nil)
+        })
+    }
+    
+    static func tryMatchWithBabysitter(completion: @escaping (MatchFlowError?) -> Void) {
+        let index = LoggedUser.shared.allMatchsIndex
+        let match = LoggedUser.shared.allMatchs![index]
+        
+        //Ver se o match existe ainda
+        MatchDAO.getMatch(idMatch: match.documentId) { (verifiedMatch) in
+            if verifiedMatch == nil {
+                print("O match nao existe mais! E agora?")
+                //Atualizar a lista de matchs local
+                searchBaba { (error) in
+                    //Se nao tiver babas disponiveis
+                    if error == AlertErrors.noBabysitterAvailable {
+                        //VOLTAR PARA A TELA DE SEARCH
+                        //SOLTAR O ERRO!
+                    }
+                }
+            } else {
+                //Verifica se está disponível
+                if verifiedMatch?.status == .available {
+                    LoggedUser.shared.changeActualMatch(match: LoggedUser.shared.allMatchs![index])
+                    updateOtherUserLocal { (error) in
+                        MatchServices.changeMatchStatus {
+                            print("Estado modificado!")
+                        }
+                        completion(nil)
+                    }
+                } else {
+                    //Nao esta disponivel, deve aumentar o indice e verificar se tem outro disponivel!
+                    if LoggedUser.shared.increaseAllMatchsIndex() {
+                        tryMatchWithBabysitter { (error) in
+                            if error == nil {
+                                return
+                            }
+                        }
+                        completion(.thisMatchIsNotAvailable)
+                    } else {
+                        //Nesse caso estorou o limite, deve ser feita uma nova busca!
+                        MatchServices.searchBaba { (error) in
+                            print("Estorou o limite local, esta sendo feita uma nova busca!")
+                        }
+                    }
+                }
+            }
         }
     }
 }
+
+
