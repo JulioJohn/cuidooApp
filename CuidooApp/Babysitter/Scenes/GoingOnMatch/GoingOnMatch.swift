@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GoingOnMatch: UIView, Nibable {
+class GoingOnMatchView: UIView, Nibable {
     
     override init(frame: CGRect) {
         super.init(frame: frame)

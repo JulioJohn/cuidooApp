@@ -10,7 +10,7 @@ import UIKit
 
 class GoingOnMatchViewController: UIViewController {
     
-    @IBOutlet var babysitterGoingOnMatchView: GoingOnMatch!
+    @IBOutlet var babysitterGoingOnMatchView: GoingOnMatchView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
