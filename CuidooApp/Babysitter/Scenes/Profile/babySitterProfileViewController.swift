@@ -24,8 +24,6 @@ class babySitterProfileViewController: UIViewController {
     }
     
     @IBAction func startJobButtonAction(_ sender: Any) {
-        //FAZER DEIXAR OFFLINE!!! E FAZER FICAR ONLINE
-        //Verificar se tem algum match atual em progresso, se tiver, abrir a tela dele
         if (isOnline){
             isOnline = !isOnline
             onOffButtonOutlet.text = "OFFLINE"
@@ -38,13 +36,25 @@ class babySitterProfileViewController: UIViewController {
         }
 
         if LoggedUser.shared.userIsLogged() {
-            MatchServices.createMatch(idBaba: LoggedUser.shared.uid!) { (error) in
-                MatchDAO.addListener(matchId: LoggedUser.shared.actualMatchID!) { (error) in
-                    self.performSegue(withIdentifier: "goToConfirmMatchSegue", sender: nil)
+            if let id = LoggedUser.shared.uid {
+                MatchServices.createMatch(idBaba: id) { (error) in
+                    if let matchId = LoggedUser.shared.actualMatchID {
+                        MatchServices.addListener(matchId: matchId) { (status) in
+                            self.statusHandle(status: status)
+                        }
+                    } else {
+                        print("NÃO EX")
+                    }
                 }
             }
         } else {
             print("O usuário não existe")
+        }
+    }
+    
+    func statusHandle(status: StatusEnum) {
+        if status == .waitingBaba {
+            performSegue(withIdentifier: "goToConfirmMatchSegue", sender: nil)
         }
     }
 

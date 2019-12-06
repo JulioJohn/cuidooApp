@@ -124,11 +124,29 @@ class MatchServices {
 //LISTENERS
 extension MatchServices {
     
-    static func addListener(matchId: String, completion: @escaping (String) -> Void) {
+    static func addListener(matchId: String, completion: @escaping (StatusEnum) -> Void) {
         MatchDAO.addListener(matchId: matchId) { (status) in
-            completion(status)
-            print("Apareceu o perfil aqui!")
+            completion(transformStatusInEnum(status: status))
         }
+    }
+    
+    static func transformStatusInEnum(status: String) -> StatusEnum{
+        var statusEnum: StatusEnum = .none
+        switch status {
+        case "available":
+            statusEnum = .available
+        case "waitingBaba":
+            statusEnum = .waitingBaba
+        case "waitingMom":
+            statusEnum = .waitingMom
+        case "inProgress":
+            statusEnum = .inProgress
+        case "finished":
+            statusEnum = .finished
+        default:
+            statusEnum = .none
+        }
+        return statusEnum
     }
     
 //    static func listenerActualMatch(id: String, completion: @escaping () -> Void) {

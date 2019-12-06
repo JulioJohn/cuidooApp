@@ -17,16 +17,11 @@ class ConfirmMatchViewController: UIViewController {
         super.viewDidLoad()
         
         if LoggedUser.shared.userIsLogged() {
-            MatchServices.createMatch(idBaba: LoggedUser.shared.uid!) { (error) in
-                if let error = error {
-                    //Tratar erro
-                } else {
-                    
-                }
-            }
-            //Observa se ouve mudança de status!
-            MatchDAO.addListener(matchId: LoggedUser.shared.actualMatchID!) { (error) in
-                self.performSegue(withIdentifier: "goToWaitingBabysitterSegue", sender: nil)
+            if let id = LoggedUser.shared.actualMatchID {
+//                //Observa se ouve mudança de status!
+//                MatchDAO.addListener(matchId: id) { (error) in
+//                    self.performSegue(withIdentifier: "goToWaitingBabysitterSegue", sender: nil)
+//                }
             }
         } else {
             print("O usuário não existe")
@@ -39,6 +34,10 @@ class ConfirmMatchViewController: UIViewController {
             self.acceptButton.isEnabled = true
             self.performSegue(withIdentifier: "goToWaitingBabysitterSegue", sender: nil)
         }
+    }
+    
+    func handleStatus(status: StatusEnum) {
+        //
     }
     
 }

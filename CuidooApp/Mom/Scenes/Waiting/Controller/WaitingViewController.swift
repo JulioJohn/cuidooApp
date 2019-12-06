@@ -12,7 +12,7 @@ class WaitingViewController: UIViewController {
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var waitingBall: UIImageView!
     
-    weak var delegate: WaitingViewControllerDelegate?
+//    weak var delegate: WaitingViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,13 +28,16 @@ class WaitingViewController: UIViewController {
                 if let matche = match {
                     //Listener que verifica se o estado atual mudou!
                     MatchServices.addListener(matchId: matche.documentId) { (status) in
-                        //se for aceito, deve pular para a tela de request
-                        if status == "waitingMom" {
-                            self.performSegue(withIdentifier: "goToRequest", sender: nil)
-                        }
+                        self.screenHandle(status: status)
                     }
                 }
             }
+        }
+    }
+    
+    func screenHandle(status: StatusEnum) {
+        if status == .waitingMom {
+            self.performSegue(withIdentifier: "goToRequest", sender: nil)
         }
     }
     
@@ -47,13 +50,13 @@ class WaitingViewController: UIViewController {
     }
 }
 
-extension WaitingViewController {
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-    }
-}
-
-protocol WaitingViewControllerDelegate: class {
-    func accepted()
-    func denied()
-}
+//extension WaitingViewController {
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//
+//    }
+//}
+//
+//protocol WaitingViewControllerDelegate: class {
+//    func accepted()
+//    func denied()
+//}
