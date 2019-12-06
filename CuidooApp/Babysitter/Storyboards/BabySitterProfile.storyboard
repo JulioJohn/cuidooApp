@@ -317,10 +317,10 @@
             </objects>
             <point key="canvasLocation" x="589.85507246376812" y="161.38392857142856"/>
         </scene>
-        <!--Storyboard Reference-->
+        <!--MoreInfo-->
         <scene sceneID="CoI-sD-7nd">
             <objects>
-                <viewControllerPlaceholder id="D1l-Am-AkD" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="MoreInfo" id="D1l-Am-AkD" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="A4Q-MK-v59"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m1s-MJ-QCl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
