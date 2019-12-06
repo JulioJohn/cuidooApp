@@ -308,6 +308,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="babySItterImageOutlet" destination="cMe-yc-iBk" id="ASa-h4-KlY"/>
+                        <outlet property="onOffButtonOutlet" destination="81W-jZ-4D7" id="Z6h-gP-kfx"/>
                         <outlet property="startJobButtonOutlet" destination="t2H-eo-nj5" id="2TX-ox-hg2"/>
                         <segue destination="wf3-a0-YHo" kind="show" identifier="goToConfirmMatchSegue" id="rnS-tP-KkO"/>
                     </connections>

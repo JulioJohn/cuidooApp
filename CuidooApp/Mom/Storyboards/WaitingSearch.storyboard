@@ -10,14 +10,13 @@
         <!--Waiting View Controller-->
         <scene sceneID="9PF-UM-HeU">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FYg-hs-qch" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="KFA-b7-CFW" customClass="WaitingViewController" customModule="CuidooApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iRo-CV-wP1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Estamos buscando uma cuidadora para você…" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t5z-fH-YWS">
-                                <rect key="frame" x="42" y="369.5" width="330" height="42"/>
+                                <rect key="frame" x="42" y="432" width="330" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="1ft-WW-cuE"/>
                                 </constraints>
@@ -26,7 +25,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0J7-77-Bu7">
-                                <rect key="frame" x="17" y="767" width="380" height="58"/>
+                                <rect key="frame" x="17" y="788" width="380" height="58"/>
                                 <color key="backgroundColor" red="1" green="0.35686274509999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="58" id="LeR-DE-iB4"/>
@@ -40,30 +39,30 @@
                                     <action selector="cancelSearchButton:" destination="KFA-b7-CFW" eventType="touchUpInside" id="wSW-Yq-Ivt"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="waitingCircle" translatesAutoresizingMaskIntoConstraints="NO" id="Nt9-JN-hRi">
-                                <rect key="frame" x="173" y="279.5" width="68" height="66"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="68" id="OoF-mt-tzl"/>
-                                </constraints>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" image="waitingCircle" translatesAutoresizingMaskIntoConstraints="NO" id="Nt9-JN-hRi">
+                                <rect key="frame" x="173" y="342" width="68" height="66"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="headerCuidoo" translatesAutoresizingMaskIntoConstraints="NO" id="EW1-i4-voh">
-                                <rect key="frame" x="32" y="92" width="350" height="30"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CuidooLogo" translatesAutoresizingMaskIntoConstraints="NO" id="EW1-i4-voh">
+                                <rect key="frame" x="32" y="64" width="350" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="Uum-wx-WkX"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="yIe-rz-caZ" firstAttribute="bottom" secondItem="0J7-77-Bu7" secondAttribute="bottom" constant="37" id="0Up-Up-31m"/>
+                            <constraint firstItem="yIe-rz-caZ" firstAttribute="bottom" secondItem="0J7-77-Bu7" secondAttribute="bottom" constant="16" id="0Up-Up-31m"/>
                             <constraint firstItem="t5z-fH-YWS" firstAttribute="top" secondItem="Nt9-JN-hRi" secondAttribute="bottom" constant="24" id="21L-Rs-0Ol"/>
                             <constraint firstItem="0J7-77-Bu7" firstAttribute="leading" secondItem="yIe-rz-caZ" secondAttribute="leading" constant="17" id="2xc-Hs-Fs5"/>
                             <constraint firstItem="0J7-77-Bu7" firstAttribute="centerX" secondItem="yIe-rz-caZ" secondAttribute="centerX" id="304-CI-l7D"/>
+                            <constraint firstItem="t5z-fH-YWS" firstAttribute="centerY" secondItem="yIe-rz-caZ" secondAttribute="centerY" id="CUc-YD-Xib"/>
                             <constraint firstItem="yIe-rz-caZ" firstAttribute="trailing" secondItem="t5z-fH-YWS" secondAttribute="trailing" constant="42" id="Ckl-iu-Ljb"/>
+                            <constraint firstItem="Nt9-JN-hRi" firstAttribute="centerX" secondItem="yIe-rz-caZ" secondAttribute="centerX" id="HFY-dA-FTL"/>
                             <constraint firstItem="yIe-rz-caZ" firstAttribute="trailing" secondItem="0J7-77-Bu7" secondAttribute="trailing" constant="17" id="Ouu-4v-xRs"/>
-                            <constraint firstItem="Nt9-JN-hRi" firstAttribute="centerY" secondItem="yIe-rz-caZ" secondAttribute="centerY" multiplier="0.69" id="WQe-Sb-N7Z"/>
                             <constraint firstItem="t5z-fH-YWS" firstAttribute="leading" secondItem="yIe-rz-caZ" secondAttribute="leading" constant="42" id="c9f-93-rfv"/>
                             <constraint firstItem="EW1-i4-voh" firstAttribute="leading" secondItem="yIe-rz-caZ" secondAttribute="leading" constant="32" id="dPq-lj-URB"/>
                             <constraint firstItem="EW1-i4-voh" firstAttribute="centerX" secondItem="yIe-rz-caZ" secondAttribute="centerX" id="dTL-eS-NLh"/>
-                            <constraint firstItem="Nt9-JN-hRi" firstAttribute="centerX" secondItem="yIe-rz-caZ" secondAttribute="centerX" id="eVq-Og-CzM"/>
-                            <constraint firstItem="EW1-i4-voh" firstAttribute="top" secondItem="yIe-rz-caZ" secondAttribute="top" constant="48" id="haq-qE-m8I"/>
+                            <constraint firstItem="EW1-i4-voh" firstAttribute="top" secondItem="yIe-rz-caZ" secondAttribute="top" constant="20" id="haq-qE-m8I"/>
                             <constraint firstItem="yIe-rz-caZ" firstAttribute="trailing" secondItem="EW1-i4-voh" secondAttribute="trailing" constant="32" id="o6D-kQ-TPb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yIe-rz-caZ"/>
@@ -76,6 +75,7 @@
                         <segue destination="5pf-Jp-8bm" kind="presentation" identifier="goToSearch" modalPresentationStyle="fullScreen" id="E3j-cT-fWn"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FYg-hs-qch" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="247.82608695652175" y="242.41071428571428"/>
         </scene>
@@ -99,7 +99,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="headerCuidoo" width="312" height="30"/>
+        <image name="CuidooLogo" width="50" height="19.5"/>
         <image name="waitingCircle" width="68" height="66"/>
     </resources>
 </document>

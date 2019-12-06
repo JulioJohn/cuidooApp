@@ -15,7 +15,7 @@ class WaitingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.cancelButton.layer.cornerRadius = 15.0
+        self.cancelButton.layer.cornerRadius = 13.0
         
         MatchServices.tryMatchWithBabysitter { (match, error) in
             if let error = error {

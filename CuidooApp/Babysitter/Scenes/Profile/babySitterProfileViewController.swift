@@ -13,6 +13,9 @@ class babySitterProfileViewController: UIViewController {
     
     @IBOutlet weak var startJobButtonOutlet: UIButton!
     @IBOutlet weak var babySItterImageOutlet: UIImageView!
+    @IBOutlet weak var onOffButtonOutlet: UILabel!
+    
+    var isOnline:Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +26,16 @@ class babySitterProfileViewController: UIViewController {
     @IBAction func startJobButtonAction(_ sender: Any) {
         //FAZER DEIXAR OFFLINE!!! E FAZER FICAR ONLINE
         //Verificar se tem algum match atual em progresso, se tiver, abrir a tela dele
+        if (isOnline){
+            isOnline = !isOnline
+            onOffButtonOutlet.text = "OFFLINE"
+            startJobButtonOutlet.setTitle("Ficar online", for: .normal)
+        }
+        else{
+            isOnline = !isOnline
+            onOffButtonOutlet.text = "ONLINE"
+            startJobButtonOutlet.setTitle("Ficar offline", for: .normal)
+        }
 
         if LoggedUser.shared.userIsLogged() {
             MatchServices.createMatch(idBaba: LoggedUser.shared.uid!) { (error) in

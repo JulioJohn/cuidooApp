@@ -20,7 +20,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aguarde a mãe confirmar sua solicitação…" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lsr-tg-Hsg">
-                                        <rect key="frame" x="42" y="369.5" width="330" height="42"/>
+                                        <rect key="frame" x="42" y="432" width="330" height="42"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="42" id="dVG-Zd-Whl"/>
                                         </constraints>
@@ -29,7 +29,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ne-T1-xQh">
-                                        <rect key="frame" x="17" y="767" width="380" height="58"/>
+                                        <rect key="frame" x="17" y="788" width="380" height="58"/>
                                         <color key="backgroundColor" red="1" green="0.35686274509999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="58" id="Ze6-5g-Mcq"/>
@@ -44,30 +44,33 @@
                                         </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="waitingCircle" translatesAutoresizingMaskIntoConstraints="NO" id="QFv-0t-o8K">
-                                        <rect key="frame" x="173" y="279.5" width="68" height="66"/>
+                                        <rect key="frame" x="173" y="342" width="68" height="66"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="68" id="0Bw-3o-TZc"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="headerCuidoo" translatesAutoresizingMaskIntoConstraints="NO" id="suO-VN-Wly">
-                                        <rect key="frame" x="32" y="92" width="350" height="30"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CuidooLogo" translatesAutoresizingMaskIntoConstraints="NO" id="suO-VN-Wly">
+                                        <rect key="frame" x="32" y="64" width="350" height="28"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="28" id="ftq-Pm-FAA"/>
+                                        </constraints>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstItem="0Cz-VU-22L" firstAttribute="bottom" secondItem="3Ne-T1-xQh" secondAttribute="bottom" constant="37" id="1Sm-ZN-8fC"/>
                                     <constraint firstItem="lsr-tg-Hsg" firstAttribute="leading" secondItem="0Cz-VU-22L" secondAttribute="leading" constant="42" id="7SD-Lc-HGW"/>
                                     <constraint firstItem="suO-VN-Wly" firstAttribute="centerX" secondItem="0Cz-VU-22L" secondAttribute="centerX" id="Daa-fH-Q1X"/>
-                                    <constraint firstItem="QFv-0t-o8K" firstAttribute="centerY" secondItem="0Cz-VU-22L" secondAttribute="centerY" multiplier="0.69" id="H0M-UR-1AP"/>
                                     <constraint firstItem="lsr-tg-Hsg" firstAttribute="top" secondItem="QFv-0t-o8K" secondAttribute="bottom" constant="24" id="OgE-s2-0Fz"/>
                                     <constraint firstItem="0Cz-VU-22L" firstAttribute="trailing" secondItem="lsr-tg-Hsg" secondAttribute="trailing" constant="42" id="Xew-Eb-hru"/>
                                     <constraint firstItem="QFv-0t-o8K" firstAttribute="centerX" secondItem="0Cz-VU-22L" secondAttribute="centerX" id="d5m-i4-1gg"/>
                                     <constraint firstItem="3Ne-T1-xQh" firstAttribute="centerX" secondItem="0Cz-VU-22L" secondAttribute="centerX" id="gvf-80-Xk8"/>
+                                    <constraint firstItem="0Cz-VU-22L" firstAttribute="bottom" secondItem="3Ne-T1-xQh" secondAttribute="bottom" constant="16" id="hGf-kC-9y0"/>
                                     <constraint firstItem="0Cz-VU-22L" firstAttribute="trailing" secondItem="suO-VN-Wly" secondAttribute="trailing" constant="32" id="lPM-L4-Gg0"/>
                                     <constraint firstItem="suO-VN-Wly" firstAttribute="leading" secondItem="0Cz-VU-22L" secondAttribute="leading" constant="32" id="nCy-HE-2K7"/>
                                     <constraint firstItem="3Ne-T1-xQh" firstAttribute="leading" secondItem="0Cz-VU-22L" secondAttribute="leading" constant="17" id="ppf-Rt-KC4"/>
                                     <constraint firstItem="0Cz-VU-22L" firstAttribute="trailing" secondItem="3Ne-T1-xQh" secondAttribute="trailing" constant="17" id="sOZ-92-8w9"/>
-                                    <constraint firstItem="suO-VN-Wly" firstAttribute="top" secondItem="0Cz-VU-22L" secondAttribute="top" constant="48" id="vhj-kw-op5"/>
+                                    <constraint firstItem="lsr-tg-Hsg" firstAttribute="centerY" secondItem="0Cz-VU-22L" secondAttribute="centerY" id="t3V-kQ-0cH"/>
+                                    <constraint firstItem="suO-VN-Wly" firstAttribute="top" secondItem="0Cz-VU-22L" secondAttribute="top" constant="20" id="vhj-kw-op5"/>
                                 </constraints>
                                 <viewLayoutGuide key="safeArea" id="0Cz-VU-22L"/>
                             </view>
@@ -76,6 +79,7 @@
                         <viewLayoutGuide key="safeArea" id="ytA-50-4v1"/>
                     </view>
                     <connections>
+                        <outlet property="cancelButton" destination="3Ne-T1-xQh" id="BfL-uL-o6H"/>
                         <outlet property="waitingBall" destination="QFv-0t-o8K" id="Tzl-5X-XlF"/>
                     </connections>
                 </viewController>
@@ -85,7 +89,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="headerCuidoo" width="312" height="30"/>
+        <image name="CuidooLogo" width="50" height="19.5"/>
         <image name="waitingCircle" width="68" height="66"/>
     </resources>
 </document>

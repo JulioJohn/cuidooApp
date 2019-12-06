@@ -10,10 +10,11 @@ import UIKit
 
 class WaitingSearchBabysitterViewController: UIViewController {
     @IBOutlet weak var waitingBall: UIImageView!
+    @IBOutlet weak var cancelButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        cancelButton.layer.cornerRadius = 13
         //Adicionar um listening que verifica se a mãe aceitou
     }
     
