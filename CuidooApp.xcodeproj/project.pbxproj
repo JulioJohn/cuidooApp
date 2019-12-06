@@ -589,8 +589,8 @@
 			isa = PBXGroup;
 			children = (
 				E76322FC238F06D0009BE203 /* ChatServices.swift */,
-				E7565B95238C002A00946D19 /* MatchServices.swift */,
 				E706220C23999B0C000A1F03 /* UserServices.swift */,
+				E7565B95238C002A00946D19 /* MatchServices.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";

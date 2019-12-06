@@ -131,6 +131,15 @@ class MatchDAO {
     }
     
     static func addListener(matchId: String, completion: @escaping (String) -> Void) {
+//        databaseMatch.whereField("documentId", isEqualTo: matchId).addSnapshotListener { (snapshot, error) in
+//            snapshot?.documentChanges.forEach({ (change) in
+//                if change.type == .modified {
+//                    if let newStatus = change.document.get("status") {
+//                        completion(newStatus as! String)
+//                    }
+//                }
+//            })
+//        }
         databaseMatch.addSnapshotListener { (snapshot, error) in
             snapshot?.documentChanges.forEach({ (change) in
                 if change.document.documentID == matchId {

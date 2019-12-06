@@ -12,6 +12,8 @@ class WaitingViewController: UIViewController {
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var waitingBall: UIImageView!
     
+    weak var delegate: WaitingViewControllerDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -34,8 +36,6 @@ class WaitingViewController: UIViewController {
                 }
             }
         }
-        
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -45,5 +45,15 @@ class WaitingViewController: UIViewController {
     @IBAction func cancelSearchButton(_ sender: Any) {
         performSegue(withIdentifier: "goToSearch", sender: nil)
     }
-    
+}
+
+extension WaitingViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+    }
+}
+
+protocol WaitingViewControllerDelegate: class {
+    func accepted()
+    func denied()
 }

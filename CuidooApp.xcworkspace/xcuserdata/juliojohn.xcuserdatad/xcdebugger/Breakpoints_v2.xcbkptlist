@@ -350,8 +350,8 @@
             filePath = "CuidooApp/Mom/Scenes/Waiting/Controller/WaitingViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
             <Locations>
