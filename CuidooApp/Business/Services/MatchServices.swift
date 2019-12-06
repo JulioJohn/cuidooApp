@@ -35,11 +35,15 @@ class MatchServices {
                     uid = matche.uidBaba
                 }
                 UserDAO.getUser(byId: uid!) { (user) in
-                    if let user = user {
-                        UserDAO.updateInformations(byId: uid!, user: user) {
-                            print("Informations do usuario atualizadas!")
+                    if let myUser = user {
+                        UserDAO.updateInformations(byId: uid!, user: myUser) { userWithInfos in
+                            if let userWithInfos = userWithInfos {
+                                print("Informations do usuario atualizadas!")
+                                completion(userWithInfos)
+                            } else {
+                                completion(nil)
+                            }
                         }
-                        completion(user)
                     } else {
                         completion(nil)
                     }

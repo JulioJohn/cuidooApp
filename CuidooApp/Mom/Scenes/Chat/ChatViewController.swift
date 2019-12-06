@@ -25,7 +25,7 @@ class ChatViewController: MessagesViewController, MessageInputBarDelegate {
     var chatServices: ChatServices!
     
     //ISSO DEVE SER ALTERADO NA TELA ANTERIOR!!!
-    var matchId: String!
+    var matchId: String?
     
     var userName: String?
     
@@ -46,14 +46,18 @@ class ChatViewController: MessagesViewController, MessageInputBarDelegate {
         
         //O user ID deve ser setado na tela anterior
         
-        self.chatServices = ChatServices(matchId: matchId)
-        self.chatServices.addListener { (message, error) in
-            if error != nil {
-                print(error)
-                return
-            } else {
-                self.insertNewMessage(message!)
+        if let id = matchId {
+            self.chatServices = ChatServices(matchId: id)
+            self.chatServices.addListener { (message, error) in
+                if error != nil {
+                    print(error)
+                    return
+                } else {
+                    self.insertNewMessage(message!)
+                }
             }
+        } else {
+            print("O matchId não existe!")
         }
     }
     func configureMessageCollectionView() {

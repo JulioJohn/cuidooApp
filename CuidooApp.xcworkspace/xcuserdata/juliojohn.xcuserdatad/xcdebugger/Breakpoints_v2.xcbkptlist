@@ -199,20 +199,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "4FD349C1-44DE-46EB-A2A5-2BD598C9B5D6"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CuidooApp/Business/DAO/UserDAO.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "1C9D3A26-F52C-4281-A46F-FF4BF5D615EA"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -348,8 +334,8 @@
             filePath = "CuidooApp/Mom/Scenes/Waiting/Controller/WaitingViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
             <Locations>
@@ -396,8 +382,8 @@
             filePath = "CuidooApp/Business/Services/MatchServices.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "247"
-            endingLineNumber = "247"
+            startingLineNumber = "162"
+            endingLineNumber = "162"
             landmarkName = "processMatch(_:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -405,84 +391,165 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D560E126-55C8-4DA4-9CE7-F4B7E99578E8"
-            shouldBeEnabled = "No"
+            uuid = "3A3A76F3-403C-427B-9F06-C9CDB48EE2A5"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CuidooApp/Business/Services/MatchServices.swift"
+            filePath = "CuidooApp/Extensions/RequestViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
-            landmarkName = "getOtherUser(isBaba:idMatch:completion:)"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "9FDC963D-DE28-41D4-8C2C-A8BB89A42697"
-            shouldBeEnabled = "No"
+            uuid = "7F7B8172-B89C-4D80-B5A5-3EBFC9EEE479"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CuidooApp/Business/Services/MatchServices.swift"
+            filePath = "CuidooApp/Extensions/RequestViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
-            landmarkName = "getOtherUser(isBaba:idMatch:completion:)"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7F7B8172-B89C-4D80-B5A5-3EBFC9EEE479 - 732be6fd5349a990"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;CuidooApp.MyUser&gt;) -&gt; () in CuidooApp.RequestViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "CuidooApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juliojohn/Desktop/CuidooApp/CuidooApp/Extensions/RequestViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "257">
+               </Location>
+               <Location
+                  uuid = "7F7B8172-B89C-4D80-B5A5-3EBFC9EEE479 - 822b800b668c4113"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #1 (Swift.Optional&lt;CuidooApp.MyUser&gt;) -&gt; () in CuidooApp.RequestViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "CuidooApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juliojohn/Desktop/CuidooApp/CuidooApp/Extensions/RequestViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "95">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AFDE318F-F772-47A0-9D80-FC405E9EC432"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CuidooApp/Extensions/RequestViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "9EBEDADE-ED2D-4DF2-A2BE-6EAC13E1DF91"
-            shouldBeEnabled = "No"
+            uuid = "8AD39BFE-9C51-4700-B49D-FDBF70CB8584"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CuidooApp/Business/Services/MatchServices.swift"
+            filePath = "CuidooApp/Extensions/RequestViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
-            landmarkName = "getOtherUser(isBaba:idMatch:completion:)"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8AD39BFE-9C51-4700-B49D-FDBF70CB8584 - d37d9dd6b4ac520d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CuidooApp.RequestViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "CuidooApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juliojohn/Desktop/CuidooApp/CuidooApp/Extensions/RequestViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "1161">
+               </Location>
+               <Location
+                  uuid = "8AD39BFE-9C51-4700-B49D-FDBF70CB8584 - 732be6fd5349a990"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;CuidooApp.MyUser&gt;) -&gt; () in CuidooApp.RequestViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "CuidooApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juliojohn/Desktop/CuidooApp/CuidooApp/Extensions/RequestViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "171">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "6312426E-C66C-4F59-9906-0D8E0D910FB8"
-            shouldBeEnabled = "No"
+            uuid = "20E0AA20-2799-45E1-8CDA-42D572499E82"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CuidooApp/Business/Services/MatchServices.swift"
+            filePath = "CuidooApp/Mom/Scenes/Auth/Model/MyUser.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "52"
             endingLineNumber = "52"
+            landmarkName = "changeUserInformations(informations:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BC6055E4-A311-4560-9E2A-6C9A99CDAEA2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CuidooApp/Business/Services/MatchServices.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
             landmarkName = "getOtherUser(isBaba:idMatch:completion:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "6312426E-C66C-4F59-9906-0D8E0D910FB8 - b054b3f9d0d45dc1"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;CuidooApp.Match&gt;) -&gt; () in static CuidooApp.MatchServices.getOtherUser(isBaba: Swift.Bool, idMatch: Swift.String, completion: (Swift.Optional&lt;CuidooApp.MyUser&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "CuidooApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/juliojohn/Desktop/CuidooApp/CuidooApp/Business/Services/MatchServices.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "53"
-                  endingLineNumber = "53"
-                  offsetFromSymbolStart = "664">
-               </Location>
-               <Location
-                  uuid = "6312426E-C66C-4F59-9906-0D8E0D910FB8 - 74d953f033327c30"
-                  shouldBeEnabled = "No"
+                  uuid = "BC6055E4-A311-4560-9E2A-6C9A99CDAEA2 - 74d953f033327c30"
+                  shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 (Swift.Optional&lt;CuidooApp.MyUser&gt;) -&gt; () in closure #1 (Swift.Optional&lt;CuidooApp.Match&gt;) -&gt; () in static CuidooApp.MatchServices.getOtherUser(isBaba: Swift.Bool, idMatch: Swift.String, completion: (Swift.Optional&lt;CuidooApp.MyUser&gt;) -&gt; ()) -&gt; ()"
@@ -491,9 +558,24 @@
                   urlString = "file:///Users/juliojohn/Desktop/CuidooApp/CuidooApp/Business/Services/MatchServices.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "45"
-                  endingLineNumber = "45"
-                  offsetFromSymbolStart = "156">
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "263">
+               </Location>
+               <Location
+                  uuid = "BC6055E4-A311-4560-9E2A-6C9A99CDAEA2 - cacfff66764195e2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;CuidooApp.MyUser&gt;) -&gt; () in closure #1 (Swift.Optional&lt;CuidooApp.MyUser&gt;) -&gt; () in closure #1 (Swift.Optional&lt;CuidooApp.Match&gt;) -&gt; () in static CuidooApp.MatchServices.getOtherUser(isBaba: Swift.Bool, idMatch: Swift.String, completion: (Swift.Optional&lt;CuidooApp.MyUser&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "CuidooApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juliojohn/Desktop/CuidooApp/CuidooApp/Business/Services/MatchServices.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "119">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -501,15 +583,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "3313B95F-5D80-4678-BBC0-AE6A3C655DEE"
-            shouldBeEnabled = "No"
+            uuid = "B1D7934B-52E0-4C96-B4C7-69EA698EB651"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CuidooApp/Business/Services/MatchServices.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
             landmarkName = "getOtherUser(isBaba:idMatch:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -517,63 +599,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "B060918D-A8EF-4667-B48C-A6EE1B0B5F25"
-            shouldBeEnabled = "No"
+            uuid = "3FEACB05-0BBB-4F1A-85CA-EDF7D3A5B1BD"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CuidooApp/Business/Services/MatchServices.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
-            landmarkName = "getOtherUser(isBaba:idMatch:completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "B060918D-A8EF-4667-B48C-A6EE1B0B5F25 - b054b3f9d0d45dc1"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;CuidooApp.Match&gt;) -&gt; () in static CuidooApp.MatchServices.getOtherUser(isBaba: Swift.Bool, idMatch: Swift.String, completion: (Swift.Optional&lt;CuidooApp.MyUser&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "CuidooApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/juliojohn/Desktop/CuidooApp/CuidooApp/Business/Services/MatchServices.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "53"
-                  endingLineNumber = "53"
-                  offsetFromSymbolStart = "664">
-               </Location>
-               <Location
-                  uuid = "B060918D-A8EF-4667-B48C-A6EE1B0B5F25 - 74d953f033327c30"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;CuidooApp.MyUser&gt;) -&gt; () in closure #1 (Swift.Optional&lt;CuidooApp.Match&gt;) -&gt; () in static CuidooApp.MatchServices.getOtherUser(isBaba: Swift.Bool, idMatch: Swift.String, completion: (Swift.Optional&lt;CuidooApp.MyUser&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "CuidooApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/juliojohn/Desktop/CuidooApp/CuidooApp/Business/Services/MatchServices.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "45"
-                  endingLineNumber = "45"
-                  offsetFromSymbolStart = "156">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "55ACED47-F75D-4C79-AC30-3F16995C678A"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CuidooApp/Business/Services/MatchServices.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
             landmarkName = "getOtherUser(isBaba:idMatch:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -581,63 +615,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "40009B04-8EB3-44A9-A0D2-48206D86902E"
-            shouldBeEnabled = "No"
+            uuid = "9AA485D7-B642-499E-86D4-F00635C363BB"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CuidooApp/Business/Services/MatchServices.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
-            landmarkName = "getOtherUser(isBaba:idMatch:completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "40009B04-8EB3-44A9-A0D2-48206D86902E - 74d953f033327c30"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;CuidooApp.MyUser&gt;) -&gt; () in closure #1 (Swift.Optional&lt;CuidooApp.Match&gt;) -&gt; () in static CuidooApp.MatchServices.getOtherUser(isBaba: Swift.Bool, idMatch: Swift.String, completion: (Swift.Optional&lt;CuidooApp.MyUser&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "CuidooApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/juliojohn/Desktop/CuidooApp/CuidooApp/Business/Services/MatchServices.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "55"
-                  endingLineNumber = "55"
-                  offsetFromSymbolStart = "276">
-               </Location>
-               <Location
-                  uuid = "40009B04-8EB3-44A9-A0D2-48206D86902E - 56572c877940aed5"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in closure #1 (Swift.Optional&lt;CuidooApp.MyUser&gt;) -&gt; () in closure #1 (Swift.Optional&lt;CuidooApp.Match&gt;) -&gt; () in static CuidooApp.MatchServices.getOtherUser(isBaba: Swift.Bool, idMatch: Swift.String, completion: (Swift.Optional&lt;CuidooApp.MyUser&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "CuidooApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/juliojohn/Desktop/CuidooApp/CuidooApp/Business/Services/MatchServices.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "56"
-                  endingLineNumber = "56"
-                  offsetFromSymbolStart = "12">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "86500FAF-D5F2-4C96-A067-2D310F62A115"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CuidooApp/Business/Services/MatchServices.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
             landmarkName = "getOtherUser(isBaba:idMatch:completion:)"
             landmarkType = "7">
          </BreakpointContent>

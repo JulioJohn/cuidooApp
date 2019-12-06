@@ -27,15 +27,13 @@ class RequestViewController: UIViewController {
         
         MatchServices.getOtherUser(isBaba: false, idMatch: actualMatchID!) { (otherUser) -> (Void) in
             if let otherUser = otherUser {
-                OperationQueue.main.addOperation {
+                DispatchQueue.main.async {
                     self.babySitterView.setInformations(name: otherUser.name, informations: otherUser.informations)
-                    self.babySitterView.reloadInputViews()
                 }
             } else {
                 //Nao pegou nenhum usuario
             }
         }
-        
     }
 
     @IBAction func didClickConfirm(_ sender: Any) {

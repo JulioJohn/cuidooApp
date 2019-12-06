@@ -38,11 +38,15 @@ class UserDAO {
         }
     }
     
-    static func updateInformations(byId: String, user: MyUser, completion: @escaping () -> Void) {
+    static func updateInformations(byId: String, user: MyUser, completion: @escaping (MyUser?) -> Void) {
         databaseUser.document(byId).collection("informations").document("1").getDocument { (snapshot, error) in
-            user.changeUserInformations(informations: snapshot?.data()! ?? [:])
-            
-            completion()
+            if let infos = snapshot?.data() {
+                user.changeUserInformations(informations: infos)
+                completion(user)
+            } else {
+                print("Informaçoes nao foram atualizadas!")
+                completion(nil)
+            }
         }
     }
     
