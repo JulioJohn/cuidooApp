@@ -12,6 +12,10 @@ class WaitingViewController: UIViewController {
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var waitingBall: UIImageView!
     
+    @IBAction func goToWaitingSearchUnwind( segue : UIStoryboardSegue) {
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -22,10 +22,10 @@ class ChatDAO {
     
     func save(_ message: Message, completion: @escaping () -> Void) {
         chatDatabase!.addDocument(data: message.representation) { error in
-        if let e = error {
-          print("Error sending message: \(e.localizedDescription)")
-          return
-        }
+            if let e = error {
+              print("Error sending message: \(e.localizedDescription)")
+              return
+            }
             completion()
       }
     }

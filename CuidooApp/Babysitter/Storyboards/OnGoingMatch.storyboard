@@ -73,10 +73,10 @@
             </objects>
             <point key="canvasLocation" x="-22" y="65"/>
         </scene>
-        <!--Storyboard Reference-->
+        <!--Chat-->
         <scene sceneID="uwI-Zr-yYB">
             <objects>
-                <viewControllerPlaceholder id="vea-T4-eLI" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Chat" id="vea-T4-eLI" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="5Gs-31-iue"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0yC-i1-pYZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

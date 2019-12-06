@@ -92,9 +92,11 @@
                         <outlet property="confirm" destination="GbP-8m-rRx" id="nRQ-0p-1tk"/>
                         <outlet property="seeNext" destination="WHe-9f-Q24" id="Qbh-dc-U85"/>
                         <segue destination="NCy-AW-38K" kind="presentation" identifier="requestingSegue" modalPresentationStyle="fullScreen" id="RrB-mU-LC8"/>
+                        <segue destination="HJh-Yl-80T" kind="unwind" identifier="goToWaitingSearchSegue" unwindAction="goToWaitingSearchUnwindWithSegue:" id="DJK-9K-NZp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ip3-3G-Ydx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="HJh-Yl-80T" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1957.9710144927537" y="150.66964285714286"/>
         </scene>

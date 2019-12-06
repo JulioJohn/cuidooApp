@@ -45,7 +45,7 @@ class RequestViewController: UIViewController {
     }
     
     @IBAction func didClickSeeNext(_ sender: Any) {
-        
+        performSegue(withIdentifier: "goToWaitingSearchSegue", sender: nil)
     }
     
 }

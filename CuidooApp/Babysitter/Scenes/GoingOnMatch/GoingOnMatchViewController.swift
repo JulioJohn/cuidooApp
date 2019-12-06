@@ -45,7 +45,7 @@ class GoingOnMatchViewController: UIViewController {
 
 extension GoingOnMatchViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "ChatViewController" {
+        if segue.identifier == "goToChatSegue" {
             if let vc = segue.destination as? ChatViewController {
                 vc.matchId = matchId
             }

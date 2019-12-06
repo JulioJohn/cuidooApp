@@ -24,7 +24,6 @@ class ChatViewController: MessagesViewController, MessageInputBarDelegate {
     
     var chatServices: ChatServices!
     
-    //ISSO DEVE SER ALTERADO NA TELA ANTERIOR!!!
     var matchId: String?
     
     var userName: String?
@@ -45,6 +44,8 @@ class ChatViewController: MessagesViewController, MessageInputBarDelegate {
         messagesCollectionView.messagesDisplayDelegate = self
         
         //O user ID deve ser setado na tela anterior
+        
+        self.matchId = LoggedUser.shared.actualMatchID
         
         if let id = matchId {
             self.chatServices = ChatServices(matchId: id)
