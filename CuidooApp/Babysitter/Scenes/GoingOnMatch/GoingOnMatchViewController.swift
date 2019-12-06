@@ -30,7 +30,7 @@ class GoingOnMatchViewController: UIViewController {
     
     func handleStatus(status: StatusEnum) {
         if status == .finished {
-            performSegue(withIdentifier: "goToSearchSegue", sender: nil)
+            performSegue(withIdentifier: "goToProfileBaba", sender: nil)
         }
     }
 
@@ -39,7 +39,8 @@ class GoingOnMatchViewController: UIViewController {
     }
     
     @IBAction func finalizeButtonAction(_ sender: Any) {
-        performSegue(withIdentifier: "goToSearchSegue", sender: nil)
+        print("Finalizou o match!")
+        performSegue(withIdentifier: "goToProfileBaba", sender: nil)
     }
 }
 

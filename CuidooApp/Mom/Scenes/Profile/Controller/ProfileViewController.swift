@@ -23,7 +23,8 @@ class ProfileViewController: UITableViewController {
         //Aqui nao é o user, é o OTHER USER ID!!!
         if let userId = LoggedUser.shared.uid {
             UserServices.getUser(id: userId) { (user, error) in
-                self.nameLabel.text = user?.name
+                self.navigationController?.title = user?.name
+                self.nameLabel.text = "mae@teste.com"
             }
         }
         

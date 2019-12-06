@@ -64,8 +64,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="babysitterGoingOnMatchView" destination="5sp-HS-F1E" id="Utz-Ro-RaE"/>
-                        <segue destination="V8L-UW-1oL" kind="unwind" identifier="goToSearchSegue" unwindAction="goToSearchUnwind:" id="PXq-ce-Las"/>
                         <segue destination="vea-T4-eLI" kind="show" identifier="goToChatSegue" id="828-mC-Est"/>
+                        <segue destination="V8L-UW-1oL" kind="unwind" identifier="goToProfileBaba" unwindAction="goToProfileBabaUnwind:" id="HNk-bk-xRN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1dn-xD-Quj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
