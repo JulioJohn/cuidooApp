@@ -18,10 +18,10 @@ class ConfirmMatchViewController: UIViewController {
         
         if LoggedUser.shared.userIsLogged() {
             if let id = LoggedUser.shared.actualMatchID {
-//                //Observa se ouve mudança de status!
-//                MatchDAO.addListener(matchId: id) { (error) in
-//                    self.performSegue(withIdentifier: "goToWaitingBabysitterSegue", sender: nil)
-//                }
+                //Observa se ouve mudança de status!
+                MatchServices.addListener(matchId: id) { (status) in
+                    self.handleStatus(status: status)
+                }
             }
         } else {
             print("O usuário não existe")
@@ -36,8 +36,14 @@ class ConfirmMatchViewController: UIViewController {
         }
     }
     
+    @IBAction func denniedButton(_ sender: Any) {
+        self.performSegue(withIdentifier: "goToProfileBabaSegue", sender: nil)
+    }
+    
     func handleStatus(status: StatusEnum) {
-        //
+        if status == .available {
+            self.performSegue(withIdentifier: "goToSearchSegue", sender: nil)
+        }
     }
     
 }

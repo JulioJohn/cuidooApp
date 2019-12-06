@@ -14,7 +14,22 @@ class GoingOnMatchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        if LoggedUser.shared.userIsLogged() {
+            if let id = LoggedUser.shared.actualMatchID {
+                MatchServices.addListener(matchId: id) { (status) in
+                    self.handleStatus(status: status)
+                }
+            }
+        } else {
+            print("Usuario esta deslogado!")
+            //Usuario deslogado!
+        }
+    }
+    
+    func handleStatus(status: StatusEnum) {
+        if status == .finished {
+            performSegue(withIdentifier: "goToSearchSegue", sender: nil)
+        }
     }
 
 }

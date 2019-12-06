@@ -59,13 +59,13 @@
                             <color key="tintColor" red="1" green="0.34509803919999998" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
                                 <action selector="chatButton:" destination="8xf-md-nD6" id="we5-0b-gFc"/>
-                                <segue destination="P8u-Cx-XDD" kind="presentation" modalPresentationStyle="automatic" id="08k-1g-1yq"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="requestingTableView" destination="Fu0-E1-n9P" id="szb-Pq-rdf"/>
                         <segue destination="DMU-AS-sIm" kind="unwind" identifier="searchSegue" unwindAction="goToSearchUnwind:" id="gOt-Pa-LCW"/>
+                        <segue destination="P8u-Cx-XDD" kind="show" identifier="goToChatSegue" id="xm6-A0-yMU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bhn-U3-aCn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -81,7 +81,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WuQ-2r-FtG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2836.9565217391305" y="-15.401785714285714"/>
+            <point key="canvasLocation" x="2659" y="-65"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8OV-xV-aoU">

@@ -7,14 +7,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GoingOnMatchViewController" customModule="CuidooApp" customModuleProvider="target">
-            <connections>
-                <outlet property="babySitterGoingOnMatchView" destination="aUm-zv-rwv" id="yhz-VA-MoO"/>
-                <outlet property="babysitterGoingOnMatchView" destination="aUm-zv-rwv" id="cKV-4j-jev"/>
-            </connections>
-        </placeholder>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GoingOnMatchView" customModule="CuidooApp" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="aUm-zv-rwv" customClass="GoingOnMatch" customModule="CuidooApp" customModuleProvider="target">
+        <view contentMode="scaleToFill" id="aUm-zv-rwv">
             <rect key="frame" x="0.0" y="0.0" width="380" height="606"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>

@@ -28,6 +28,7 @@ class WaitingViewController: UIViewController {
                 if let matche = match {
                     //Listener que verifica se o estado atual mudou!
                     MatchServices.addListener(matchId: matche.documentId) { (status) in
+                        LoggedUser.shared.actualMatchID = match?.documentId
                         self.screenHandle(status: status)
                     }
                 }
@@ -46,17 +47,6 @@ class WaitingViewController: UIViewController {
     }
 
     @IBAction func cancelSearchButton(_ sender: Any) {
-        performSegue(withIdentifier: "goToSearch", sender: nil)
+        performSegue(withIdentifier: "goToSearchSegue", sender: nil)
     }
 }
-
-//extension WaitingViewController {
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//
-//    }
-//}
-//
-//protocol WaitingViewControllerDelegate: class {
-//    func accepted()
-//    func denied()
-//}

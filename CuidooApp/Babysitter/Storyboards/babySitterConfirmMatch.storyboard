@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="P9h-Am-v7v">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0Ig-2f-Dxa">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
@@ -22,6 +22,9 @@
                                     <constraint firstAttribute="height" constant="66" id="1e7-bu-zWl"/>
                                 </constraints>
                                 <state key="normal" title="Recusar"/>
+                                <connections>
+                                    <action selector="denniedButton:" destination="P9h-Am-v7v" eventType="touchUpInside" id="eq9-y7-Jre"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jis-Vn-KbT">
                                 <rect key="frame" x="215" y="780" width="183" height="66"/>
@@ -35,7 +38,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xsN-qj-dos" customClass="babySitterConfirmMatchView" customModule="CuidooApp" customModuleProvider="target">
-                                <rect key="frame" x="8" y="52" width="398" height="712"/>
+                                <rect key="frame" x="8" y="96" width="398" height="668"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
                         </subviews>
@@ -54,20 +57,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yGO-jV-APE"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Confirmar chamado" id="LpF-N9-Ruf">
-                        <barButtonItem key="rightBarButtonItem" image="text.bubble" catalog="system" id="P8f-dp-Vv5">
-                            <color key="tintColor" red="0.99824029209999998" green="0.39281293750000001" blue="0.39213877920000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Confirmar chamado" id="LpF-N9-Ruf"/>
                     <connections>
                         <outlet property="acceptButton" destination="Jis-Vn-KbT" id="CCK-VR-f2h"/>
                         <outlet property="babySitterConfirmMatchView" destination="xsN-qj-dos" id="LdB-Kl-A6t"/>
-                        <segue destination="dL7-9P-9XV" kind="show" identifier="goToWaitingBabysitterSegue" id="EKu-NG-De2"/>
+                        <segue destination="dL7-9P-9XV" kind="presentation" identifier="goToWaitingBabysitterSegue" modalPresentationStyle="fullScreen" id="Aa1-sG-7oM"/>
+                        <segue destination="uG4-KU-0gE" kind="unwind" identifier="goToProfileBabaSegue" unwindAction="goToProfileBabaUnwind:" id="xFf-f6-xFZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oql-qt-7T9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="uG4-KU-0gE" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1104" y="181"/>
+            <point key="canvasLocation" x="1841" y="181"/>
         </scene>
         <!--WaitingSearchBabysitter-->
         <scene sceneID="JbM-tV-dkp">
@@ -77,10 +78,25 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VDW-5n-cBZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1285" y="597"/>
+            <point key="canvasLocation" x="1672" y="559"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xyb-Ls-Abh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0Ig-2f-Dxa" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LZz-Bd-fcc">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="P9h-Am-v7v" kind="relationship" relationship="rootViewController" id="PGO-46-7sS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sV3-Ke-xvT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1102.8985507246377" y="180.80357142857142"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="text.bubble" catalog="system" width="64" height="54"/>
-    </resources>
 </document>

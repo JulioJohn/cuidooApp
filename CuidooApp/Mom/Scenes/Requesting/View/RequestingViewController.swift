@@ -72,7 +72,7 @@ class RequestingViewController: UIViewController {
     }
     
     @IBAction func chatButton(_ sender: Any) {
-        
+        performSegue(withIdentifier: "goToChatSegue", sender: nil)
     }
     
     @IBAction func endButton(_ sender: Any) {
@@ -129,4 +129,14 @@ extension RequestingViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     
-} // end extension RequestingViewController: UITableViewDataSource, UITableViewDelegate
+}
+
+extension RequestingViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ChatViewController" {
+            if let vc = segue.destination as? ChatViewController {
+                vc.matchId = actualMatchId
+            }
+        }
+    }
+}

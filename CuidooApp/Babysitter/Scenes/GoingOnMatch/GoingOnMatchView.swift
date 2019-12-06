@@ -19,5 +19,4 @@ class GoingOnMatchView: UIView, Nibable {
         super.init(coder: aDecoder)
         loadNib()
     }
-
 }

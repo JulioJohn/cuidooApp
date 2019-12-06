@@ -46,9 +46,9 @@ class MatchServices {
         MatchDAO.getMatch(idMatch: idMatch) { (match) in
             if let matche = match {
                 if isBaba == true {
-                    uid = matche.uidBaba
-                } else  {
                     uid = matche.uidMae
+                } else  {
+                    uid = matche.uidBaba
                 }
                 UserDAO.getUser(byId: uid!) { (user) in
                     if let user = user {

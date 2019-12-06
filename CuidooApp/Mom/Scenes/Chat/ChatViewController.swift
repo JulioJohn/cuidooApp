@@ -43,9 +43,8 @@ class ChatViewController: MessagesViewController, MessageInputBarDelegate {
         
         messagesCollectionView.messagesLayoutDelegate = self
         messagesCollectionView.messagesDisplayDelegate = self
-//
-//        //match ID deve ser setado na tela anterior
-//        self.matchId = LoggedUser.shared.actualMatchID
+        
+        //O user ID deve ser setado na tela anterior
         
         self.chatServices = ChatServices(matchId: matchId)
         self.chatServices.addListener { (message, error) in

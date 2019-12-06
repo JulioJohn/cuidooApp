@@ -56,8 +56,13 @@
                             <color key="tintColor" red="0.99824029209999998" green="0.39281293750000001" blue="0.39213877920000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="babysitterGoingOnMatchView" destination="5sp-HS-F1E" id="Utz-Ro-RaE"/>
+                        <segue destination="V8L-UW-1oL" kind="unwind" identifier="goToSearchSegue" unwindAction="goToSearchUnwind:" id="PXq-ce-Las"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1dn-xD-Quj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="V8L-UW-1oL" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="75" y="67"/>
         </scene>

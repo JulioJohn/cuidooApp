@@ -15,7 +15,24 @@ class WaitingSearchBabysitterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         cancelButton.layer.cornerRadius = 13
-        //Adicionar um listening que verifica se a mãe aceitou
+        
+        if LoggedUser.shared.userIsLogged() {
+            if let matchId = LoggedUser.shared.actualMatchID {
+                MatchServices.addListener(matchId: matchId) { (status) in
+                    self.statusHandle(status: status)
+                }
+            } else {
+                print("Não existe match atual!")
+            }
+        } else {
+            //Voltar para a AuthScreen
+        }
+    }
+    
+    func statusHandle(status: StatusEnum) {
+        if status == .inProgress {
+            performSegue(withIdentifier: "goToOnGoingSegue", sender: nil)
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -23,10 +40,6 @@ class WaitingSearchBabysitterViewController: UIViewController {
     }
     
     @IBAction func cancelButtonAction(_ sender: Any) {
-        self.dismiss(animated: true) {
-            print("Sumiu com essa tela!")
-            //Deve deletar o match aqui
-            
-        }
+        performSegue(withIdentifier: "goToProfileBabaSegue", sender: nil)
     }
 }
