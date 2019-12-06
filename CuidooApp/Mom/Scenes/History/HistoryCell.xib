@@ -32,52 +32,53 @@
                                     <constraint firstAttribute="width" constant="201" id="9or-yD-REm"/>
                                     <constraint firstAttribute="height" constant="26" id="x9J-f8-zr2"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$00,00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vk1-hk-VVC">
-                                <rect key="frame" x="306" y="82" width="59" height="18"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <rect key="frame" x="303" y="80.5" width="62" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="riK-P2-wOM">
-                                <rect key="frame" x="117.5" y="55" width="110" height="20"/>
+                                <rect key="frame" x="117.5" y="45" width="110" height="28.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="star" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="5zn-lO-b1O">
-                                        <rect key="frame" x="0.0" y="0.0" width="22" height="20"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="22" height="28.5"/>
                                         <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" image="star" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="srY-Jg-dyg">
-                                        <rect key="frame" x="22" y="0.0" width="22" height="20"/>
+                                        <rect key="frame" x="22" y="0.0" width="22" height="28.5"/>
                                         <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" image="star" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="qkW-hk-HWu">
-                                        <rect key="frame" x="44" y="0.0" width="22" height="20"/>
+                                        <rect key="frame" x="44" y="0.0" width="22" height="28.5"/>
                                         <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="3" contentMode="scaleAspectFit" image="star" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="EPC-A1-cDq">
-                                        <rect key="frame" x="66" y="0.0" width="22" height="20"/>
+                                        <rect key="frame" x="66" y="0.0" width="22" height="28.5"/>
                                         <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="4" contentMode="scaleAspectFit" image="star" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="PSM-iC-NY5">
-                                        <rect key="frame" x="88" y="0.0" width="22" height="20"/>
+                                        <rect key="frame" x="88" y="0.0" width="22" height="28.5"/>
                                         <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </imageView>
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00/00/0000   00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X2G-mb-0EH">
-                                <rect key="frame" x="117.5" y="83" width="150" height="18"/>
+                                <rect key="frame" x="117.5" y="81.5" width="162.5" height="19.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="X2G-mb-0EH" secondAttribute="height" multiplier="25:3" id="Aic-aC-BPP"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dhE-K6-8T2">
-                                <rect key="frame" x="341.5" y="15" width="20.5" height="22"/>
+                                <rect key="frame" x="341.5" y="15" width="20.5" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" image="heart" catalog="system"/>
                                 <connections>
                                     <action selector="favoriteSelected:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="vDX-Vr-09S"/>
@@ -91,7 +92,7 @@
                             <constraint firstAttribute="bottom" secondItem="EDI-RC-6EC" secondAttribute="bottom" constant="11" id="IMz-zF-RC2"/>
                             <constraint firstItem="dhE-K6-8T2" firstAttribute="top" secondItem="g6f-Id-HLX" secondAttribute="top" constant="15" id="RyR-H7-0As"/>
                             <constraint firstItem="riK-P2-wOM" firstAttribute="leading" secondItem="EDI-RC-6EC" secondAttribute="trailing" constant="15" id="T0a-Dw-TfB"/>
-                            <constraint firstItem="riK-P2-wOM" firstAttribute="top" secondItem="fMC-bV-4rh" secondAttribute="bottom" constant="14" id="Y2W-hW-9Cs"/>
+                            <constraint firstItem="riK-P2-wOM" firstAttribute="top" secondItem="fMC-bV-4rh" secondAttribute="bottom" constant="4" id="Y2W-hW-9Cs"/>
                             <constraint firstAttribute="trailing" secondItem="dhE-K6-8T2" secondAttribute="trailing" constant="15" id="Ypf-aM-S1h"/>
                             <constraint firstAttribute="bottom" secondItem="X2G-mb-0EH" secondAttribute="bottom" constant="14" id="d7m-Dy-SKT"/>
                             <constraint firstItem="EDI-RC-6EC" firstAttribute="leading" secondItem="g6f-Id-HLX" secondAttribute="leading" constant="11.5" id="ghH-iU-qvl"/>

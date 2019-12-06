@@ -128,5 +128,129 @@
             landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4A6F115F-0155-41B0-92DE-082741A3FB90"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CuidooApp/Mom/Scenes/Chat/ChatViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "198"
+            endingLineNumber = "198"
+            landmarkName = "cellTopLabelAttributedText(for:at:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "087C2D6A-3B5C-44FF-873B-865E260C90D5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CuidooApp/Mom/Scenes/Chat/ChatViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "ChatViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "087C2D6A-3B5C-44FF-873B-865E260C90D5 - b065c5e1705a5424"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CuidooApp.ChatViewController.matchId.getter : Swift.Optional&lt;Swift.String&gt;"
+                  moduleName = "CuidooApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/victoria.faria/Documents/Repositories/cuidooApp/CuidooApp/Mom/Scenes/Chat/ChatViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "124">
+               </Location>
+               <Location
+                  uuid = "087C2D6A-3B5C-44FF-873B-865E260C90D5 - fd949e507c2c3428"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CuidooApp.ChatViewController.matchId.setter : Swift.Optional&lt;Swift.String&gt;"
+                  moduleName = "CuidooApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/victoria.faria/Documents/Repositories/cuidooApp/CuidooApp/Mom/Scenes/Chat/ChatViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "216">
+               </Location>
+               <Location
+                  uuid = "087C2D6A-3B5C-44FF-873B-865E260C90D5 - 261addb7f9ddfc27"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CuidooApp.ChatViewController.matchId.modify : Swift.Optional&lt;Swift.String&gt;"
+                  moduleName = "CuidooApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/victoria.faria/Documents/Repositories/cuidooApp/CuidooApp/Mom/Scenes/Chat/ChatViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "087C2D6A-3B5C-44FF-873B-865E260C90D5 - e3a07a91442a89ce"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CuidooApp.ChatViewController.matchId.modify : Swift.Optional&lt;Swift.String&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "CuidooApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/victoria.faria/Documents/Repositories/cuidooApp/CuidooApp/Mom/Scenes/Chat/ChatViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "087C2D6A-3B5C-44FF-873B-865E260C90D5 - a3d6fcb4f629cfa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CuidooApp.ChatViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; CuidooApp.ChatViewController"
+                  moduleName = "CuidooApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/victoria.faria/Documents/Repositories/cuidooApp/CuidooApp/Mom/Scenes/Chat/ChatViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "488">
+               </Location>
+               <Location
+                  uuid = "087C2D6A-3B5C-44FF-873B-865E260C90D5 - a3a621b22312e685"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CuidooApp.ChatViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;CuidooApp.ChatViewController&gt;"
+                  moduleName = "CuidooApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/victoria.faria/Documents/Repositories/cuidooApp/CuidooApp/Mom/Scenes/Chat/ChatViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "432">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
