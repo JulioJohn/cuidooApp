@@ -24,6 +24,21 @@ class babySitterProfileViewController: UIViewController {
         startJobButtonOutlet.layer.cornerRadius = 13
         babySitterImageView.layer.cornerRadius = 65
         
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for:.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.layoutIfNeeded()
+        self.navigationController?.navigationBar.tintColor = .cuidooPink
+        
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 280, height: 28))
+        imageView.contentMode = .scaleAspectFit
+          
+        // 4
+        let image = UIImage(named: "CuidooLogo")
+        imageView.image = image
+          
+        // 5
+        navigationItem.titleView = imageView
+        
         self.navigationController?.navigationBar.barTintColor = .white
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.layoutIfNeeded()
