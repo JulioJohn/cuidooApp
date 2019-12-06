@@ -14,7 +14,7 @@ class babySitterConfirmMatchView: UIView, Nibable {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        babySitterImageView.layer.cornerRadius = 30
+        babySitterImageView.layer.cornerRadius = babySitterImageView.frame.height/2
         loadNib()
     }
 

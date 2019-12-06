@@ -17,42 +17,48 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hNe-Au-7bf">
                                 <rect key="frame" x="16" y="780" width="183" height="66"/>
-                                <color key="backgroundColor" red="0.92923806980000001" green="0.92923806980000001" blue="0.92923806980000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="1" green="0.35686274509999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="66" id="1e7-bu-zWl"/>
                                 </constraints>
-                                <state key="normal" title="Recusar"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <state key="normal" title="Recusar">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="denniedButton:" destination="P9h-Am-v7v" eventType="touchUpInside" id="eq9-y7-Jre"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jis-Vn-KbT">
                                 <rect key="frame" x="215" y="780" width="183" height="66"/>
-                                <color key="backgroundColor" red="0.92923806980000001" green="0.92923806980000001" blue="0.92923806980000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="1" green="0.35686274509999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="66" id="M8m-Pm-XMo"/>
                                 </constraints>
-                                <state key="normal" title="Aceitar"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <state key="normal" title="Aceitar">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="acceptButton:" destination="P9h-Am-v7v" eventType="touchUpInside" id="d32-74-3BS"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xsN-qj-dos" customClass="babySitterConfirmMatchView" customModule="CuidooApp" customModuleProvider="target">
-                                <rect key="frame" x="8" y="96" width="398" height="668"/>
+                                <rect key="frame" x="17" y="101" width="380" height="654"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="xsN-qj-dos" firstAttribute="leading" secondItem="yGO-jV-APE" secondAttribute="leading" constant="8" id="3Ir-yk-CB2"/>
-                            <constraint firstItem="yGO-jV-APE" firstAttribute="trailing" secondItem="xsN-qj-dos" secondAttribute="trailing" constant="8" id="Doq-8b-GHX"/>
+                            <constraint firstItem="xsN-qj-dos" firstAttribute="leading" secondItem="yGO-jV-APE" secondAttribute="leading" constant="17" id="3Ir-yk-CB2"/>
+                            <constraint firstItem="yGO-jV-APE" firstAttribute="trailing" secondItem="xsN-qj-dos" secondAttribute="trailing" constant="17" id="Doq-8b-GHX"/>
                             <constraint firstItem="hNe-Au-7bf" firstAttribute="width" secondItem="Jis-Vn-KbT" secondAttribute="width" id="O4b-nv-5kq"/>
-                            <constraint firstItem="hNe-Au-7bf" firstAttribute="top" secondItem="xsN-qj-dos" secondAttribute="bottom" constant="16" id="UoN-2d-5hD"/>
+                            <constraint firstItem="hNe-Au-7bf" firstAttribute="top" secondItem="xsN-qj-dos" secondAttribute="bottom" constant="25" id="UoN-2d-5hD"/>
                             <constraint firstItem="yGO-jV-APE" firstAttribute="bottom" secondItem="hNe-Au-7bf" secondAttribute="bottom" constant="16" id="Utu-kW-70u"/>
                             <constraint firstItem="hNe-Au-7bf" firstAttribute="leading" secondItem="yGO-jV-APE" secondAttribute="leading" constant="16" id="bAb-tj-Yyh"/>
                             <constraint firstItem="yGO-jV-APE" firstAttribute="trailing" secondItem="Jis-Vn-KbT" secondAttribute="trailing" constant="16" id="dYm-R4-AnV"/>
                             <constraint firstItem="Jis-Vn-KbT" firstAttribute="centerY" secondItem="hNe-Au-7bf" secondAttribute="centerY" id="pCA-W9-Pts"/>
-                            <constraint firstItem="xsN-qj-dos" firstAttribute="top" secondItem="yGO-jV-APE" secondAttribute="top" constant="8" id="rmQ-2b-lDP"/>
+                            <constraint firstItem="xsN-qj-dos" firstAttribute="top" secondItem="yGO-jV-APE" secondAttribute="top" constant="13" id="rmQ-2b-lDP"/>
                             <constraint firstItem="Jis-Vn-KbT" firstAttribute="leading" secondItem="hNe-Au-7bf" secondAttribute="trailing" constant="16" id="sv2-kV-mzi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yGO-jV-APE"/>
@@ -61,6 +67,7 @@
                     <connections>
                         <outlet property="acceptButton" destination="Jis-Vn-KbT" id="CCK-VR-f2h"/>
                         <outlet property="babySitterConfirmMatchView" destination="xsN-qj-dos" id="LdB-Kl-A6t"/>
+                        <outlet property="deniedButton" destination="hNe-Au-7bf" id="ahT-jD-2Bh"/>
                         <segue destination="dL7-9P-9XV" kind="presentation" identifier="goToWaitingBabysitterSegue" modalPresentationStyle="fullScreen" id="Aa1-sG-7oM"/>
                         <segue destination="uG4-KU-0gE" kind="unwind" identifier="goToProfileBabaSegue" unwindAction="goToProfileBabaUnwind:" id="xFf-f6-xFZ"/>
                     </connections>

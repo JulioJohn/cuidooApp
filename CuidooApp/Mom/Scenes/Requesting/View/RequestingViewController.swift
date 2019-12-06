@@ -19,11 +19,17 @@ class RequestingViewController: UIViewController {
     
     let actualMatchId = LoggedUser.shared.actualMatchID
     
+    @IBOutlet weak var reportButton: UIButton!
+    @IBOutlet weak var finalizedButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         requestingTableView.delegate =  self
         requestingTableView.dataSource = self
+        
+        reportButton.layer.cornerRadius = 13.0
+        finalizedButton.layer.cornerRadius = 13.0
 
         requestingTableView.register(RecommendationCell.nib, forCellReuseIdentifier: RecommendationCell.reuseIdentifier)
         

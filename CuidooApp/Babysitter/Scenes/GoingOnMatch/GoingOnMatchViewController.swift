@@ -12,10 +12,19 @@ class GoingOnMatchViewController: UIViewController {
     
     @IBOutlet var babysitterGoingOnMatchView: GoingOnMatchView!
     
+    @IBOutlet weak var finalizeButton: UIButton!
+    @IBOutlet weak var reportButton: UIButton!
+    
     let matchId: String? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.finalizeButton.layer.cornerRadius = 13.0
+        self.reportButton.layer.cornerRadius = 13.0
+        
+        self.babysitterGoingOnMatchView.layer.cornerRadius = 7
+        
         if LoggedUser.shared.userIsLogged() {
             if let id = LoggedUser.shared.actualMatchID {
                 MatchServices.addListener(matchId: id) { (status) in

@@ -17,19 +17,25 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5AL-z5-GeY">
                                 <rect key="frame" x="16" y="780" width="183" height="66"/>
-                                <color key="backgroundColor" red="0.92923806980000001" green="0.92923806980000001" blue="0.92923806980000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="1" green="0.35686274509999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="66" id="h6T-bg-1GY"/>
                                 </constraints>
-                                <state key="normal" title="REPORTAR"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <state key="normal" title="Reportar">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MdX-k1-JtL">
                                 <rect key="frame" x="215" y="780" width="183" height="66"/>
-                                <color key="backgroundColor" red="0.92923806980000001" green="0.92923806980000001" blue="0.92923806980000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="1" green="0.35686274509999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="66" id="qLr-EX-LOO"/>
                                 </constraints>
-                                <state key="normal" title="FINALIZAR"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <state key="normal" title="Finalizar">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="endButton:" destination="8xf-md-nD6" eventType="touchUpInside" id="3bz-cG-TA5"/>
                                 </connections>
@@ -63,6 +69,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="finalizedButton" destination="MdX-k1-JtL" id="eVV-gW-oCC"/>
+                        <outlet property="reportButton" destination="5AL-z5-GeY" id="MEF-9T-fr5"/>
                         <outlet property="requestingTableView" destination="Fu0-E1-n9P" id="szb-Pq-rdf"/>
                         <segue destination="DMU-AS-sIm" kind="unwind" identifier="searchSegue" unwindAction="goToSearchUnwind:" id="gOt-Pa-LCW"/>
                         <segue destination="P8u-Cx-XDD" kind="show" identifier="goToChatSegue" id="xm6-A0-yMU"/>

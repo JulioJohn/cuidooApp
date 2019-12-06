@@ -12,9 +12,13 @@ class ConfirmMatchViewController: UIViewController {
     
     @IBOutlet weak var babySitterConfirmMatchView: babySitterConfirmMatchView!
     @IBOutlet weak var acceptButton: UIButton!
+    @IBOutlet weak var deniedButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        acceptButton.layer.cornerRadius = 13.0
+        deniedButton.layer.cornerRadius = 13.0
+        
         
         if LoggedUser.shared.userIsLogged() {
             if let id = LoggedUser.shared.actualMatchID {
