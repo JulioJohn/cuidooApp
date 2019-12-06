@@ -14,6 +14,8 @@ class ChatViewController: MessagesViewController, MessageInputBarDelegate {
 
     @IBOutlet weak var headView: UIView!
     
+    @IBOutlet weak var babySitterChatImageView: UIImageView!
+    
     //private let user: User
     private let channel: Channel! = nil
     
@@ -30,15 +32,15 @@ class ChatViewController: MessagesViewController, MessageInputBarDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.largeTitleDisplayMode = .never
+        babySitterChatImageView.layer.cornerRadius = 19.859
         
-        scrollsToBottomOnKeyboardBeginsEditing = true
-        maintainPositionOnKeyboardFrameChanged = true
+        navigationItem.largeTitleDisplayMode = .never
+    
         messageInputBar.inputTextView.tintColor = .primary
         messageInputBar.sendButton.setTitleColor(.primary, for: .normal)
-
+        configureMessageCollectionView()
         messageInputBar.delegate = self
-        messagesCollectionView.messagesDataSource = self
+        
         messagesCollectionView.messagesLayoutDelegate = self
         messagesCollectionView.messagesDisplayDelegate = self
 //
@@ -54,6 +56,14 @@ class ChatViewController: MessagesViewController, MessageInputBarDelegate {
                 self.insertNewMessage(message!)
             }
         }
+    }
+    func configureMessageCollectionView() {
+        
+        messagesCollectionView.messagesDataSource = self
+        
+        scrollsToBottomOnKeyboardBeginsEditing = true // default false
+        maintainPositionOnKeyboardFrameChanged = true // default false
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -80,6 +90,7 @@ class ChatViewController: MessagesViewController, MessageInputBarDelegate {
         }
       }
     }
+    
     
     private func save(_ message: Message) {
         chatServices.save(message) {
@@ -172,6 +183,14 @@ extension ChatViewController: MessagesLayoutDelegate {
 
     return 0
   }
+  
+    func cellTopLabelHeight(for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> CGFloat {
+        
+        if let firstMessageId = messages.first?.id, firstMessageId == message.messageId {
+            return 75
+        }
+        return 0
+    }
    
     func cellTopLabelAttributedText(for message: MessageType, at indexPath: IndexPath) -> NSAttributedString? {
         let name = message.sender.displayName

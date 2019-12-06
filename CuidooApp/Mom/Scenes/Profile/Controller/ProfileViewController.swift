@@ -17,7 +17,7 @@ class ProfileViewController: UITableViewController {
         super.viewDidLoad()
         
         
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for:.default)
+        self.navigationController?.navigationBar.barTintColor = .white
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.layoutIfNeeded()
         self.navigationController?.navigationBar.tintColor = .cuidooPink

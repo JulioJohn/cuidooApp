@@ -12,14 +12,23 @@ class babySitterProfileViewController: UIViewController {
 
     
     @IBOutlet weak var startJobButtonOutlet: UIButton!
-    @IBOutlet weak var babySItterImageOutlet: UIImageView!
     @IBOutlet weak var onOffButtonOutlet: UILabel!
+    @IBOutlet weak var babySitterImageView: UIImageView!
     
     var isOnline:Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         startJobButtonOutlet.layer.cornerRadius = 13
+        babySitterImageView.layer.cornerRadius = 65
+        
+        self.navigationController?.navigationBar.barTintColor = .white
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.layoutIfNeeded()
+        self.navigationController?.navigationBar.tintColor = .cuidooPink
+        
+        
+        
        
     }
     
