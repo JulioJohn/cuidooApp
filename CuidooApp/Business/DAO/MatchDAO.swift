@@ -30,6 +30,27 @@ class MatchDAO {
         }
     }
     
+    static func getAvailableMatches(completion: @escaping ([Match]?, MatchFlowError?) -> Void) {
+        databaseMatch.whereField("status", isEqualTo: "available").getDocuments { (snapshot, error) in
+            //Não deu erro
+            if error == nil {
+                if let snapshot = snapshot {
+                let matches = snapshot.documents.map { (snapshot) -> Match? in
+                    Match(data: snapshot.data())
+                }.compactMap { $0 }
+                completion(matches, nil)
+                } else {
+                    completion(nil,nil)
+                }
+            //Deu erro
+            } else {
+                print(error)
+                //Caso nao existam matchs disponíveis!
+                completion(nil, .noAvailableMatchExists)
+            }
+        }
+    }
+    
     static func createMatch(idBaba: String, completion: @escaping () -> Void) {
         //Uso essa linha para definir a chave do documento como sendo a chave do Id interno
         let document = databaseMatch.document()
@@ -37,6 +58,8 @@ class MatchDAO {
         let documentData: [String : Any] = ["documentId": "\(document.documentID)", "uidBaba": "\(idBaba)","uidMae": "none", "status": "available"]
         
         self.database.collection("users").document("\(idBaba)").updateData(["actualMatch" : document.documentID])
+        
+        LoggedUser.shared.actualMatchID = document.documentID
         
         document.setData(documentData)
         
@@ -69,10 +92,9 @@ class MatchDAO {
         }
     }
     
-    static func momLikesBaba(idMom: String, completion: @escaping () -> Void) {
+    static func momLikesBaba(idMatch: String, idMom: String, completion: @escaping () -> Void) {
         databaseMatch.getDocuments { (snapshot, error) in
-            let matchId: String = LoggedUser.shared.actualMatch!.documentId
-            databaseMatch.document(matchId).updateData(["uidMae" : idMom, "status" : "inProgress"])
+            databaseMatch.document(idMatch).updateData(["uidMae" : idMom, "status" : "inProgress"])
             completion()
         }
     }
@@ -82,13 +104,20 @@ class MatchDAO {
     ///   - status: status novo
     ///   - completion: ao termino da alteração
     static func changeMatchStatus(status: String, completion: @escaping () -> Void) {
-        let matchId: String = LoggedUser.shared.actualMatch!.documentId
+        let matchId: String = LoggedUser.shared.actualMatchID!
         databaseMatch.document(matchId).updateData(["status" : status])
         completion()
     }
     
+    static func changeMatchStatus(matchId: String,
+                                  status: StatusEnum,
+                                  completion: @escaping () -> Void) {
+        databaseMatch.document(matchId).updateData(["status" : status.rawValue])
+        completion()
+    }
+    
     static func getMatchStatus(completion: @escaping (String) -> Void) {
-        let matchId: String = LoggedUser.shared.actualMatch!.documentId
+        let matchId: String = LoggedUser.shared.actualMatchID!
         databaseMatch.document(matchId).getDocument { (snapshot, error) in
             let status = snapshot?.get("status")
             completion(status as! String)

@@ -17,6 +17,8 @@ class RequestingViewController: UIViewController {
     var entityAbout: aboutBabySitterEntity?
     var entityRecommendation: [HistoryEntity] = []
     
+    let actualMatchId = LoggedUser.shared.actualMatchID
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -39,29 +41,35 @@ class RequestingViewController: UIViewController {
         
         // ---------------------------------------------------------
         
-        let user = LoggedUser.shared.actualMatch?.otherUser
-        
+        MatchServices.getOtherUser(isBaba: false, idMatch: actualMatchId!) { (otherUser) -> (Void) in
+            if let user = otherUser {
+                OperationQueue.main.addOperation {
+                    self.fillInformations(user: user)
+                    self.requestingTableView.reloadData()
+                }
+            } else {
+                //Nao pegou nenhum usuario
+            }
+        }
+    }
+    
+    func fillInformations(user: MyUser) {
         //sessão 1
         entityDataPicture =
-            HistoryEntity(name: user?.name, timestamp: nil, value: nil, favoriteHeart: nil, rating: nil, age: "34", ocupation: user?.informations.profission)
+            HistoryEntity(name: user.name, timestamp: nil, value: nil, favoriteHeart: nil, rating: nil, age: "34", ocupation: user.informations.profission)
         
         //sessão2
-        entityEvaluation = EvaluationEntity(jobs: "\(user?.informations.cuidados)", evaluation:"\( user?.informations.avaliation)", experience: user?.informations.experience ?? "")
+        entityEvaluation = EvaluationEntity(jobs: "\(user.informations.cuidados)", evaluation:"\( user.informations.avaliation)", experience: user.informations.experience ?? "")
         
         //sessão 3
-        entityAbout = aboutBabySitterEntity(aboutBabySitter: user?.informations.description ?? "")
+        entityAbout = aboutBabySitterEntity(aboutBabySitter: user.informations.description ?? "")
         
         //sessão 4
         entityRecommendation = [ HistoryEntity(name: "Camila", timestamp: "Trocar DATA!!", rating: 4, textEvaluation: "Minha filha amou a Claudia, muito cuidadosa e brincalhona."),
                                  HistoryEntity(name: "Roberta", timestamp: "Trocar DATA!!", rating: 3, textEvaluation: "Minha filha amou a Claudia, muito cuidadosa e brincalhona."),
                                  HistoryEntity(name: "Aline", timestamp: "Trocar DATA!!", rating: 4, textEvaluation: "Minha filha amou a Claudia, muito cuidadosa e brincalhona."),
-                                 
         ]
-        
-        
-        
-    } // end vewDidLoad()
-    
+    }
     
     @IBAction func chatButton(_ sender: Any) {
         

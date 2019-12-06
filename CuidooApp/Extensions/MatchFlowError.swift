@@ -8,6 +8,9 @@
 
 import Foundation
 
-enum MatchFlowError {
+enum MatchFlowError: Error {
     case thisMatchIsNotAvailable
+    case thisMatchIsNoLongerAvailable
+    case noMatchExists
+    case noAvailableMatchExists
 }

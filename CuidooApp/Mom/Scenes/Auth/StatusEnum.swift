@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum StatusEnum {
+enum StatusEnum: String {
     case available
     case waitingBaba
     case waitingMom

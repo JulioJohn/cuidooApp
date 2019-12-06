@@ -13,19 +13,36 @@ class UserDAO {
     static var database = Firestore.firestore()
     static var databaseUser = database.collection("users")
     
-    /// Pega o id do usuario autenticado, bate no banco e atualiza o usuario local
-    /// - Parameter completion: Ocorre após atribuir valor ao usuário local atualizado
-    static func getUser(completion: @escaping () -> Void) {
+//    /// Pega o id do usuario autenticado, bate no banco e atualiza o usuario local
+//    /// - Parameter completion: Ocorre após atribuir valor ao usuário local atualizado
+//    static func getUser(completion: @escaping () -> Void) {
+//        let user = Auth.auth().currentUser
+//        if let user = user {
+//            let uid = user.uid
+//
+//            databaseUser.document("\(uid)").getDocument { (snapshot, error) in
+//                //Armazenando o usuario logado
+//                LoggedUser.shared.changeUser(user: MyUser(data: snapshot?.data()! ?? [:]))
+//
+//                //Após armazenado roda a completion
+//                completion()
+//            }
+//        }
+//    }
+    
+    static func getLoggedUser(completion: @escaping (MyUser?) -> Void) {
         let user = Auth.auth().currentUser
         if let user = user {
             let uid = user.uid
-            
+
             databaseUser.document("\(uid)").getDocument { (snapshot, error) in
-                //Armazenando o usuario logado
-                LoggedUser.shared.changeUser(user: MyUser(data: snapshot?.data()! ?? [:]))
+                let user = MyUser(data: snapshot?.data()! ?? [:])
                 
+                //Armazenando o usuario logado
+                LoggedUser.shared.changeUser(uid: uid, name: user?.name)
+
                 //Após armazenado roda a completion
-                completion()
+                completion(user)
             }
         }
     }
@@ -38,13 +55,13 @@ class UserDAO {
         }
     }
     
-    static func updateInformations(completion: @escaping () -> Void) {
-        databaseUser.document(LoggedUser.shared.user!.uid).collection("informations").document("1").getDocument { (snapshot, error) in
-            LoggedUser.shared.user?.changeUserInformations(informations: snapshot?.data()! ?? [:])
-            
-            completion()
-        }
-    }
+//    static func updateInformations(completion: @escaping () -> Void) {
+//        databaseUser.document(LoggedUser.shared.user!.uid).collection("informations").document("1").getDocument { (snapshot, error) in
+//            LoggedUser.shared.user?.changeUserInformations(informations: snapshot?.data()! ?? [:])
+//            
+//            completion()
+//        }
+//    }
     
     static func updateInformations(byId: String, user: MyUser, completion: @escaping () -> Void) {
         databaseUser.document(byId).collection("informations").document("1").getDocument { (snapshot, error) in
@@ -54,13 +71,13 @@ class UserDAO {
         }
     }
     
-    static func updateUserActualMatch(completion: @escaping () -> Void) {
-        let loggedUserId = LoggedUser.shared.user?.uid
-        let actualMatchId = LoggedUser.shared.actualMatch?.documentId
-        databaseUser.document(loggedUserId!).updateData(["actualMatch": actualMatchId!]) { (error) in
-            completion()
-        }
-    }
+//    static func updateUserActualMatch(completion: @escaping () -> Void) {
+//        let loggedUserId = LoggedUser.shared.user?.uid
+//        let actualMatchId = LoggedUser.shared.actualMatch?.documentId
+//        databaseUser.document(loggedUserId!).updateData(["actualMatch": actualMatchId!]) { (error) in
+//            completion()
+//        }
+//    }
     
     static func login(email: String, password: String, completion: @escaping () -> Void) {
         Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
@@ -77,7 +94,7 @@ class UserDAO {
     }
     
     static func getMatchHistory(completion: @escaping ([MatchHistory?]) -> Void) {
-        let userId: String = LoggedUser.shared.user!.uid
+        let userId: String = LoggedUser.shared.uid!
         databaseUser.document(userId).collection("matchsFinalizados").getDocuments(completion: { (snapshot, error) in
             let size = (snapshot!.count - 1) as Int
             var matchs: [MatchHistory?] = []

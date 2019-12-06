@@ -15,6 +15,8 @@ class RequestViewController: UIViewController {
     @IBOutlet weak var confirm: UIButton!
     @IBOutlet weak var seeNext: UIButton!
     
+    let actualMatchID = LoggedUser.shared.actualMatchID
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,14 +25,25 @@ class RequestViewController: UIViewController {
         confirm.layer.cornerRadius = 13
         seeNext.layer.cornerRadius = 13
         
-        let otherUser = (LoggedUser.shared.actualMatch?.otherUser)!
-        babySitterView.setInformations(name: otherUser.name, informations: otherUser.informations)
+        MatchServices.getOtherUser(isBaba: false, idMatch: actualMatchID!) { (otherUser) -> (Void) in
+            if let otherUser = otherUser {
+                OperationQueue.main.addOperation {
+                    self.babySitterView.setInformations(name: otherUser.name, informations: otherUser.informations)
+                    self.babySitterView.reloadInputViews()
+                }
+            } else {
+                //Nao pegou nenhum usuario
+            }
+        }
         
     }
 
     @IBAction func didClickConfirm(_ sender: Any) {
-        MatchServices.momLikesBaba(idMom: LoggedUser.shared.user!.uid, matchId: LoggedUser.shared.actualMatch!.documentId)
-        performSegue(withIdentifier: "requestingSegue", sender: nil)
+        let uid = LoggedUser.shared.uid!
+        if let matchId = self.actualMatchID{
+            MatchServices.momLikesBaba(idMom: uid, matchId: matchId)
+            performSegue(withIdentifier: "requestingSegue", sender: nil)
+        }
     }
     
     @IBAction func didClickSeeNext(_ sender: Any) {

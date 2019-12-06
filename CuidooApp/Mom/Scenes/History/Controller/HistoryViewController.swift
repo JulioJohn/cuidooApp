@@ -37,7 +37,6 @@ class HistoryViewController: UIViewController {
             }
         }
     }
-
 }
 
 extension HistoryViewController: UITableViewDataSource, UITableViewDelegate {

@@ -43,13 +43,13 @@ class SearchViewController: UIViewController {
     }
     
     @IBAction func searchButton(_ sender: Any) {
-        MatchServices.searchBaba { (error) in
-            if error != nil {
-                self.noBabySitterAlert()
-            } else {
+//        MatchServices.searchBaba { (error) in
+//            if error != nil {
+//                self.noBabySitterAlert()
+//            } else {
                 self.performSegue(withIdentifier: "goToWaitingScene", sender: nil)
-            }
-        }
+//            }
+//        }
     }
     
     func noBabySitterAlert() {

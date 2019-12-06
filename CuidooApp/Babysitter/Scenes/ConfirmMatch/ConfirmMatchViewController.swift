@@ -17,14 +17,16 @@ class ConfirmMatchViewController: UIViewController {
         super.viewDidLoad()
         
         if LoggedUser.shared.userIsLogged() {
-            MatchServices.createMatch(idBaba: LoggedUser.shared.user!.uid)
-            //Atualiza meu usuario local
-            MatchServices.getUser {
-                LoggedUser.shared.user!.showClass()
-                //Observa se ouve mudança de status!
-                MatchDAO.addListener(matchId: LoggedUser.shared.actualMatch!.documentId) { (error) in
-                    self.performSegue(withIdentifier: "goToConfirmMatchSegue", sender: nil)
+            MatchServices.createMatch(idBaba: LoggedUser.shared.uid!) { (error) in
+                if let error = error {
+                    //Tratar erro
+                } else {
+                    
                 }
+            }
+            //Observa se ouve mudança de status!
+            MatchDAO.addListener(matchId: LoggedUser.shared.actualMatchID!) { (error) in
+                self.performSegue(withIdentifier: "goToWaitingBabysitterSegue", sender: nil)
             }
         } else {
             print("O usuário não existe")

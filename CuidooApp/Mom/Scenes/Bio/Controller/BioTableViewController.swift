@@ -20,8 +20,8 @@ class BioTableViewController: UITableViewController {
         
         profilePic.layer.cornerRadius = 55
         
-        self.nameMomLabel.text = LoggedUser.shared.user?.name
-        self.bioLabel.text = LoggedUser.shared.user?.informations.description
+//        self.nameMomLabel.text = LoggedUser.shared.user?.name
+//        self.bioLabel.text = LoggedUser.shared.user?.informations.description
     }
     
 } // end class BioTableViewController

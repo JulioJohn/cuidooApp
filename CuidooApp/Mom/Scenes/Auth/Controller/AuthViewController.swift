@@ -9,8 +9,6 @@
 import UIKit
 
 class AuthViewController: UIViewController {
-
-    //LEMBRAR: POSSO FAZER UM LISTENER NO FIREBASE PARA MEU USUARIO/MATCH LOCAIS, MAS PARA ISSO PRECISAREI DE UM LISTENER LOCAL PARA ESSE LISTENER
     
     //Outlets
     @IBOutlet weak var userTextField: UITextField!
@@ -30,21 +28,20 @@ class AuthViewController: UIViewController {
         //Validar os campos
         let email = userTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
         let password = passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
-         
         
         MatchServices.userLogin(email: email, password: password) {
             //Atualiza meu usuario local
-            MatchServices.getUser {
-                LoggedUser.shared.user!.showClass()
-                if LoggedUser.shared.user!.isBaba {
-                    self.performSegue(withIdentifier: "SearchBabaSegue", sender: nil)
+            MatchServices.getLoggedUser(completion: { (loggedUser) in
+                if let isBaba = loggedUser?.isBaba {
+                    if isBaba {
+                        self.performSegue(withIdentifier: "SearchBabaSegue", sender: nil)
+                    } else {
+                        self.performSegue(withIdentifier: "SearchSegue", sender: nil)
+                    }
                 } else {
-                    self.performSegue(withIdentifier: "SearchSegue", sender: nil)
+                    print("Não foi possível acessar esse dado!")
                 }
-                OperationQueue.main.addOperation {
-                    //Atualizar UI aqui
-                }
-            }
+            })
         }
     }
 }

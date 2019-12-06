@@ -15,10 +15,14 @@ class ProfileViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
+        if let userId = LoggedUser.shared.uid {
+            UserServices.getUser(id: userId) { (user, error) in
+                self.nameLabel.text = user?.name
+            }
+        }
+        
         profilePicMomImageView.layer.cornerRadius = 65
-         
-        nameLabel.text = LoggedUser.shared.user?.name
     }
 
 } // end class ProfileViewController

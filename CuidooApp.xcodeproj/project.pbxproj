@@ -66,6 +66,7 @@
 		E2F65A962384363E00E9EEA8 /* HistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F65A942384363E00E9EEA8 /* HistoryCell.swift */; };
 		E2F65A972384363E00E9EEA8 /* HistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2F65A952384363E00E9EEA8 /* HistoryCell.xib */; };
 		E706220B2398B565000A1F03 /* MatchFlowError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E706220A2398B565000A1F03 /* MatchFlowError.swift */; };
+		E706220D23999B0C000A1F03 /* UserServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = E706220C23999B0C000A1F03 /* UserServices.swift */; };
 		E713185423953ACE005525C5 /* WaitingSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E713185323953ACE005525C5 /* WaitingSearch.storyboard */; };
 		E713185923953DFA005525C5 /* WaitingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E713185823953DFA005525C5 /* WaitingViewController.swift */; };
 		E713185B23954CB8005525C5 /* WaitingSceneAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = E713185A23954CB8005525C5 /* WaitingSceneAnimations.swift */; };
@@ -168,6 +169,7 @@
 		E2F65A942384363E00E9EEA8 /* HistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCell.swift; sourceTree = "<group>"; };
 		E2F65A952384363E00E9EEA8 /* HistoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryCell.xib; sourceTree = "<group>"; };
 		E706220A2398B565000A1F03 /* MatchFlowError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchFlowError.swift; sourceTree = "<group>"; };
+		E706220C23999B0C000A1F03 /* UserServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServices.swift; sourceTree = "<group>"; };
 		E713185323953ACE005525C5 /* WaitingSearch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WaitingSearch.storyboard; sourceTree = "<group>"; };
 		E713185823953DFA005525C5 /* WaitingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingViewController.swift; sourceTree = "<group>"; };
 		E713185A23954CB8005525C5 /* WaitingSceneAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingSceneAnimations.swift; sourceTree = "<group>"; };
@@ -292,8 +294,8 @@
 				4C9145B32397D1410028870E /* babySitterConfirmMatch.storyboard */,
 				4C9145C9239801820028870E /* BabySitterProfile.storyboard */,
 				4C9145B12397D13C0028870E /* SearchBaba.storyboard */,
-				E72CE87323980B3E00DA9861 /* OnGoingMatch.storyboard */,
 				E72CE87523989F2200DA9861 /* WaitingSearchBabysitter.storyboard */,
+				E72CE87323980B3E00DA9861 /* OnGoingMatch.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -577,6 +579,7 @@
 			children = (
 				E76322FC238F06D0009BE203 /* ChatServices.swift */,
 				E7565B95238C002A00946D19 /* MatchServices.swift */,
+				E706220C23999B0C000A1F03 /* UserServices.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -966,6 +969,7 @@
 				E7CCFEEF237C8DA400F9DA94 /* DatabaseRepresentation.swift in Sources */,
 				E7444B52238DD5F600001EC0 /* UserDAO.swift in Sources */,
 				E7565B96238C002A00946D19 /* MatchServices.swift in Sources */,
+				E706220D23999B0C000A1F03 /* UserServices.swift in Sources */,
 				E299048F2386C2590055CB25 /* HistoryViewController.swift in Sources */,
 				E713185923953DFA005525C5 /* WaitingViewController.swift in Sources */,
 				E7CCFEF6237C9B6B00F9DA94 /* ChatColorsExtension.swift in Sources */,

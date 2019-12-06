@@ -21,7 +21,11 @@ class ChatViewController: MessagesViewController, MessageInputBarDelegate {
     private var messages: [Message] = []
     
     var chatServices: ChatServices!
+    
+    //ISSO DEVE SER ALTERADO NA TELA ANTERIOR!!!
     var matchId: String!
+    
+    var userName: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,9 +41,9 @@ class ChatViewController: MessagesViewController, MessageInputBarDelegate {
         messagesCollectionView.messagesDataSource = self
         messagesCollectionView.messagesLayoutDelegate = self
         messagesCollectionView.messagesDisplayDelegate = self
-        
-        //match ID deve  ser setado na tela anterior
-        self.matchId = LoggedUser.shared.actualMatch?.documentId
+//
+//        //match ID deve ser setado na tela anterior
+//        self.matchId = LoggedUser.shared.actualMatchID
         
         self.chatServices = ChatServices(matchId: matchId)
         self.chatServices.addListener { (message, error) in
@@ -134,7 +138,7 @@ extension ChatViewController: MessagesDataSource {
     }
     
     func currentSender() -> SenderType {
-        return Sender(id: LoggedUser.shared.user!.uid, displayName: LoggedUser.shared.user!.name)
+        return Sender(id: LoggedUser.shared.uid!, displayName: LoggedUser.shared.name!)
     }
     
     func numberOfSections(in messagesCollectionView: MessagesCollectionView) -> Int {
