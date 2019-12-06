@@ -10,6 +10,9 @@ import UIKit
 
 class ConfigurationViewController: UITableViewController {
     
+    
+   
+    
     @IBAction func logoutButton(_ sender: Any) {
         MatchServices.desconnect()
         performSegue(withIdentifier: "goToAuthSegue", sender: nil)
@@ -17,6 +20,10 @@ class ConfigurationViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for:.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.layoutIfNeeded()
     }
 
    

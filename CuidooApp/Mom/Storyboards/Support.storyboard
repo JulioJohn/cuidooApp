@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Faq View Controller-->
+        <!--Ajuda e suporte-->
         <scene sceneID="7xs-8S-7gi">
             <objects>
                 <viewController id="zKg-Jh-GZ4" customClass="FaqViewController" customModule="CuidooApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -42,6 +42,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="miV-ZM-RD8"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Ajuda e suporte" id="qWn-is-w2N">
+                        <barButtonItem key="backBarButtonItem" title=" " id="JaW-HY-FxH"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="faqTableView" destination="rDZ-7E-xAD" id="XHi-xX-cf0"/>
                     </connections>
@@ -51,4 +54,5 @@
             <point key="canvasLocation" x="327.536231884058" y="215.625"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="1" green="0.27298599480000002" blue="0.31496530769999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

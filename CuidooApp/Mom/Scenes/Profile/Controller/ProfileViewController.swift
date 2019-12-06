@@ -16,6 +16,13 @@ class ProfileViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for:.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.layoutIfNeeded()
+        self.navigationController?.navigationBar.tintColor = .cuidooPink
+        
+        
         if let userId = LoggedUser.shared.uid {
             UserServices.getUser(id: userId) { (user, error) in
                 self.nameLabel.text = user?.name
