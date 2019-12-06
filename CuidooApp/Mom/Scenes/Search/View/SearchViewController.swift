@@ -44,13 +44,7 @@ class SearchViewController: UIViewController {
     }
     
     @IBAction func searchButton(_ sender: Any) {
-//        MatchServices.searchBaba { (error) in
-//            if error != nil {
-//                self.noBabySitterAlert()
-//            } else {
-                self.performSegue(withIdentifier: "goToWaitingScene", sender: nil)
-//            }
-//        }
+        self.performSegue(withIdentifier: "goToWaitingScene", sender: nil)
     }
     
     func noBabySitterAlert() {
@@ -72,7 +66,7 @@ extension SearchViewController: InfoCellDelegate {
 
 extension SearchViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1//section == 2 ? 3 : 1
+        return 1
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

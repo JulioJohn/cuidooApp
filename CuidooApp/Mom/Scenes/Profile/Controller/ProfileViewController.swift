@@ -15,7 +15,6 @@ class ProfileViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.navigationController?.navigationBar.barTintColor = .white
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.layoutIfNeeded()
@@ -31,4 +30,4 @@ class ProfileViewController: UITableViewController {
         profilePicMomImageView.layer.cornerRadius = 65
     }
 
-} // end class ProfileViewController
+}

@@ -38,19 +38,6 @@ class MoreInfoViewController: UIViewController {
         MoreInfoTableView.estimatedRowHeight = 200
         MoreInfoTableView.rowHeight = UITableView.automaticDimension
         MoreInfoTableView.allowsMultipleSelection = false
-        
-        // ---------------------------------------------------------
-        
-//        MatchServices.getOtherUser(isBaba: false, idMatch: actualMatchId!) { (otherUser) -> (Void) in
-//            if let user = otherUser {
-//                OperationQueue.main.addOperation {
-//                    self.fillInformations(user: user)
-//                    self.MoreInfoTableView.reloadData()
-//                }
-//            } else {
-//                //Nao pegou nenhum usuario
-//            }
-//        }
     }
     
     func fillInformations(user: MyUser) {
@@ -70,18 +57,6 @@ class MoreInfoViewController: UIViewController {
                                  HistoryEntity(name: "Aline", timestamp: "Trocar DATA!!", rating: 4, textEvaluation: "Minha filha amou a Claudia, muito cuidadosa e brincalhona."),
         ]
     }
-    
-//    @IBAction func chatButton(_ sender: Any) {
-//
-//    }
-//
-//    @IBAction func endButton(_ sender: Any) {
-//        MatchServices.changeMatchStatus {
-//            print("Finalizou chamado!")
-//            self.performSegue(withIdentifier: "searchSegue", sender: nil)
-//        }
-//    }
-//
 }
 
 extension MoreInfoViewController: UITableViewDataSource, UITableViewDelegate {
@@ -129,4 +104,4 @@ extension MoreInfoViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     
-} // end extension MoreInfoViewController: UITableViewDataSource, UITableViewDelegate
+} 

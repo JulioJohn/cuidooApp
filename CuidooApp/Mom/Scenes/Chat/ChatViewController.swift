@@ -124,10 +124,7 @@ extension ChatViewController: MessagesDisplayDelegate {
     }
     
     func messageStyle(for message: MessageType, at indexPath: IndexPath,
-                      in messagesCollectionView: MessagesCollectionView) -> MessageStyle {
-        
-        //  let corner: MessageStyle.TailCorner = isFromCurrentSender(message: message) ? .bottomRight : .bottomLeft
-        
+                      in messagesCollectionView: MessagesCollectionView) -> MessageStyle {        
         return .bubble
     }
     

@@ -28,10 +28,6 @@ class babySitterProfileViewController: UIViewController {
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.layoutIfNeeded()
         self.navigationController?.navigationBar.tintColor = .cuidooPink
-        
-        
-        
-       
     }
     
     @IBAction func startJobButtonAction(_ sender: Any) {
@@ -44,6 +40,8 @@ class babySitterProfileViewController: UIViewController {
             isOnline = !isOnline
             onOffButtonOutlet.text = "ONLINE"
             startJobButtonOutlet.setTitle("Ficar offline", for: .normal)
+            
+            //Deletar o match criado!
         }
 
         if LoggedUser.shared.userIsLogged() {
@@ -54,7 +52,7 @@ class babySitterProfileViewController: UIViewController {
                             self.statusHandle(status: status)
                         }
                     } else {
-                        print("NÃO EX")
+                        print("Não existe usuário logado!")
                     }
                 }
             }

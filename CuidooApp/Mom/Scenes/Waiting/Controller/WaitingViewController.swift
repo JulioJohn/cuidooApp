@@ -12,8 +12,6 @@ class WaitingViewController: UIViewController {
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var waitingBall: UIImageView!
     
-//    weak var delegate: WaitingViewControllerDelegate?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
