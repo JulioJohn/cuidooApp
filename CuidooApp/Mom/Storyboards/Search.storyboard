@@ -23,7 +23,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9z5-u0-nMU">
                                         <rect key="frame" x="18" y="16" width="378" height="58"/>
-                                        <color key="backgroundColor" red="0.99824029209999998" green="0.39281293750000001" blue="0.39213877920000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="1" green="0.35686274509999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="58" id="wiZ-RG-ARj"/>
                                         </constraints>
@@ -64,7 +64,7 @@
                     <navigationItem key="navigationItem" title="Cuidoo" id="Jab-k6-Wd2">
                         <barButtonItem key="backBarButtonItem" title=" " id="l2s-km-THx"/>
                         <barButtonItem key="rightBarButtonItem" image="person.crop.circle" catalog="system" id="inK-Y6-fla">
-                            <color key="tintColor" red="1" green="0.38701313729999998" blue="0.3767012656" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="1" green="0.35686274509999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
                                 <segue destination="MNg-Fq-qgL" kind="show" id="a6k-xF-Fqw"/>
                             </connections>

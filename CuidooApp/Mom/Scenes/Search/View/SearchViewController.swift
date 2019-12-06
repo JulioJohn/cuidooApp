@@ -22,6 +22,7 @@ class SearchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.searchButton.layer.cornerRadius = 20
         searchTableView.delegate = self
         searchTableView.dataSource = self
@@ -117,3 +118,4 @@ extension SearchViewController: UITableViewDataSource{
 extension SearchViewController: UITableViewDelegate{
     
 }
+
