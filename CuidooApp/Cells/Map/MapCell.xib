@@ -16,7 +16,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Onde nos encontramos?" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xpd-jc-zmL">
-                        <rect key="frame" x="36" y="32" width="342" height="34.5"/>
+                        <rect key="frame" x="36" y="27" width="342" height="39.5"/>
                         <color key="backgroundColor" red="0.93337559699999995" green="0.93324023489999997" blue="0.94117838139999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
@@ -45,7 +45,7 @@
                     <constraint firstItem="96x-z5-wQK" firstAttribute="top" secondItem="ocd-NC-jlI" secondAttribute="bottom" id="Mq8-MT-UmE"/>
                     <constraint firstItem="96x-z5-wQK" firstAttribute="leading" secondItem="ocd-NC-jlI" secondAttribute="leading" id="VoZ-Jj-9V6"/>
                     <constraint firstItem="ocd-NC-jlI" firstAttribute="top" secondItem="Xpd-jc-zmL" secondAttribute="bottom" constant="16" id="dWD-gp-meM"/>
-                    <constraint firstItem="Xpd-jc-zmL" firstAttribute="top" secondItem="fAt-Be-MEc" secondAttribute="topMargin" constant="21" id="suf-a4-Fqb"/>
+                    <constraint firstItem="Xpd-jc-zmL" firstAttribute="top" secondItem="fAt-Be-MEc" secondAttribute="topMargin" constant="16" id="suf-a4-Fqb"/>
                     <constraint firstItem="ocd-NC-jlI" firstAttribute="leading" secondItem="Xpd-jc-zmL" secondAttribute="leading" id="vJy-8h-4M6"/>
                     <constraint firstAttribute="bottom" secondItem="96x-z5-wQK" secondAttribute="bottom" constant="19" id="z2Y-fF-DSp"/>
                 </constraints>
