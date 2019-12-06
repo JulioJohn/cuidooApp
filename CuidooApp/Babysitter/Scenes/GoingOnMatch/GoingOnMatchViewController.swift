@@ -12,6 +12,8 @@ class GoingOnMatchViewController: UIViewController {
     
     @IBOutlet var babysitterGoingOnMatchView: GoingOnMatchView!
     
+    let matchId: String? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         if LoggedUser.shared.userIsLogged() {
@@ -32,4 +34,21 @@ class GoingOnMatchViewController: UIViewController {
         }
     }
 
+    @IBAction func chatButtonAction(_ sender: Any) {
+        performSegue(withIdentifier: "goToChatSegue", sender: nil)
+    }
+    
+    @IBAction func finalizeButtonAction(_ sender: Any) {
+        performSegue(withIdentifier: "goToSearchSegue", sender: nil)
+    }
+}
+
+extension GoingOnMatchViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ChatViewController" {
+            if let vc = segue.destination as? ChatViewController {
+                vc.matchId = matchId
+            }
+        }
+    }
 }

@@ -22,6 +22,9 @@
                                     <constraint firstAttribute="height" constant="66" id="OU0-WL-7ez"/>
                                 </constraints>
                                 <state key="normal" title="Finalizar"/>
+                                <connections>
+                                    <action selector="finalizeButtonAction:" destination="7g3-tF-Fu7" eventType="touchUpInside" id="zfl-1H-NcV"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lMQ-VT-PFz">
                                 <rect key="frame" x="16" y="780" width="183" height="66"/>
@@ -54,17 +57,31 @@
                     <navigationItem key="navigationItem" title="Em andamento" id="CNt-gn-Sz4">
                         <barButtonItem key="rightBarButtonItem" image="text.bubble" catalog="system" id="HTc-QA-ARm">
                             <color key="tintColor" red="0.99824029209999998" green="0.39281293750000001" blue="0.39213877920000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="chatButtonAction:" destination="7g3-tF-Fu7" id="t02-Vn-brB"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="babysitterGoingOnMatchView" destination="5sp-HS-F1E" id="Utz-Ro-RaE"/>
                         <segue destination="V8L-UW-1oL" kind="unwind" identifier="goToSearchSegue" unwindAction="goToSearchUnwind:" id="PXq-ce-Las"/>
+                        <segue destination="vea-T4-eLI" kind="show" identifier="goToChatSegue" id="828-mC-Est"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1dn-xD-Quj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="V8L-UW-1oL" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="75" y="67"/>
+            <point key="canvasLocation" x="-22" y="65"/>
+        </scene>
+        <!--Storyboard Reference-->
+        <scene sceneID="uwI-Zr-yYB">
+            <objects>
+                <viewControllerPlaceholder id="vea-T4-eLI" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="5Gs-31-iue"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0yC-i1-pYZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="580" y="65"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="WH1-2m-lbP">
