@@ -36,7 +36,7 @@
 		E201500123759B58002D8C8B /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E201500023759B58002D8C8B /* Profile.storyboard */; };
 		E201500323759B86002D8C8B /* Request.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E201500223759B86002D8C8B /* Request.storyboard */; };
 		E201500523759B96002D8C8B /* Requesting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E201500423759B96002D8C8B /* Requesting.storyboard */; };
-		E201500823759BAA002D8C8B /* Requested.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E201500723759BAA002D8C8B /* Requested.storyboard */; };
+		E201500823759BAA002D8C8B /* MoreInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E201500723759BAA002D8C8B /* MoreInfo.storyboard */; };
 		E201500A23759BB4002D8C8B /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E201500923759BB4002D8C8B /* Chat.storyboard */; };
 		E201500E23759BD0002D8C8B /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E201500D23759BD0002D8C8B /* History.storyboard */; };
 		E201501023759BDB002D8C8B /* Support.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E201500F23759BDB002D8C8B /* Support.storyboard */; };
@@ -49,6 +49,7 @@
 		E2800F50238EA613004FB8C4 /* RecommendationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2800F4E238EA613004FB8C4 /* RecommendationCell.swift */; };
 		E2800F51238EA613004FB8C4 /* RecommendationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2800F4F238EA613004FB8C4 /* RecommendationCell.xib */; };
 		E2800F53238EB872004FB8C4 /* aboutBabySitterEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2800F52238EB872004FB8C4 /* aboutBabySitterEntity.swift */; };
+		E281D8DB239A83E6004B6FCC /* MoreInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E281D8DA239A83E6004B6FCC /* MoreInfoViewController.swift */; };
 		E2911E8E238812E800273197 /* ConfigurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2911E8D238812E800273197 /* ConfigurationViewController.swift */; };
 		E296F6B2238EBFC600C83544 /* RequestingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E296F6B1238EBFC600C83544 /* RequestingViewController.swift */; };
 		E299048B2386AE5B0055CB25 /* HistoryEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E299048A2386AE5B0055CB25 /* HistoryEntity.swift */; };
@@ -139,7 +140,7 @@
 		E201500023759B58002D8C8B /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		E201500223759B86002D8C8B /* Request.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Request.storyboard; sourceTree = "<group>"; };
 		E201500423759B96002D8C8B /* Requesting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Requesting.storyboard; sourceTree = "<group>"; };
-		E201500723759BAA002D8C8B /* Requested.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Requested.storyboard; sourceTree = "<group>"; };
+		E201500723759BAA002D8C8B /* MoreInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MoreInfo.storyboard; sourceTree = "<group>"; };
 		E201500923759BB4002D8C8B /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
 		E201500D23759BD0002D8C8B /* History.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
 		E201500F23759BDB002D8C8B /* Support.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Support.storyboard; sourceTree = "<group>"; };
@@ -152,6 +153,7 @@
 		E2800F4E238EA613004FB8C4 /* RecommendationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationCell.swift; sourceTree = "<group>"; };
 		E2800F4F238EA613004FB8C4 /* RecommendationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendationCell.xib; sourceTree = "<group>"; };
 		E2800F52238EB872004FB8C4 /* aboutBabySitterEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aboutBabySitterEntity.swift; sourceTree = "<group>"; };
+		E281D8DA239A83E6004B6FCC /* MoreInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreInfoViewController.swift; sourceTree = "<group>"; };
 		E2911E8D238812E800273197 /* ConfigurationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationViewController.swift; sourceTree = "<group>"; };
 		E296F6B1238EBFC600C83544 /* RequestingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestingViewController.swift; sourceTree = "<group>"; };
 		E299048A2386AE5B0055CB25 /* HistoryEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryEntity.swift; sourceTree = "<group>"; };
@@ -391,11 +393,12 @@
 			path = Requesting;
 			sourceTree = "<group>";
 		};
-		E2014FF723759737002D8C8B /* Requested */ = {
+		E2014FF723759737002D8C8B /* MoreInfo */ = {
 			isa = PBXGroup;
 			children = (
+				E281D8D9239A83C6004B6FCC /* Controller */,
 			);
-			path = Requested;
+			path = MoreInfo;
 			sourceTree = "<group>";
 		};
 		E2014FF823759754002D8C8B /* Chat */ = {
@@ -470,6 +473,14 @@
 				E2800F4F238EA613004FB8C4 /* RecommendationCell.xib */,
 			);
 			path = RecommendationCell;
+			sourceTree = "<group>";
+		};
+		E281D8D9239A83C6004B6FCC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E281D8DA239A83E6004B6FCC /* MoreInfoViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		E2911E8B2388127300273197 /* Configuration */ = {
@@ -738,7 +749,7 @@
 				E201500023759B58002D8C8B /* Profile.storyboard */,
 				E201500223759B86002D8C8B /* Request.storyboard */,
 				E201500423759B96002D8C8B /* Requesting.storyboard */,
-				E201500723759BAA002D8C8B /* Requested.storyboard */,
+				E201500723759BAA002D8C8B /* MoreInfo.storyboard */,
 				E201500923759BB4002D8C8B /* Chat.storyboard */,
 				E201500D23759BD0002D8C8B /* History.storyboard */,
 				E201500F23759BDB002D8C8B /* Support.storyboard */,
@@ -768,7 +779,7 @@
 				E7632302238F6EDE009BE203 /* Search Baba */,
 				E2014FF4237596D5002D8C8B /* Request */,
 				E2014FF6237596F6002D8C8B /* Requesting */,
-				E2014FF723759737002D8C8B /* Requested */,
+				E2014FF723759737002D8C8B /* MoreInfo */,
 				E2014FF823759754002D8C8B /* Chat */,
 				E2014FFA23759765002D8C8B /* Profile */,
 				E2F65A8E23840D3000E9EEA8 /* Bio */,
@@ -860,7 +871,7 @@
 				E201500323759B86002D8C8B /* Request.storyboard in Resources */,
 				E2800F51238EA613004FB8C4 /* RecommendationCell.xib in Resources */,
 				E7FF57D92371A36F00F3FA22 /* LaunchScreen.storyboard in Resources */,
-				E201500823759BAA002D8C8B /* Requested.storyboard in Resources */,
+				E201500823759BAA002D8C8B /* MoreInfo.storyboard in Resources */,
 				E201500523759B96002D8C8B /* Requesting.storyboard in Resources */,
 				E713185423953ACE005525C5 /* WaitingSearch.storyboard in Resources */,
 				E201501023759BDB002D8C8B /* Support.storyboard in Resources */,
@@ -953,6 +964,7 @@
 				E2911E8E238812E800273197 /* ConfigurationViewController.swift in Sources */,
 				E2B20045238C1D8200CD103A /* FaqTableViewCell.swift in Sources */,
 				E72CE8692397F10B00DA9861 /* AlertType.swift in Sources */,
+				E281D8DB239A83E6004B6FCC /* MoreInfoViewController.swift in Sources */,
 				E2B20037238BFD4D00CD103A /* BioTableViewController.swift in Sources */,
 				E2F65A962384363E00E9EEA8 /* HistoryCell.swift in Sources */,
 				E2B2004B238C25DC00CD103A /* FaqViewController.swift in Sources */,
@@ -1139,7 +1151,7 @@
 			baseConfigurationReference = 303077478AF76DECDC033BE2 /* Pods-CuidooApp.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 97PTJ72QJZ;
+				DEVELOPMENT_TEAM = 76DX35F6T7;
 				INFOPLIST_FILE = CuidooApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1157,7 +1169,7 @@
 			baseConfigurationReference = 800AE3D6E1EBAC85C2721D3B /* Pods-CuidooApp.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 97PTJ72QJZ;
+				DEVELOPMENT_TEAM = 76DX35F6T7;
 				INFOPLIST_FILE = CuidooApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -42,6 +42,16 @@
                                 <subviews>
                                     <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KYG-Th-P9N" customClass="BabySitterInfosView" customModule="CuidooApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="688"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dds-w5-unG">
+                                                <rect key="frame" x="8" y="8" width="366" height="680"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.984754193" green="0.9759552775" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <segue destination="Tg1-v8-aDS" kind="show" id="CxI-Ws-SQc"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="382" id="d8E-GV-pOf"/>
@@ -87,6 +97,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ip3-3G-Ydx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1957.9710144927537" y="150.66964285714286"/>
+        </scene>
+        <!--MoreInfo-->
+        <scene sceneID="9gV-Gz-C1p">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MoreInfo" id="Tg1-v8-aDS" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="TC5-0l-ZZS"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hGK-jU-cpt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2878" y="156"/>
         </scene>
         <!--Requesting-->
         <scene sceneID="tFU-0y-SwR">
