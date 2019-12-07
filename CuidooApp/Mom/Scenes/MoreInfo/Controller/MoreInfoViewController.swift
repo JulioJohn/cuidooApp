@@ -25,6 +25,16 @@ class MoreInfoViewController: UIViewController {
         MoreInfoTableView.delegate =  self
         MoreInfoTableView.dataSource = self
 
+        if let id = LoggedUser.shared.uid {
+            UserServices.getUser(id: id) { (user, error) in
+                if let error = error {
+                    //Tratar erros
+                } else {
+                    self.fillInformations(user: user!)
+                    self.MoreInfoTableView.reloadData()
+                }
+            }
+        }
         MoreInfoTableView.register(RecommendationCell.nib, forCellReuseIdentifier: RecommendationCell.reuseIdentifier)
         
         MoreInfoTableView.register(AboutCell.nib, forCellReuseIdentifier: AboutCell.reuseIdentifier)

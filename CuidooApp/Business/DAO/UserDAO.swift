@@ -19,22 +19,31 @@ class UserDAO {
             let uid = user.uid
 
             databaseUser.document("\(uid)").getDocument { (snapshot, error) in
-                let user = MyUser(data: snapshot?.data()! ?? [:])
-                
-                //Armazenando o usuario logado
-                LoggedUser.shared.changeUser(uid: uid, name: user?.name)
-
-                //Após armazenado roda a completion
-                completion(user)
+                if let user = MyUser(data: snapshot?.data()! ?? [:]) {
+                    //Armazenando o usuario logado
+                    LoggedUser.shared.changeUser(uid: uid, name: user.name)
+                    
+                    updateInformations(byId: uid, user: user) { (userWithInfos) in
+                        completion(userWithInfos)
+                    }
+                } else {
+                    completion(nil)
+                }
             }
         }
     }
     
     static func getUser(byId: String, completion: @escaping (MyUser?) -> Void) {
         databaseUser.document("\(byId)").getDocument { (snapshot, error) in
-            
-            //Após armazenado roda a completion
-            completion(MyUser(data: snapshot?.data()! ?? [:]))
+            if let user = MyUser(data: snapshot?.data()! ?? [:]) {
+                let uid = user.uid
+                updateInformations(byId: uid, user: user) { (userWithInfos) in
+                    completion(userWithInfos)
+                }
+            } else {
+                print("Usuario veio nil")
+                completion(nil)
+            }
         }
     }
     
@@ -69,8 +78,12 @@ class UserDAO {
         databaseUser.document(userId).collection("matchsFinalizados").getDocuments(completion: { (snapshot, error) in
             let size = (snapshot!.count - 1) as Int
             var matchs: [MatchHistory?] = []
-            for i in 0 ... size {
-                matchs.append(MatchHistory(data: (snapshot?.documents[i].data())!))
+            if let snap = snapshot {
+                for i in 0 ... size {
+                    matchs.append(MatchHistory(data: (snapshot?.documents[i].data())!))
+                }
+            } else {
+                print("Erro ao pegar o histórico de matchs!")
             }
             completion(matchs)
         })
