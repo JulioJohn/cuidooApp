@@ -20,10 +20,14 @@ class GoingOnMatchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Configurações iniciais
         self.finalizeButton.layer.cornerRadius = 13.0
         self.reportButton.layer.cornerRadius = 13.0
-        
-        self.babysitterGoingOnMatchView.layer.cornerRadius = 7
+        if let nav = navigationController {
+            removeNavegationBarLine(nav: nav)
+        } else {
+            print("Não foi possível retirar a linha!")
+        }
         
         if LoggedUser.shared.userIsLogged() {
             if let id = LoggedUser.shared.actualMatchID {
@@ -60,5 +64,12 @@ extension GoingOnMatchViewController {
                 vc.matchId = matchId
             }
         }
+    }
+    
+    func removeNavegationBarLine(nav: UINavigationController) {
+        nav.navigationBar.barTintColor = .white
+        nav.navigationBar.shadowImage = UIImage()
+        nav.navigationBar.layoutIfNeeded()
+        nav.navigationBar.tintColor = .cuidooPink
     }
 }

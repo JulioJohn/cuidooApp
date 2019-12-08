@@ -30,6 +30,12 @@ class RequestingViewController: UIViewController {
         
         reportButton.layer.cornerRadius = 13.0
         finalizedButton.layer.cornerRadius = 13.0
+        
+       //Deixa a navegation bar sem a linha de baixo
+        self.navigationController?.navigationBar.barTintColor = .white
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.layoutIfNeeded()
+        self.navigationController?.navigationBar.tintColor = .cuidooPink
 
         requestingTableView.register(RecommendationCell.nib, forCellReuseIdentifier: RecommendationCell.reuseIdentifier)
         

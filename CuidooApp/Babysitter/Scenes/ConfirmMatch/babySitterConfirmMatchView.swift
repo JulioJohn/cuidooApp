@@ -19,15 +19,17 @@ class babySitterConfirmMatchView: UIView, Nibable {
         super.init(frame: frame)
         
         loadNib()
+        
         babySitterImageView.layer.cornerRadius = babySitterImageView.frame.height/2
          topView.roundCorners(corners: [.topLeft, .topRight], radius: 12)
-        
-        
+        bottomView.roundCorners(corners: [.bottomRight, .bottomLeft], radius: 12)
     }
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        
         loadNib()
+        
         babySitterImageView.layer.cornerRadius = babySitterImageView.frame.height/2
         topView.roundCorners(corners: [.topRight, .topLeft], radius: 12)
         bottomView.roundCorners(corners: [.bottomRight, .bottomLeft], radius: 12)

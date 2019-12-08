@@ -39,10 +39,14 @@ class babySitterProfileViewController: UIViewController {
         // 5
         navigationItem.titleView = imageView
         
-        self.navigationController?.navigationBar.barTintColor = .white
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.layoutIfNeeded()
-        self.navigationController?.navigationBar.tintColor = .cuidooPink
+        removeNavegationBarLine(nav: self.navigationController!)
+    }
+    
+    func removeNavegationBarLine(nav: UINavigationController) {
+        nav.navigationBar.barTintColor = .white
+        nav.navigationBar.shadowImage = UIImage()
+        nav.navigationBar.layoutIfNeeded()
+        nav.navigationBar.tintColor = .cuidooPink
     }
     
     @IBAction func startJobButtonAction(_ sender: Any) {

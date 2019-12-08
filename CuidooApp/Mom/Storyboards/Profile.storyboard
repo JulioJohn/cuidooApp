@@ -210,6 +210,29 @@
                                             <segue destination="AOA-fx-0Rt" kind="show" id="uyr-kM-UzL"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableCellProfile" rowHeight="1" id="FTj-bm-wo2">
+                                        <rect key="frame" x="0.0" y="546.5" width="414" height="1"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FTj-bm-wo2" id="Fmo-JA-WbX">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="1"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KEN-QP-rol">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="1"/>
+                                                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="Wvn-w3-fi6"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="KEN-QP-rol" firstAttribute="top" secondItem="Fmo-JA-WbX" secondAttribute="top" id="UGQ-op-0Ji"/>
+                                                <constraint firstItem="KEN-QP-rol" firstAttribute="leading" secondItem="Fmo-JA-WbX" secondAttribute="leading" id="VSI-df-Pif"/>
+                                                <constraint firstAttribute="trailing" secondItem="KEN-QP-rol" secondAttribute="trailing" id="llQ-lS-aoR"/>
+                                                <constraint firstAttribute="bottom" secondItem="KEN-QP-rol" secondAttribute="bottom" id="lqE-5X-Loe"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>

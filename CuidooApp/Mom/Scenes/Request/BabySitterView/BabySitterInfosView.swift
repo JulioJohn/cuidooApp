@@ -10,6 +10,7 @@ import UIKit
 
 class BabySitterInfosView: UIView, Nibable {
 
+    @IBOutlet var babysitterView: UIView!
     @IBOutlet weak var babySitterImage: UIImageView!
     @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var descriptionText: UILabel!
@@ -44,11 +45,17 @@ class BabySitterInfosView: UIView, Nibable {
     override init(frame: CGRect) {
         super.init(frame: frame)
         loadNib()
+        
+//        babySitterImage.roundCorners(corners: [.topLeft, .topRight], radius: 12)
+//        bottomView.roundCorners(corners: [.bottomRight, .bottomLeft], radius: 12)
     }
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         loadNib()
+        
+//        babySitterImage.roundCorners(corners: [.topLeft, .topRight], radius: 12)
+//        bottomView.roundCorners(corners: [.bottomRight, .bottomLeft], radius: 12)
     }
     
 

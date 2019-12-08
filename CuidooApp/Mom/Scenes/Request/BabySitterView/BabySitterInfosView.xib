@@ -11,6 +11,7 @@
             <connections>
                 <outlet property="avaliationLabel" destination="5WW-LX-Pns" id="tDp-hc-XKx"/>
                 <outlet property="babySitterImage" destination="wQR-7u-0lV" id="lz2-0H-ucp"/>
+                <outlet property="babysitterView" destination="iN0-l3-epB" id="iXO-lF-tdz"/>
                 <outlet property="bottomView" destination="pEo-Kw-0Yb" id="14D-nG-hf5"/>
                 <outlet property="cuidadosLabel" destination="zKo-AH-RwW" id="y9o-cz-K55"/>
                 <outlet property="descriptionLabel" destination="Zyl-kD-jb5" id="0OG-YI-PR1"/>
@@ -33,7 +34,7 @@
                     </constraints>
                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                 </imageView>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Retângulo 312" translatesAutoresizingMaskIntoConstraints="NO" id="afx-pw-pOY">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundNameBlur 2" translatesAutoresizingMaskIntoConstraints="NO" id="afx-pw-pOY">
                     <rect key="frame" x="0.0" y="374" width="414" height="80"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pEo-Kw-0Yb">
@@ -253,7 +254,7 @@
     </objects>
     <resources>
         <image name="Bebe" width="15" height="16.5"/>
-        <image name="Retângulo 312" width="341" height="80"/>
+        <image name="backgroundNameBlur 2" width="341" height="80"/>
         <image name="heart" catalog="system" width="64" height="54"/>
         <image name="star.fill" catalog="system" width="64" height="58"/>
         <image name="woman" width="1000" height="667"/>
