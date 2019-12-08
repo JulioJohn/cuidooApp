@@ -41,7 +41,7 @@
                                 </state>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5sp-HS-F1E" customClass="GoingOnMatchView" customModule="CuidooApp" customModuleProvider="target">
-                                <rect key="frame" x="17" y="113" width="380" height="642"/>
+                                <rect key="frame" x="17" y="108" width="380" height="647"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="13.0"/>
@@ -52,7 +52,7 @@
                         <constraints>
                             <constraint firstItem="lMQ-VT-PFz" firstAttribute="leading" secondItem="VqC-Dv-8O0" secondAttribute="leading" constant="16" id="8cl-AP-cYj"/>
                             <constraint firstItem="VqC-Dv-8O0" firstAttribute="trailing" secondItem="ny9-Nb-lfj" secondAttribute="trailing" constant="16" id="GWH-8l-4ac"/>
-                            <constraint firstItem="5sp-HS-F1E" firstAttribute="top" secondItem="VqC-Dv-8O0" secondAttribute="top" constant="25" id="J0W-MC-bzK"/>
+                            <constraint firstItem="5sp-HS-F1E" firstAttribute="top" secondItem="VqC-Dv-8O0" secondAttribute="top" constant="20" id="J0W-MC-bzK"/>
                             <constraint firstItem="VqC-Dv-8O0" firstAttribute="bottom" secondItem="lMQ-VT-PFz" secondAttribute="bottom" constant="16" id="MLi-e0-ds4"/>
                             <constraint firstItem="ny9-Nb-lfj" firstAttribute="leading" secondItem="lMQ-VT-PFz" secondAttribute="trailing" constant="16" id="OP4-da-xLH"/>
                             <constraint firstItem="lMQ-VT-PFz" firstAttribute="width" secondItem="ny9-Nb-lfj" secondAttribute="width" id="OWq-3H-HGc"/>
@@ -64,6 +64,12 @@
                         <viewLayoutGuide key="safeArea" id="VqC-Dv-8O0"/>
                     </view>
                     <navigationItem key="navigationItem" title="Em andamento" id="CNt-gn-Sz4">
+                        <barButtonItem key="leftBarButtonItem" title="Cancelar" id="Kl8-5E-eJl">
+                            <color key="tintColor" red="1" green="0.35686274509999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="cancelAction:" destination="7g3-tF-Fu7" id="RGx-DQ-R2w"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="text.bubble" catalog="system" id="HTc-QA-ARm">
                             <color key="tintColor" red="0.99824029209999998" green="0.39281293750000001" blue="0.39213877920000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>

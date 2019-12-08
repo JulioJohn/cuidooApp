@@ -25,6 +25,12 @@ class RequestViewController: UIViewController {
         confirm.layer.cornerRadius = 13
         seeNext.layer.cornerRadius = 13
         
+        if let nav = navigationController {
+            removeNavegationBarLine(nav: nav)
+        } else {
+            print("Não foi possível retirar a linha!")
+        }
+        
         MatchServices.getOtherUser(isBaba: false, idMatch: actualMatchID!) { (otherUser) -> (Void) in
             if let otherUser = otherUser {
                 DispatchQueue.main.async {
@@ -48,4 +54,13 @@ class RequestViewController: UIViewController {
         performSegue(withIdentifier: "goToWaitingSearchSegue", sender: nil)
     }
     
+}
+
+extension RequestViewController {
+    func removeNavegationBarLine(nav: UINavigationController) {
+        nav.navigationBar.barTintColor = .white
+        nav.navigationBar.shadowImage = UIImage()
+        nav.navigationBar.layoutIfNeeded()
+        nav.navigationBar.tintColor = .cuidooPink
+    }
 }

@@ -40,6 +40,10 @@ class GoingOnMatchViewController: UIViewController {
             //Usuario deslogado!
         }
     }
+    @IBAction func cancelAction(_ sender: Any) {
+        //DELETAR O MATCH ANTES
+        cancelBabySitterAlert()
+    }
     
     func handleStatus(status: StatusEnum) {
         if status == .finished {
@@ -58,6 +62,17 @@ class GoingOnMatchViewController: UIViewController {
 }
 
 extension GoingOnMatchViewController {
+    func cancelBabySitterAlert() {
+        let alert = UIAlertController(title: "Confirmar cancelamento?", message: "Ao cancelar o chamado você perderá acesso aos dados da mãe.", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Sim", style: .default, handler: { (action) in
+            self.performSegue(withIdentifier: "goToProfileBaba", sender: nil)
+        }))
+        alert.addAction(UIAlertAction(title: "Não", style: .cancel, handler: nil))
+        
+        self.present(alert, animated: true)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToChatSegue" {
             if let vc = segue.destination as? ChatViewController {
@@ -72,4 +87,5 @@ extension GoingOnMatchViewController {
         nav.navigationBar.layoutIfNeeded()
         nav.navigationBar.tintColor = .cuidooPink
     }
+    
 }

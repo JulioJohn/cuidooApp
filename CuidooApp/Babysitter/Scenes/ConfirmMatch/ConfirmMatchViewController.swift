@@ -51,6 +51,7 @@ class ConfirmMatchViewController: UIViewController {
     
     @IBAction func acceptButton(_ sender: Any) {
         self.acceptButton.isEnabled = false
+        myTimer?.invalidate()
         MatchServices.changeMatchStatus {
             self.acceptButton.isEnabled = true
             self.performSegue(withIdentifier: "goToWaitingBabysitterSegue", sender: nil)
