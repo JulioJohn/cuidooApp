@@ -25,6 +25,9 @@
                                 <state key="normal" title="Reportar">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="reportButton:" destination="8xf-md-nD6" eventType="touchUpInside" id="Lz9-al-us1"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MdX-k1-JtL">
                                 <rect key="frame" x="215" y="780" width="183" height="66"/>
@@ -61,6 +64,12 @@
                         <viewLayoutGuide key="safeArea" id="o7O-gU-ARH"/>
                     </view>
                     <navigationItem key="navigationItem" title="Em andamento" id="qsS-3H-rq3">
+                        <barButtonItem key="leftBarButtonItem" title="Cancelar" id="S8U-XB-jsC">
+                            <color key="tintColor" red="1" green="0.35686274509999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="cancelButton:" destination="8xf-md-nD6" id="0vB-2e-2Jr"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="text.bubble" catalog="system" id="E8q-lV-UaG">
                             <color key="tintColor" red="1" green="0.34509803919999998" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>

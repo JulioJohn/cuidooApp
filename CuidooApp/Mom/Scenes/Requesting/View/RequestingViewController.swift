@@ -88,6 +88,13 @@ class RequestingViewController: UIViewController {
         }
     }
     
+    @IBAction func cancelButton(_ sender: Any) {
+        cancelBabySitterAlert()
+    }
+   
+    @IBAction func reportButton(_ sender: Any) {
+        reportBabySitterAlert()
+    }
 }
 
 extension RequestingViewController: UITableViewDataSource, UITableViewDelegate {
@@ -144,5 +151,25 @@ extension RequestingViewController {
                 vc.matchId = actualMatchId
             }
         }
+    }
+    
+    func cancelBabySitterAlert() {
+        let alert = UIAlertController(title: "Confirmar cancelamento?", message: "Ao cancelar o chamado você perderá acesso aos dados da cuidadora.", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Sim", style: .default, handler: { (action) in
+            self.performSegue(withIdentifier: "searchSegue", sender: nil)
+        }))
+        alert.addAction(UIAlertAction(title: "Não", style: .cancel, handler: nil))
+        
+        self.present(alert, animated: true)
+    }
+    
+    func reportBabySitterAlert() {
+        let alert = UIAlertController(title: "Confirmar reporte?", message: "O reporte registra problemas graves durante o chamado.", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Reportar", style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Cancelar", style: .cancel, handler: nil))
+        
+        self.present(alert, animated: true)
     }
 }

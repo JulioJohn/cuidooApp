@@ -44,14 +44,14 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xsN-qj-dos" customClass="babySitterConfirmMatchView" customModule="CuidooApp" customModuleProvider="target">
-                                <rect key="frame" x="17" y="101" width="380" height="654"/>
+                                <rect key="frame" x="17" y="101" width="389" height="654"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="xsN-qj-dos" firstAttribute="leading" secondItem="yGO-jV-APE" secondAttribute="leading" constant="17" id="3Ir-yk-CB2"/>
-                            <constraint firstItem="yGO-jV-APE" firstAttribute="trailing" secondItem="xsN-qj-dos" secondAttribute="trailing" constant="17" id="Doq-8b-GHX"/>
+                            <constraint firstItem="yGO-jV-APE" firstAttribute="trailing" secondItem="xsN-qj-dos" secondAttribute="trailing" constant="8" id="Doq-8b-GHX"/>
                             <constraint firstItem="hNe-Au-7bf" firstAttribute="width" secondItem="Jis-Vn-KbT" secondAttribute="width" id="O4b-nv-5kq"/>
                             <constraint firstItem="hNe-Au-7bf" firstAttribute="top" secondItem="xsN-qj-dos" secondAttribute="bottom" constant="25" id="UoN-2d-5hD"/>
                             <constraint firstItem="yGO-jV-APE" firstAttribute="bottom" secondItem="hNe-Au-7bf" secondAttribute="bottom" constant="16" id="Utu-kW-70u"/>
@@ -67,7 +67,7 @@
                     <connections>
                         <outlet property="acceptButton" destination="Jis-Vn-KbT" id="CCK-VR-f2h"/>
                         <outlet property="babySitterConfirmMatchView" destination="xsN-qj-dos" id="LdB-Kl-A6t"/>
-                        <outlet property="deniedButton" destination="hNe-Au-7bf" id="ahT-jD-2Bh"/>
+                        <outlet property="deniedButton" destination="hNe-Au-7bf" id="7Fs-nk-EC7"/>
                         <segue destination="dL7-9P-9XV" kind="presentation" identifier="goToWaitingBabysitterSegue" modalPresentationStyle="fullScreen" id="Aa1-sG-7oM"/>
                         <segue destination="uG4-KU-0gE" kind="unwind" identifier="goToProfileBabaSegue" unwindAction="goToProfileBabaUnwind:" id="xFf-f6-xFZ"/>
                     </connections>

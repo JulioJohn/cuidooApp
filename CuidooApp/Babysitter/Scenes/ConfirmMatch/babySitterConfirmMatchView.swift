@@ -10,17 +10,39 @@ import UIKit
 
 class babySitterConfirmMatchView: UIView, Nibable {
 
+    @IBOutlet weak var stackView: UIStackView!
+    
     @IBOutlet weak var babySitterImageView: UIImageView!
     
+    @IBOutlet var contentView: UIView!
     override init(frame: CGRect) {
         super.init(frame: frame)
-        babySitterImageView.layer.cornerRadius = babySitterImageView.frame.height/2
+        
         loadNib()
+        babySitterImageView.layer.cornerRadius = babySitterImageView.frame.height/2
+         topView.roundCorners(corners: [.topLeft, .topRight], radius: 12)
+        
+        
     }
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         loadNib()
+        babySitterImageView.layer.cornerRadius = babySitterImageView.frame.height/2
+        topView.roundCorners(corners: [.topRight, .topLeft], radius: 12)
+        bottomView.roundCorners(corners: [.bottomRight, .bottomLeft], radius: 12)
+        
     }
+    @IBOutlet weak var topView: UIView!
+    @IBOutlet weak var bottomView: UIView!    
 
+}
+
+extension UIView {
+    func roundCorners(corners: UIRectCorner, radius: CGFloat) {
+        let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+        let mask = CAShapeLayer()
+        mask.path = path.cgPath
+        layer.mask = mask
+    }
 }

@@ -10,6 +10,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="babySitterConfirmMatchView" customModule="CuidooApp" customModuleProvider="target">
             <connections>
                 <outlet property="babySitterImageView" destination="D5F-Hl-3f6" id="OC5-tn-pat"/>
+                <outlet property="bottomView" destination="liO-Rt-P8b" id="Dru-MN-fkH"/>
+                <outlet property="contentView" destination="v49-va-IRt" id="BR8-oG-WUc"/>
+                <outlet property="stackView" destination="3ne-aM-n9H" id="od5-qw-uA0"/>
+                <outlet property="topView" destination="R4W-kF-x2b" id="vTl-yC-dKr"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -44,7 +48,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
-                            <color key="backgroundColor" red="0.97647720579999997" green="0.9764588475" blue="0.97647124529999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstItem="Kw7-xR-R1B" firstAttribute="top" secondItem="6mf-18-q6m" secondAttribute="bottom" constant="8" id="1My-oJ-AuL"/>
                                 <constraint firstItem="6mf-18-q6m" firstAttribute="top" secondItem="D5F-Hl-3f6" secondAttribute="bottom" constant="16" id="205-Yw-Pcv"/>
@@ -73,7 +77,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
-                            <color key="backgroundColor" red="0.97647720579999997" green="0.9764588475" blue="0.97647124529999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="bottom" secondItem="cYQ-uD-ydW" secondAttribute="bottom" priority="250" constant="16" id="Jz6-y2-EgF"/>
                                 <constraint firstAttribute="trailing" secondItem="cYQ-uD-ydW" secondAttribute="trailing" constant="16" id="NKq-Of-Lb7"/>
@@ -209,7 +213,7 @@
                                     </constraints>
                                 </stackView>
                             </subviews>
-                            <color key="backgroundColor" red="0.97647720579999997" green="0.9764588475" blue="0.97647124529999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="bottom" secondItem="WRo-3I-zC3" secondAttribute="bottom" constant="4" id="3Ns-5E-IlN"/>
                                 <constraint firstAttribute="trailing" secondItem="WRo-3I-zC3" secondAttribute="trailing" constant="4" id="7L2-JI-hj3"/>
@@ -220,9 +224,10 @@
                             </constraints>
                         </view>
                     </subviews>
+                    <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </stackView>
             </subviews>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="3ne-aM-n9H" firstAttribute="leading" secondItem="gLj-oI-ToS" secondAttribute="leading" id="0Kv-7A-xVw"/>
                 <constraint firstItem="gLj-oI-ToS" firstAttribute="bottom" secondItem="3ne-aM-n9H" secondAttribute="bottom" id="7oa-tL-UCh"/>
