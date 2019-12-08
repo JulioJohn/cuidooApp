@@ -44,21 +44,31 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xsN-qj-dos" customClass="babySitterConfirmMatchView" customModule="CuidooApp" customModuleProvider="target">
-                                <rect key="frame" x="17" y="101" width="389" height="654"/>
+                                <rect key="frame" x="17" y="114" width="389" height="641"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QkU-G5-QJg" userLabel="timerView">
+                                <rect key="frame" x="17" y="101" width="380" height="5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="5" id="XZq-m5-4Ma"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="QkU-G5-QJg" firstAttribute="trailing" secondItem="yGO-jV-APE" secondAttribute="trailing" constant="-17" id="1Lo-Gu-dw1"/>
                             <constraint firstItem="xsN-qj-dos" firstAttribute="leading" secondItem="yGO-jV-APE" secondAttribute="leading" constant="17" id="3Ir-yk-CB2"/>
+                            <constraint firstItem="QkU-G5-QJg" firstAttribute="leading" secondItem="yGO-jV-APE" secondAttribute="leading" constant="17" id="6zD-ce-Ggj"/>
                             <constraint firstItem="yGO-jV-APE" firstAttribute="trailing" secondItem="xsN-qj-dos" secondAttribute="trailing" constant="8" id="Doq-8b-GHX"/>
                             <constraint firstItem="hNe-Au-7bf" firstAttribute="width" secondItem="Jis-Vn-KbT" secondAttribute="width" id="O4b-nv-5kq"/>
+                            <constraint firstItem="QkU-G5-QJg" firstAttribute="top" secondItem="yGO-jV-APE" secondAttribute="top" constant="13" id="QXN-9E-0tC"/>
                             <constraint firstItem="hNe-Au-7bf" firstAttribute="top" secondItem="xsN-qj-dos" secondAttribute="bottom" constant="25" id="UoN-2d-5hD"/>
                             <constraint firstItem="yGO-jV-APE" firstAttribute="bottom" secondItem="hNe-Au-7bf" secondAttribute="bottom" constant="16" id="Utu-kW-70u"/>
                             <constraint firstItem="hNe-Au-7bf" firstAttribute="leading" secondItem="yGO-jV-APE" secondAttribute="leading" constant="16" id="bAb-tj-Yyh"/>
                             <constraint firstItem="yGO-jV-APE" firstAttribute="trailing" secondItem="Jis-Vn-KbT" secondAttribute="trailing" constant="16" id="dYm-R4-AnV"/>
+                            <constraint firstItem="xsN-qj-dos" firstAttribute="top" secondItem="QkU-G5-QJg" secondAttribute="bottom" constant="8" symbolic="YES" id="hwa-zB-kRW"/>
                             <constraint firstItem="Jis-Vn-KbT" firstAttribute="centerY" secondItem="hNe-Au-7bf" secondAttribute="centerY" id="pCA-W9-Pts"/>
-                            <constraint firstItem="xsN-qj-dos" firstAttribute="top" secondItem="yGO-jV-APE" secondAttribute="top" constant="13" id="rmQ-2b-lDP"/>
                             <constraint firstItem="Jis-Vn-KbT" firstAttribute="leading" secondItem="hNe-Au-7bf" secondAttribute="trailing" constant="16" id="sv2-kV-mzi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yGO-jV-APE"/>
@@ -68,6 +78,7 @@
                         <outlet property="acceptButton" destination="Jis-Vn-KbT" id="CCK-VR-f2h"/>
                         <outlet property="babySitterConfirmMatchView" destination="xsN-qj-dos" id="LdB-Kl-A6t"/>
                         <outlet property="deniedButton" destination="hNe-Au-7bf" id="7Fs-nk-EC7"/>
+                        <outlet property="timerView" destination="QkU-G5-QJg" id="n0M-CA-3FS"/>
                         <segue destination="dL7-9P-9XV" kind="presentation" identifier="goToWaitingBabysitterSegue" modalPresentationStyle="fullScreen" id="Aa1-sG-7oM"/>
                         <segue destination="uG4-KU-0gE" kind="unwind" identifier="goToProfileBabaSegue" unwindAction="goToProfileBabaUnwind:" id="xFf-f6-xFZ"/>
                     </connections>
@@ -75,7 +86,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oql-qt-7T9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="uG4-KU-0gE" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1841" y="181"/>
+            <point key="canvasLocation" x="1890" y="173"/>
         </scene>
         <!--WaitingSearchBabysitter-->
         <scene sceneID="JbM-tV-dkp">

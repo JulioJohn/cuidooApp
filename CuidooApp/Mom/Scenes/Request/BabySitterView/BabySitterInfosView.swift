@@ -46,16 +46,14 @@ class BabySitterInfosView: UIView, Nibable {
         super.init(frame: frame)
         loadNib()
         
-//        babySitterImage.roundCorners(corners: [.topLeft, .topRight], radius: 12)
-//        bottomView.roundCorners(corners: [.bottomRight, .bottomLeft], radius: 12)
+        babysitterView.layer.cornerRadius = 13.0
     }
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         loadNib()
-        
-//        babySitterImage.roundCorners(corners: [.topLeft, .topRight], radius: 12)
-//        bottomView.roundCorners(corners: [.bottomRight, .bottomLeft], radius: 12)
+    
+        babysitterView.layer.cornerRadius = 13.0
     }
     
 
