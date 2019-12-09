@@ -44,10 +44,10 @@
                                 </connections>
                             </button>
                             <scrollView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R8N-PZ-850">
-                                <rect key="frame" x="16" y="104" width="382" height="644"/>
+                                <rect key="frame" x="16" y="101" width="382" height="647"/>
                                 <subviews>
                                     <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KYG-Th-P9N" customClass="BabySitterInfosView" customModule="CuidooApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="382" height="644"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="647"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dds-w5-unG">
                                                 <rect key="frame" x="8" y="8" width="366" height="680"/>
@@ -74,9 +74,23 @@
                                 <viewLayoutGuide key="contentLayoutGuide" id="riK-lD-rcq"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="KWO-cd-HCr"/>
                             </scrollView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fbo-72-hMN">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Confirmar Cuidadora" id="nWL-uG-AZm">
+                                        <barButtonItem key="leftBarButtonItem" title="Cancelar" id="diF-TV-QFm">
+                                            <color key="tintColor" red="1" green="0.35686274509999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <connections>
+                                                <action selector="cancelButton:" destination="ymi-OD-QlD" id="Gzi-Xp-Gkd"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="1ZU-Sq-gDP" firstAttribute="trailing" secondItem="fbo-72-hMN" secondAttribute="trailing" id="07I-qr-3NO"/>
                             <constraint firstItem="1ZU-Sq-gDP" firstAttribute="bottom" secondItem="WHe-9f-Q24" secondAttribute="bottom" constant="32" id="1UC-ob-kpb"/>
                             <constraint firstItem="WHe-9f-Q24" firstAttribute="width" secondItem="GbP-8m-rRx" secondAttribute="width" id="5UM-Iw-MrG"/>
                             <constraint firstItem="GbP-8m-rRx" firstAttribute="centerY" secondItem="WHe-9f-Q24" secondAttribute="centerY" id="5tv-Ab-anE"/>
@@ -84,7 +98,9 @@
                             <constraint firstItem="R8N-PZ-850" firstAttribute="leading" secondItem="1ZU-Sq-gDP" secondAttribute="leading" constant="16" id="HSP-2r-ZmV"/>
                             <constraint firstItem="WHe-9f-Q24" firstAttribute="leading" secondItem="1ZU-Sq-gDP" secondAttribute="leading" constant="16" id="O0Z-QJ-IBr"/>
                             <constraint firstItem="1ZU-Sq-gDP" firstAttribute="trailing" secondItem="R8N-PZ-850" secondAttribute="trailing" constant="16" id="OC0-XJ-LLg"/>
-                            <constraint firstItem="R8N-PZ-850" firstAttribute="top" secondItem="1ZU-Sq-gDP" secondAttribute="top" constant="16" id="Udb-lW-qU9"/>
+                            <constraint firstItem="fbo-72-hMN" firstAttribute="leading" secondItem="1ZU-Sq-gDP" secondAttribute="leading" id="VDk-z8-ezM"/>
+                            <constraint firstItem="fbo-72-hMN" firstAttribute="top" secondItem="1ZU-Sq-gDP" secondAttribute="top" id="bJe-kR-MH4"/>
+                            <constraint firstItem="R8N-PZ-850" firstAttribute="top" secondItem="fbo-72-hMN" secondAttribute="bottom" constant="13" id="mmO-9a-Wuj"/>
                             <constraint firstItem="GbP-8m-rRx" firstAttribute="top" secondItem="R8N-PZ-850" secondAttribute="bottom" constant="16" id="nAJ-Jr-yyi"/>
                             <constraint firstItem="GbP-8m-rRx" firstAttribute="leading" secondItem="WHe-9f-Q24" secondAttribute="trailing" constant="16" id="vkN-ky-ce6"/>
                         </constraints>
@@ -96,10 +112,10 @@
                             <color key="tintColor" red="1" green="0.35686274509999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         </barButtonItem>
                     </navigationItem>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="babySitterView" destination="KYG-Th-P9N" id="Hgm-bc-0ge"/>
                         <outlet property="confirm" destination="GbP-8m-rRx" id="nRQ-0p-1tk"/>
+                        <outlet property="myNavegationBar" destination="fbo-72-hMN" id="dzS-vE-QSV"/>
                         <outlet property="seeNext" destination="WHe-9f-Q24" id="Qbh-dc-U85"/>
                         <segue destination="NCy-AW-38K" kind="presentation" identifier="requestingSegue" modalPresentationStyle="fullScreen" id="RrB-mU-LC8"/>
                         <segue destination="HJh-Yl-80T" kind="unwind" identifier="goToWaitingSearchSegue" unwindAction="goToWaitingSearchUnwindWithSegue:" id="DJK-9K-NZp"/>

@@ -13,8 +13,16 @@ class babySitterConfirmMatchView: UIView, Nibable {
     @IBOutlet weak var stackView: UIStackView!
     
     @IBOutlet weak var babySitterImageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var aboutTextLabel: UILabel!
+    @IBOutlet weak var detailsLabel: UILabel!
+    @IBOutlet weak var kidsInfoLabel: UILabel!
+    @IBOutlet weak var distanceLabel: UILabel!
+    @IBOutlet weak var durationLabel: UILabel!
+    @IBOutlet weak var remunarationLabel: UILabel!
     
     @IBOutlet var contentView: UIView!
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -35,6 +43,7 @@ class babySitterConfirmMatchView: UIView, Nibable {
         bottomView.roundCorners(corners: [.bottomRight, .bottomLeft], radius: 12)
         
     }
+    
     @IBOutlet weak var topView: UIView!
     @IBOutlet weak var bottomView: UIView!    
 

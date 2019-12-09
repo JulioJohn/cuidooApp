@@ -9,9 +9,16 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="babySitterConfirmMatchView" customModule="CuidooApp" customModuleProvider="target">
             <connections>
+                <outlet property="aboutTextLabel" destination="Kw7-xR-R1B" id="Bz3-Z8-I6W"/>
                 <outlet property="babySitterImageView" destination="D5F-Hl-3f6" id="OC5-tn-pat"/>
                 <outlet property="bottomView" destination="liO-Rt-P8b" id="Dru-MN-fkH"/>
                 <outlet property="contentView" destination="v49-va-IRt" id="BR8-oG-WUc"/>
+                <outlet property="detailsLabel" destination="cYQ-uD-ydW" id="Y4v-ks-hho"/>
+                <outlet property="distanceLabel" destination="opx-iY-rZY" id="Qkt-FS-xPs"/>
+                <outlet property="durationLabel" destination="dDi-cV-6SZ" id="Ts4-ej-n9s"/>
+                <outlet property="kidsInfoLabel" destination="YXI-74-MYm" id="qjB-bg-b4Y"/>
+                <outlet property="nameLabel" destination="6mf-18-q6m" id="GdI-TB-Azq"/>
+                <outlet property="remunarationLabel" destination="y6Q-mz-zoc" id="pNq-2o-BDY"/>
                 <outlet property="stackView" destination="3ne-aM-n9H" id="od5-qw-uA0"/>
                 <outlet property="topView" destination="R4W-kF-x2b" id="vTl-yC-dKr"/>
             </connections>

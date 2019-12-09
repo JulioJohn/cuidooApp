@@ -15,6 +15,8 @@ class RequestViewController: UIViewController {
     @IBOutlet weak var confirm: UIButton!
     @IBOutlet weak var seeNext: UIButton!
     
+    @IBOutlet weak var myNavegationBar: UINavigationBar!
+    
     let actualMatchID = LoggedUser.shared.actualMatchID
     
     override func viewDidLoad() {
@@ -25,8 +27,8 @@ class RequestViewController: UIViewController {
         confirm.layer.cornerRadius = 13
         seeNext.layer.cornerRadius = 13
         
-        if let nav = navigationController {
-            removeNavegationBarLine(nav: nav)
+        if let nav = myNavegationBar {
+            removeNavegationBarLine(navBar: nav)
         } else {
             print("Não foi possível retirar a linha!")
         }
@@ -42,6 +44,10 @@ class RequestViewController: UIViewController {
         }
     }
 
+    @IBAction func cancelButton(_ sender: Any) {
+        performSegue(withIdentifier: "goToWaitingSearchSegue", sender: nil)
+    }
+    
     @IBAction func didClickConfirm(_ sender: Any) {
         let uid = LoggedUser.shared.uid!
         if let matchId = self.actualMatchID{
@@ -57,10 +63,10 @@ class RequestViewController: UIViewController {
 }
 
 extension RequestViewController {
-    func removeNavegationBarLine(nav: UINavigationController) {
-        nav.navigationBar.barTintColor = .white
-        nav.navigationBar.shadowImage = UIImage()
-        nav.navigationBar.layoutIfNeeded()
-        nav.navigationBar.tintColor = .cuidooPink
+    func removeNavegationBarLine(navBar: UINavigationBar) {
+        navBar.barTintColor = .white
+        navBar.shadowImage = UIImage()
+        navBar.layoutIfNeeded()
+        navBar.tintColor = .cuidooPink
     }
 }
