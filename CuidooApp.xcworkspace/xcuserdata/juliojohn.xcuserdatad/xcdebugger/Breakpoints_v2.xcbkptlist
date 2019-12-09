@@ -398,8 +398,8 @@
             filePath = "CuidooApp/Extensions/RequestViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -414,40 +414,40 @@
             filePath = "CuidooApp/Extensions/RequestViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "7F7B8172-B89C-4D80-B5A5-3EBFC9EEE479 - 732be6fd5349a990"
+                  uuid = "7F7B8172-B89C-4D80-B5A5-3EBFC9EEE479 - a873b59e00efe0b3"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;CuidooApp.MyUser&gt;) -&gt; () in CuidooApp.RequestViewController.viewDidLoad() -&gt; ()"
-                  moduleName = "CuidooApp"
+                  symbolName = "closure #1 (Swift.Optional&lt;Cuidoo.MyUser&gt;) -&gt; () in Cuidoo.RequestViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "Cuidoo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/juliojohn/Desktop/CuidooApp/CuidooApp/Extensions/RequestViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "38"
-                  endingLineNumber = "38"
-                  offsetFromSymbolStart = "232">
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "257">
                </Location>
                <Location
-                  uuid = "7F7B8172-B89C-4D80-B5A5-3EBFC9EEE479 - 822b800b668c4113"
+                  uuid = "7F7B8172-B89C-4D80-B5A5-3EBFC9EEE479 - 481586e73e1915f8"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in closure #1 (Swift.Optional&lt;CuidooApp.MyUser&gt;) -&gt; () in CuidooApp.RequestViewController.viewDidLoad() -&gt; ()"
-                  moduleName = "CuidooApp"
+                  symbolName = "closure #1 () -&gt; () in closure #1 (Swift.Optional&lt;Cuidoo.MyUser&gt;) -&gt; () in Cuidoo.RequestViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "Cuidoo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/juliojohn/Desktop/CuidooApp/CuidooApp/Extensions/RequestViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "39"
-                  endingLineNumber = "39"
-                  offsetFromSymbolStart = "116">
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "95">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -462,8 +462,8 @@
             filePath = "CuidooApp/Extensions/RequestViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -478,40 +478,40 @@
             filePath = "CuidooApp/Extensions/RequestViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "8AD39BFE-9C51-4700-B49D-FDBF70CB8584 - d37d9dd6b4ac520d"
+                  uuid = "8AD39BFE-9C51-4700-B49D-FDBF70CB8584 - b21c8cf0b196e4d"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "CuidooApp.RequestViewController.viewDidLoad() -&gt; ()"
-                  moduleName = "CuidooApp"
+                  symbolName = "Cuidoo.RequestViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "Cuidoo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/juliojohn/Desktop/CuidooApp/CuidooApp/Extensions/RequestViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "36"
-                  endingLineNumber = "36"
-                  offsetFromSymbolStart = "1500">
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "1001">
                </Location>
                <Location
-                  uuid = "8AD39BFE-9C51-4700-B49D-FDBF70CB8584 - 732be6fd5349a990"
+                  uuid = "8AD39BFE-9C51-4700-B49D-FDBF70CB8584 - a873b59e00efe0b3"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;CuidooApp.MyUser&gt;) -&gt; () in CuidooApp.RequestViewController.viewDidLoad() -&gt; ()"
-                  moduleName = "CuidooApp"
+                  symbolName = "closure #1 (Swift.Optional&lt;Cuidoo.MyUser&gt;) -&gt; () in Cuidoo.RequestViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "Cuidoo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/juliojohn/Desktop/CuidooApp/CuidooApp/Extensions/RequestViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "37"
-                  endingLineNumber = "37"
-                  offsetFromSymbolStart = "168">
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "171">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -532,34 +532,34 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "BC6055E4-A311-4560-9E2A-6C9A99CDAEA2 - 74d953f033327c30"
+                  uuid = "BC6055E4-A311-4560-9E2A-6C9A99CDAEA2 - 5415f9c11f0dab2c"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;CuidooApp.MyUser&gt;) -&gt; () in closure #1 (Swift.Optional&lt;CuidooApp.Match&gt;) -&gt; () in static CuidooApp.MatchServices.getOtherUser(isBaba: Swift.Bool, idMatch: Swift.String, completion: (Swift.Optional&lt;CuidooApp.MyUser&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "CuidooApp"
+                  symbolName = "closure #1 (Swift.Optional&lt;Cuidoo.MyUser&gt;) -&gt; () in closure #1 (Swift.Optional&lt;Cuidoo.Match&gt;) -&gt; () in static Cuidoo.MatchServices.getOtherUser(isBaba: Swift.Bool, idMatch: Swift.String, completion: (Swift.Optional&lt;Cuidoo.MyUser&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Cuidoo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/juliojohn/Desktop/CuidooApp/CuidooApp/Business/Services/MatchServices.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "39"
                   endingLineNumber = "39"
-                  offsetFromSymbolStart = "276">
+                  offsetFromSymbolStart = "263">
                </Location>
                <Location
-                  uuid = "BC6055E4-A311-4560-9E2A-6C9A99CDAEA2 - cacfff66764195e2"
+                  uuid = "BC6055E4-A311-4560-9E2A-6C9A99CDAEA2 - 2e5313a809ea40ab"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;CuidooApp.MyUser&gt;) -&gt; () in closure #1 (Swift.Optional&lt;CuidooApp.MyUser&gt;) -&gt; () in closure #1 (Swift.Optional&lt;CuidooApp.Match&gt;) -&gt; () in static CuidooApp.MatchServices.getOtherUser(isBaba: Swift.Bool, idMatch: Swift.String, completion: (Swift.Optional&lt;CuidooApp.MyUser&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "CuidooApp"
+                  symbolName = "closure #1 (Swift.Optional&lt;Cuidoo.MyUser&gt;) -&gt; () in closure #1 (Swift.Optional&lt;Cuidoo.MyUser&gt;) -&gt; () in closure #1 (Swift.Optional&lt;Cuidoo.Match&gt;) -&gt; () in static Cuidoo.MatchServices.getOtherUser(isBaba: Swift.Bool, idMatch: Swift.String, completion: (Swift.Optional&lt;Cuidoo.MyUser&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Cuidoo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/juliojohn/Desktop/CuidooApp/CuidooApp/Business/Services/MatchServices.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "40"
                   endingLineNumber = "40"
-                  offsetFromSymbolStart = "140">
+                  offsetFromSymbolStart = "119">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -628,34 +628,34 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "CE72A46C-4EF0-4893-A244-DCB60D0CC045 - d95ca49259a31693"
+                  uuid = "CE72A46C-4EF0-4893-A244-DCB60D0CC045 - bca657146b5a435b"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "CuidooApp.MoreInfoViewController.viewDidLoad() -&gt; ()"
-                  moduleName = "CuidooApp"
+                  symbolName = "Cuidoo.MoreInfoViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "Cuidoo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/juliojohn/Desktop/CuidooApp/CuidooApp/Mom/Scenes/MoreInfo/Controller/MoreInfoViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "29"
                   endingLineNumber = "29"
-                  offsetFromSymbolStart = "820">
+                  offsetFromSymbolStart = "840">
                </Location>
                <Location
-                  uuid = "CE72A46C-4EF0-4893-A244-DCB60D0CC045 - fbd2f2c4bd8c7ce2"
+                  uuid = "CE72A46C-4EF0-4893-A244-DCB60D0CC045 - 1d87e8a30ae911f8"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;CuidooApp.MyUser&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in CuidooApp.MoreInfoViewController.viewDidLoad() -&gt; ()"
-                  moduleName = "CuidooApp"
+                  symbolName = "closure #1 (Swift.Optional&lt;Cuidoo.MyUser&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Cuidoo.MoreInfoViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "Cuidoo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/juliojohn/Desktop/CuidooApp/CuidooApp/Mom/Scenes/MoreInfo/Controller/MoreInfoViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "30"
                   endingLineNumber = "30"
-                  offsetFromSymbolStart = "164">
+                  offsetFromSymbolStart = "137">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -708,34 +708,34 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "BBBA7D65-314F-48E4-86A1-8575585B7256 - ed3c45e69977ffc6"
+                  uuid = "BBBA7D65-314F-48E4-86A1-8575585B7256 - 1d0ba0facb50e117"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "static CuidooApp.UserDAO.getMatchHistory(completion: (Swift.Array&lt;Swift.Optional&lt;CuidooApp.MatchHistory&gt;&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "CuidooApp"
+                  symbolName = "static Cuidoo.UserDAO.getMatchHistory(completion: (Swift.Array&lt;Swift.Optional&lt;Cuidoo.MatchHistory&gt;&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Cuidoo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/juliojohn/Desktop/CuidooApp/CuidooApp/Business/DAO/UserDAO.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "78"
                   endingLineNumber = "78"
-                  offsetFromSymbolStart = "388">
+                  offsetFromSymbolStart = "424">
                </Location>
                <Location
-                  uuid = "BBBA7D65-314F-48E4-86A1-8575585B7256 - c587a1d612d9dc14"
+                  uuid = "BBBA7D65-314F-48E4-86A1-8575585B7256 - fdef464eab0ceb07"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in static CuidooApp.UserDAO.getMatchHistory(completion: (Swift.Array&lt;Swift.Optional&lt;CuidooApp.MatchHistory&gt;&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "CuidooApp"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in static Cuidoo.UserDAO.getMatchHistory(completion: (Swift.Array&lt;Swift.Optional&lt;Cuidoo.MatchHistory&gt;&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Cuidoo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/juliojohn/Desktop/CuidooApp/CuidooApp/Business/DAO/UserDAO.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "79"
                   endingLineNumber = "79"
-                  offsetFromSymbolStart = "248">
+                  offsetFromSymbolStart = "272">
                </Location>
             </Locations>
          </BreakpointContent>

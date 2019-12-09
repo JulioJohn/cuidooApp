@@ -202,7 +202,7 @@
 		E7CCFEF5237C9B6B00F9DA94 /* ChatColorsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatColorsExtension.swift; sourceTree = "<group>"; };
 		E7CCFEF7237C9C0700F9DA94 /* CollectionViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewExtension.swift; sourceTree = "<group>"; };
 		E7CCFEFA2384192800F9DA94 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
-		E7FF57C92371A36A00F3FA22 /* CuidooApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CuidooApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7FF57C92371A36A00F3FA22 /* Cuidoo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cuidoo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7FF57CC2371A36A00F3FA22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E7FF57CE2371A36A00F3FA22 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E7FF57D32371A36A00F3FA22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Auth.storyboard; sourceTree = "<group>"; };
@@ -717,7 +717,7 @@
 		E7FF57CA2371A36A00F3FA22 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E7FF57C92371A36A00F3FA22 /* CuidooApp.app */,
+				E7FF57C92371A36A00F3FA22 /* Cuidoo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -815,7 +815,7 @@
 			);
 			name = CuidooApp;
 			productName = CuidooApp;
-			productReference = E7FF57C92371A36A00F3FA22 /* CuidooApp.app */;
+			productReference = E7FF57C92371A36A00F3FA22 /* Cuidoo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -1032,6 +1032,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1092,6 +1093,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1154,7 +1156,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = juliojohn.CuidooApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Cuidoo;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1172,7 +1174,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = juliojohn.CuidooApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Cuidoo;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

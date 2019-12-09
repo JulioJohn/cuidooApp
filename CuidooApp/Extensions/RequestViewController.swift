@@ -21,11 +21,13 @@ class RequestViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        babySitterView.layoutIfNeeded()
-        babySitterView.layer.cornerRadius = 13
+
         confirm.layer.cornerRadius = 13
         seeNext.layer.cornerRadius = 13
+        
+        babySitterView.layer.masksToBounds = true
+        babySitterView.layer.cornerRadius = 13
+        babySitterView.layoutIfNeeded()
         
         if let nav = myNavegationBar {
             removeNavegationBarLine(navBar: nav)
