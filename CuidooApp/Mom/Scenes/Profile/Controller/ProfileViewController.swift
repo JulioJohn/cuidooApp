@@ -12,6 +12,7 @@ class ProfileViewController: UITableViewController {
     
     @IBOutlet weak var profilePicMomImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var navegationItem: UINavigationItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +24,9 @@ class ProfileViewController: UITableViewController {
         //Aqui nao é o user, é o OTHER USER ID!!!
         if let userId = LoggedUser.shared.uid {
             UserServices.getUser(id: userId) { (user, error) in
-                self.navigationController?.title = user?.name
+                OperationQueue.main.addOperation {
+                    self.navegationItem.title = user?.name
+                }
                 self.nameLabel.text = "mae@teste.com"
             }
         }
