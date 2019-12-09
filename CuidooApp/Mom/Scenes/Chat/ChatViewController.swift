@@ -16,6 +16,8 @@ class ChatViewController: MessagesViewController, MessageInputBarDelegate {
     
     @IBOutlet weak var babySitterChatImageView: UIImageView!
     
+    @IBOutlet weak var nameLabel: UILabel!
+    
     //private let user: User
     private let channel: Channel! = nil
     
@@ -30,7 +32,6 @@ class ChatViewController: MessagesViewController, MessageInputBarDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         babySitterChatImageView.layer.cornerRadius = 19.859
         
         navigationItem.largeTitleDisplayMode = .never
@@ -44,6 +45,10 @@ class ChatViewController: MessagesViewController, MessageInputBarDelegate {
         messagesCollectionView.messagesDisplayDelegate = self
         
         //O user ID deve ser setado na tela anterior
+        
+        if let name = self.userName {
+            self.nameLabel.text = name
+        }
         
         self.matchId = LoggedUser.shared.actualMatchID
         

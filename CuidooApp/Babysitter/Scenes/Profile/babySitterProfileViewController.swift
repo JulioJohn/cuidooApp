@@ -49,7 +49,7 @@ class babySitterProfileViewController: UIViewController {
         nav.navigationBar.tintColor = .cuidooPink
     }
     
-    @IBAction func startJobButtonAction(_ sender: Any) {
+    func changeType() {
         if (isOnline){
             isOnline = !isOnline
             onOffButtonOutlet.text = "OFFLINE"
@@ -62,6 +62,10 @@ class babySitterProfileViewController: UIViewController {
             
             //Deletar o match criado!
         }
+    }
+    
+    @IBAction func startJobButtonAction(_ sender: Any) {
+        changeType()
 
         if LoggedUser.shared.userIsLogged() {
             if let id = LoggedUser.shared.uid {
@@ -82,6 +86,7 @@ class babySitterProfileViewController: UIViewController {
     
     func statusHandle(status: StatusEnum) {
         if status == .waitingBaba {
+            changeType()
             performSegue(withIdentifier: "goToConfirmMatchSegue", sender: nil)
         }
     }
