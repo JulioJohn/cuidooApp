@@ -42,6 +42,9 @@ class SearchViewController: UIViewController {
         searchTableView.delegate = self
         searchTableView.dataSource = self
         
+        searchTableView.keyboardDismissMode = .onDrag
+        //searchTableView.keyboardDismissMode = .interactive
+        
         searchTableView.register(UINib(nibName: "BabySitterCell", bundle: nil), forCellReuseIdentifier: "babySitterCell")
         searchTableView.register(UINib(nibName: "InfoCell", bundle: nil), forCellReuseIdentifier: "infoCell")
         searchTableView.register(UINib(nibName: "MapCell", bundle: nil), forCellReuseIdentifier:
@@ -56,6 +59,16 @@ class SearchViewController: UIViewController {
         entities = [BabySitterEntity(title: "Cuidadora voluntária", time: "12 minutos de você", value: "R$0,00"),
                     BabySitterEntity(title: "Cuidadora mãe", time: "12 minutos de você", value: "R$63,00"),
                     BabySitterEntity(title: "Cuidadora profissional", time: "12 minutos de você", value: "R$84,00")]
+    }
+    
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.searchTableView.endEditing(true)
+        print("lala")
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+        print("lala")
     }
     
     @IBAction func searchButton(_ sender: Any) {
@@ -127,4 +140,3 @@ extension SearchViewController: UITableViewDataSource{
 extension SearchViewController: UITableViewDelegate{
     
 }
-
