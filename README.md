@@ -2,7 +2,7 @@
 //Português
 
 Cuidoo é um aplicativo responsável por encontrar pessoas para cuidarem eventualmente de suas crianças.
- * Features:
+ *Features:
  - Match entre pais e cuidadores
  - Chat entre pais e cuidadores
  - Sistema de Avaliações
@@ -11,7 +11,7 @@ Cuidoo é um aplicativo responsável por encontrar pessoas para cuidarem eventua
 //English
 
 Cuidoo is an app responsible for finding people to care of your children eventually.
- * Features:
+ *Features:
  - Match system between parents and caregivers
  - Chat system between parents and caregivers
  - Avaliantion system
