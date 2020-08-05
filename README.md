@@ -16,5 +16,5 @@ Cuidoo is an app responsible for finding people to care of your children eventua
 __Features:__
   - Match system between parents and caregivers
   - Chat system between parents and caregivers
-  - Avaliantion system
+  - Avaliation system
   - Report system
